@@ -11,7 +11,7 @@ ROCK_NEO := rock_neo
 
 CROSS           := mipsel-linux-gnu-
 AS              := $(CROSS)as
-CC              := ./bin/cc1-26
+CC              := ./bin/cc1-27
 LD              := $(CROSS)ld
 CPP				:= $(CROSS)cpp
 OBJCOPY         := $(CROSS)objcopy
