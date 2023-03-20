@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: font
+  base_path: ../
+  target_path: ./disks/us/cddata/dat/font.bin
+  asm_path: asm/font
+  asset_path: assets/font
+  src_path: src/font
+  compiler: GCC
+  symbol_addrs_path: config/syms.us.font.txt
+  undefined_funcs_auto_path: config/undefined_funcs_auto.us.font.txt
+  undefined_syms_auto_path: config/undefined_syms_auto.us.font.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+  gp_value: 0x80097864
+segments:
+# ..\bg\char\font.dat
+  - name: font_font_0_header
+    type: bin
+    start: 0x00000000
+  - name: font_font_0
+    type: bin
+    start: 0x00000800
+  - [0x9000]

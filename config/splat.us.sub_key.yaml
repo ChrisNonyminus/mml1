@@ -1,0 +1,38 @@
+options:
+  platform: psx
+  basename: sub_key
+  base_path: ../
+  target_path: ./disks/us/cddata/dat/sub_key.bin
+  asm_path: asm/sub_key
+  asset_path: assets/sub_key
+  src_path: src/sub_key
+  compiler: GCC
+  symbol_addrs_path: config/syms.us.sub_key.txt
+  undefined_funcs_auto_path: config/undefined_funcs_auto.us.sub_key.txt
+  undefined_syms_auto_path: config/undefined_syms_auto.us.sub_key.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+  gp_value: 0x80097864
+segments:
+# ..\BG\CHAR\SUB01.TIM
+  - name: sub_key_SUB01_0_header
+    type: bin
+    start: 0x00000000
+  - name: sub_key_SUB01_0
+    type: bin
+    start: 0x00000800
+# ..\MESS\STFF_FE.MSG
+  - name: sub_key_STFF_FE_1_header
+    type: bin
+    start: 0x00008800
+  - name: sub_key_STFF_FE_1
+    type: code
+    start: 0x00009000
+    vram: 0x801F2000
+    exclusive_ram_id: sub_key_STFF_FE_ram_1
+    subalign: 4
+    subsegments:
+      - [0x9000, data, STFF_FE_1]
+  - [0xD800]

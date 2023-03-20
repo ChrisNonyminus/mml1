@@ -1,0 +1,47 @@
+options:
+  platform: psx
+  basename: st0b_00d
+  base_path: ../
+  target_path: ./disks/us/cddata/dat/st0b_00d.bin
+  asm_path: asm/st0b_00d
+  asset_path: assets/st0b_00d
+  src_path: src/st0b_00d
+  compiler: GCC
+  symbol_addrs_path: config/syms.us.st0b_00d.txt
+  undefined_funcs_auto_path: config/undefined_funcs_auto.us.st0b_00d.txt
+  undefined_syms_auto_path: config/undefined_syms_auto.us.st0b_00d.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+  gp_value: 0x80097864
+segments:
+# ..\OBJ\ST0B\AR00\BS0900.TIM
+  - name: st0b_00d_BS0900_0_header
+    type: bin
+    start: 0x00000000
+  - name: st0b_00d_BS0900_0
+    type: bin
+    start: 0x00000800
+# ..\OBJ\ST0B\AR00\EM2B00.TIM
+  - name: st0b_00d_EM2B00_1_header
+    type: bin
+    start: 0x00008800
+  - name: st0b_00d_EM2B00_1
+    type: bin
+    start: 0x00009000
+# ..\OBJ\ST0B\AR00\EM1D00.TIM
+  - name: st0b_00d_EM1D00_2_header
+    type: bin
+    start: 0x0000D000
+  - name: st0b_00d_EM1D00_2
+    type: bin
+    start: 0x0000D800
+# ..\OBJ\ST0B\AR00\BS0903.TIM
+  - name: st0b_00d_BS0903_3_header
+    type: bin
+    start: 0x00011800
+  - name: st0b_00d_BS0903_3
+    type: bin
+    start: 0x00012000
+  - [0x1A800]

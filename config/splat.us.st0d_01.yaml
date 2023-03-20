@@ -1,0 +1,113 @@
+options:
+  platform: psx
+  basename: st0d_01
+  base_path: ../
+  target_path: ./disks/us/cddata/dat/st0d_01.bin
+  asm_path: asm/st0d_01
+  asset_path: assets/st0d_01
+  src_path: src/st0d_01
+  compiler: GCC
+  symbol_addrs_path: config/syms.us.st0d_01.txt
+  undefined_funcs_auto_path: config/undefined_funcs_auto.us.st0d_01.txt
+  undefined_syms_auto_path: config/undefined_syms_auto.us.st0d_01.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+  gp_value: 0x80097864
+segments:
+# ..\EMBIN\ST0D_01.EBD
+  - name: st0d_01_ST0D_01_0_header
+    type: bin
+    start: 0x00000000
+  - name: st0d_01_ST0D_01_0
+    type: code
+    start: 0x00000800
+    vram: 0x8016C000
+    exclusive_ram_id: st0d_01_ST0D_01_ram_0
+    subalign: 4
+    subsegments:
+      - [0x800, data, ST0D_01_0]
+# ..\OBJ\ST0D\AR01\EM0500.TIM
+  - name: st0d_01_EM0500_1_header
+    type: bin
+    start: 0x0001A000
+  - name: st0d_01_EM0500_1
+    type: bin
+    start: 0x0001A800
+# ..\OBJ\ST0D\AR01\EM0900.TIM
+  - name: st0d_01_EM0900_2_header
+    type: bin
+    start: 0x00022800
+  - name: st0d_01_EM0900_2
+    type: bin
+    start: 0x00023000
+# ..\OBJ\ST0D\AR01\EM1300.TIM
+  - name: st0d_01_EM1300_3_header
+    type: bin
+    start: 0x00027000
+  - name: st0d_01_EM1300_3
+    type: bin
+    start: 0x00027800
+# ..\OBJ\ST0D\AR01\EM1300C.TIM
+  - name: st0d_01_EM1300C_4_header
+    type: bin
+    start: 0x0002B800
+  - name: st0d_01_EM1300C_4
+    type: bin
+    start: 0x0002C000
+# ..\OBJ\ST0D\AR01\EM3000.TIM
+  - name: st0d_01_EM3000_5_header
+    type: bin
+    start: 0x00030800
+  - name: st0d_01_EM3000_5
+    type: bin
+    start: 0x00031000
+# ..\OBJ\ST0D\AR01\EM3800.TIM
+  - name: st0d_01_EM3800_6_header
+    type: bin
+    start: 0x00033000
+  - name: st0d_01_EM3800_6
+    type: bin
+    start: 0x00033800
+# ..\OBJ\ST0D\AR01\EM4500.TIM
+  - name: st0d_01_EM4500_7_header
+    type: bin
+    start: 0x00037800
+  - name: st0d_01_EM4500_7
+    type: bin
+    start: 0x00038000
+# ..\OBJ\ST0D\AR01\EM4900.TIM
+  - name: st0d_01_EM4900_8_header
+    type: bin
+    start: 0x0003C000
+  - name: st0d_01_EM4900_8
+    type: bin
+    start: 0x0003C800
+# ..\SCR\st0d\inbth00.TIM
+  - name: st0d_01_inbth00_9_header
+    type: bin
+    start: 0x00040800
+  - name: st0d_01_inbth00_9
+    type: bin
+    start: 0x00041000
+# ..\SCR\st0d\inbth10.TIM
+  - name: st0d_01_inbth10_10_header
+    type: bin
+    start: 0x00049000
+  - name: st0d_01_inbth10_10
+    type: bin
+    start: 0x00049800
+# ..\MESS\ST0D_01.MSG
+  - name: st0d_01_ST0D_01_11_header
+    type: bin
+    start: 0x00051800
+  - name: st0d_01_ST0D_01_11
+    type: code
+    start: 0x00052000
+    vram: 0x80153000
+    exclusive_ram_id: st0d_01_ST0D_01_ram_11
+    subalign: 4
+    subsegments:
+      - [0x52000, data, ST0D_01_11]
+  - [0x53800]

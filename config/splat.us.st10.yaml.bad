@@ -1,0 +1,98 @@
+options:
+  platform: psx
+  basename: st10
+  base_path: ../
+  target_path: ./disks/us/cddata/dat/st10.bin
+  asm_path: asm/st10
+  asset_path: assets/st10
+  src_path: src/st10
+  compiler: GCC
+  symbol_addrs_path: config/syms.us.st10.txt
+  undefined_funcs_auto_path: config/undefined_funcs_auto.us.st10.txt
+  undefined_syms_auto_path: config/undefined_syms_auto.us.st10.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+  gp_value: 0x80097864
+segments:
+# ..\progbin\r3_st10.bin
+  - name: st10_r3_st10_0_header
+    type: bin
+    start: 0x00000000
+  - name: st10_r3_st10_0
+    type: code
+    start: 0x00000800
+    vram: 0x80100000
+    exclusive_ram_id: st10_r3_st10_ram_0
+    subalign: 4
+    subsegments:
+      - [0x800, data, r3_st10_0]
+# ..\MAP\DATA\ST10_MAP.IDX
+  - name: st10_ST10_MAP_1_header
+    type: bin
+    start: 0x00015800
+  - name: st10_ST10_MAP_1
+    type: code
+    start: 0x00016000
+    vram: 0x8015C000
+    exclusive_ram_id: st10_ST10_MAP_ram_1
+    subalign: 4
+    subsegments:
+      - [0x16000, data, ST10_MAP_1]
+# ..\MAP\DATA\ST10_MAP.MDT
+  - name: st10_ST10_MAP_2_header
+    type: bin
+    start: 0x00018800
+  - name: st10_ST10_MAP_2
+    type: code
+    start: 0x00019000
+    vram: 0x80164000
+    exclusive_ram_id: st10_ST10_MAP_ram_2
+    subalign: 4
+    subsegments:
+      - [0x19000, data, ST10_MAP_2]
+# ..\SCR\DATA\ST10.STG
+  - name: st10_ST10_3_header
+    type: bin
+    start: 0x0001C000
+  - name: st10_ST10_3
+    type: code
+    start: 0x0001C800
+    vram: 0x80194000
+    exclusive_ram_id: st10_ST10_ram_3
+    subalign: 4
+    subsegments:
+      - [0x1C800, data, ST10_3]
+# ..\SCR\DATA\ST10.HED
+  - name: st10_ST10_4_header
+    type: bin
+    start: 0x0002C000
+  - name: st10_ST10_4
+    type: code
+    start: 0x0002C800
+    vram: 0x8013A000
+    exclusive_ram_id: st10_ST10_ram_4
+    subalign: 4
+    subsegments:
+      - [0x2C800, data, ST10_4]
+# ..\SCR\DATA\ST10.HD2
+  - name: st10_ST10_5_header
+    type: bin
+    start: 0x0002D000
+  - name: st10_ST10_5
+    type: code
+    start: 0x0002D800
+    vram: 0x80139F00
+    exclusive_ram_id: st10_ST10_ram_5
+    subalign: 4
+    subsegments:
+      - [0x2D800, data, ST10_5]
+# ..\OBJ\COMM\PL0000.TIM
+  - name: st10_PL0000_6_header
+    type: bin
+    start: 0x0002E000
+  - name: st10_PL0000_6
+    type: bin
+    start: 0x0002E800
+  - [0x8D000]

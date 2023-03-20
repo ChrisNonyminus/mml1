@@ -1,0 +1,115 @@
+options:
+  platform: psx
+  basename: st03_00c
+  base_path: ../
+  target_path: ./disks/us/cddata/dat/st03_00c.bin
+  asm_path: asm/st03_00c
+  asset_path: assets/st03_00c
+  src_path: src/st03_00c
+  compiler: GCC
+  symbol_addrs_path: config/syms.us.st03_00c.txt
+  undefined_funcs_auto_path: config/undefined_funcs_auto.us.st03_00c.txt
+  undefined_syms_auto_path: config/undefined_syms_auto.us.st03_00c.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+  gp_value: 0x80097864
+segments:
+# ..\EMBIN\ST03_00C.EBD
+  - name: st03_00c_ST03_00C_0_header
+    type: bin
+    start: 0x00000000
+  - name: st03_00c_ST03_00C_0
+    type: code
+    start: 0x00000800
+    vram: 0x8016C000
+    exclusive_ram_id: st03_00c_ST03_00C_ram_0
+    subalign: 4
+    subsegments:
+      - [0x800, data, ST03_00C_0]
+# ..\OBJ\ST03\AR00B\EM0500.TIM
+  - name: st03_00c_EM0500_1_header
+    type: bin
+    start: 0x0001F800
+  - name: st03_00c_EM0500_1
+    type: bin
+    start: 0x00020000
+# ..\OBJ\ST03\AR00B\EM1300.TIM
+  - name: st03_00c_EM1300_2_header
+    type: bin
+    start: 0x00028000
+  - name: st03_00c_EM1300_2
+    type: bin
+    start: 0x00028800
+# ..\OBJ\ST03\AR00B\EM1300B.TIM
+  - name: st03_00c_EM1300B_3_header
+    type: bin
+    start: 0x0002C800
+  - name: st03_00c_EM1300B_3
+    type: bin
+    start: 0x0002D000
+# ..\OBJ\ST03\AR00B\EM3900.TIM
+  - name: st03_00c_EM3900_4_header
+    type: bin
+    start: 0x00031800
+  - name: st03_00c_EM3900_4
+    type: bin
+    start: 0x00032000
+# ..\OBJ\ST03\AR00B\EM4900.TIM
+  - name: st03_00c_EM4900_5_header
+    type: bin
+    start: 0x00036000
+  - name: st03_00c_EM4900_5
+    type: bin
+    start: 0x00036800
+# ..\OBJ\ST03\AR00B\KABUTO.TIM
+  - name: st03_00c_KABUTO_6_header
+    type: bin
+    start: 0x0003A800
+  - name: st03_00c_KABUTO_6
+    type: bin
+    start: 0x0003B000
+# ..\OBJ\ST03\AR00B\EM0A00.TIM
+  - name: st03_00c_EM0A00_7_header
+    type: bin
+    start: 0x0003F000
+  - name: st03_00c_EM0A00_7
+    type: bin
+    start: 0x0003F800
+# ..\SCR\st03\scmanbo.TIM
+  - name: st03_00c_scmanbo_8_header
+    type: bin
+    start: 0x00047800
+  - name: st03_00c_scmanbo_8
+    type: bin
+    start: 0x00048000
+# ..\SCR\st03\scmanb2.TIM
+  - name: st03_00c_scmanb2_9_header
+    type: bin
+    start: 0x00050000
+  - name: st03_00c_scmanb2_9
+    type: bin
+    start: 0x00050800
+# ..\SCR\st03\scm902.TIM
+  - name: st03_00c_scm902_10_header
+    type: bin
+    start: 0x00058800
+  - name: st03_00c_scm902_10
+    type: bin
+    start: 0x00059000
+# ..\SCR\st03\scm910.TIM
+  - name: st03_00c_scm910_11_header
+    type: bin
+    start: 0x00061000
+  - name: st03_00c_scm910_11
+    type: bin
+    start: 0x00061800
+# ..\SCR\st03\scm911.TIM
+  - name: st03_00c_scm911_12_header
+    type: bin
+    start: 0x00069800
+  - name: st03_00c_scm911_12
+    type: bin
+    start: 0x0006A000
+  - [0x94800]

@@ -1,0 +1,38 @@
+options:
+  platform: psx
+  basename: st00_01
+  base_path: ../
+  target_path: ./disks/us/cddata/dat/st00_01.bin
+  asm_path: asm/st00_01
+  asset_path: assets/st00_01
+  src_path: src/st00_01
+  compiler: GCC
+  symbol_addrs_path: config/syms.us.st00_01.txt
+  undefined_funcs_auto_path: config/undefined_funcs_auto.us.st00_01.txt
+  undefined_syms_auto_path: config/undefined_syms_auto.us.st00_01.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+  gp_value: 0x80097864
+segments:
+# ..\EMBIN\ST00_01.EBD
+  - name: st00_01_ST00_01_0_header
+    type: bin
+    start: 0x00000000
+  - name: st00_01_ST00_01_0
+    type: code
+    start: 0x00000800
+    vram: 0x8016C000
+    exclusive_ram_id: st00_01_ST00_01_ram_0
+    subalign: 4
+    subsegments:
+      - [0x800, data, ST00_01_0]
+# ..\OBJ\COMM\PL0000N.TIM
+  - name: st00_01_PL0000N_1_header
+    type: bin
+    start: 0x0001D800
+  - name: st00_01_PL0000N_1
+    type: bin
+    start: 0x0001E000
+  - [0x37000]

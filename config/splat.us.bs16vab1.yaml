@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: bs16vab1
+  base_path: ../
+  target_path: ./disks/us/cddata/dat/bs16vab1.bin
+  asm_path: asm/bs16vab1
+  asset_path: assets/bs16vab1
+  src_path: src/bs16vab1
+  compiler: GCC
+  symbol_addrs_path: config/syms.us.bs16vab1.txt
+  undefined_funcs_auto_path: config/undefined_funcs_auto.us.bs16vab1.txt
+  undefined_syms_auto_path: config/undefined_syms_auto.us.bs16vab1.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+  gp_value: 0x80097864
+segments:
+# ..\sound\moto\se\vab\et_lb01b.va
+  - name: bs16vab1_et_lb01b_0_header
+    type: bin
+    start: 0x00000000
+  - name: bs16vab1_et_lb01b_0
+    type: bin
+    start: 0x00000800
+  - [0x24000]

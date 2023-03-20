@@ -1,0 +1,108 @@
+options:
+  platform: psx
+  basename: st15_00
+  base_path: ../
+  target_path: ./disks/us/cddata/dat/st15_00.bin
+  asm_path: asm/st15_00
+  asset_path: assets/st15_00
+  src_path: src/st15_00
+  compiler: GCC
+  symbol_addrs_path: config/syms.us.st15_00.txt
+  undefined_funcs_auto_path: config/undefined_funcs_auto.us.st15_00.txt
+  undefined_syms_auto_path: config/undefined_syms_auto.us.st15_00.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+  gp_value: 0x80097864
+segments:
+# ..\EMBIN\ST15_00.EBD
+  - name: st15_00_ST15_00_0_header
+    type: bin
+    start: 0x00000000
+  - name: st15_00_ST15_00_0
+    type: code
+    start: 0x00000800
+    vram: 0x8016C000
+    exclusive_ram_id: st15_00_ST15_00_ram_0
+    subalign: 4
+    subsegments:
+      - [0x800, data, ST15_00_0]
+# ..\OBJ\ST15\AR00\BS0900.TIM
+  - name: st15_00_BS0900_1_header
+    type: bin
+    start: 0x00011800
+  - name: st15_00_BS0900_1
+    type: bin
+    start: 0x00012000
+# ..\OBJ\ST15\AR00\BS090A.TIM
+  - name: st15_00_BS090A_2_header
+    type: bin
+    start: 0x0001A000
+  - name: st15_00_BS090A_2
+    type: bin
+    start: 0x0001A800
+# ..\OBJ\ST15\AR00\BS0B00.TIM
+  - name: st15_00_BS0B00_3_header
+    type: bin
+    start: 0x00022800
+  - name: st15_00_BS0B00_3
+    type: bin
+    start: 0x00023000
+# ..\OBJ\ST15\AR00\BS0B0D.TIM
+  - name: st15_00_BS0B0D_4_header
+    type: bin
+    start: 0x0002B000
+  - name: st15_00_BS0B0D_4
+    type: bin
+    start: 0x0002B800
+# ..\OBJ\ST15\AR00\EM0000.TIM
+  - name: st15_00_EM0000_5_header
+    type: bin
+    start: 0x00033800
+  - name: st15_00_EM0000_5
+    type: bin
+    start: 0x00034000
+# ..\OBJ\ST15\AR00\EM0A00.TIM
+  - name: st15_00_EM0A00_6_header
+    type: bin
+    start: 0x00038000
+  - name: st15_00_EM0A00_6
+    type: bin
+    start: 0x00038800
+# ..\OBJ\ST15\AR00\EM5F00.TIM
+  - name: st15_00_EM5F00_7_header
+    type: bin
+    start: 0x00040800
+  - name: st15_00_EM5F00_7
+    type: bin
+    start: 0x00041000
+# ..\OBJ\ST15\AR00\EM6000.TIM
+  - name: st15_00_EM6000_8_header
+    type: bin
+    start: 0x00045000
+  - name: st15_00_EM6000_8
+    type: bin
+    start: 0x00045800
+# ..\OBJ\ST15\AR00\EM6001.TIM
+  - name: st15_00_EM6001_9_header
+    type: bin
+    start: 0x0004D800
+  - name: st15_00_EM6001_9
+    type: bin
+    start: 0x0004E000
+# ..\SCR\st15\ings210.TIM
+  - name: st15_00_ings210_10_header
+    type: bin
+    start: 0x00056800
+  - name: st15_00_ings210_10
+    type: bin
+    start: 0x00057000
+# ..\SCR\st15\ings210c.TIM
+  - name: st15_00_ings210c_11_header
+    type: bin
+    start: 0x0005F000
+  - name: st15_00_ings210c_11
+    type: bin
+    start: 0x0005F800
+  - [0x78800]

@@ -1,0 +1,130 @@
+options:
+  platform: psx
+  basename: st1a_02c
+  base_path: ../
+  target_path: ./disks/us/cddata/dat/st1a_02c.bin
+  asm_path: asm/st1a_02c
+  asset_path: assets/st1a_02c
+  src_path: src/st1a_02c
+  compiler: GCC
+  symbol_addrs_path: config/syms.us.st1a_02c.txt
+  undefined_funcs_auto_path: config/undefined_funcs_auto.us.st1a_02c.txt
+  undefined_syms_auto_path: config/undefined_syms_auto.us.st1a_02c.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+  gp_value: 0x80097864
+segments:
+# ..\EMBIN\ST1A_02C.EBD
+  - name: st1a_02c_ST1A_02C_0_header
+    type: bin
+    start: 0x00000000
+  - name: st1a_02c_ST1A_02C_0
+    type: code
+    start: 0x00000800
+    vram: 0x8016C000
+    exclusive_ram_id: st1a_02c_ST1A_02C_ram_0
+    subalign: 4
+    subsegments:
+      - [0x800, data, ST1A_02C_0]
+# ..\OBJ\ST1A\AR02\BS1300.TIM
+  - name: st1a_02c_BS1300_1_header
+    type: bin
+    start: 0x0001E800
+  - name: st1a_02c_BS1300_1
+    type: bin
+    start: 0x0001F000
+# ..\OBJ\ST1A\AR02\EM1400.TIM
+  - name: st1a_02c_EM1400_2_header
+    type: bin
+    start: 0x00027000
+  - name: st1a_02c_EM1400_2
+    type: bin
+    start: 0x00027800
+# ..\OBJ\ST1A\AR02\EM2D00.TIM
+  - name: st1a_02c_EM2D00_3_header
+    type: bin
+    start: 0x0002B800
+  - name: st1a_02c_EM2D00_3
+    type: bin
+    start: 0x0002C000
+# ..\OBJ\ST1A\AR02\EM3000.TIM
+  - name: st1a_02c_EM3000_4_header
+    type: bin
+    start: 0x00030000
+  - name: st1a_02c_EM3000_4
+    type: bin
+    start: 0x00030800
+# ..\OBJ\ST1A\AR02\EM4900.TIM
+  - name: st1a_02c_EM4900_5_header
+    type: bin
+    start: 0x00032800
+  - name: st1a_02c_EM4900_5
+    type: bin
+    start: 0x00033000
+# ..\OBJ\ST1A\AR02\EM5A00.TIM
+  - name: st1a_02c_EM5A00_6_header
+    type: bin
+    start: 0x00037000
+  - name: st1a_02c_EM5A00_6
+    type: bin
+    start: 0x00037800
+# ..\OBJ\ST1A\AR02\CA0000.TIM
+  - name: st1a_02c_CA0000_7_header
+    type: bin
+    start: 0x0003F800
+  - name: st1a_02c_CA0000_7
+    type: bin
+    start: 0x00040000
+# ..\OBJ\ST1A\AR02\CA0001.TIM
+  - name: st1a_02c_CA0001_8_header
+    type: bin
+    start: 0x00048000
+  - name: st1a_02c_CA0001_8
+    type: bin
+    start: 0x00048800
+# ..\OBJ\FACE\PL00B09.TIM
+  - name: st1a_02c_PL00B09_9_header
+    type: bin
+    start: 0x00051000
+  - name: st1a_02c_PL00B09_9
+    type: bin
+    start: 0x00051800
+# ..\PLBIN\PL00DE1S.PBD
+  - name: st1a_02c_PL00DE1S_10_header
+    type: bin
+    start: 0x00059800
+  - name: st1a_02c_PL00DE1S_10
+    type: code
+    start: 0x0005A000
+    vram: 0x800DBA00
+    exclusive_ram_id: st1a_02c_PL00DE1S_ram_10
+    subalign: 4
+    subsegments:
+      - [0x5A000, data, PL00DE1S_10]
+# ..\PLBIN\PL00DE1M.PBD
+  - name: st1a_02c_PL00DE1M_11_header
+    type: bin
+    start: 0x0005A800
+  - name: st1a_02c_PL00DE1M_11
+    type: code
+    start: 0x0005B000
+    vram: 0x800E9600
+    exclusive_ram_id: st1a_02c_PL00DE1M_ram_11
+    subalign: 4
+    subsegments:
+      - [0x5B000, data, PL00DE1M_11]
+# ..\MESS\ST1A_00.MSG
+  - name: st1a_02c_ST1A_00_12_header
+    type: bin
+    start: 0x0005D800
+  - name: st1a_02c_ST1A_00_12
+    type: code
+    start: 0x0005E000
+    vram: 0x80153000
+    exclusive_ram_id: st1a_02c_ST1A_00_ram_12
+    subalign: 4
+    subsegments:
+      - [0x5E000, data, ST1A_00_12]
+  - [0x60000]

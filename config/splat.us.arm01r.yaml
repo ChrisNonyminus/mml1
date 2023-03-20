@@ -1,0 +1,74 @@
+options:
+  platform: psx
+  basename: arm01r
+  base_path: ../
+  target_path: ./disks/us/cddata/dat/arm01r.bin
+  asm_path: asm/arm01r
+  asset_path: assets/arm01r
+  src_path: src/arm01r
+  compiler: GCC
+  symbol_addrs_path: config/syms.us.arm01r.txt
+  undefined_funcs_auto_path: config/undefined_funcs_auto.us.arm01r.txt
+  undefined_syms_auto_path: config/undefined_syms_auto.us.arm01r.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+  gp_value: 0x80097864
+segments:
+# ..\progbin\r3_shl04.bin
+  - name: arm01r_r3_shl04_0_header
+    type: bin
+    start: 0x00000000
+  - name: arm01r_r3_shl04_0
+    type: code
+    start: 0x00000800
+    vram: 0x800D8800
+    exclusive_ram_id: arm01r_r3_shl04_ram_0
+    subalign: 4
+    subsegments:
+      - [0x800, data, r3_shl04_0]
+# ..\PLBIN\PL00R01S.PBD
+  - name: arm01r_PL00R01S_1_header
+    type: bin
+    start: 0x00001000
+  - name: arm01r_PL00R01S_1
+    type: code
+    start: 0x00001800
+    vram: 0x800DC880
+    exclusive_ram_id: arm01r_PL00R01S_ram_1
+    subalign: 4
+    subsegments:
+      - [0x1800, data, PL00R01S_1]
+# ..\PLBIN\PL00R01M.PBD
+  - name: arm01r_PL00R01M_2_header
+    type: bin
+    start: 0x00002000
+  - name: arm01r_PL00R01M_2
+    type: code
+    start: 0x00002800
+    vram: 0x800EF600
+    exclusive_ram_id: arm01r_PL00R01M_ram_2
+    subalign: 4
+    subsegments:
+      - [0x2800, data, PL00R01M_2]
+# ..\PLBIN\PL00R01P.PBD
+  - name: arm01r_PL00R01P_3_header
+    type: bin
+    start: 0x00004000
+  - name: arm01r_PL00R01P_3
+    type: code
+    start: 0x00004800
+    vram: 0x800FB500
+    exclusive_ram_id: arm01r_PL00R01P_ram_3
+    subalign: 4
+    subsegments:
+      - [0x4800, data, PL00R01P_3]
+# ..\sound\moto\se\vab\r_drill.vab
+  - name: arm01r_r_drill_4_header
+    type: bin
+    start: 0x00006000
+  - name: arm01r_r_drill_4
+    type: bin
+    start: 0x00006800
+  - [0xB800]

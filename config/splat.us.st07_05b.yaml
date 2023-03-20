@@ -1,0 +1,94 @@
+options:
+  platform: psx
+  basename: st07_05b
+  base_path: ../
+  target_path: ./disks/us/cddata/dat/st07_05b.bin
+  asm_path: asm/st07_05b
+  asset_path: assets/st07_05b
+  src_path: src/st07_05b
+  compiler: GCC
+  symbol_addrs_path: config/syms.us.st07_05b.txt
+  undefined_funcs_auto_path: config/undefined_funcs_auto.us.st07_05b.txt
+  undefined_syms_auto_path: config/undefined_syms_auto.us.st07_05b.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+  gp_value: 0x80097864
+segments:
+# ..\EMBIN\ST07_05B.EBD
+  - name: st07_05b_ST07_05B_0_header
+    type: bin
+    start: 0x00000000
+  - name: st07_05b_ST07_05B_0
+    type: code
+    start: 0x00000800
+    vram: 0x8016C000
+    exclusive_ram_id: st07_05b_ST07_05B_ram_0
+    subalign: 4
+    subsegments:
+      - [0x800, data, ST07_05B_0]
+# ..\OBJ\ST07\AR05\EM0000.TIM
+  - name: st07_05b_EM0000_1_header
+    type: bin
+    start: 0x00012800
+  - name: st07_05b_EM0000_1
+    type: bin
+    start: 0x00013000
+# ..\OBJ\ST07\AR05\EM0B00.TIM
+  - name: st07_05b_EM0B00_2_header
+    type: bin
+    start: 0x00017000
+  - name: st07_05b_EM0B00_2
+    type: bin
+    start: 0x00017800
+# ..\OBJ\ST07\AR05\EM2B00.TIM
+  - name: st07_05b_EM2B00_3_header
+    type: bin
+    start: 0x0001F800
+  - name: st07_05b_EM2B00_3
+    type: bin
+    start: 0x00020000
+# ..\OBJ\ST07\AR05\BS0900.TIM
+  - name: st07_05b_BS0900_4_header
+    type: bin
+    start: 0x00024000
+  - name: st07_05b_BS0900_4
+    type: bin
+    start: 0x00024800
+# ..\OBJ\ST07\AR05\BS0904.TIM
+  - name: st07_05b_BS0904_5_header
+    type: bin
+    start: 0x0002C800
+  - name: st07_05b_BS0904_5
+    type: bin
+    start: 0x0002D000
+# ..\OBJ\ST07\AR05\BS0B00.TIM
+  - name: st07_05b_BS0B00_6_header
+    type: bin
+    start: 0x00035000
+  - name: st07_05b_BS0B00_6
+    type: bin
+    start: 0x00035800
+# ..\OBJ\ST07\AR05\BS0B06.TIM
+  - name: st07_05b_BS0B06_7_header
+    type: bin
+    start: 0x0003D800
+  - name: st07_05b_BS0B06_7
+    type: bin
+    start: 0x0003E000
+# ..\SCR\st07\inmer00.TIM
+  - name: st07_05b_inmer00_8_header
+    type: bin
+    start: 0x00046000
+  - name: st07_05b_inmer00_8
+    type: bin
+    start: 0x00046800
+# ..\SCR\st07\inmer00c.TIM
+  - name: st07_05b_inmer00c_9_header
+    type: bin
+    start: 0x0004E800
+  - name: st07_05b_inmer00c_9
+    type: bin
+    start: 0x0004F000
+  - [0x85800]

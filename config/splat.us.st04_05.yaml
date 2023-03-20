@@ -1,0 +1,73 @@
+options:
+  platform: psx
+  basename: st04_05
+  base_path: ../
+  target_path: ./disks/us/cddata/dat/st04_05.bin
+  asm_path: asm/st04_05
+  asset_path: assets/st04_05
+  src_path: src/st04_05
+  compiler: GCC
+  symbol_addrs_path: config/syms.us.st04_05.txt
+  undefined_funcs_auto_path: config/undefined_funcs_auto.us.st04_05.txt
+  undefined_syms_auto_path: config/undefined_syms_auto.us.st04_05.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+  gp_value: 0x80097864
+segments:
+# ..\EMBIN\ST04_05.EBD
+  - name: st04_05_ST04_05_0_header
+    type: bin
+    start: 0x00000000
+  - name: st04_05_ST04_05_0
+    type: code
+    start: 0x00000800
+    vram: 0x8016C000
+    exclusive_ram_id: st04_05_ST04_05_ram_0
+    subalign: 4
+    subsegments:
+      - [0x800, data, ST04_05_0]
+# ..\OBJ\ST04\AR05\EM0000.TIM
+  - name: st04_05_EM0000_1_header
+    type: bin
+    start: 0x0001A800
+  - name: st04_05_EM0000_1
+    type: bin
+    start: 0x0001B000
+# ..\OBJ\ST04\AR05\EM0600.TIM
+  - name: st04_05_EM0600_2_header
+    type: bin
+    start: 0x0001F000
+  - name: st04_05_EM0600_2
+    type: bin
+    start: 0x0001F800
+# ..\OBJ\ST04\AR05\EM0900B.TIM
+  - name: st04_05_EM0900B_3_header
+    type: bin
+    start: 0x00021000
+  - name: st04_05_EM0900B_3
+    type: bin
+    start: 0x00021800
+# ..\OBJ\ST04\AR05\EM1300.TIM
+  - name: st04_05_EM1300_4_header
+    type: bin
+    start: 0x00025800
+  - name: st04_05_EM1300_4
+    type: bin
+    start: 0x00026000
+# ..\OBJ\ST04\AR05\EM1500.TIM
+  - name: st04_05_EM1500_5_header
+    type: bin
+    start: 0x0002A000
+  - name: st04_05_EM1500_5
+    type: bin
+    start: 0x0002A800
+# ..\OBJ\ST04\AR05\EM1500B.TIM
+  - name: st04_05_EM1500B_6_header
+    type: bin
+    start: 0x0002E800
+  - name: st04_05_EM1500B_6
+    type: bin
+    start: 0x0002F000
+  - [0x5E800]

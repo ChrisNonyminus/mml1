@@ -1,0 +1,108 @@
+options:
+  platform: psx
+  basename: st05_00h
+  base_path: ../
+  target_path: ./disks/us/cddata/dat/st05_00h.bin
+  asm_path: asm/st05_00h
+  asset_path: assets/st05_00h
+  src_path: src/st05_00h
+  compiler: GCC
+  symbol_addrs_path: config/syms.us.st05_00h.txt
+  undefined_funcs_auto_path: config/undefined_funcs_auto.us.st05_00h.txt
+  undefined_syms_auto_path: config/undefined_syms_auto.us.st05_00h.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+  gp_value: 0x80097864
+segments:
+# ..\EMBIN\ST05_00H.EBD
+  - name: st05_00h_ST05_00H_0_header
+    type: bin
+    start: 0x00000000
+  - name: st05_00h_ST05_00H_0
+    type: code
+    start: 0x00000800
+    vram: 0x8016C000
+    exclusive_ram_id: st05_00h_ST05_00H_ram_0
+    subalign: 4
+    subsegments:
+      - [0x800, data, ST05_00H_0]
+# ..\OBJ\ST05\AR00H\CA0000.TIM
+  - name: st05_00h_CA0000_1_header
+    type: bin
+    start: 0x00027800
+  - name: st05_00h_CA0000_1
+    type: bin
+    start: 0x00028000
+# ..\OBJ\ST05\AR00H\CA0001.TIM
+  - name: st05_00h_CA0001_2_header
+    type: bin
+    start: 0x00030000
+  - name: st05_00h_CA0001_2
+    type: bin
+    start: 0x00030800
+# ..\OBJ\ST05\AR00H\EM0500.TIM
+  - name: st05_00h_EM0500_3_header
+    type: bin
+    start: 0x00039000
+  - name: st05_00h_EM0500_3
+    type: bin
+    start: 0x00039800
+# ..\OBJ\ST05\AR00H\EM0600.TIM
+  - name: st05_00h_EM0600_4_header
+    type: bin
+    start: 0x00041800
+  - name: st05_00h_EM0600_4
+    type: bin
+    start: 0x00042000
+# ..\OBJ\ST05\AR00H\EM0900.TIM
+  - name: st05_00h_EM0900_5_header
+    type: bin
+    start: 0x00043800
+  - name: st05_00h_EM0900_5
+    type: bin
+    start: 0x00044000
+# ..\OBJ\ST05\AR00H\EM0900B.TIM
+  - name: st05_00h_EM0900B_6_header
+    type: bin
+    start: 0x00048000
+  - name: st05_00h_EM0900B_6
+    type: bin
+    start: 0x00048800
+# ..\OBJ\ST05\AR00H\EM1300C.TIM
+  - name: st05_00h_EM1300C_7_header
+    type: bin
+    start: 0x0004D000
+  - name: st05_00h_EM1300C_7
+    type: bin
+    start: 0x0004D800
+# ..\OBJ\ST05\AR00H\EM1500B.TIM
+  - name: st05_00h_EM1500B_8_header
+    type: bin
+    start: 0x00052000
+  - name: st05_00h_EM1500B_8
+    type: bin
+    start: 0x00052800
+# ..\OBJ\ST05\AR00H\EM4200.TIM
+  - name: st05_00h_EM4200_9_header
+    type: bin
+    start: 0x00057000
+  - name: st05_00h_EM4200_9
+    type: bin
+    start: 0x00057800
+# ..\OBJ\ST05\AR00H\GAITOU.TIM
+  - name: st05_00h_GAITOU_10_header
+    type: bin
+    start: 0x0005B800
+  - name: st05_00h_GAITOU_10
+    type: bin
+    start: 0x0005C000
+# ..\OBJ\ST05\AR00H\SCKO00.TIM
+  - name: st05_00h_SCKO00_11_header
+    type: bin
+    start: 0x00060000
+  - name: st05_00h_SCKO00_11
+    type: bin
+    start: 0x00060800
+  - [0xD7800]

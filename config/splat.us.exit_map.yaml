@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: exit_map
+  base_path: ../
+  target_path: ./disks/us/cddata/dat/exit_map.bin
+  asm_path: asm/exit_map
+  asset_path: assets/exit_map
+  src_path: src/exit_map
+  compiler: GCC
+  symbol_addrs_path: config/syms.us.exit_map.txt
+  undefined_funcs_auto_path: config/undefined_funcs_auto.us.exit_map.txt
+  undefined_syms_auto_path: config/undefined_syms_auto.us.exit_map.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+  gp_value: 0x80097864
+segments:
+# ..\OBJ\COMM\KOUKA00.TIM
+  - name: exit_map_KOUKA00_0_header
+    type: bin
+    start: 0x00000000
+  - name: exit_map_KOUKA00_0
+    type: bin
+    start: 0x00000800
+  - [0x14800]

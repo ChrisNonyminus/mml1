@@ -1,0 +1,40 @@
+options:
+  platform: psx
+  basename: st03_08
+  base_path: ../
+  target_path: ./disks/us/cddata/dat/st03_08.bin
+  asm_path: asm/st03_08
+  asset_path: assets/st03_08
+  src_path: src/st03_08
+  compiler: GCC
+  symbol_addrs_path: config/syms.us.st03_08.txt
+  undefined_funcs_auto_path: config/undefined_funcs_auto.us.st03_08.txt
+  undefined_syms_auto_path: config/undefined_syms_auto.us.st03_08.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+  gp_value: 0x80097864
+segments:
+# ..\SCR\st03\inrrm00.TIM
+  - name: st03_08_inrrm00_0_header
+    type: bin
+    start: 0x00000000
+  - name: st03_08_inrrm00_0
+    type: bin
+    start: 0x00000800
+# ..\SCR\st03\inrrm10.TIM
+  - name: st03_08_inrrm10_1_header
+    type: bin
+    start: 0x00007800
+  - name: st03_08_inrrm10_1
+    type: bin
+    start: 0x00008000
+# ..\SCR\st03\inrrm11c.TIM
+  - name: st03_08_inrrm11c_2_header
+    type: bin
+    start: 0x0000F000
+  - name: st03_08_inrrm11c_2
+    type: bin
+    start: 0x0000F800
+  - [0x76800]

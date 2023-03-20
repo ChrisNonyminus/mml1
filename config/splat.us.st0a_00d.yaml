@@ -1,0 +1,108 @@
+options:
+  platform: psx
+  basename: st0a_00d
+  base_path: ../
+  target_path: ./disks/us/cddata/dat/st0a_00d.bin
+  asm_path: asm/st0a_00d
+  asset_path: assets/st0a_00d
+  src_path: src/st0a_00d
+  compiler: GCC
+  symbol_addrs_path: config/syms.us.st0a_00d.txt
+  undefined_funcs_auto_path: config/undefined_funcs_auto.us.st0a_00d.txt
+  undefined_syms_auto_path: config/undefined_syms_auto.us.st0a_00d.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+  gp_value: 0x80097864
+segments:
+# ..\EMBIN\ST0A_00D.EBD
+  - name: st0a_00d_ST0A_00D_0_header
+    type: bin
+    start: 0x00000000
+  - name: st0a_00d_ST0A_00D_0
+    type: code
+    start: 0x00000800
+    vram: 0x8016C000
+    exclusive_ram_id: st0a_00d_ST0A_00D_ram_0
+    subalign: 4
+    subsegments:
+      - [0x800, data, ST0A_00D_0]
+# ..\OBJ\ST0A\AR00D\EM0500.TIM
+  - name: st0a_00d_EM0500_1_header
+    type: bin
+    start: 0x00023800
+  - name: st0a_00d_EM0500_1
+    type: bin
+    start: 0x00024000
+# ..\OBJ\ST0A\AR00D\EM0600.TIM
+  - name: st0a_00d_EM0600_2_header
+    type: bin
+    start: 0x0002C000
+  - name: st0a_00d_EM0600_2
+    type: bin
+    start: 0x0002C800
+# ..\OBJ\ST0A\AR00D\EM0900.TIM
+  - name: st0a_00d_EM0900_3_header
+    type: bin
+    start: 0x0002E000
+  - name: st0a_00d_EM0900_3
+    type: bin
+    start: 0x0002E800
+# ..\OBJ\ST0A\AR00D\EM0900B.TIM
+  - name: st0a_00d_EM0900B_4_header
+    type: bin
+    start: 0x00032800
+  - name: st0a_00d_EM0900B_4
+    type: bin
+    start: 0x00033000
+# ..\OBJ\ST0A\AR00D\EM1300C.TIM
+  - name: st0a_00d_EM1300C_5_header
+    type: bin
+    start: 0x00037800
+  - name: st0a_00d_EM1300C_5
+    type: bin
+    start: 0x00038000
+# ..\OBJ\ST0A\AR00D\EM4200.TIM
+  - name: st0a_00d_EM4200_6_header
+    type: bin
+    start: 0x0003C800
+  - name: st0a_00d_EM4200_6
+    type: bin
+    start: 0x0003D000
+# ..\OBJ\ST0A\AR00D\EM4900.TIM
+  - name: st0a_00d_EM4900_7_header
+    type: bin
+    start: 0x00041000
+  - name: st0a_00d_EM4900_7
+    type: bin
+    start: 0x00041800
+# ..\OBJ\ST0A\AR00D\KABUTO.TIM
+  - name: st0a_00d_KABUTO_8_header
+    type: bin
+    start: 0x00045800
+  - name: st0a_00d_KABUTO_8
+    type: bin
+    start: 0x00046000
+# ..\SCR\st0a\st6_201.TIM
+  - name: st0a_00d_st6_201_9_header
+    type: bin
+    start: 0x0004A000
+  - name: st0a_00d_st6_201_9
+    type: bin
+    start: 0x0004A800
+# ..\SCR\st0a\st6_401.TIM
+  - name: st0a_00d_st6_401_10_header
+    type: bin
+    start: 0x0004C800
+  - name: st0a_00d_st6_401_10
+    type: bin
+    start: 0x0004D000
+# ..\SCR\st0a\st6_402c.TIM
+  - name: st0a_00d_st6_402c_11_header
+    type: bin
+    start: 0x00055000
+  - name: st0a_00d_st6_402c_11
+    type: bin
+    start: 0x00055800
+  - [0xCF800]

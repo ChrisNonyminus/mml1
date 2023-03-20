@@ -1,0 +1,157 @@
+options:
+  platform: psx
+  basename: st08_01
+  base_path: ../
+  target_path: ./disks/us/cddata/dat/st08_01.bin
+  asm_path: asm/st08_01
+  asset_path: assets/st08_01
+  src_path: src/st08_01
+  compiler: GCC
+  symbol_addrs_path: config/syms.us.st08_01.txt
+  undefined_funcs_auto_path: config/undefined_funcs_auto.us.st08_01.txt
+  undefined_syms_auto_path: config/undefined_syms_auto.us.st08_01.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+  gp_value: 0x80097864
+segments:
+# ..\EMBIN\ST08_01.EBD
+  - name: st08_01_ST08_01_0_header
+    type: bin
+    start: 0x00000000
+  - name: st08_01_ST08_01_0
+    type: code
+    start: 0x00000800
+    vram: 0x8016C000
+    exclusive_ram_id: st08_01_ST08_01_ram_0
+    subalign: 4
+    subsegments:
+      - [0x800, data, ST08_01_0]
+# ..\OBJ\ST08\AR01\EM0000.TIM
+  - name: st08_01_EM0000_1_header
+    type: bin
+    start: 0x0001B800
+  - name: st08_01_EM0000_1
+    type: bin
+    start: 0x0001C000
+# ..\OBJ\ST08\AR01\EM0600.TIM
+  - name: st08_01_EM0600_2_header
+    type: bin
+    start: 0x00020000
+  - name: st08_01_EM0600_2
+    type: bin
+    start: 0x00020800
+# ..\OBJ\ST08\AR01\EM0900B.TIM
+  - name: st08_01_EM0900B_3_header
+    type: bin
+    start: 0x00022000
+  - name: st08_01_EM0900B_3
+    type: bin
+    start: 0x00022800
+# ..\OBJ\ST08\AR01\EM1300.TIM
+  - name: st08_01_EM1300_4_header
+    type: bin
+    start: 0x00026800
+  - name: st08_01_EM1300_4
+    type: bin
+    start: 0x00027000
+# ..\OBJ\ST08\AR01\EM1300C.TIM
+  - name: st08_01_EM1300C_5_header
+    type: bin
+    start: 0x0002B000
+  - name: st08_01_EM1300C_5
+    type: bin
+    start: 0x0002B800
+# ..\OBJ\ST08\AR01\EM1700.TIM
+  - name: st08_01_EM1700_6_header
+    type: bin
+    start: 0x00030000
+  - name: st08_01_EM1700_6
+    type: bin
+    start: 0x00030800
+# ..\OBJ\ST08\AR01\EM1B00.TIM
+  - name: st08_01_EM1B00_7_header
+    type: bin
+    start: 0x00034800
+  - name: st08_01_EM1B00_7
+    type: bin
+    start: 0x00035000
+# ..\OBJ\ST08\AR01\EM3900.TIM
+  - name: st08_01_EM3900_8_header
+    type: bin
+    start: 0x00036800
+  - name: st08_01_EM3900_8
+    type: bin
+    start: 0x00037000
+# ..\OBJ\ST08\AR01\EM3A00.TIM
+  - name: st08_01_EM3A00_9_header
+    type: bin
+    start: 0x0003B000
+  - name: st08_01_EM3A00_9
+    type: bin
+    start: 0x0003B800
+# ..\OBJ\ST08\AR01\EM4D00.TIM
+  - name: st08_01_EM4D00_10_header
+    type: bin
+    start: 0x0003F800
+  - name: st08_01_EM4D00_10
+    type: bin
+    start: 0x00040000
+# ..\OBJ\ST08\AR01\EM6500.TIM
+  - name: st08_01_EM6500_11_header
+    type: bin
+    start: 0x00044000
+  - name: st08_01_EM6500_11
+    type: bin
+    start: 0x00044800
+# ..\OBJ\ST08\AR01\SCKO00.TIM
+  - name: st08_01_SCKO00_12_header
+    type: bin
+    start: 0x00048800
+  - name: st08_01_SCKO00_12
+    type: bin
+    start: 0x00049000
+# ..\SCR\ST08\inhos00.TIM
+  - name: st08_01_inhos00_13_header
+    type: bin
+    start: 0x0004D000
+  - name: st08_01_inhos00_13
+    type: bin
+    start: 0x0004D800
+# ..\SCR\ST08\inhos08c.TIM
+  - name: st08_01_inhos08c_14_header
+    type: bin
+    start: 0x00055800
+  - name: st08_01_inhos08c_14
+    type: bin
+    start: 0x00056000
+# ..\SCR\ST08\inhos14c.TIM
+  - name: st08_01_inhos14c_15_header
+    type: bin
+    start: 0x0005E800
+  - name: st08_01_inhos14c_15
+    type: bin
+    start: 0x0005F000
+# ..\SCR\ST08\inhos30.TIM
+  - name: st08_01_inhos30_16_header
+    type: bin
+    start: 0x00069000
+  - name: st08_01_inhos30_16
+    type: bin
+    start: 0x00069800
+# ..\sound\moto\se\vab\e_tw01a.vab
+  - name: st08_01_e_tw01a_17_header
+    type: bin
+    start: 0x00071800
+  - name: st08_01_e_tw01a_17
+    type: bin
+    start: 0x00072000
+# ..\sound\moto\se\vab\m_hp00a.vab
+  - name: st08_01_m_hp00a_18_header
+    type: bin
+    start: 0x0008B800
+  - name: st08_01_m_hp00a_18
+    type: bin
+    start: 0x0008C000
+  - [0xC1000]

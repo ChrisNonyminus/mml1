@@ -1,0 +1,62 @@
+options:
+  platform: psx
+  basename: st0a
+  base_path: ../
+  target_path: ./disks/us/cddata/dat/st0a.bin
+  asm_path: asm/st0a
+  asset_path: assets/st0a
+  src_path: src/st0a
+  compiler: GCC
+  symbol_addrs_path: config/syms.us.st0a.txt
+  undefined_funcs_auto_path: config/undefined_funcs_auto.us.st0a.txt
+  undefined_syms_auto_path: config/undefined_syms_auto.us.st0a.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+  gp_value: 0x80097864
+segments:
+# ..\progbin\r3_st0a.bin
+  - name: st0a_r3_st0a_0_header
+    type: bin
+    start: 0x00000000
+  - name: st0a_r3_st0a_0
+    type: code
+    start: 0x00000800
+    vram: 0x80100000
+    exclusive_ram_id: st0a_r3_st0a_ram_0
+    subalign: 4
+    subsegments:
+      - [0x800, data, r3_st0a_0]
+# ..\MAP\DATA\ST0A_MAP.IDX
+  - name: st0a_ST0A_MAP_1_header
+    type: bin
+    start: 0x0001C000
+  - name: st0a_ST0A_MAP_1
+    type: code
+    start: 0x0001C800
+    vram: 0x8015C000
+    exclusive_ram_id: st0a_ST0A_MAP_ram_1
+    subalign: 4
+    subsegments:
+      - [0x1C800, data, ST0A_MAP_1]
+# ..\MAP\DATA\ST0A_MAP.MDT
+  - name: st0a_ST0A_MAP_2_header
+    type: bin
+    start: 0x0001E800
+  - name: st0a_ST0A_MAP_2
+    type: code
+    start: 0x0001F000
+    vram: 0x80164000
+    exclusive_ram_id: st0a_ST0A_MAP_ram_2
+    subalign: 4
+    subsegments:
+      - [0x1F000, data, ST0A_MAP_2]
+# ..\OBJ\COMM\PL0000.TIM
+  - name: st0a_PL0000_3_header
+    type: bin
+    start: 0x00020000
+  - name: st0a_PL0000_3
+    type: bin
+    start: 0x00020800
+  - [0x46800]

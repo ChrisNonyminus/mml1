@@ -1,0 +1,66 @@
+options:
+  platform: psx
+  basename: st17c
+  base_path: ../
+  target_path: ./disks/us/cddata/dat/st17c.bin
+  asm_path: asm/st17c
+  asset_path: assets/st17c
+  src_path: src/st17c
+  compiler: GCC
+  symbol_addrs_path: config/syms.us.st17c.txt
+  undefined_funcs_auto_path: config/undefined_funcs_auto.us.st17c.txt
+  undefined_syms_auto_path: config/undefined_syms_auto.us.st17c.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+  gp_value: 0x80097864
+segments:
+# ..\EMBIN\ST17_00C.EBD
+  - name: st17c_ST17_00C_0_header
+    type: bin
+    start: 0x00000000
+  - name: st17c_ST17_00C_0
+    type: code
+    start: 0x00000800
+    vram: 0x8016C000
+    exclusive_ram_id: st17c_ST17_00C_ram_0
+    subalign: 4
+    subsegments:
+      - [0x800, data, ST17_00C_0]
+# ..\OBJ\ST17\AR00\BS0A00.TIM
+  - name: st17c_BS0A00_1_header
+    type: bin
+    start: 0x0001C000
+  - name: st17c_BS0A00_1
+    type: bin
+    start: 0x0001C800
+# ..\OBJ\ST17\AR00\BS0F00.TIM
+  - name: st17c_BS0F00_2_header
+    type: bin
+    start: 0x00024800
+  - name: st17c_BS0F00_2
+    type: bin
+    start: 0x00025000
+# ..\SCR\st17\infwl00.TIM
+  - name: st17c_infwl00_3_header
+    type: bin
+    start: 0x0002D000
+  - name: st17c_infwl00_3
+    type: bin
+    start: 0x0002D800
+# ..\SCR\st17\infwl10.TIM
+  - name: st17c_infwl10_4_header
+    type: bin
+    start: 0x00035800
+  - name: st17c_infwl10_4
+    type: bin
+    start: 0x00036000
+# ..\SCR\st17\infwl10c.TIM
+  - name: st17c_infwl10c_5_header
+    type: bin
+    start: 0x0003E000
+  - name: st17c_infwl10c_5
+    type: bin
+    start: 0x0003E800
+  - [0x48800]

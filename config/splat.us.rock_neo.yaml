@@ -1,0 +1,40 @@
+options:
+  platform: psx
+  basename: rock_neo
+  base_path: ../
+  target_path: disks/us/rock_neo.exe
+  asm_path: asm/rock_neo
+  asset_path: assets/rock_neo
+  src_path: src/rock_neo
+  compiler: GCC
+  symbol_addrs_path: config/syms.us.rock_neo.txt
+  undefined_funcs_auto_path: config/undefined_funcs_auto.us.rock_neo.txt
+  undefined_syms_auto_path: config/undefined_syms_auto.us.rock_neo.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+  section_order:
+    - ".rodata"
+    - ".text"
+    - ".data"
+  gp_value: 0x80097864
+
+segments:
+  - [0x800, header]
+  - name: main
+    type: code
+    start: 0x800
+    vram: 0x80010000
+    subalign: 4
+    subsegments:
+      - [0x800, rodata]
+      - [0x2490, asm]
+      - [0x4F434, c, sub_scrn]
+      - [0x531E0, asm]
+      - [0x587F8, asm, psxsdk/code]
+      - [0x70EC4, data, data1]
+      - [0x80788, data, psxsdk/data1]
+      - [0x88064, data, data2]
+      - [0x93A48, data, psxsdk/data2]
+  - [0xC9800]

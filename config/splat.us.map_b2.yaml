@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: map_b2
+  base_path: ../
+  target_path: ./disks/us/cddata/dat/map_b2.bin
+  asm_path: asm/map_b2
+  asset_path: assets/map_b2
+  src_path: src/map_b2
+  compiler: GCC
+  symbol_addrs_path: config/syms.us.map_b2.txt
+  undefined_funcs_auto_path: config/undefined_funcs_auto.us.map_b2.txt
+  undefined_syms_auto_path: config/undefined_syms_auto.us.map_b2.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+  gp_value: 0x80097864
+segments:
+# ..\BG\CHAR\MAP_B2E.TIM
+  - name: map_b2_MAP_B2E_0_header
+    type: bin
+    start: 0x00000000
+  - name: map_b2_MAP_B2E_0
+    type: bin
+    start: 0x00000800
+  - [0x11000]

@@ -1,0 +1,83 @@
+options:
+  platform: psx
+  basename: support2
+  base_path: ../
+  target_path: ./disks/us/cddata/dat/support2.bin
+  asm_path: asm/support2
+  asset_path: assets/support2
+  src_path: src/support2
+  compiler: GCC
+  symbol_addrs_path: config/syms.us.support2.txt
+  undefined_funcs_auto_path: config/undefined_funcs_auto.us.support2.txt
+  undefined_syms_auto_path: config/undefined_syms_auto.us.support2.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+  gp_value: 0x80097864
+segments:
+# ..\progbin\r3_sup.bin
+  - name: support2_r3_sup_0_header
+    type: bin
+    start: 0x00000000
+  - name: support2_r3_sup_0
+    type: code
+    start: 0x00000800
+    vram: 0x801D8000
+    exclusive_ram_id: support2_r3_sup_ram_0
+    subalign: 4
+    subsegments:
+      - [0x800, data, r3_sup_0]
+# ..\EMBIN\SUPPORT.EBD
+  - name: support2_SUPPORT_1_header
+    type: bin
+    start: 0x00005000
+  - name: support2_SUPPORT_1
+    type: code
+    start: 0x00005800
+    vram: 0x801F2000
+    exclusive_ram_id: support2_SUPPORT_ram_1
+    subalign: 4
+    subsegments:
+      - [0x5800, data, SUPPORT_1]
+# ..\SCR\DATA\SUPPORT.STG
+  - name: support2_SUPPORT_2_header
+    type: bin
+    start: 0x00009000
+  - name: support2_SUPPORT_2
+    type: code
+    start: 0x00009800
+    vram: 0x801F6000
+    exclusive_ram_id: support2_SUPPORT_ram_2
+    subalign: 4
+    subsegments:
+      - [0x9800, data, SUPPORT_2]
+# ..\OBJ\COMM\SELECT00.TIM
+  - name: support2_SELECT00_3_header
+    type: bin
+    start: 0x0000A800
+  - name: support2_SELECT00_3
+    type: bin
+    start: 0x0000B000
+# ..\SCR\SUPPORT2\rospc00.TIM
+  - name: support2_rospc00_4_header
+    type: bin
+    start: 0x00013000
+  - name: support2_rospc00_4
+    type: bin
+    start: 0x00013800
+# ..\SCR\SUPPORT2\rospc01c.TIM
+  - name: support2_rospc01c_5_header
+    type: bin
+    start: 0x0001B800
+  - name: support2_rospc01c_5
+    type: bin
+    start: 0x0001C000
+# ..\SCR\SUPPORT2\rospc10c.TIM
+  - name: support2_rospc10c_6_header
+    type: bin
+    start: 0x00024800
+  - name: support2_rospc10c_6
+    type: bin
+    start: 0x00025000
+  - [0x51800]

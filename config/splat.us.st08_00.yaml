@@ -1,0 +1,94 @@
+options:
+  platform: psx
+  basename: st08_00
+  base_path: ../
+  target_path: ./disks/us/cddata/dat/st08_00.bin
+  asm_path: asm/st08_00
+  asset_path: assets/st08_00
+  src_path: src/st08_00
+  compiler: GCC
+  symbol_addrs_path: config/syms.us.st08_00.txt
+  undefined_funcs_auto_path: config/undefined_funcs_auto.us.st08_00.txt
+  undefined_syms_auto_path: config/undefined_syms_auto.us.st08_00.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+  gp_value: 0x80097864
+segments:
+# ..\EMBIN\ST08_00A.EBD
+  - name: st08_00_ST08_00A_0_header
+    type: bin
+    start: 0x00000000
+  - name: st08_00_ST08_00A_0
+    type: code
+    start: 0x00000800
+    vram: 0x8016C000
+    exclusive_ram_id: st08_00_ST08_00A_ram_0
+    subalign: 4
+    subsegments:
+      - [0x800, data, ST08_00A_0]
+# ..\OBJ\ST08\AR00A\EM0500.TIM
+  - name: st08_00_EM0500_1_header
+    type: bin
+    start: 0x00024000
+  - name: st08_00_EM0500_1
+    type: bin
+    start: 0x00024800
+# ..\OBJ\ST08\AR00A\EM0900.TIM
+  - name: st08_00_EM0900_2_header
+    type: bin
+    start: 0x0002C800
+  - name: st08_00_EM0900_2
+    type: bin
+    start: 0x0002D000
+# ..\OBJ\ST08\AR00A\EM0900B.TIM
+  - name: st08_00_EM0900B_3_header
+    type: bin
+    start: 0x00031000
+  - name: st08_00_EM0900B_3
+    type: bin
+    start: 0x00031800
+# ..\OBJ\ST08\AR00A\EM4200.TIM
+  - name: st08_00_EM4200_4_header
+    type: bin
+    start: 0x00036000
+  - name: st08_00_EM4200_4
+    type: bin
+    start: 0x00036800
+# ..\OBJ\ST08\AR00A\EM4900.TIM
+  - name: st08_00_EM4900_5_header
+    type: bin
+    start: 0x0003A800
+  - name: st08_00_EM4900_5
+    type: bin
+    start: 0x0003B000
+# ..\OBJ\ST08\AR00A\EM4A00.TIM
+  - name: st08_00_EM4A00_6_header
+    type: bin
+    start: 0x0003F000
+  - name: st08_00_EM4A00_6
+    type: bin
+    start: 0x0003F800
+# ..\OBJ\ST08\AR00A\EM5000.TIM
+  - name: st08_00_EM5000_7_header
+    type: bin
+    start: 0x00043800
+  - name: st08_00_EM5000_7
+    type: bin
+    start: 0x00044000
+# ..\OBJ\ST08\AR00A\EM5001.TIM
+  - name: st08_00_EM5001_8_header
+    type: bin
+    start: 0x00048000
+  - name: st08_00_EM5001_8
+    type: bin
+    start: 0x00048800
+# ..\OBJ\ST08\AR00A\EM3000.TIM
+  - name: st08_00_EM3000_9_header
+    type: bin
+    start: 0x0004D000
+  - name: st08_00_EM3000_9
+    type: bin
+    start: 0x0004D800
+  - [0xFE000]

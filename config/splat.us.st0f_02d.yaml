@@ -1,0 +1,66 @@
+options:
+  platform: psx
+  basename: st0f_02d
+  base_path: ../
+  target_path: ./disks/us/cddata/dat/st0f_02d.bin
+  asm_path: asm/st0f_02d
+  asset_path: assets/st0f_02d
+  src_path: src/st0f_02d
+  compiler: GCC
+  symbol_addrs_path: config/syms.us.st0f_02d.txt
+  undefined_funcs_auto_path: config/undefined_funcs_auto.us.st0f_02d.txt
+  undefined_syms_auto_path: config/undefined_syms_auto.us.st0f_02d.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+  gp_value: 0x80097864
+segments:
+# ..\EMBIN\ST0F_02.EBD
+  - name: st0f_02d_ST0F_02_0_header
+    type: bin
+    start: 0x00000000
+  - name: st0f_02d_ST0F_02_0
+    type: code
+    start: 0x00000800
+    vram: 0x8016C000
+    exclusive_ram_id: st0f_02d_ST0F_02_ram_0
+    subalign: 4
+    subsegments:
+      - [0x800, data, ST0F_02_0]
+# ..\OBJ\ST0F\AR02\EM0900B.TIM
+  - name: st0f_02d_EM0900B_1_header
+    type: bin
+    start: 0x00012800
+  - name: st0f_02d_EM0900B_1
+    type: bin
+    start: 0x00013000
+# ..\OBJ\ST0F\AR02\EM1300C.TIM
+  - name: st0f_02d_EM1300C_2_header
+    type: bin
+    start: 0x00017000
+  - name: st0f_02d_EM1300C_2
+    type: bin
+    start: 0x00017800
+# ..\OBJ\ST0F\AR02\EM4400.TIM
+  - name: st0f_02d_EM4400_3_header
+    type: bin
+    start: 0x0001B800
+  - name: st0f_02d_EM4400_3
+    type: bin
+    start: 0x0001C000
+# ..\OBJ\ST0F\AR02\EM5300.TIM
+  - name: st0f_02d_EM5300_4_header
+    type: bin
+    start: 0x00020000
+  - name: st0f_02d_EM5300_4
+    type: bin
+    start: 0x00020800
+# ..\OBJ\ST0F\AR02\EM5300B.TIM
+  - name: st0f_02d_EM5300B_5_header
+    type: bin
+    start: 0x00024800
+  - name: st0f_02d_EM5300B_5
+    type: bin
+    start: 0x00025000
+  - [0x89800]

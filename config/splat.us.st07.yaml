@@ -1,0 +1,86 @@
+options:
+  platform: psx
+  basename: st07
+  base_path: ../
+  target_path: ./disks/us/cddata/dat/st07.bin
+  asm_path: asm/st07
+  asset_path: assets/st07
+  src_path: src/st07
+  compiler: GCC
+  symbol_addrs_path: config/syms.us.st07.txt
+  undefined_funcs_auto_path: config/undefined_funcs_auto.us.st07.txt
+  undefined_syms_auto_path: config/undefined_syms_auto.us.st07.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+  gp_value: 0x80097864
+segments:
+# ..\progbin\r3_st07.bin
+  - name: st07_r3_st07_0_header
+    type: bin
+    start: 0x00000000
+  - name: st07_r3_st07_0
+    type: code
+    start: 0x00000800
+    vram: 0x80100000
+    exclusive_ram_id: st07_r3_st07_ram_0
+    subalign: 4
+    subsegments:
+      - [0x800, data, r3_st07_0]
+# ..\MAP\DATA\ST07_MAP.IDX
+  - name: st07_ST07_MAP_1_header
+    type: bin
+    start: 0x00009800
+  - name: st07_ST07_MAP_1
+    type: code
+    start: 0x0000A000
+    vram: 0x8015C000
+    exclusive_ram_id: st07_ST07_MAP_ram_1
+    subalign: 4
+    subsegments:
+      - [0xA000, data, ST07_MAP_1]
+# ..\MAP\DATA\ST07_MAP.MDT
+  - name: st07_ST07_MAP_2_header
+    type: bin
+    start: 0x0000A800
+  - name: st07_ST07_MAP_2
+    type: code
+    start: 0x0000B000
+    vram: 0x80164000
+    exclusive_ram_id: st07_ST07_MAP_ram_2
+    subalign: 4
+    subsegments:
+      - [0xB000, data, ST07_MAP_2]
+# ..\SCR\DATA\ST07.STG
+  - name: st07_ST07_3_header
+    type: bin
+    start: 0x0000C000
+  - name: st07_ST07_3
+    type: code
+    start: 0x0000C800
+    vram: 0x80194000
+    exclusive_ram_id: st07_ST07_ram_3
+    subalign: 4
+    subsegments:
+      - [0xC800, data, ST07_3]
+# ..\SCR\DATA\ST07.HED
+  - name: st07_ST07_4_header
+    type: bin
+    start: 0x00017000
+  - name: st07_ST07_4
+    type: code
+    start: 0x00017800
+    vram: 0x8013A000
+    exclusive_ram_id: st07_ST07_ram_4
+    subalign: 4
+    subsegments:
+      - [0x17800, data, ST07_4]
+# ..\OBJ\COMM\PL0000.TIM
+  - name: st07_PL0000_5_header
+    type: bin
+    start: 0x00018000
+  - name: st07_PL0000_5
+    type: bin
+    start: 0x00018800
+  - [0x22000]

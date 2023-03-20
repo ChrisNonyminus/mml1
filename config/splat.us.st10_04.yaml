@@ -1,0 +1,80 @@
+options:
+  platform: psx
+  basename: st10_04
+  base_path: ../
+  target_path: ./disks/us/cddata/dat/st10_04.bin
+  asm_path: asm/st10_04
+  asset_path: assets/st10_04
+  src_path: src/st10_04
+  compiler: GCC
+  symbol_addrs_path: config/syms.us.st10_04.txt
+  undefined_funcs_auto_path: config/undefined_funcs_auto.us.st10_04.txt
+  undefined_syms_auto_path: config/undefined_syms_auto.us.st10_04.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+  gp_value: 0x80097864
+segments:
+# ..\EMBIN\ST10_04.EBD
+  - name: st10_04_ST10_04_0_header
+    type: bin
+    start: 0x00000000
+  - name: st10_04_ST10_04_0
+    type: code
+    start: 0x00000800
+    vram: 0x8016C000
+    exclusive_ram_id: st10_04_ST10_04_ram_0
+    subalign: 4
+    subsegments:
+      - [0x800, data, ST10_04_0]
+# ..\OBJ\ST10\AR04\EM1500B.TIM
+  - name: st10_04_EM1500B_1_header
+    type: bin
+    start: 0x00010000
+  - name: st10_04_EM1500B_1
+    type: bin
+    start: 0x00010800
+# ..\OBJ\ST10\AR04\EM2200.TIM
+  - name: st10_04_EM2200_2_header
+    type: bin
+    start: 0x00014800
+  - name: st10_04_EM2200_2
+    type: bin
+    start: 0x00015000
+# ..\OBJ\ST10\AR04\EM2400.TIM
+  - name: st10_04_EM2400_3_header
+    type: bin
+    start: 0x00019000
+  - name: st10_04_EM2400_3
+    type: bin
+    start: 0x00019800
+# ..\OBJ\ST10\AR04\EM2600.TIM
+  - name: st10_04_EM2600_4_header
+    type: bin
+    start: 0x0001D800
+  - name: st10_04_EM2600_4
+    type: bin
+    start: 0x0001E000
+# ..\OBJ\ST10\AR04\EM4400.TIM
+  - name: st10_04_EM4400_5_header
+    type: bin
+    start: 0x00022000
+  - name: st10_04_EM4400_5
+    type: bin
+    start: 0x00022800
+# ..\OBJ\ST10\AR04\EM5300B.TIM
+  - name: st10_04_EM5300B_6_header
+    type: bin
+    start: 0x00026800
+  - name: st10_04_EM5300B_6
+    type: bin
+    start: 0x00027000
+# ..\SCR\st10\inyam00.TIM
+  - name: st10_04_inyam00_7_header
+    type: bin
+    start: 0x0002B000
+  - name: st10_04_inyam00_7
+    type: bin
+    start: 0x0002B800
+  - [0x34800]

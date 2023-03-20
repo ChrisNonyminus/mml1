@@ -1,0 +1,73 @@
+options:
+  platform: psx
+  basename: st11_00b
+  base_path: ../
+  target_path: ./disks/us/cddata/dat/st11_00b.bin
+  asm_path: asm/st11_00b
+  asset_path: assets/st11_00b
+  src_path: src/st11_00b
+  compiler: GCC
+  symbol_addrs_path: config/syms.us.st11_00b.txt
+  undefined_funcs_auto_path: config/undefined_funcs_auto.us.st11_00b.txt
+  undefined_syms_auto_path: config/undefined_syms_auto.us.st11_00b.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+  gp_value: 0x80097864
+segments:
+# ..\EMBIN\ST11_00B.EBD
+  - name: st11_00b_ST11_00B_0_header
+    type: bin
+    start: 0x00000000
+  - name: st11_00b_ST11_00B_0
+    type: code
+    start: 0x00000800
+    vram: 0x8016C000
+    exclusive_ram_id: st11_00b_ST11_00B_ram_0
+    subalign: 4
+    subsegments:
+      - [0x800, data, ST11_00B_0]
+# ..\OBJ\ST10\AR00B\SCKO00.TIM
+  - name: st11_00b_SCKO00_1_header
+    type: bin
+    start: 0x00014800
+  - name: st11_00b_SCKO00_1
+    type: bin
+    start: 0x00015000
+# ..\OBJ\ST10\AR00B\SCKO01C.TIM
+  - name: st11_00b_SCKO01C_2_header
+    type: bin
+    start: 0x00019000
+  - name: st11_00b_SCKO01C_2
+    type: bin
+    start: 0x00019800
+# ..\OBJ\ST10\AR00B\HANA.TIM
+  - name: st11_00b_HANA_3_header
+    type: bin
+    start: 0x0001E000
+  - name: st11_00b_HANA_3
+    type: bin
+    start: 0x0001E800
+# ..\SCR\st03\scm500.TIM
+  - name: st11_00b_scm500_4_header
+    type: bin
+    start: 0x00023000
+  - name: st11_00b_scm500_4
+    type: bin
+    start: 0x00023800
+# ..\SCR\st03\scm910.TIM
+  - name: st11_00b_scm910_5_header
+    type: bin
+    start: 0x00027800
+  - name: st11_00b_scm910_5
+    type: bin
+    start: 0x00028000
+# ..\SCR\st03\scm911.TIM
+  - name: st11_00b_scm911_6_header
+    type: bin
+    start: 0x00030000
+  - name: st11_00b_scm911_6
+    type: bin
+    start: 0x00030800
+  - [0x50000]

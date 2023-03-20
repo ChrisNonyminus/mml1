@@ -1,0 +1,73 @@
+options:
+  platform: psx
+  basename: st0b_00b
+  base_path: ../
+  target_path: ./disks/us/cddata/dat/st0b_00b.bin
+  asm_path: asm/st0b_00b
+  asset_path: assets/st0b_00b
+  src_path: src/st0b_00b
+  compiler: GCC
+  symbol_addrs_path: config/syms.us.st0b_00b.txt
+  undefined_funcs_auto_path: config/undefined_funcs_auto.us.st0b_00b.txt
+  undefined_syms_auto_path: config/undefined_syms_auto.us.st0b_00b.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+  gp_value: 0x80097864
+segments:
+# ..\EMBIN\ST0B_00B.EBD
+  - name: st0b_00b_ST0B_00B_0_header
+    type: bin
+    start: 0x00000000
+  - name: st0b_00b_ST0B_00B_0
+    type: code
+    start: 0x00000800
+    vram: 0x8016C000
+    exclusive_ram_id: st0b_00b_ST0B_00B_ram_0
+    subalign: 4
+    subsegments:
+      - [0x800, data, ST0B_00B_0]
+# ..\OBJ\ST0B\AR00\EM0500.TIM
+  - name: st0b_00b_EM0500_1_header
+    type: bin
+    start: 0x0000D000
+  - name: st0b_00b_EM0500_1
+    type: bin
+    start: 0x0000D800
+# ..\OBJ\ST0B\AR00\EM1D00.TIM
+  - name: st0b_00b_EM1D00_2_header
+    type: bin
+    start: 0x00015800
+  - name: st0b_00b_EM1D00_2
+    type: bin
+    start: 0x00016000
+# ..\OBJ\ST0B\AR00\BOAT.TIM
+  - name: st0b_00b_BOAT_3_header
+    type: bin
+    start: 0x0001A000
+  - name: st0b_00b_BOAT_3
+    type: bin
+    start: 0x0001A800
+# ..\OBJ\COMM\SHIBUKI.TIM
+  - name: st0b_00b_SHIBUKI_4_header
+    type: bin
+    start: 0x00022800
+  - name: st0b_00b_SHIBUKI_4
+    type: bin
+    start: 0x00023000
+# ..\SCR\st0b\st8_301.TIM
+  - name: st0b_00b_st8_301_5_header
+    type: bin
+    start: 0x00027000
+  - name: st0b_00b_st8_301_5
+    type: bin
+    start: 0x00027800
+# ..\SCR\st0b\st8_302c.TIM
+  - name: st0b_00b_st8_302c_6_header
+    type: bin
+    start: 0x0002F800
+  - name: st0b_00b_st8_302c_6
+    type: bin
+    start: 0x00030000
+  - [0x7E000]

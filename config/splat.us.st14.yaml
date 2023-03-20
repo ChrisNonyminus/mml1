@@ -1,0 +1,76 @@
+options:
+  platform: psx
+  basename: st14
+  base_path: ../
+  target_path: ./disks/us/cddata/dat/st14.bin
+  asm_path: asm/st14
+  asset_path: assets/st14
+  src_path: src/st14
+  compiler: GCC
+  symbol_addrs_path: config/syms.us.st14.txt
+  undefined_funcs_auto_path: config/undefined_funcs_auto.us.st14.txt
+  undefined_syms_auto_path: config/undefined_syms_auto.us.st14.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+  gp_value: 0x80097864
+segments:
+# ..\progbin\r3_st14.bin
+  - name: st14_r3_st14_0_header
+    type: bin
+    start: 0x00000000
+  - name: st14_r3_st14_0
+    type: code
+    start: 0x00000800
+    vram: 0x80100000
+    exclusive_ram_id: st14_r3_st14_ram_0
+    subalign: 4
+    subsegments:
+      - [0x800, data, r3_st14_0]
+# ..\MAP\DATA\ST14_MAP.IDX
+  - name: st14_ST14_MAP_1_header
+    type: bin
+    start: 0x00017000
+  - name: st14_ST14_MAP_1
+    type: code
+    start: 0x00017800
+    vram: 0x8015C000
+    exclusive_ram_id: st14_ST14_MAP_ram_1
+    subalign: 4
+    subsegments:
+      - [0x17800, data, ST14_MAP_1]
+# ..\MAP\DATA\ST14_MAP.MDT
+  - name: st14_ST14_MAP_2_header
+    type: bin
+    start: 0x00019800
+  - name: st14_ST14_MAP_2
+    type: code
+    start: 0x0001A000
+    vram: 0x80164000
+    exclusive_ram_id: st14_ST14_MAP_ram_2
+    subalign: 4
+    subsegments:
+      - [0x1A000, data, ST14_MAP_2]
+# ..\sound\moto\se\vab\t_ug04b.vab
+  - name: st14_t_ug04b_3_header
+    type: bin
+    start: 0x0001C000
+  - name: st14_t_ug04b_3
+    type: bin
+    start: 0x0001C800
+# ..\sound\moto\se\vab\e_ug04b.vab
+  - name: st14_e_ug04b_4_header
+    type: bin
+    start: 0x00039000
+  - name: st14_e_ug04b_4
+    type: bin
+    start: 0x00039800
+# ..\sound\moto\se\vab\m_ug04b.vab
+  - name: st14_m_ug04b_5_header
+    type: bin
+    start: 0x0004B800
+  - name: st14_m_ug04b_5
+    type: bin
+    start: 0x0004C000
+  - [0x129000]

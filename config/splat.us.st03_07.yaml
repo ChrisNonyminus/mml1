@@ -1,0 +1,66 @@
+options:
+  platform: psx
+  basename: st03_07
+  base_path: ../
+  target_path: ./disks/us/cddata/dat/st03_07.bin
+  asm_path: asm/st03_07
+  asset_path: assets/st03_07
+  src_path: src/st03_07
+  compiler: GCC
+  symbol_addrs_path: config/syms.us.st03_07.txt
+  undefined_funcs_auto_path: config/undefined_funcs_auto.us.st03_07.txt
+  undefined_syms_auto_path: config/undefined_syms_auto.us.st03_07.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+  gp_value: 0x80097864
+segments:
+# ..\EMBIN\ST03_07.EBD
+  - name: st03_07_ST03_07_0_header
+    type: bin
+    start: 0x00000000
+  - name: st03_07_ST03_07_0
+    type: code
+    start: 0x00000800
+    vram: 0x8016C000
+    exclusive_ram_id: st03_07_ST03_07_ram_0
+    subalign: 4
+    subsegments:
+      - [0x800, data, ST03_07_0]
+# ..\OBJ\ST03\AR07\EM0500.TIM
+  - name: st03_07_EM0500_1_header
+    type: bin
+    start: 0x00016800
+  - name: st03_07_EM0500_1
+    type: bin
+    start: 0x00017000
+# ..\OBJ\ST03\AR07\EM0900B.TIM
+  - name: st03_07_EM0900B_2_header
+    type: bin
+    start: 0x0001F000
+  - name: st03_07_EM0900B_2
+    type: bin
+    start: 0x0001F800
+# ..\OBJ\ST03\AR07\EM1400.TIM
+  - name: st03_07_EM1400_3_header
+    type: bin
+    start: 0x00023800
+  - name: st03_07_EM1400_3
+    type: bin
+    start: 0x00024000
+# ..\OBJ\ST03\AR07\EM2500.TIM
+  - name: st03_07_EM2500_4_header
+    type: bin
+    start: 0x00028000
+  - name: st03_07_EM2500_4
+    type: bin
+    start: 0x00028800
+# ..\OBJ\ST03\AR07\EM2501.TIM
+  - name: st03_07_EM2501_5_header
+    type: bin
+    start: 0x00030800
+  - name: st03_07_EM2501_5
+    type: bin
+    start: 0x00031000
+  - [0xB5800]

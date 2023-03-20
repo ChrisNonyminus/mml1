@@ -1,0 +1,7 @@
+*.o
+*.ld
+build/
+disks/
+asm/
+assets/
+logs/

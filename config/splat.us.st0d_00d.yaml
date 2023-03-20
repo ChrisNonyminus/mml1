@@ -1,0 +1,134 @@
+options:
+  platform: psx
+  basename: st0d_00d
+  base_path: ../
+  target_path: ./disks/us/cddata/dat/st0d_00d.bin
+  asm_path: asm/st0d_00d
+  asset_path: assets/st0d_00d
+  src_path: src/st0d_00d
+  compiler: GCC
+  symbol_addrs_path: config/syms.us.st0d_00d.txt
+  undefined_funcs_auto_path: config/undefined_funcs_auto.us.st0d_00d.txt
+  undefined_syms_auto_path: config/undefined_syms_auto.us.st0d_00d.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+  gp_value: 0x80097864
+segments:
+# ..\EMBIN\ST0D_00D.EBD
+  - name: st0d_00d_ST0D_00D_0_header
+    type: bin
+    start: 0x00000000
+  - name: st0d_00d_ST0D_00D_0
+    type: code
+    start: 0x00000800
+    vram: 0x8016C000
+    exclusive_ram_id: st0d_00d_ST0D_00D_ram_0
+    subalign: 4
+    subsegments:
+      - [0x800, data, ST0D_00D_0]
+# ..\EMBIN\ST0D_00B.EBD
+  - name: st0d_00d_ST0D_00B_1_header
+    type: bin
+    start: 0x00013000
+  - name: st0d_00d_ST0D_00B_1
+    type: code
+    start: 0x00013800
+    vram: 0x80190000
+    exclusive_ram_id: st0d_00d_ST0D_00B_ram_1
+    subalign: 4
+    subsegments:
+      - [0x13800, data, ST0D_00B_1]
+# ..\OBJ\ST0D\AR00\EM0500.TIM
+  - name: st0d_00d_EM0500_2_header
+    type: bin
+    start: 0x00015000
+  - name: st0d_00d_EM0500_2
+    type: bin
+    start: 0x00015800
+# ..\OBJ\ST0D\AR00\EM0900.TIM
+  - name: st0d_00d_EM0900_3_header
+    type: bin
+    start: 0x0001D800
+  - name: st0d_00d_EM0900_3
+    type: bin
+    start: 0x0001E000
+# ..\OBJ\ST0D\AR00\EM0900B.TIM
+  - name: st0d_00d_EM0900B_4_header
+    type: bin
+    start: 0x00022000
+  - name: st0d_00d_EM0900B_4
+    type: bin
+    start: 0x00022800
+# ..\OBJ\ST0D\AR00\EM4200.TIM
+  - name: st0d_00d_EM4200_5_header
+    type: bin
+    start: 0x00027000
+  - name: st0d_00d_EM4200_5
+    type: bin
+    start: 0x00027800
+# ..\OBJ\ST0D\AR00\SCKO00.TIM
+  - name: st0d_00d_SCKO00_6_header
+    type: bin
+    start: 0x0002B800
+  - name: st0d_00d_SCKO00_6
+    type: bin
+    start: 0x0002C000
+# ..\OBJ\ST0D\AR00\SCKO01C.TIM
+  - name: st0d_00d_SCKO01C_7_header
+    type: bin
+    start: 0x00030000
+  - name: st0d_00d_SCKO01C_7
+    type: bin
+    start: 0x00030800
+# ..\OBJ\ST0D\AR00\BOAT.TIM
+  - name: st0d_00d_BOAT_8_header
+    type: bin
+    start: 0x00035000
+  - name: st0d_00d_BOAT_8
+    type: bin
+    start: 0x00035800
+# ..\SCR\st0d\boath00.TIM
+  - name: st0d_00d_boath00_9_header
+    type: bin
+    start: 0x0003D800
+  - name: st0d_00d_boath00_9
+    type: bin
+    start: 0x0003E000
+# ..\SCR\st0d\boath10.TIM
+  - name: st0d_00d_boath10_10_header
+    type: bin
+    start: 0x00046000
+  - name: st0d_00d_boath10_10
+    type: bin
+    start: 0x00046800
+# ..\SCR\st0d\boath20.TIM
+  - name: st0d_00d_boath20_11_header
+    type: bin
+    start: 0x0004E800
+  - name: st0d_00d_boath20_11
+    type: bin
+    start: 0x0004F000
+# ..\SCR\st0d\boath30.TIM
+  - name: st0d_00d_boath30_12_header
+    type: bin
+    start: 0x00057000
+  - name: st0d_00d_boath30_12
+    type: bin
+    start: 0x00057800
+# ..\SCR\st0d\insub00.TIM
+  - name: st0d_00d_insub00_13_header
+    type: bin
+    start: 0x0005F800
+  - name: st0d_00d_insub00_13
+    type: bin
+    start: 0x00060000
+# ..\SCR\st0d\insub00c.TIM
+  - name: st0d_00d_insub00c_14_header
+    type: bin
+    start: 0x00068000
+  - name: st0d_00d_insub00c_14
+    type: bin
+    start: 0x00068800
+  - [0x74800]

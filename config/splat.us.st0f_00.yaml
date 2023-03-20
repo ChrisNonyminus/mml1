@@ -1,0 +1,115 @@
+options:
+  platform: psx
+  basename: st0f_00
+  base_path: ../
+  target_path: ./disks/us/cddata/dat/st0f_00.bin
+  asm_path: asm/st0f_00
+  asset_path: assets/st0f_00
+  src_path: src/st0f_00
+  compiler: GCC
+  symbol_addrs_path: config/syms.us.st0f_00.txt
+  undefined_funcs_auto_path: config/undefined_funcs_auto.us.st0f_00.txt
+  undefined_syms_auto_path: config/undefined_syms_auto.us.st0f_00.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+  gp_value: 0x80097864
+segments:
+# ..\EMBIN\ST0F_00.EBD
+  - name: st0f_00_ST0F_00_0_header
+    type: bin
+    start: 0x00000000
+  - name: st0f_00_ST0F_00_0
+    type: code
+    start: 0x00000800
+    vram: 0x8016C000
+    exclusive_ram_id: st0f_00_ST0F_00_ram_0
+    subalign: 4
+    subsegments:
+      - [0x800, data, ST0F_00_0]
+# ..\OBJ\ST0F\AR00\EM0000.TIM
+  - name: st0f_00_EM0000_1_header
+    type: bin
+    start: 0x00015800
+  - name: st0f_00_EM0000_1
+    type: bin
+    start: 0x00016000
+# ..\OBJ\ST0F\AR00\EM0900.TIM
+  - name: st0f_00_EM0900_2_header
+    type: bin
+    start: 0x0001A000
+  - name: st0f_00_EM0900_2
+    type: bin
+    start: 0x0001A800
+# ..\OBJ\ST0F\AR00\EM1300.TIM
+  - name: st0f_00_EM1300_3_header
+    type: bin
+    start: 0x0001E800
+  - name: st0f_00_EM1300_3
+    type: bin
+    start: 0x0001F000
+# ..\OBJ\ST0F\AR00\EM1500B.TIM
+  - name: st0f_00_EM1500B_4_header
+    type: bin
+    start: 0x00023000
+  - name: st0f_00_EM1500B_4
+    type: bin
+    start: 0x00023800
+# ..\OBJ\ST0F\AR00\EM2400.TIM
+  - name: st0f_00_EM2400_5_header
+    type: bin
+    start: 0x00027800
+  - name: st0f_00_EM2400_5
+    type: bin
+    start: 0x00028000
+# ..\OBJ\ST0F\AR00\EM2600.TIM
+  - name: st0f_00_EM2600_6_header
+    type: bin
+    start: 0x0002C000
+  - name: st0f_00_EM2600_6
+    type: bin
+    start: 0x0002C800
+# ..\OBJ\ST0F\AR00\EM3000.TIM
+  - name: st0f_00_EM3000_7_header
+    type: bin
+    start: 0x00030800
+  - name: st0f_00_EM3000_7
+    type: bin
+    start: 0x00031000
+# ..\OBJ\ST0F\AR00\EM4500.TIM
+  - name: st0f_00_EM4500_8_header
+    type: bin
+    start: 0x00033000
+  - name: st0f_00_EM4500_8
+    type: bin
+    start: 0x00033800
+# ..\OBJ\ST0F\AR00\EM4700.TIM
+  - name: st0f_00_EM4700_9_header
+    type: bin
+    start: 0x00037800
+  - name: st0f_00_EM4700_9
+    type: bin
+    start: 0x00038000
+# ..\OBJ\ST0F\AR00\EM5300.TIM
+  - name: st0f_00_EM5300_10_header
+    type: bin
+    start: 0x0003C000
+  - name: st0f_00_EM5300_10
+    type: bin
+    start: 0x0003C800
+# ..\SCR\st0f\inpol00.TIM
+  - name: st0f_00_inpol00_11_header
+    type: bin
+    start: 0x00040800
+  - name: st0f_00_inpol00_11
+    type: bin
+    start: 0x00041000
+# ..\SCR\st0f\inpol01.TIM
+  - name: st0f_00_inpol01_12_header
+    type: bin
+    start: 0x00048000
+  - name: st0f_00_inpol01_12
+    type: bin
+    start: 0x00048800
+  - [0xAC000]

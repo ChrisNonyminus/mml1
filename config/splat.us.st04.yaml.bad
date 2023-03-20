@@ -1,0 +1,98 @@
+options:
+  platform: psx
+  basename: st04
+  base_path: ../
+  target_path: ./disks/us/cddata/dat/st04.bin
+  asm_path: asm/st04
+  asset_path: assets/st04
+  src_path: src/st04
+  compiler: GCC
+  symbol_addrs_path: config/syms.us.st04.txt
+  undefined_funcs_auto_path: config/undefined_funcs_auto.us.st04.txt
+  undefined_syms_auto_path: config/undefined_syms_auto.us.st04.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+  gp_value: 0x80097864
+segments:
+# ..\PROGBIN\R3_ST04.BIN
+  - name: st04_R3_ST04_0_header
+    type: bin
+    start: 0x00000000
+  - name: st04_R3_ST04_0
+    type: code
+    start: 0x00000800
+    vram: 0x80100000
+    exclusive_ram_id: st04_R3_ST04_ram_0
+    subalign: 4
+    subsegments:
+      - [0x800, data, R3_ST04_0]
+# ..\MAP\DATA\ST04_MAP.IDX
+  - name: st04_ST04_MAP_1_header
+    type: bin
+    start: 0x00012800
+  - name: st04_ST04_MAP_1
+    type: code
+    start: 0x00013000
+    vram: 0x8015C000
+    exclusive_ram_id: st04_ST04_MAP_ram_1
+    subalign: 4
+    subsegments:
+      - [0x13000, data, ST04_MAP_1]
+# ..\MAP\DATA\ST04_MAP.MDT
+  - name: st04_ST04_MAP_2_header
+    type: bin
+    start: 0x00013800
+  - name: st04_ST04_MAP_2
+    type: code
+    start: 0x00014000
+    vram: 0x80164000
+    exclusive_ram_id: st04_ST04_MAP_ram_2
+    subalign: 4
+    subsegments:
+      - [0x14000, data, ST04_MAP_2]
+# ..\SCR\DATA\ST04.STG
+  - name: st04_ST04_3_header
+    type: bin
+    start: 0x00014800
+  - name: st04_ST04_3
+    type: code
+    start: 0x00015000
+    vram: 0x80194000
+    exclusive_ram_id: st04_ST04_ram_3
+    subalign: 4
+    subsegments:
+      - [0x15000, data, ST04_3]
+# ..\SCR\DATA\ST04.HED
+  - name: st04_ST04_4_header
+    type: bin
+    start: 0x0002C000
+  - name: st04_ST04_4
+    type: code
+    start: 0x0002C800
+    vram: 0x8013A000
+    exclusive_ram_id: st04_ST04_ram_4
+    subalign: 4
+    subsegments:
+      - [0x2C800, data, ST04_4]
+# ..\SCR\DATA\ST04.HD2
+  - name: st04_ST04_5_header
+    type: bin
+    start: 0x0002D000
+  - name: st04_ST04_5
+    type: code
+    start: 0x0002D800
+    vram: 0x80139F00
+    exclusive_ram_id: st04_ST04_ram_5
+    subalign: 4
+    subsegments:
+      - [0x2D800, data, ST04_5]
+# ..\OBJ\COMM\PL0000.TIM
+  - name: st04_PL0000_6_header
+    type: bin
+    start: 0x0002E000
+  - name: st04_PL0000_6
+    type: bin
+    start: 0x0002E800
+  - [0x83800]
