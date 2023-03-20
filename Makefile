@@ -39,6 +39,7 @@ GO				:= $(HOME)/go/bin/go
 GOPATH			:= $(HOME)/go
 ASPATCH			:= $(GOPATH)/bin/aspatch
 SOTNDISK		:= $(GOPATH)/bin/sotn-disk
+PYPATCHASM := $(TOOLS_DIR)/patchasm.py
 
 DIFF := diff -u --color=never
 XXD := xxd -u -g 4
@@ -78,6 +79,7 @@ endef
 
 ALL_YAMLS := $(wildcard $(SPLATYAML_FOLDER)/splat.$(VERSION).*.yaml)
 ALL_BINARIES := $(patsubst $(SPLATYAML_FOLDER)/splat.$(VERSION).%.yaml,$(BUILD_DIR)/%.bin,$(ALL_YAMLS))
+ALL_MODULE_NAMES := $(patsubst $(SPLATYAML_FOLDER)/splat.$(VERSION).%.yaml,%,$(ALL_YAMLS))
 
 default: all
 all: build check
@@ -196,14 +198,17 @@ diff_main:
 $(BUILD_DIR)/%.s.o: %.s
 	$(AS) $(AS_FLAGS) -o $@ $<
 $(BUILD_DIR)/%.c.o: %.c $(ASPATCH)
-	$(CPP) $(CPP_FLAGS) $< | $(CC) $(CC_FLAGS) | $(ASPATCH) | $(AS) $(AS_FLAGS) -o $@
+	$(CPP) $(CPP_FLAGS) $< | $(CC) $(CC_FLAGS) | $(ASPATCH) | $(PYTHON) $(PYPATCHASM) | $(AS) $(AS_FLAGS) -o $@
 $(BUILD_DIR)/$(ASSETS_DIR)/%.bin.o: $(ASSETS_DIR)/%.bin
 	$(LD) -r -b binary -o $@ $<
 
 CHECK_FOLDER := hash/$(VERSION)
+ALL_HASHES := $(wildcard $(CHECK_FOLDER)/**.sha1)
 
+# for each sha1 file in hash/$(VERSION), whose filename is in the ALL_MODULE_NAMES list, check it
 check:
-	$(foreach file,$(wildcard $(CHECK_FOLDER)/**.sha1),sha1sum -c $(file))
+	$(foreach module,$(ALL_MODULE_NAMES),$(shell if [ -f hash/$(VERSION)/$(module).bin.sha1 ]; then sha1sum -c --quiet hash/$(VERSION)/$(module).bin.sha1; fi))
+	@echo "OK"
 
 
 .PHONY: all, build, clean, disk, extract_disk, split_all, make_sha1_files, check, tools, default, debug_log_%, dosplit_%, make_sha1_file, %_build_dirs, %_bin

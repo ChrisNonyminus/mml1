@@ -16,5 +16,9 @@ extern SUB_SCREEN_WORK D_800A38F0;
 
 void func_8005EC34(void);                             /* 0x8005EC34 */
 s32 func_8005EC80(s32* arg0);                        /* 0x8005EC80 */
+unknown_t func_800605DC();
+unknown_t func_80060248(SUB_SCREEN_WORK*);
+s32 func_800600CC(SUB_SCREEN_WORK*);
+void Sub_screen_shift_check(SUB_SCREEN_WORK*);
 
 #endif

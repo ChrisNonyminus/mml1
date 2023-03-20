@@ -2,6 +2,8 @@
 
 #include "rock_neo/sub_scrn.h"
 #include "rock_neo/moji.h"
+#include "rock_neo/cd.h"
+#include "rock_neo/game.h"
 
 #ifdef TEMP
 INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/sub_scrn", func_8005EC34);
@@ -12,8 +14,7 @@ void func_8005EC34(void) {
 }
 #endif
 
-#if 1 // for some reason, cc1-27 makes this function's decompilation nonmatching, even though it SHOULD match when compiled with gcc 2.7.2.
-      // basically, it turns an addiu into an ori for some ungodly reason
+#if 0
 INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/sub_scrn", func_8005EC80);
 #else
 s32 func_8005EC80(s32* arg0) {
@@ -46,7 +47,66 @@ INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/sub_scrn", func_8005FDE4);
 
 INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/sub_scrn", func_8005FFBC);
 
-INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/sub_scrn", func_800600CC);
+#if 0
+INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/sub_scrn", func_800600CC); // https://decomp.me/scratch/XN3jK
+#else
+s32 func_800600CC(SUB_SCREEN_WORK* subp) {
+    switch (subp->routine_1) {
+        case 0:
+            {
+                MojiTaskKill();
+                Game_logo_kill(-1);
+                Cd_read_comb(205);
+                subp->routine_1++;
+                break; 
+            }
+        case 1:
+            {
+                if (Cd_read_sync2() != 0)
+                {
+                    break;
+                }
+                func_8001D7AC(22);
+                func_8005382C(0, 0x801F2000, 0x1D); // ???
+                func_80063FC0(2, 0x20007);
+                func_800605DC();
+                subp->routine_1++;
+                break;
+            }
+        case 2:
+            {
+                if ((Moji_flag & 0x480000FF) == 0x48000002) {
+                    Cd_read_comb(EXIT_SUB_BIN);
+                    subp->routine_1++;
+                    break;
+                }
+                if (!(Moji_flag & 0x8000000)) {
+                    if (!(Moji_flag3 & 0x10000)){
+                        if (Moji_flag3 & 0x80000) {
+                            func_80060248(subp);
+                        }
+                    }
+                    else {
+                        if (Moji_flag3 & 0x40000) {
+                           func_80060248(subp);
+                        }
+                    }
+                }
+                func_800605DC();
+                Sub_screen_shift_check(subp);
+                break;
+            }
+        case 3:
+            {
+                if (Cd_read_sync2() == 0) {
+                    *(u32*)&subp->routine_0 = 0;
+                }
+                break;
+            }
+    }
+    return 0;
+}
+#endif
 
 INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/sub_scrn", func_80060248);
 
