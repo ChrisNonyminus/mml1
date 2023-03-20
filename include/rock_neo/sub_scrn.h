@@ -35,5 +35,6 @@ s32 func_800600CC(SUB_SCREEN_WORK*);
 void Sub_screen_shift_check(SUB_SCREEN_WORK*);
 unknown_t func_80060DB8(SUB_SCREEN_WORK*);
 void Sub_screen_sort_sub(PL_WORK*, s32, s32);
+void Sub_screen_sound_reinit(PL_WORK*);
 
 #endif

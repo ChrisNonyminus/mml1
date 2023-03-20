@@ -62,9 +62,29 @@ void func_80015734(GAME_WORK* gw) {
     gw->x1 = 1;
     gw->x82 = (u8)gw->x82 & 0xFE;
 }
-// clang-format off
 
-INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/game", func_80015840);
+void func_80015840(GAME_WORK* arg0) {
+    _unkstruc_800C3558* temp_v1 = &D_800C3558;
+
+    switch (arg0->x1) { /* irregular */
+    case 0:
+        if (temp_v1->x15 == 0) {
+            arg0->area_no = (s8)temp_v1->x17;
+            arg0->x52 = (s8)(u8)arg0->x53;
+            func_80015EE8(&Player_work, &D_800C3558, 1);
+        }
+        func_80016D64();
+        /* fallthrough */
+    case 1:
+        func_80038648();
+        func_8001F3C8();
+        temp_v1->x14 = 0;
+        arg0->routine_0 = 3;
+        arg0->x1 = 0;
+        return;
+    }
+}
+// clang-format off
 
 INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/game", func_800158F0);
 
@@ -80,7 +100,39 @@ INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/game", func_80016434);
 
 INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/game", func_800164B4);
 
-INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/game", func_80016528);
+// clang-format on
+void func_80016528(GAME_WORK* arg0) {
+    PL_WORK* pp;
+
+    pp = &Player_work;
+
+    switch (arg0->x1) { /* irregular */
+    case 0:
+        func_8005DF3C();
+        pp->xBD |= 0x40;
+        MojiTaskKill();
+        func_80063EF0();
+        func_80017C30(0);
+        func_8001B2F0(0x10);
+        func_8001B2F0(0x16);
+        func_8001B2F0(0x17);
+        arg0->x1++;
+        break;
+    case 1:
+        func_8005DF4C();
+        if ((D_800C0C2A & 1) || (D_800C0C2A & 0x1000)) {
+            Sub_screen_sound_reinit(pp);
+            pp->xBD &= 0xBF;
+            MojiTaskKill();
+            Game_logo_kill(-1);
+            arg0->routine_0 = 3;
+            arg0->x1 = 1;
+        }
+        break;
+    }
+    return;
+}
+// clang-format off
 
 INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/game", func_8001663C);
 
