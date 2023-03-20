@@ -6,6 +6,7 @@
 #include "rock_neo/moji.h"
 #include "rock_neo/obj.h"
 #include "rock_neo/player.h"
+#include "rock_neo/sce.h"
 #include "rock_neo/sound.h"
 #include "rock_neo/sub_scrn.h"
 
@@ -274,13 +275,79 @@ void Sub_screen_sort_range(void) {
         }
     }
 }
+
+void Sub_screen_sort_rapid(void) {
+    s32 d0, d1;
+    u8 sort_src, sort_dist;
+
+    PL_WORK* pp;
+
+    pp = &Player_work;
+
+    for (d0 = 0; d0 < 0x1f; d0++) {
+        for (d1 = 0; d1 < 0x1f - d0; d1++) {
+            if (!(sort_dist = pp->rb_parts_sort_data[d1 + 1]))
+                continue;
+            if ((!(sort_src = pp->rb_parts_sort_data[d1])) ||
+                (Rock_buster_parts_tbl[sort_src - 1].repeat_level <
+                 Rock_buster_parts_tbl[sort_dist - 1].repeat_level))
+                Sub_screen_sort_sub(pp, d1, d1 + 1);
+        }
+    }
+}
+
+void sub_screen_sort_sub(PL_WORK* pp, s32 d0, s32 d1) {
+    u8 sort_buff;
+
+    sort_buff = pp->rb_parts_sort_data[d0];
+    pp->rb_parts_sort_data[d0] = pp->rb_parts_sort_data[d1];
+    pp->rb_parts_sort_data[d1] = sort_buff;
+}
+
+void Sub_screen_rb_parts_set(void) {
+    s32 d0, d1, d2;
+
+    PL_WORK* pp;
+
+    pp = &Player_work;
+
+    if (Sce_flag_test(PL_KEY_ITEM_06))
+        d0 = 3;
+    else
+        d0 = 2;
+
+    pp->weapon_data[1].attack_level = 0x00;
+    pp->weapon_data[1].bullet_level = 0x00;
+    pp->weapon_data[1].dist_level = 0x00;
+    pp->weapon_data[1].repeat_level = 0x00;
+
+    for (d1 = 0; d1 < d0; d1++) {
+        if (!(d2 = pp->rb_parts_equip_data[d1]))
+            continue;
+        pp->weapon_data[1].attack_level +=
+            Rock_buster_parts_tbl[d2 - 1].attack_level;
+        pp->weapon_data[1].bullet_level +=
+            Rock_buster_parts_tbl[d2 - 1].bullet_level;
+        pp->weapon_data[1].dist_level +=
+            Rock_buster_parts_tbl[d2 - 1].dist_level;
+        pp->weapon_data[1].repeat_level +=
+            Rock_buster_parts_tbl[d2 - 1].repeat_level;
+    }
+    if (pp->weapon_data[1].attack_level > 0x07)
+        pp->weapon_data[1].attack_level = 0x07;
+
+    if (pp->weapon_data[1].bullet_level > 0x07)
+        pp->weapon_data[1].bullet_level = 0x07;
+
+    if (pp->weapon_data[1].dist_level > 0x07)
+        pp->weapon_data[1].dist_level = 0x07;
+
+    if (pp->weapon_data[1].repeat_level > 0x07)
+        pp->weapon_data[1].repeat_level = 0x07;
+}
 // clang-format off
 
-INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/sub_scrn", Sub_screen_sort_rapid);
 
-INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/sub_scrn", Sub_screen_sort_sub);
-
-INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/sub_scrn", Sub_screen_rb_parts_set);
 
 INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/sub_scrn", Sub_screen_rb_parts_calc);
 
