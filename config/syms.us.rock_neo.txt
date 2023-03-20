@@ -426,3 +426,5 @@ func_8002AB70 = 0x8002AB70;
 func_8002B2C8 = 0x8002B2C8;
 func_8002BD48 = 0x8002BD48;
 func_8002D9A0 = 0x8002D9A0;
+
+Rock_buster_parts_tbl = 0x8008FE64;

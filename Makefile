@@ -91,7 +91,7 @@ logs:
 	@echo $(ALL_BINARIES) > logs/all_binaries.log
 
 clean:
-	rm -rf $(BUILD_DIR) asm/ assets/
+	rm -rf $(BUILD_DIR) asm/ assets/ logs/
 
 debug_log_%: logs
 	@echo $(1) > logs/debug_$(1).log
@@ -179,6 +179,9 @@ $(SOTNDISK): $(GO)
 	$(GO) install github.com/xeeynamo/sotn-decomp/tools/sotn-disk@latest
 
 tools: $(ASPATCH) $(SOTNDISK)
+format:
+	clang-format -i $$(find $(SRC_DIR)/ -type f -name "*.c")
+	clang-format -i $$(find $(INCLUDE_DIR)/ -type f -name "*.h")
 
 diff_%:
 	$(XXD) $(BUILD_DIR)/$*.bin > $(BUILD_DIR)/$*.bin.xxd

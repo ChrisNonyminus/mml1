@@ -19,6 +19,8 @@ def patch_asm(asm):
 def main():
     asm = sys.stdin.read()
     print(patch_asm(asm))
+    f = open("build/test.s", "w")
+    f.write(patch_asm(asm))
 
 if __name__ == "__main__":
     main()

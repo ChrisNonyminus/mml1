@@ -6,3 +6,4 @@ asm/
 assets/
 logs/
 ctx.c
+.vscode/settings.json

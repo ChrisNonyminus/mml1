@@ -9,4 +9,3 @@ unknown_t Obj_work_flag_change(unknown_t, unknown_t);
 #define WORK_KILL 0x80
 
 #endif
-
