@@ -8,6 +8,10 @@ s32 Sub_screen_basic_param_set();                     /* 0x80061E0C */
 typedef struct SUB_SCREEN_WORK {
     s8 routine_0, routine_1;
     s16 routine_2;
+    u8 x4 [0x8 - 0x4];
+    u16 x8;
+    u8 rb_parts_no_2;
+    u8 weapon_no;
 } SUB_SCREEN_WORK;
 extern void (*D_8008DBB0[])(SUB_SCREEN_WORK*); // sub_scrn.c function/routine pointer table I think
 
@@ -20,5 +24,6 @@ unknown_t func_800605DC();
 unknown_t func_80060248(SUB_SCREEN_WORK*);
 s32 func_800600CC(SUB_SCREEN_WORK*);
 void Sub_screen_shift_check(SUB_SCREEN_WORK*);
+unknown_t func_80060DB8(SUB_SCREEN_WORK*);
 
 #endif

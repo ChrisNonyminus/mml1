@@ -4,6 +4,10 @@
 #include "rock_neo/moji.h"
 #include "rock_neo/cd.h"
 #include "rock_neo/game.h"
+#include "rock_neo/player.h"
+#include "rock_neo/obj.h"
+#include "rock_neo/sound.h"
+#include "rock_neo/joy.h"
 
 #ifdef TEMP
 INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/sub_scrn", func_8005EC34);
@@ -120,9 +124,55 @@ INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/sub_scrn", func_80060B00);
 
 INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/sub_scrn", func_80060C70);
 
+#if 0
 INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/sub_scrn", func_80060DB8);
+#else
+unknown_t func_80060DB8(SUB_SCREEN_WORK* subp) {
+    PL_WORK* pp = &Player_work;
+    
+    if (
+        ((subp->weapon_no != pp->weapon_right_no)
+        || (subp->x8 != *(u16*)&pp->rb_parts_equip_data[0]))
+        || (subp->rb_parts_no_2 != pp->rb_parts_equip_data[2])
+        ) {
+        
+		Pl00_shot_enable_off( pp );
+		Pl00_shot_enable_on( pp );
 
+		if( subp->weapon_no != pp->weapon_right_no )
+			Obj_work_flag_change( WORK_PL_SHL, WORK_KILL );
+
+    pp->x110 = 0;
+    
+	}
+	return( 1 );
+}
+#endif
+
+#if 0
 INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/sub_scrn", Sub_screen_cancel_check);
+#else
+s32	Sub_screen_cancel_check( void )
+{
+	u32	joy_trg;
+
+	// joy_trg = Joy1.trg;
+    joy_trg = D_800C0C2A;
+
+	//if( (joy_trg & (JOY_CANCEL | JOY_ST)) ){
+    if ((joy_trg & 0x1008) != 0) {
+		Sound_call( SE_CANCEL, 1, 0 );
+
+		MojiTaskKill();
+		Game_logo_kill( -1 );
+		Cd_read_comb( EXIT_SUB_BIN );
+
+		return( 1 );
+	} else {
+		return( 0 );
+	}
+}
+#endif
 
 INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/sub_scrn", Sub_screen_shift_check);
 
