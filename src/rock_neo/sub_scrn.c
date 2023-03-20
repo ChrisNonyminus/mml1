@@ -345,11 +345,65 @@ void Sub_screen_rb_parts_set(void) {
     if (pp->weapon_data[1].repeat_level > 0x07)
         pp->weapon_data[1].repeat_level = 0x07;
 }
+
 // clang-format off
 
+#ifdef OG_COMPILER
+void Sub_screen_rb_parts_calc(SUB_SCREEN_WORK* subp) {
+    s32 d0, d1, d2;
 
+    PL_WORK* pp;
 
+    pp = &Player_work;
+
+    if (Sce_flag_test(PL_KEY_ITEM_06))
+        d0 = 3;
+    else
+        d0 = 2;
+
+    subp->attack_end_0 = subp->attack_end_1 = 0x00;
+    subp->bullet_end_0 = subp->bullet_end_1 = 0x00;
+    subp->dist_end_0 = subp->dist_end_1 = 0x00;
+    subp->repeat_end_0 = subp->repeat_end_1 = 0x00;
+
+    if (Moji_flag & MOJI_TASK0_ON) {
+        for (d1 = 0; d1 < d0; d1++) {
+            if (!(d2 = pp->rb_parts_equip_data[d1]))
+                continue;
+            Sub_screen_rb_parts_calc_sub00(subp, d2 - 1);
+            Sub_screen_rb_parts_calc_sub01(subp, d2 - 1);
+        }
+    } else {
+        if (Moji_flag3 & MOJI3_PARTS_TASK) {
+            for (d1 = 0; d1 < d0; d1++) {
+                if ((d2 = pp->rb_parts_equip_data[d1]))
+                    Sub_screen_rb_parts_calc_sub00(subp, d2 - 1);
+
+                if (d1 == GET_SELECT_NO(1))
+                    continue;
+                if (d2)
+                    Sub_screen_rb_parts_calc_sub01(subp, d2 - 1);
+            }
+        } else {
+            for (d1 = 0; d1 < d0; d1++) {
+                //				if( (d1 != GET_SELECT_NO(1)) &&
+                //										(d2 =
+                // pp->rb_parts_equip_data[d1])
+                //)
+                if ((d2 = pp->rb_parts_equip_data[d1]))
+                    Sub_screen_rb_parts_calc_sub00(subp, d2 - 1);
+
+                if (d1 == GET_SELECT_NO(1))
+                    d2 = GET_PARTS_NO(1);
+                if (d2)
+                    Sub_screen_rb_parts_calc_sub01(subp, d2 - 1);
+            }
+        }
+    }
+}
+#else
 INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/sub_scrn", Sub_screen_rb_parts_calc);
+#endif
 
 INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/sub_scrn", Sub_screen_rb_parts_calc_sub00);
 

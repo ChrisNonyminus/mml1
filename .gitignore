@@ -7,3 +7,4 @@ assets/
 logs/
 ctx.c
 .vscode/settings.json
+__pycache__/

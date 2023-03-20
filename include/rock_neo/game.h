@@ -5,4 +5,13 @@
 
 void Game_logo_kill(unknown_t);
 
+typedef struct GAME_WORK {
+    u8 x0[0x50];
+    s8 stage_no, area_no;
+} GAME_WORK;
+
+extern GAME_WORK Game_work;
+
+extern void (*Game_main_tbl[])(GAME_WORK*);
+
 #endif

@@ -13,6 +13,14 @@ typedef struct SUB_SCREEN_WORK {
     u16 x8;
     u8 rb_parts_no_2;
     u8 weapon_no;
+    u8 xC[0xC + 5 - 0xC];
+    u8 attack_end_0, x12, x13, attack_end_1;
+    u8 x15[4];
+    u8 bullet_end_0, x1A, x1B, bullet_end_1;
+    u8 x1D[4];
+    u8 dist_end_0, x22, x23, dist_end_1;
+    u8 x25[4];
+    u8 repeat_end_0, x29, x2A, repeat_end_1;
 } SUB_SCREEN_WORK;
 extern void (*D_8008DBB0[])(
     SUB_SCREEN_WORK*); // sub_scrn.c function/routine pointer table I think

@@ -5,17 +5,6 @@ main = 0x80011C90;
 idk_Init_system_maybe = 0x80011F04;
 vsync_cb = 0x800123FC;
 
-PadChkVsync = 0x800153CC;
-PadStartCom = 0x800153EC;
-PadStopCom = 0x8001540C;
-PadChkMtap = 0x8001542C;
-PadGetState = 0x80015478;
-PadInfoMode = 0x80015538;
-PadInfoAct = 0x80015630;
-PadInfoComb = 0x80015704;
-PadSetActAlign = 0x800157AC;
-PadSetMainMode = 0x800157E4;
-PadSetAct = 0x8001582C;
 
 
 
@@ -428,3 +417,9 @@ func_8002BD48 = 0x8002BD48;
 func_8002D9A0 = 0x8002D9A0;
 
 Rock_buster_parts_tbl = 0x8008FE64;
+Game_work = 0x800C1B10;
+
+Code800133D8_work = 0x80098AA8;
+Code800133D8_main_tbl = 0x80080950;
+
+Game_main_tbl = 0x80082114;
