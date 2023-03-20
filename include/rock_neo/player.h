@@ -31,4 +31,12 @@ unknown_t Pl00_shot_enable_on(PL_WORK*);
 
 #define PL_KEY_ITEM_06 0x526
 
+typedef struct _unkstruc_800C3558 {
+    u8 x0[0x15];
+    s8 x15;
+    u8 x16, x17;
+} _unkstruc_800C3558;
+unknown_t func_80015EE8(PL_WORK*, _unkstruc_800C3558*, unknown_t);
+extern _unkstruc_800C3558 D_800C3558;
+
 #endif

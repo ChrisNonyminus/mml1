@@ -12,11 +12,57 @@
 
 // clang-format off
 
-INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/game", func_800155A4);
+// clang-format on
+void func_800155A4(void) {
+    GAME_WORK* gp;
 
+    gp = &Game_work;
+
+    *(s8*)0x1F800001 = 2; // TODO: make variable mapped to this address
+    *(s32*)&gp->routine_0 = 0;
+    while (1) {
+        Game_main_tbl[gp->routine_0](gp);
+        func_80031AA4();
+        func_80016BC0();
+        func_80016BF4();
+        func_80012E98(1);
+    }
+}
+// clang-format off
+
+// https://decomp.me/scratch/OFeoF
 INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/game", func_80015634);
 
-INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/game", func_80015734);
+// clang-format on
+void func_80015734(GAME_WORK* gw) {
+    _unkstruc_800C3558* temp_v1 = &D_800C3558;
+
+    switch (gw->x1) {
+    case 0:
+        func_8001DA8C(0x527);
+        if (!((u8)gw->x82 & 1) && (gw->x54[7] == 0)) {
+            func_8001DA8C(0x510);
+            func_8001DA8C(0x522);
+            func_8001DA8C(0x446);
+            func_8001DA8C(0x448);
+        }
+        break;
+    case 1:
+        func_80016D64();
+        break;
+    }
+    if (temp_v1->x15 == 0) {
+        gw->stage_no = temp_v1->x16;
+        gw->area_no = temp_v1->x17;
+        gw->x52 = gw->x53;
+        func_80015EE8(&Player_work, temp_v1, 1);
+    }
+    func_8001F23C();
+    gw->routine_0 = 2; // queue up next routine
+    gw->x1 = 1;
+    gw->x82 = (u8)gw->x82 & 0xFE;
+}
+// clang-format off
 
 INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/game", func_80015840);
 
