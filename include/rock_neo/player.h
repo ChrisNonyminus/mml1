@@ -3,12 +3,14 @@
 
 #include "rock_neo.h"
 
-typedef struct BUSTER_PART {
+typedef struct WPN_DATA {
     s8 attack_level;
-    s8 x0[0x7];
-} BUSTER_PART;
+    s8 bullet_level;
+    s8 dist_level;
+    s8 unk[0x5];
+} WPN_DATA;
 
-extern BUSTER_PART Rock_buster_parts_tbl[];
+extern WPN_DATA Rock_buster_parts_tbl[];
 
 typedef struct PL_WORK {
     u8 x0[0x110];

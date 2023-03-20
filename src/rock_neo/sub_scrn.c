@@ -228,9 +228,53 @@ void Sub_screen_sort_attack(void) {
 // clang-format off
 #endif
 
+#if 0
 INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/sub_scrn", Sub_screen_sort_energy);
+#else
+// clang-format on
+void Sub_screen_sort_energy(void) {
+    s32 d0, d1;
+    u8 sort_src, sort_dist;
 
-INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/sub_scrn", Sub_screen_sort_range);
+    PL_WORK* pp;
+
+    pp = &Player_work;
+
+    for (d0 = 0; d0 < 0x1f; d0++) {
+        for (d1 = 0; d1 < 0x1f - d0; d1++) {
+            if (!(sort_dist = pp->rb_parts_sort_data[d1 + 1]))
+                continue;
+            if ((!(sort_src = pp->rb_parts_sort_data[d1])) ||
+                (Rock_buster_parts_tbl[sort_src - 1].bullet_level <
+                 Rock_buster_parts_tbl[sort_dist - 1].bullet_level))
+                Sub_screen_sort_sub(pp, d1, d1 + 1);
+        }
+    }
+}
+// clang-format off
+
+#endif
+// clang-format on
+void Sub_screen_sort_range(void) {
+    s32 d0, d1;
+    u8 sort_src, sort_dist;
+
+    PL_WORK* pp;
+
+    pp = &Player_work;
+
+    for (d0 = 0; d0 < 0x1f; d0++) {
+        for (d1 = 0; d1 < 0x1f - d0; d1++) {
+            if (!(sort_dist = pp->rb_parts_sort_data[d1 + 1]))
+                continue;
+            if ((!(sort_src = pp->rb_parts_sort_data[d1])) ||
+                (Rock_buster_parts_tbl[sort_src - 1].dist_level <
+                 Rock_buster_parts_tbl[sort_dist - 1].dist_level))
+                Sub_screen_sort_sub(pp, d1, d1 + 1);
+        }
+    }
+}
+// clang-format off
 
 INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/sub_scrn", Sub_screen_sort_rapid);
 
