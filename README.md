@@ -10,7 +10,7 @@ Contributions and help are more than appreciated!
 # Prequisites
 - A Debian-based Linux distro. Arch-based distros and Gentoo *might* work, but I'm not positive.
 - mipsel-linux-gnu toolchain
-- [https://github.com/Lameguy64/mkpsxiso](mkpsxiso) (install the latest deb artifact from the latest commit action)
+- [mkpsxiso]([mkpsxiso](https://github.com/Lameguy64/mkpsxiso)) (install the latest deb artifact from the latest commit action)
 - python3 (see https://github.com/ethteck/splat for pip package requirements)
 
 # BUILDING
