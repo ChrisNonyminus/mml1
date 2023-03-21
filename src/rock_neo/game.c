@@ -172,15 +172,26 @@ void func_80016BF4(void) {
         }
     }
 }
+void func_80016D0C(GAME_WORK* arg0) {
+    if (D_80098A72 == 0) {
+        arg0->x1++;
+    }
+}
+void func_80016D38(GAME_WORK* arg0) { // lol, duplicate function
+    if (D_80098A72 == 0) {
+        arg0->x1++;
+    }
+}
+s32 func_80016D64(void) {
+    while (D_80098788)
+        func_80012E98(1);
+    return func_8001B314();
+}
 // clang-format off
 
 
 
-INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/game", func_80016D0C);
 
-INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/game", func_80016D38);
-
-INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/game", func_80016D64);
 
 INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/game", func_80016DAC);
 

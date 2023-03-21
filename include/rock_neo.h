@@ -30,6 +30,8 @@ unknown_t func_80063BA8();
 unknown_t func_800665E8();
 extern u16 D_80098910;
 extern s16 D_80098A70;
+extern s16 D_80098A72;
+extern u8 D_80098788;
 
 #define GET_PARTS_NO(x) ((u8*)&Moji_flag3)[x]
 #define GET_SELECT_NO(x) ((u8*)&D_80098B2C)[x]
