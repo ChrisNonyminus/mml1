@@ -18,7 +18,7 @@ Contributions and help are more than appreciated!
 - run ``make extract_disk``
 - run ``make split_all``
 - run ``make``
-- To make a new disk, run ``make disk``.
+- To make a new disk image of the game, run ``make disk``.
 
 # Useful make phonies
 - ``make format`` runs clang-format on all c code.
