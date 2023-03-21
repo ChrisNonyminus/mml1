@@ -191,12 +191,12 @@ format:
 
 diff_%:
 	$(XXD) $(BUILD_DIR)/$*.bin > $(BUILD_DIR)/$*.bin.xxd
-	$(XXD) disks/$(VERSION)/cddata/dat/$*.bin > $(BUILD_DIR)/$*.bin.good.xxd
+	$(XXD) disks/$(VERSION)/CDDATA/DAT/$(call UC,$*).BIN > $(BUILD_DIR)/$*.bin.good.xxd
 	$(DIFF) $(BUILD_DIR)/$*.bin.xxd $(BUILD_DIR)/$*.bin.good.xxd > $(BUILD_DIR)/$*.diff
 
 diff_rock_neo:
 	$(XXD) $(BUILD_DIR)/rock_neo.exe > $(BUILD_DIR)/rock_neo.bin.xxd
-	$(XXD) disks/$(VERSION)/rock_neo.exe > $(BUILD_DIR)/rock_neo.bin.good.xxd
+	$(XXD) disks/$(VERSION)/ROCK_NEO.EXE > $(BUILD_DIR)/rock_neo.bin.good.xxd
 	$(DIFF) $(BUILD_DIR)/rock_neo.bin.xxd $(BUILD_DIR)/rock_neo.bin.good.xxd > $(BUILD_DIR)/rock_neo.diff
 
 diff_main:

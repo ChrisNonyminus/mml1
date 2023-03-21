@@ -2,7 +2,7 @@ options:
   platform: psx
   basename: gauge
   base_path: ../
-  target_path: ./disks/us/cddata/dat/gauge.bin
+  target_path: ./disks/us/CDDATA/DAT/GAUGE.BIN
   asm_path: asm/gauge
   asset_path: assets/gauge
   src_path: src/gauge

@@ -2,7 +2,7 @@ options:
   platform: psx
   basename: st12
   base_path: ../
-  target_path: ./disks/us/cddata/dat/st12.bin
+  target_path: ./disks/us/CDDATA/DAT/ST12.BIN
   asm_path: asm/st12
   asset_path: assets/st12
   src_path: src/st12

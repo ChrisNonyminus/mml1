@@ -2,7 +2,7 @@ options:
   platform: psx
   basename: st06_02c
   base_path: ../
-  target_path: ./disks/us/cddata/dat/st06_02c.bin
+  target_path: ./disks/us/CDDATA/DAT/ST06_02C.BIN
   asm_path: asm/st06_02c
   asset_path: assets/st06_02c
   src_path: src/st06_02c

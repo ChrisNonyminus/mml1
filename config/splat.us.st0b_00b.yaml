@@ -2,7 +2,7 @@ options:
   platform: psx
   basename: st0b_00b
   base_path: ../
-  target_path: ./disks/us/cddata/dat/st0b_00b.bin
+  target_path: ./disks/us/CDDATA/DAT/ST0B_00B.BIN
   asm_path: asm/st0b_00b
   asset_path: assets/st0b_00b
   src_path: src/st0b_00b

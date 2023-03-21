@@ -2,7 +2,7 @@ options:
   platform: psx
   basename: arm12r
   base_path: ../
-  target_path: ./disks/us/cddata/dat/arm12r.bin
+  target_path: ./disks/us/CDDATA/DAT/ARM12R.BIN
   asm_path: asm/arm12r
   asset_path: assets/arm12r
   src_path: src/arm12r

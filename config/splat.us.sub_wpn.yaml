@@ -2,7 +2,7 @@ options:
   platform: psx
   basename: sub_wpn
   base_path: ../
-  target_path: ./disks/us/cddata/dat/sub_wpn.bin
+  target_path: ./disks/us/CDDATA/DAT/SUB_WPN.BIN
   asm_path: asm/sub_wpn
   asset_path: assets/sub_wpn
   src_path: src/sub_wpn

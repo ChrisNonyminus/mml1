@@ -2,7 +2,7 @@ options:
   platform: psx
   basename: st14_00b
   base_path: ../
-  target_path: ./disks/us/cddata/dat/st14_00b.bin
+  target_path: ./disks/us/CDDATA/DAT/ST14_00B.BIN
   asm_path: asm/st14_00b
   asset_path: assets/st14_00b
   src_path: src/st14_00b

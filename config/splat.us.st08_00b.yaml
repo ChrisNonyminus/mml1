@@ -2,7 +2,7 @@ options:
   platform: psx
   basename: st08_00b
   base_path: ../
-  target_path: ./disks/us/cddata/dat/st08_00b.bin
+  target_path: ./disks/us/CDDATA/DAT/ST08_00B.BIN
   asm_path: asm/st08_00b
   asset_path: assets/st08_00b
   src_path: src/st08_00b

@@ -2,7 +2,7 @@ options:
   platform: psx
   basename: st1a_02d
   base_path: ../
-  target_path: ./disks/us/cddata/dat/st1a_02d.bin
+  target_path: ./disks/us/CDDATA/DAT/ST1A_02D.BIN
   asm_path: asm/st1a_02d
   asset_path: assets/st1a_02d
   src_path: src/st1a_02d

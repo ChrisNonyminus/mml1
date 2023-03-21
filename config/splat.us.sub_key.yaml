@@ -2,7 +2,7 @@ options:
   platform: psx
   basename: sub_key
   base_path: ../
-  target_path: ./disks/us/cddata/dat/sub_key.bin
+  target_path: ./disks/us/CDDATA/DAT/SUB_KEY.BIN
   asm_path: asm/sub_key
   asset_path: assets/sub_key
   src_path: src/sub_key

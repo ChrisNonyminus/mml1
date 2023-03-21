@@ -2,7 +2,7 @@ options:
   platform: psx
   basename: leg01
   base_path: ../
-  target_path: ./disks/us/cddata/dat/leg01.bin
+  target_path: ./disks/us/CDDATA/DAT/LEG01.BIN
   asm_path: asm/leg01
   asset_path: assets/leg01
   src_path: src/leg01

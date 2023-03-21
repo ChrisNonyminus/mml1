@@ -2,7 +2,7 @@ options:
   platform: psx
   basename: arm00l
   base_path: ../
-  target_path: ./disks/us/cddata/dat/arm00l.bin
+  target_path: ./disks/us/CDDATA/DAT/ARM00L.BIN
   asm_path: asm/arm00l
   asset_path: assets/arm00l
   src_path: src/arm00l

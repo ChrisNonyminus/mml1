@@ -2,7 +2,7 @@ options:
   platform: psx
   basename: arm09r
   base_path: ../
-  target_path: ./disks/us/cddata/dat/arm09r.bin
+  target_path: ./disks/us/CDDATA/DAT/ARM09R.BIN
   asm_path: asm/arm09r
   asset_path: assets/arm09r
   src_path: src/arm09r

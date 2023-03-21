@@ -2,7 +2,7 @@ options:
   platform: psx
   basename: support2
   base_path: ../
-  target_path: ./disks/us/cddata/dat/support2.bin
+  target_path: ./disks/us/CDDATA/DAT/SUPPORT2.BIN
   asm_path: asm/support2
   asset_path: assets/support2
   src_path: src/support2

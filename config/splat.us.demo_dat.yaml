@@ -2,7 +2,7 @@ options:
   platform: psx
   basename: demo_dat
   base_path: ../
-  target_path: ./disks/us/cddata/dat/demo_dat.bin
+  target_path: ./disks/us/CDDATA/DAT/DEMO_DAT.BIN
   asm_path: asm/demo_dat
   asset_path: assets/demo_dat
   src_path: src/demo_dat

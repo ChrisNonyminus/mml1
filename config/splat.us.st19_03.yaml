@@ -2,7 +2,7 @@ options:
   platform: psx
   basename: st19_03
   base_path: ../
-  target_path: ./disks/us/cddata/dat/st19_03.bin
+  target_path: ./disks/us/CDDATA/DAT/ST19_03.BIN
   asm_path: asm/st19_03
   asset_path: assets/st19_03
   src_path: src/st19_03

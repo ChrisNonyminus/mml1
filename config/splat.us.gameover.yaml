@@ -2,7 +2,7 @@ options:
   platform: psx
   basename: gameover
   base_path: ../
-  target_path: ./disks/us/cddata/dat/gameover.bin
+  target_path: ./disks/us/CDDATA/DAT/GAMEOVER.BIN
   asm_path: asm/gameover
   asset_path: assets/gameover
   src_path: src/gameover

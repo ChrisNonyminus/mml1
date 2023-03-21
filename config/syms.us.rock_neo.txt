@@ -118,36 +118,6 @@ MojiTaskKill = 0x80053A30;
 
 
 
-CdStatus = 0x8005D94C;
-CdMode = 0x8005D95C;
-CdLastCom = 0x8005D96C;
-CdLastPos = 0x8005D97C;
-CdReset = 0x8005D988;
-CdFlush = 0x8005D9F4;
-CdSetDebug = 0x8005DA14;
-CdComstr = 0x8005DA28;
-CdIntstr = 0x8005DA5C;
-CdSync = 0x8005DA90;
-CdReady = 0x8005DAB0;
-CdSyncCallback = 0x8005DAD0;
-CdReadyCallback = 0x8005DAE4;
-CdControl = 0x8005DAF8;
-CdControlF = 0x8005DC34;
-CdControlB = 0x8005DD68;
-CdMix = 0x8005DEB4;
-CdGetSector = 0x8005DED4;
-CdGetSector2 = 0x8005DEF4;
-CdDataCallback = 0x8005DF14;
-CdDataSync = 0x8005DF38;
-CdIntToPos = 0x8005DF58;
-CdPosToInt = 0x8005E05C;
-
-
-
-
-
-
-
 Sub_screen_cancel_check = 0x80060E64;
 Sub_screen_shift_check = 0x80060EC0;
 Sub_screen_sort_attack = 0x80060F84;

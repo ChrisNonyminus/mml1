@@ -2,7 +2,7 @@ options:
   platform: psx
   basename: st16_00
   base_path: ../
-  target_path: ./disks/us/cddata/dat/st16_00.bin
+  target_path: ./disks/us/CDDATA/DAT/ST16_00.BIN
   asm_path: asm/st16_00
   asset_path: assets/st16_00
   src_path: src/st16_00

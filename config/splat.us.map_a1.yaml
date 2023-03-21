@@ -2,7 +2,7 @@ options:
   platform: psx
   basename: map_a1
   base_path: ../
-  target_path: ./disks/us/cddata/dat/map_a1.bin
+  target_path: ./disks/us/CDDATA/DAT/MAP_A1.BIN
   asm_path: asm/map_a1
   asset_path: assets/map_a1
   src_path: src/map_a1

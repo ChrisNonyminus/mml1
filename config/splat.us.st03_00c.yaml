@@ -2,7 +2,7 @@ options:
   platform: psx
   basename: st03_00c
   base_path: ../
-  target_path: ./disks/us/cddata/dat/st03_00c.bin
+  target_path: ./disks/us/CDDATA/DAT/ST03_00C.BIN
   asm_path: asm/st03_00c
   asset_path: assets/st03_00c
   src_path: src/st03_00c

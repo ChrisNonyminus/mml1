@@ -2,7 +2,7 @@ options:
   platform: psx
   basename: kaifont
   base_path: ../
-  target_path: ./disks/us/cddata/dat/kaifont.bin
+  target_path: ./disks/us/CDDATA/DAT/KAIFONT.BIN
   asm_path: asm/kaifont
   asset_path: assets/kaifont
   src_path: src/kaifont

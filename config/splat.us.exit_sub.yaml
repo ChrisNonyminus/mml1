@@ -2,7 +2,7 @@ options:
   platform: psx
   basename: exit_sub
   base_path: ../
-  target_path: ./disks/us/cddata/dat/exit_sub.bin
+  target_path: ./disks/us/CDDATA/DAT/EXIT_SUB.BIN
   asm_path: asm/exit_sub
   asset_path: assets/exit_sub
   src_path: src/exit_sub

@@ -2,7 +2,7 @@ options:
   platform: psx
   basename: map_b3
   base_path: ../
-  target_path: ./disks/us/cddata/dat/map_b3.bin
+  target_path: ./disks/us/CDDATA/DAT/MAP_B3.BIN
   asm_path: asm/map_b3
   asset_path: assets/map_b3
   src_path: src/map_b3

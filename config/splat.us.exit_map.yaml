@@ -2,7 +2,7 @@ options:
   platform: psx
   basename: exit_map
   base_path: ../
-  target_path: ./disks/us/cddata/dat/exit_map.bin
+  target_path: ./disks/us/CDDATA/DAT/EXIT_MAP.BIN
   asm_path: asm/exit_map
   asset_path: assets/exit_map
   src_path: src/exit_map

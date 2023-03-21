@@ -2,7 +2,7 @@ options:
   platform: psx
   basename: font
   base_path: ../
-  target_path: ./disks/us/cddata/dat/font.bin
+  target_path: ./disks/us/CDDATA/DAT/FONT.BIN
   asm_path: asm/font
   asset_path: assets/font
   src_path: src/font

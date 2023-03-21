@@ -2,7 +2,7 @@ options:
   platform: psx
   basename: rock_neo
   base_path: ../
-  target_path: disks/us/rock_neo.exe
+  target_path: disks/us/ROCK_NEO.EXE
   asm_path: asm/rock_neo
   asset_path: assets/rock_neo
   src_path: src/rock_neo

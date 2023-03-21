@@ -2,7 +2,7 @@ options:
   platform: psx
   basename: st0c
   base_path: ../
-  target_path: ./disks/us/cddata/dat/st0c.bin
+  target_path: ./disks/us/CDDATA/DAT/ST0C.BIN
   asm_path: asm/st0c
   asset_path: assets/st0c
   src_path: src/st0c

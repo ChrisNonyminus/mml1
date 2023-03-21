@@ -2,7 +2,7 @@ options:
   platform: psx
   basename: st0a
   base_path: ../
-  target_path: ./disks/us/cddata/dat/st0a.bin
+  target_path: ./disks/us/CDDATA/DAT/ST0A.BIN
   asm_path: asm/st0a
   asset_path: assets/st0a
   src_path: src/st0a

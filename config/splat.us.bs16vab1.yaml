@@ -2,7 +2,7 @@ options:
   platform: psx
   basename: bs16vab1
   base_path: ../
-  target_path: ./disks/us/cddata/dat/bs16vab1.bin
+  target_path: ./disks/us/CDDATA/DAT/BS16VAB1.BIN
   asm_path: asm/bs16vab1
   asset_path: assets/bs16vab1
   src_path: src/bs16vab1
