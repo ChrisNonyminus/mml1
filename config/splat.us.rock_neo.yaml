@@ -18,7 +18,6 @@ options:
     - ".rodata"
     - ".text"
     - ".data"
-  gp_value: 0x80097864
 
 segments:
   - [0x800, header]
