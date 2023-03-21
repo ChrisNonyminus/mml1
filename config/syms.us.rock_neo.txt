@@ -70,46 +70,6 @@ Pl00_shot_enable_on = 0x800423C8;
 
 
 
-PadChkVsync_0 = 0x8004493C;
-PadStartCom_0 = 0x8004495C;
-PadStopCom_0 = 0x8004497C;
-PadChkMtap_0 = 0x8004499C;
-PadGetState_0 = 0x800449E8;
-
-PadInfoMode_0 = 0x80044AA8;
-PadInfoAct_0 = 0x80044BA0;
-PadInfoComb_0 = 0x80044C74;
-PadSetActAlign_0 = 0x80044D1C;
-PadSetMainMode_0 = 0x80044D54;
-PadSetAct_0 = 0x80044D9C;
-
-
-
-
-PadChkVsync_1 = 0x80047BD8;
-PadStartCom_1 = 0x80047BF8;
-PadStopCom_1 = 0x80047C18;
-PadChkMtap_1 = 0x80047C38;
-PadGetState_1 = 0x80047C84;
-PadInfoMode_1 = 0x80047D44;
-PadInfoAct_1 = 0x80047E3C;
-PadInfoComb_1 = 0x80047F10;
-PadSetActAlign_1 = 0x80047FB8;
-PadSetMainMode_1 = 0x80047FF0;
-PadSetAct_1 = 0x80048038;
-PadChkVsync_2 = 0x800485C4;
-PadStartCom_2 = 0x800485E4;
-PadStopCom_2 = 0x80048604;
-PadChkMtap_2 = 0x80048624;
-PadGetState_2 = 0x80048670;
-PadInfoMode_2 = 0x80048730;
-PadInfoAct_2 = 0x80048828;
-PadInfoComb_2 = 0x800488FC;
-PadSetActAlign_2 = 0x800489A4;
-PadSetMainMode_2 = 0x800489DC;
-
-PadSetAct_2 = 0x80048A24;
-
 
 
 
@@ -405,3 +365,4 @@ Sce_flag = 0x800BE378;
 Moji_work = 0x800BB6B8;
 
 Debug_work = 0x800C4C10;
+Scene_work = 0x800C4C48;
