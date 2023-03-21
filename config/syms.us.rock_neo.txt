@@ -403,3 +403,5 @@ unknown_Cd_strucptr = 0x800989A4;
 Sce_flag = 0x800BE378;
 
 Moji_work = 0x800BB6B8;
+
+Debug_work = 0x800C4C10;
