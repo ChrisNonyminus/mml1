@@ -334,7 +334,8 @@ Map_screen_work = 0x800987F0;
 idk_framecounter_maybe = 0x80098888;
 Moji_flag = 0x80098A58;
 Moji_flag3 = 0x80098B30;
-Player_work = 0x800B51B0;
+Player_work = 0x800B51B0; // type:symbol size:0x5F4
+Player_work2 = 0x800B57A4; // type:symbol size:0x5F4
 
 
 func_80023728 = 0x80023728;
@@ -347,9 +348,9 @@ func_8002BD48 = 0x8002BD48;
 func_8002D9A0 = 0x8002D9A0;
 
 Rock_buster_parts_tbl = 0x8008FE64;
-Game_work = 0x800C1B10;
+Game_work = 0x800C1B10; // type:symbol size:0x210
 
-Code800133D8_work = 0x80098AA8;
+Code800133D8_work = 0x80098AA8; // type:symbol size:0x10
 Code800133D8_main_tbl = 0x80080950;
 
 Game_main_tbl = 0x80082114;
@@ -362,7 +363,7 @@ unknown_Cd_strucptr = 0x800989A4;
 
 Sce_flag = 0x800BE378;
 
-Moji_work = 0x800BB6B8;
+Moji_work = 0x800BB6B8; // type:symbol size:784
 
-Debug_work = 0x800C4C10;
-Scene_work = 0x800C4C48;
+Debug_work = 0x800C4C10; // type:symbol size:0x38
+Scene_work = 0x800C4C48; // type:symbol size:0xA8

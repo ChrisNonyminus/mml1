@@ -67,12 +67,18 @@ define link
 	$(LD) -o $(2) \
 		-Map $(BUILD_DIR)/$(1).map \
 		-T $(1).ld \
-		-T $(CONFIG_DIR)/syms.$(VERSION).$(1).txt \
+		-T $(CONFIG_DIR)/generated.syms.$(VERSION).$(1).txt \
 		-T $(CONFIG_DIR)/undefined_syms_auto.$(VERSION).$(1).txt \
 		-T $(CONFIG_DIR)/undefined_funcs_auto.$(VERSION).$(1).txt \
 		--no-check-sections \
 		-nostdlib \
 		-s
+
+endef
+
+define copy_syms_txt
+
+	cpp $(1) > $(CONFIG_DIR)/generated.syms.$(VERSION).$(patsubst $(CONFIG_DIR)/syms.$(VERSION).%.txt,%,$(1)).txt
 
 endef
 
@@ -84,6 +90,7 @@ endef
 ALL_YAMLS := $(wildcard $(SPLATYAML_FOLDER)/splat.$(VERSION).*.yaml)
 ALL_BINARIES := $(patsubst $(SPLATYAML_FOLDER)/splat.$(VERSION).%.yaml,$(BUILD_DIR)/%.bin,$(ALL_YAMLS))
 ALL_MODULE_NAMES := $(patsubst $(SPLATYAML_FOLDER)/splat.$(VERSION).%.yaml,%,$(ALL_YAMLS))
+ALL_SYMBOL_LISTS := $(patsubst $(SPLATYAML_FOLDER)/splat.$(VERSION).%.yaml,$(CONFIG_DIR)/syms.$(VERSION).%.txt,$(ALL_YAMLS))
 
 default: all
 all: build check
@@ -97,8 +104,9 @@ logs:
 clean:
 	rm -rf $(BUILD_DIR) asm/ assets/ logs/
 
-debug_log_%: logs
-	@echo $(1) > logs/debug_$(1).log
+define debug_log
+	@echo $* > logs/debug_$*.log
+endef
 
 
 dosplit_%:
@@ -106,7 +114,9 @@ dosplit_%:
 
 split_all:
 	@mkdir -p logs/
+	@echo $(ALL_SYMBOL_LISTS) > logs/ALL_SYMBOL_LISTS.log
 	$(foreach yaml,$(ALL_YAMLS),$(call split_yaml,$(yaml)))
+	$(foreach yaml,$(ALL_SYMBOL_LISTS),$(call copy_syms_txt,$(yaml)))
 
 # make a sha1 file for each binary, and edit it so that the path in the sha1 points to the binary in the build dir
 define make_sha1_file
