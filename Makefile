@@ -42,6 +42,8 @@ GOPATH			:= $(HOME)/go
 ASPATCH			:= $(GOPATH)/bin/aspatch
 SOTNDISK		:= $(GOPATH)/bin/sotn-disk
 PYPATCHASM := $(TOOLS_DIR)/patchasm.py
+DUMPSXISO := dumpsxiso
+MKPSXISO := mkpsxiso
 
 DIFF := diff -u --color=never
 XXD := xxd -u -g 4
@@ -161,15 +163,17 @@ $(BUILD_DIR)/$(ROCK_NEO).elf: $(call list_o_files,$(ROCK_NEO))
 $(BUILD_DIR)/rock_neo.bin: rock_neo_build_dirs $(BUILD_DIR)/rock_neo.exe
 	rm -f $(BUILD_DIR)/rock_neo.bin
 
+UC = $(shell echo '$1' | tr '[:lower:]' '[:upper:]')
+
 extract_disk: $(SOTNDISK)
-	$(SOTNDISK) extract disks/mml1.$(VERSION).cue disks/$(VERSION)
+	$(DUMPSXISO) -x disks/$(VERSION) -s disks/mml1.$(VERSION).xml disks/mml1.$(VERSION).track1.bin 
 disk: build $(SOTNDISK)
 	mkdir -p $(DISK_DIR)
 	cp -r disks/$(VERSION)/* $(DISK_DIR)
 	cp $(BUILD_DIR)/$(MAIN).exe $(DISK_DIR)/SLUS_006.03
-	cp $(BUILD_DIR)/$(ROCK_NEO).exe $(DISK_DIR)/rock_neo.exe
-	$(foreach file,$(wildcard $(BUILD_DIR)/**.bin),cp $(file) $(DISK_DIR)/cddata/dat/$(notdir $(file));)
-	$(SOTNDISK) make build/mml1.$(VERSION).cue $(DISK_DIR) $(CONFIG_DIR)/disk.$(VERSION).lba
+	cp $(BUILD_DIR)/$(ROCK_NEO).exe $(DISK_DIR)/ROCK_NEO.EXE
+	$(foreach file,$(wildcard $(BUILD_DIR)/**.bin),cp $(file) $(DISK_DIR)/CDDATA/DAT/$(call UC,$(notdir $(file)));)
+	$(MKPSXISO) mml1.$(VERSION).xml
 
 $(GO):
 	curl -L -o go1.19.7.linux-amd64.tar.gz https://go.dev/dl/go1.19.7.linux-amd64.tar.gz
