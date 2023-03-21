@@ -367,3 +367,4 @@ Moji_work = 0x800BB6B8; // type:symbol size:784
 
 Debug_work = 0x800C4C10; // type:symbol size:0x38
 Scene_work = 0x800C4C48; // type:symbol size:0xA8
+

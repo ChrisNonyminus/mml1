@@ -296,7 +296,7 @@ void Sub_screen_sort_rapid(void) {
     }
 }
 
-void sub_screen_sort_sub(PL_WORK* pp, s32 d0, s32 d1) {
+void Sub_screen_sort_sub(PL_WORK* pp, s32 d0, s32 d1) {
     u8 sort_buff;
 
     sort_buff = pp->rb_parts_sort_data[d0];
