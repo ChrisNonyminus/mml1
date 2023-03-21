@@ -44,8 +44,9 @@ segments:
       - [0x4F434, c, sub_scrn]
       - [0x531E0, asm]
       - [0x587F8, asm, psxsdk/code]
-      - [0x70EC4, data, sdata]
-      - [0x80788, data, psxsdk/sdata]
-      - [0x88064, data, gpdata]
-      - [0x93A48, data, psxsdk/gpdata]
+      - [0x70EC4, data]
+      - [0x80064, sdata]
+      - [0x88958, sbss]
+      - [0x8B648, bss]
+      - [0xB5E88, bin] # heap?
   - [0xC9800]
