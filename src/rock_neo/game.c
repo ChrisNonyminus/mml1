@@ -10,6 +10,8 @@
 #include "rock_neo/sound.h"
 #include "rock_neo/sub_scrn.h"
 
+#include "rock_neo/Code800133D8.h"
+
 // clang-format off
 
 // clang-format on
@@ -132,6 +134,7 @@ void func_80016528(GAME_WORK* arg0) {
     }
     return;
 }
+
 // clang-format off
 
 INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/game", func_8001663C);
@@ -140,9 +143,38 @@ INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/game", func_80016798);
 
 INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/game", func_800169AC);
 
-INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/game", func_80016BC0);
+// clang-format on
+void func_80016BC0(void) {
+    if (++Game_work.time > 10799999u)
+        Game_work.time = 10799999u;
+}
 
-INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/game", func_80016BF4);
+void func_80016BF4(void) {
+    if (Game_work.routine_0 >= 3 && Game_work.routine_0 != 6 && !D_80098910) {
+        if ((D_800C0C26 & 9) == 9) {
+            if (Game_work.xA++ >= 61) {
+                *(s8*)0x1F800001 = 2;
+                MojiTaskKill();
+                func_80063BA8();
+                func_80063EF0();
+                func_800665E8();
+                func_8001B314();
+                func_8001B33C();
+                func_8001D494(0, 1, 0);
+                D_80098A70 = 0;
+                func_80017C30(8);
+                func_8001DCD0(0x1FEu);
+                Code800133D8_work.x0 = 1;
+                func_80012F78(func_80013420);
+            }
+        } else {
+            Game_work.xA = 0;
+        }
+    }
+}
+// clang-format off
+
+
 
 INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/game", func_80016D0C);
 

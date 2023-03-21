@@ -22,6 +22,14 @@ unknown_t func_8001B2F0(unknown_t);
 unknown_t func_8005DF3C();
 unknown_t func_8005DF4C();
 unknown_t func_80063EF0();
+unknown_t func_8001B314();
+unknown_t func_8001B33C();
+unknown_t func_8001D494(unknown_t, unknown_t, unknown_t);
+unknown_t func_8001DCD0(unknown_t);
+unknown_t func_80063BA8();
+unknown_t func_800665E8();
+extern u16 D_80098910;
+extern s16 D_80098A70;
 
 #define GET_PARTS_NO(x) ((u8*)&Moji_flag3)[x]
 #define GET_SELECT_NO(x) ((u8*)&D_80098B2C)[x]

@@ -9,7 +9,8 @@ typedef struct GAME_WORK {
     s8 routine_0;
     s8 x1;
     u8 x2[0x4 - 0x2];
-    s32 x4, x8;
+    s32 x4;
+    s16 x8, xA;
     s32 time;
     u8 x10[0x18 - 0x10];
     u16 difficultyUnlocked[2];
@@ -33,8 +34,8 @@ extern GAME_WORK Game_work;
 
 extern void (*Game_main_tbl[])(GAME_WORK*);
 
-unknown_t func_80016BC0();
-unknown_t func_80016BF4();
+void func_80016BC0();
+void func_80016BF4();
 
 void func_800155A4(void);
 

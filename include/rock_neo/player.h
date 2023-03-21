@@ -14,7 +14,9 @@ typedef struct WPN_DATA {
 extern WPN_DATA Rock_buster_parts_tbl[];
 
 typedef struct PL_WORK {
-    u8 x0[0xBD];
+    u8 x0[0x6E];
+    u16 life;
+    u8 x70[0xBD - 0x70];
     u8 xBD;
     u8 xBE[0x110 - 0xBE];
     s8 x110;

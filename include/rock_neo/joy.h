@@ -3,6 +3,7 @@
 
 #include "rock_neo.h"
 
+extern u16 D_800C0C26; // Joy1.???
 extern u16 D_800C0C2A; // Joy1.trg
 
 #define JOY_L1 0x400
