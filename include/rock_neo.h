@@ -3,6 +3,10 @@
 
 #include "common.h"
 
+#include "psxsdk/libapi.h"
+#include "psxsdk/libc.h"
+#include "psxsdk/libgpu.h"
+
 /* Symbols with unknown compile units */
 unknown_t func_8005382C(unknown_t, unknown_t, unknown_t);
 unknown_t func_80063FC0(unknown_t, unknown_t);

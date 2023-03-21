@@ -1,3 +1,5 @@
+#ifndef LIBAPI_H
+#define LIBAPI_H
 extern void InitHeap(unsigned long*, unsigned long);
 extern long Load(char*, struct EXEC*);
 extern long Exec(struct EXEC*, long, char**);
@@ -24,3 +26,5 @@ extern long OpenEvent(unsigned long, long, long, long (*func)());
 extern long EnableEvent(long);
 // ChangeClearRCnt
 extern void _96_remove(void);
+
+#endif

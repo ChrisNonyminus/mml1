@@ -1,3 +1,5 @@
+#ifndef PSXSDK_LIBC_H
+#define PSXSDK_LIBC_H
 extern void exit();
 extern void puts(char*);
 // setjmp
@@ -10,4 +12,6 @@ extern int rand(void);
 extern void srand(unsigned int);
 extern void* malloc(size_t);
 extern void free(void*);
-int printf(char*, ...)
+int printf(char*, ...);
+
+#endif
