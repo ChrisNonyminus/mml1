@@ -173,7 +173,7 @@ disk: build $(SOTNDISK)
 	cp $(BUILD_DIR)/$(MAIN).exe $(DISK_DIR)/SLUS_006.03
 	cp $(BUILD_DIR)/$(ROCK_NEO).exe $(DISK_DIR)/ROCK_NEO.EXE
 	$(foreach file,$(wildcard $(BUILD_DIR)/**.bin),cp $(file) $(DISK_DIR)/CDDATA/DAT/$(call UC,$(notdir $(file)));)
-	$(MKPSXISO) mml1.$(VERSION).xml
+	$(MKPSXISO) -y mml1.$(VERSION).xml
 
 $(GO):
 	curl -L -o go1.19.7.linux-amd64.tar.gz https://go.dev/dl/go1.19.7.linux-amd64.tar.gz
