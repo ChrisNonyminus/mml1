@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST0D_01.inbth10.TIM
+  base_path: ../
+  target_path: ./disks/us/CDDATA/DAT/ST0D_01.BIN
+  asm_path: asm/ST0D_01/inbth10.TIM
+  asset_path: assets/ST0D_01/inbth10.TIM
+  src_path: src/ST0D_01/inbth10.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/syms.us.ST0D_01/generated.inbth10.TIM.txt
+  undefined_funcs_auto_path: config/undefined_funcs_auto.us.ST0D_01/inbth10.TIM.txt
+  undefined_syms_auto_path: config/undefined_syms_auto.us.ST0D_01ST0D_01/inbth10.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\SCR\st0d\inbth10.TIM
+  - name: ST0D_01_inbth10_10_header
+    type: dashchunkheader
+    start: 0x00049000
+  - name: ST0D_01_inbth10_10
+    type: bin
+    start: 0x00049800
+  - [0x88A0]

@@ -1,0 +1,31 @@
+options:
+  platform: psx
+  basename: ST05_00E.ST05_00E.EBD
+  base_path: ../
+  target_path: ./disks/us/CDDATA/DAT/ST05_00E.BIN
+  asm_path: asm/ST05_00E/ST05_00E.EBD
+  asset_path: assets/ST05_00E/ST05_00E.EBD
+  src_path: src/ST05_00E/ST05_00E.EBD
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/syms.us.ST05_00E/generated.ST05_00E.EBD.txt
+  undefined_funcs_auto_path: config/undefined_funcs_auto.us.ST05_00E/ST05_00E.EBD.txt
+  undefined_syms_auto_path: config/undefined_syms_auto.us.ST05_00EST05_00E/ST05_00E.EBD.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\EMBIN\ST05_00E.EBD
+  - name: ST05_00E_ST05_00E_0_header
+    type: dashchunkheader
+    start: 0x00000000
+  - name: ST05_00E_ST05_00E_0
+    type: code
+    start: 0x00000800
+    vram: 0x8016C000
+    exclusive_ram_id: ST05_00E_ST05_00E_ram_0
+    subalign: 4
+    subsegments:
+      - [0x800, data, ST05_00E_0]
+  - [0x23E5C]

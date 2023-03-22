@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST0A_00C.st6_402c.TIM
+  base_path: ../
+  target_path: ./disks/us/CDDATA/DAT/ST0A_00C.BIN
+  asm_path: asm/ST0A_00C/st6_402c.TIM
+  asset_path: assets/ST0A_00C/st6_402c.TIM
+  src_path: src/ST0A_00C/st6_402c.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/syms.us.ST0A_00C/generated.st6_402c.TIM.txt
+  undefined_funcs_auto_path: config/undefined_funcs_auto.us.ST0A_00C/st6_402c.TIM.txt
+  undefined_syms_auto_path: config/undefined_syms_auto.us.ST0A_00CST0A_00C/st6_402c.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\SCR\st0a\st6_402c.TIM
+  - name: ST0A_00C_st6_402c_13_header
+    type: dashchunkheader
+    start: 0x00058000
+  - name: ST0A_00C_st6_402c_13
+    type: bin
+    start: 0x00058800
+  - [0x8920]

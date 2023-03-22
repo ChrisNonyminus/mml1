@@ -1,0 +1,31 @@
+options:
+  platform: psx
+  basename: ST10B.ST10_MAP.MDT
+  base_path: ../
+  target_path: ./disks/us/CDDATA/DAT/ST10B.BIN
+  asm_path: asm/ST10B/ST10_MAP.MDT
+  asset_path: assets/ST10B/ST10_MAP.MDT
+  src_path: src/ST10B/ST10_MAP.MDT
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/syms.us.ST10B/generated.ST10_MAP.MDT.txt
+  undefined_funcs_auto_path: config/undefined_funcs_auto.us.ST10B/ST10_MAP.MDT.txt
+  undefined_syms_auto_path: config/undefined_syms_auto.us.ST10BST10B/ST10_MAP.MDT.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\MAP\DATA\ST10_MAP.MDT
+  - name: ST10B_ST10_MAP_2_header
+    type: dashchunkheader
+    start: 0x00018800
+  - name: ST10B_ST10_MAP_2
+    type: code
+    start: 0x00019000
+    vram: 0x80164000
+    exclusive_ram_id: ST10B_ST10_MAP_ram_2
+    subalign: 4
+    subsegments:
+      - [0x19000, data, ST10_MAP_2]
+  - [0x3586]

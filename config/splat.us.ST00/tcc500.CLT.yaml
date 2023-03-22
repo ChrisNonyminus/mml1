@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST00.tcc500.CLT
+  base_path: ../
+  target_path: ./disks/us/CDDATA/DAT/ST00.BIN
+  asm_path: asm/ST00/tcc500.CLT
+  asset_path: assets/ST00/tcc500.CLT
+  src_path: src/ST00/tcc500.CLT
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/syms.us.ST00/generated.tcc500.CLT.txt
+  undefined_funcs_auto_path: config/undefined_funcs_auto.us.ST00/tcc500.CLT.txt
+  undefined_syms_auto_path: config/undefined_syms_auto.us.ST00ST00/tcc500.CLT.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\SCR\st00\tcc500.CLT
+  - name: ST00_tcc500_11_header
+    type: dashchunkheader
+    start: 0x00061800
+  - name: ST00_tcc500_11
+    type: bin
+    start: 0x00062000
+  - [0x900]

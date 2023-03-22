@@ -1,0 +1,31 @@
+options:
+  platform: psx
+  basename: ST16.ST16_MAP.IDX
+  base_path: ../
+  target_path: ./disks/us/CDDATA/DAT/ST16.BIN
+  asm_path: asm/ST16/ST16_MAP.IDX
+  asset_path: assets/ST16/ST16_MAP.IDX
+  src_path: src/ST16/ST16_MAP.IDX
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/syms.us.ST16/generated.ST16_MAP.IDX.txt
+  undefined_funcs_auto_path: config/undefined_funcs_auto.us.ST16/ST16_MAP.IDX.txt
+  undefined_syms_auto_path: config/undefined_syms_auto.us.ST16ST16/ST16_MAP.IDX.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\MAP\DATA\ST16_MAP.IDX
+  - name: ST16_ST16_MAP_1_header
+    type: dashchunkheader
+    start: 0x0000F000
+  - name: ST16_ST16_MAP_1
+    type: code
+    start: 0x0000F800
+    vram: 0x8015C000
+    exclusive_ram_id: ST16_ST16_MAP_ram_1
+    subalign: 4
+    subsegments:
+      - [0xF800, data, ST16_MAP_1]
+  - [0x2564]

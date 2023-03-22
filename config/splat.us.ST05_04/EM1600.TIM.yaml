@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST05_04.EM1600.TIM
+  base_path: ../
+  target_path: ./disks/us/CDDATA/DAT/ST05_04.BIN
+  asm_path: asm/ST05_04/EM1600.TIM
+  asset_path: assets/ST05_04/EM1600.TIM
+  src_path: src/ST05_04/EM1600.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/syms.us.ST05_04/generated.EM1600.TIM.txt
+  undefined_funcs_auto_path: config/undefined_funcs_auto.us.ST05_04/EM1600.TIM.txt
+  undefined_syms_auto_path: config/undefined_syms_auto.us.ST05_04ST05_04/EM1600.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\OBJ\ST05\AR04\EM1600.TIM
+  - name: ST05_04_EM1600_6_header
+    type: dashchunkheader
+    start: 0x00028800
+  - name: ST05_04_EM1600_6
+    type: bin
+    start: 0x00029000
+  - [0x3920]

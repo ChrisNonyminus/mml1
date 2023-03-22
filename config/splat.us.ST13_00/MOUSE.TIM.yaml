@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST13_00.MOUSE.TIM
+  base_path: ../
+  target_path: ./disks/us/CDDATA/DAT/ST13_00.BIN
+  asm_path: asm/ST13_00/MOUSE.TIM
+  asset_path: assets/ST13_00/MOUSE.TIM
+  src_path: src/ST13_00/MOUSE.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/syms.us.ST13_00/generated.MOUSE.TIM.txt
+  undefined_funcs_auto_path: config/undefined_funcs_auto.us.ST13_00/MOUSE.TIM.txt
+  undefined_syms_auto_path: config/undefined_syms_auto.us.ST13_00ST13_00/MOUSE.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\OBJ\ST13\AR00\MOUSE.TIM
+  - name: ST13_00_MOUSE_6_header
+    type: dashchunkheader
+    start: 0x0003D000
+  - name: ST13_00_MOUSE_6
+    type: bin
+    start: 0x0003D800
+  - [0x4920]

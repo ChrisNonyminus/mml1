@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST05_00B.GAITOU.TIM
+  base_path: ../
+  target_path: ./disks/us/CDDATA/DAT/ST05_00B.BIN
+  asm_path: asm/ST05_00B/GAITOU.TIM
+  asset_path: assets/ST05_00B/GAITOU.TIM
+  src_path: src/ST05_00B/GAITOU.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/syms.us.ST05_00B/generated.GAITOU.TIM.txt
+  undefined_funcs_auto_path: config/undefined_funcs_auto.us.ST05_00B/GAITOU.TIM.txt
+  undefined_syms_auto_path: config/undefined_syms_auto.us.ST05_00BST05_00B/GAITOU.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\OBJ\ST05\AR00B\GAITOU.TIM
+  - name: ST05_00B_GAITOU_6_header
+    type: dashchunkheader
+    start: 0x0003D000
+  - name: ST05_00B_GAITOU_6
+    type: bin
+    start: 0x0003D800
+  - [0x4920]

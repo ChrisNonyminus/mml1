@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST17C.infwl10.TIM
+  base_path: ../
+  target_path: ./disks/us/CDDATA/DAT/ST17C.BIN
+  asm_path: asm/ST17C/infwl10.TIM
+  asset_path: assets/ST17C/infwl10.TIM
+  src_path: src/ST17C/infwl10.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/syms.us.ST17C/generated.infwl10.TIM.txt
+  undefined_funcs_auto_path: config/undefined_funcs_auto.us.ST17C/infwl10.TIM.txt
+  undefined_syms_auto_path: config/undefined_syms_auto.us.ST17CST17C/infwl10.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\SCR\st17\infwl10.TIM
+  - name: ST17C_infwl10_4_header
+    type: dashchunkheader
+    start: 0x00035800
+  - name: ST17C_infwl10_4
+    type: bin
+    start: 0x00036000
+  - [0x8840]

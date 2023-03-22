@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: DEMO_DAT.KOUKA01.TIM
+  base_path: ../
+  target_path: ./disks/us/CDDATA/DAT/DEMO_DAT.BIN
+  asm_path: asm/DEMO_DAT/KOUKA01.TIM
+  asset_path: assets/DEMO_DAT/KOUKA01.TIM
+  src_path: src/DEMO_DAT/KOUKA01.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/syms.us.DEMO_DAT/generated.KOUKA01.TIM.txt
+  undefined_funcs_auto_path: config/undefined_funcs_auto.us.DEMO_DAT/KOUKA01.TIM.txt
+  undefined_syms_auto_path: config/undefined_syms_auto.us.DEMO_DATDEMO_DAT/KOUKA01.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\OBJ\COMM\KOUKA01.TIM
+  - name: DEMO_DAT_KOUKA01_4_header
+    type: dashchunkheader
+    start: 0x0001D000
+  - name: DEMO_DAT_KOUKA01_4
+    type: bin
+    start: 0x0001D800
+  - [0x8920]

@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST10_04.EM1500B.TIM
+  base_path: ../
+  target_path: ./disks/us/CDDATA/DAT/ST10_04.BIN
+  asm_path: asm/ST10_04/EM1500B.TIM
+  asset_path: assets/ST10_04/EM1500B.TIM
+  src_path: src/ST10_04/EM1500B.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/syms.us.ST10_04/generated.EM1500B.TIM.txt
+  undefined_funcs_auto_path: config/undefined_funcs_auto.us.ST10_04/EM1500B.TIM.txt
+  undefined_syms_auto_path: config/undefined_syms_auto.us.ST10_04ST10_04/EM1500B.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\OBJ\ST10\AR04\EM1500B.TIM
+  - name: ST10_04_EM1500B_1_header
+    type: dashchunkheader
+    start: 0x00010000
+  - name: ST10_04_EM1500B_1
+    type: bin
+    start: 0x00010800
+  - [0x4920]

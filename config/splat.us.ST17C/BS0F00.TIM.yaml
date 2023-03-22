@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST17C.BS0F00.TIM
+  base_path: ../
+  target_path: ./disks/us/CDDATA/DAT/ST17C.BIN
+  asm_path: asm/ST17C/BS0F00.TIM
+  asset_path: assets/ST17C/BS0F00.TIM
+  src_path: src/ST17C/BS0F00.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/syms.us.ST17C/generated.BS0F00.TIM.txt
+  undefined_funcs_auto_path: config/undefined_funcs_auto.us.ST17C/BS0F00.TIM.txt
+  undefined_syms_auto_path: config/undefined_syms_auto.us.ST17CST17C/BS0F00.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\OBJ\ST17\AR00\BS0F00.TIM
+  - name: ST17C_BS0F00_2_header
+    type: dashchunkheader
+    start: 0x00024800
+  - name: ST17C_BS0F00_2
+    type: bin
+    start: 0x00025000
+  - [0x8920]

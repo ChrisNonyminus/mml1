@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST04_00.EM1300b.TIM
+  base_path: ../
+  target_path: ./disks/us/CDDATA/DAT/ST04_00.BIN
+  asm_path: asm/ST04_00/EM1300b.TIM
+  asset_path: assets/ST04_00/EM1300b.TIM
+  src_path: src/ST04_00/EM1300b.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/syms.us.ST04_00/generated.EM1300b.TIM.txt
+  undefined_funcs_auto_path: config/undefined_funcs_auto.us.ST04_00/EM1300b.TIM.txt
+  undefined_syms_auto_path: config/undefined_syms_auto.us.ST04_00ST04_00/EM1300b.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\OBJ\ST04\AR00A\EM1300b.TIM
+  - name: ST04_00_EM1300b_6_header
+    type: dashchunkheader
+    start: 0x0003A800
+  - name: ST04_00_EM1300b_6
+    type: bin
+    start: 0x0003B000
+  - [0x4920]

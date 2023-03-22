@@ -13,19 +13,18 @@
 
 # This python script will scan a given folder for files that follow this format, and create yamls for splat, placed in the "config" folder and named splatconfig.us.{overlay file name}.yaml.
 
+import json
 import os
 import struct
 import yaml
 
 
 def align_up(val, align):
-    print (val, align)
     if (val % align) == 0:
         return val
     return (val + align - 1) & ~(align - 1)
 
 def get_chunks(file):
-    print(file)
     chunks = []
     with open(file, "rb") as f:
         offset = 0
@@ -40,37 +39,35 @@ def get_chunks(file):
             if chunk_size == 0:
                 offset += 0x800
                 continue
-            print (offset)
             chunk_name = chunk[0x40:0x60].split(b"\x00")[0].decode("ascii")
-            print(chunk_type, chunk_size, chunk_load_addr, chunk_name)
             chunks.append((chunk_type, chunk_size, chunk_load_addr, chunk_name, offset, os.path.getsize(file)))
             offset = align_up(offset + 0x800 + chunk_size, 0x800) if chunk_type != 1 else align_up(offset + chunk_size, 0x800)
     return chunks
 
+load_addresses = {}
 def get_yaml(file, chunks):
-    
     for i, chunk in enumerate(chunks):
         (chunk_type, chunk_size, chunk_load_addr, chunk_name, chunk_offset, fsize) = chunk
         chunk_id = chunk_name
-        if "/" in chunk_name:
-            chunk_id = chunk_name.split("/")[-1]
-        if "\\" in chunk_name:
-            chunk_id = chunk_name.split("\\")[-1]
-        if "." in chunk_name:
-            chunk_id = chunk_name.split(".")[0]
-        with open(f"config/splat.us.{file.replace('.BIN', '')}.{chunk_id}.yaml", "w") as f:
+        if "/" in chunk_id:
+            chunk_id = chunk_id.split("/")[-1]
+        if "\\" in chunk_id:
+            chunk_id = chunk_id.split("\\")[-1]
+        os.makedirs(f"config/splat.us.{file.replace('.BIN', '')}/", exist_ok= True)
+        with open(f"config/splat.us.{file.replace('.BIN', '')}/{chunk_id}.yaml", "w") as f:
             f.write(f"options:\n")
             f.write(f"  platform: psx\n")
-            f.write(f"  basename: {chunk_id}\n")
+            f.write(f"  basename: {file.replace('.BIN', '')}.{chunk_id}\n")
             f.write(f"  base_path: ../\n")
             f.write(f"  target_path: ./disks/us/CDDATA/DAT/{file}\n")
             f.write(f"  asm_path: asm/{file.replace('.BIN', '')}/{chunk_id}\n")
             f.write(f"  asset_path: assets/{file.replace('.BIN', '')}/{chunk_id}\n")
             f.write(f"  src_path: src/{file.replace('.BIN', '')}/{chunk_id}\n")
             f.write(f"  compiler: GCC\n")
-            f.write(f"  symbol_addrs_path: config/syms.us.{file.replace('.BIN', '')}.{chunk_id}.txt\n")
-            f.write(f"  undefined_funcs_auto_path: config/undefined_funcs_auto.us.{file.replace('.BIN', '')}.{chunk_id}.txt\n")
-            f.write(f"  undefined_syms_auto_path: config/undefined_syms_auto.us.{file.replace('.BIN', '')}{file.replace('.BIN', '')}.{chunk_id}.txt\n")
+            f.write(f"  extensions_path: tools/splat_ext\n")
+            f.write(f"  symbol_addrs_path: config/syms.us.{file.replace('.BIN', '')}/generated.{chunk_id}.txt\n")
+            f.write(f"  undefined_funcs_auto_path: config/undefined_funcs_auto.us.{file.replace('.BIN', '')}/{chunk_id}.txt\n")
+            f.write(f"  undefined_syms_auto_path: config/undefined_syms_auto.us.{file.replace('.BIN', '')}{file.replace('.BIN', '')}/{chunk_id}.txt\n")
             f.write(f"  find_file_boundaries: yes\n")
             f.write(f"  use_legacy_include_asm: no\n")
             f.write(f"  migrate_rodata_to_functions: no\n")
@@ -86,8 +83,10 @@ def get_yaml(file, chunks):
                 chunk_name = chunk_name.split(".")[0]
             
             if chunk_type == 0 and chunk_load_addr != 0:
+                if chunk_load_addr not in load_addresses:
+                    load_addresses[chunk_load_addr] = chunk_id
                 f.write(f"  - name: {file.replace('.BIN', '')}_{('ovl') if chunk_name == '' else chunk_name}_{i}_header\n")
-                f.write(f"    type: bin\n")
+                f.write(f"    type: dashchunkheader\n")
                 f.write(f"    start: 0x{chunk_offset:08X}\n")
                 f.write(f"  - name: {file.replace('.BIN', '')}_{('ovl') if chunk_name == '' else chunk_name}_{i}\n")
                 f.write(f"    type: code\n")
@@ -99,7 +98,7 @@ def get_yaml(file, chunks):
                 f.write(f"      - [0x{chunk_offset + 0x800:X}, data, {('ovl') if chunk_name == '' else chunk_name}_{i}]\n")
             else:
                 f.write(f"  - name: {file.replace('.BIN', '')}_{chunk_name}_{i}_header\n")
-                f.write(f"    type: bin\n")
+                f.write(f"    type: dashchunkheader\n")
                 f.write(f"    start: 0x{chunk_offset:08X}\n")
                 f.write(f"  - name: {file.replace('.BIN', '')}_{chunk_name}_{i}\n")
                 f.write(f"    type: bin\n")
@@ -115,4 +114,8 @@ if __name__ == "__main__":
         if file.endswith(".BIN"):
             chunks = get_chunks(os.path.join(sys.argv[1], file))
             get_yaml(file, chunks)
+    print("common_load_addresses_for_overlays = {")
+    for load in load_addresses:
+        print(f"\t0x{load:08X}: \"{load_addresses[load]}\"")
+    print("}")
 

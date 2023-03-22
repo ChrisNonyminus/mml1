@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST1A_02C.EM3000.TIM
+  base_path: ../
+  target_path: ./disks/us/CDDATA/DAT/ST1A_02C.BIN
+  asm_path: asm/ST1A_02C/EM3000.TIM
+  asset_path: assets/ST1A_02C/EM3000.TIM
+  src_path: src/ST1A_02C/EM3000.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/syms.us.ST1A_02C/generated.EM3000.TIM.txt
+  undefined_funcs_auto_path: config/undefined_funcs_auto.us.ST1A_02C/EM3000.TIM.txt
+  undefined_syms_auto_path: config/undefined_syms_auto.us.ST1A_02CST1A_02C/EM3000.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\OBJ\ST1A\AR02\EM3000.TIM
+  - name: ST1A_02C_EM3000_4_header
+    type: dashchunkheader
+    start: 0x00030000
+  - name: ST1A_02C_EM3000_4
+    type: bin
+    start: 0x00030800
+  - [0x2920]

@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST05_00H.EM4200.TIM
+  base_path: ../
+  target_path: ./disks/us/CDDATA/DAT/ST05_00H.BIN
+  asm_path: asm/ST05_00H/EM4200.TIM
+  asset_path: assets/ST05_00H/EM4200.TIM
+  src_path: src/ST05_00H/EM4200.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/syms.us.ST05_00H/generated.EM4200.TIM.txt
+  undefined_funcs_auto_path: config/undefined_funcs_auto.us.ST05_00H/EM4200.TIM.txt
+  undefined_syms_auto_path: config/undefined_syms_auto.us.ST05_00HST05_00H/EM4200.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\OBJ\ST05\AR00H\EM4200.TIM
+  - name: ST05_00H_EM4200_9_header
+    type: dashchunkheader
+    start: 0x00057000
+  - name: ST05_00H_EM4200_9
+    type: bin
+    start: 0x00057800
+  - [0x4920]

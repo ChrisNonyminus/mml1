@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST05_00.EM2400.TIM
+  base_path: ../
+  target_path: ./disks/us/CDDATA/DAT/ST05_00.BIN
+  asm_path: asm/ST05_00/EM2400.TIM
+  asset_path: assets/ST05_00/EM2400.TIM
+  src_path: src/ST05_00/EM2400.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/syms.us.ST05_00/generated.EM2400.TIM.txt
+  undefined_funcs_auto_path: config/undefined_funcs_auto.us.ST05_00/EM2400.TIM.txt
+  undefined_syms_auto_path: config/undefined_syms_auto.us.ST05_00ST05_00/EM2400.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\OBJ\ST05\AR00A\EM2400.TIM
+  - name: ST05_00_EM2400_7_header
+    type: dashchunkheader
+    start: 0x00044000
+  - name: ST05_00_EM2400_7
+    type: bin
+    start: 0x00044800
+  - [0x4920]

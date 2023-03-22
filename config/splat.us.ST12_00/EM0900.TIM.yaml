@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST12_00.EM0900.TIM
+  base_path: ../
+  target_path: ./disks/us/CDDATA/DAT/ST12_00.BIN
+  asm_path: asm/ST12_00/EM0900.TIM
+  asset_path: assets/ST12_00/EM0900.TIM
+  src_path: src/ST12_00/EM0900.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/syms.us.ST12_00/generated.EM0900.TIM.txt
+  undefined_funcs_auto_path: config/undefined_funcs_auto.us.ST12_00/EM0900.TIM.txt
+  undefined_syms_auto_path: config/undefined_syms_auto.us.ST12_00ST12_00/EM0900.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\OBJ\ST12\AR00\EM0900.TIM
+  - name: ST12_00_EM0900_2_header
+    type: dashchunkheader
+    start: 0x00024000
+  - name: ST12_00_EM0900_2
+    type: bin
+    start: 0x00024800
+  - [0x4920]

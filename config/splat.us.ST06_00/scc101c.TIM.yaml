@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST06_00.scc101c.TIM
+  base_path: ../
+  target_path: ./disks/us/CDDATA/DAT/ST06_00.BIN
+  asm_path: asm/ST06_00/scc101c.TIM
+  asset_path: assets/ST06_00/scc101c.TIM
+  src_path: src/ST06_00/scc101c.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/syms.us.ST06_00/generated.scc101c.TIM.txt
+  undefined_funcs_auto_path: config/undefined_funcs_auto.us.ST06_00/scc101c.TIM.txt
+  undefined_syms_auto_path: config/undefined_syms_auto.us.ST06_00ST06_00/scc101c.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\SCR\st06\scc101c.TIM
+  - name: ST06_00_scc101c_19_header
+    type: dashchunkheader
+    start: 0x00082800
+  - name: ST06_00_scc101c_19
+    type: bin
+    start: 0x00083000
+  - [0x8920]

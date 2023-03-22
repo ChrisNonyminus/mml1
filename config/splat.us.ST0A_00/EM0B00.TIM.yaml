@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST0A_00.EM0B00.TIM
+  base_path: ../
+  target_path: ./disks/us/CDDATA/DAT/ST0A_00.BIN
+  asm_path: asm/ST0A_00/EM0B00.TIM
+  asset_path: assets/ST0A_00/EM0B00.TIM
+  src_path: src/ST0A_00/EM0B00.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/syms.us.ST0A_00/generated.EM0B00.TIM.txt
+  undefined_funcs_auto_path: config/undefined_funcs_auto.us.ST0A_00/EM0B00.TIM.txt
+  undefined_syms_auto_path: config/undefined_syms_auto.us.ST0A_00ST0A_00/EM0B00.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\OBJ\ST0A\AR00A\EM0B00.TIM
+  - name: ST0A_00_EM0B00_3_header
+    type: dashchunkheader
+    start: 0x0002C000
+  - name: ST0A_00_EM0B00_3
+    type: bin
+    start: 0x0002C800
+  - [0x8920]

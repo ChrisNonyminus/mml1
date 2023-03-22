@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST04_01.injun10.TIM
+  base_path: ../
+  target_path: ./disks/us/CDDATA/DAT/ST04_01.BIN
+  asm_path: asm/ST04_01/injun10.TIM
+  asset_path: assets/ST04_01/injun10.TIM
+  src_path: src/ST04_01/injun10.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/syms.us.ST04_01/generated.injun10.TIM.txt
+  undefined_funcs_auto_path: config/undefined_funcs_auto.us.ST04_01/injun10.TIM.txt
+  undefined_syms_auto_path: config/undefined_syms_auto.us.ST04_01ST04_01/injun10.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\SCR\ST04\injun10.TIM
+  - name: ST04_01_injun10_9_header
+    type: dashchunkheader
+    start: 0x0003A800
+  - name: ST04_01_injun10_9
+    type: bin
+    start: 0x0003B000
+  - [0x88A0]

@@ -1,0 +1,31 @@
+options:
+  platform: psx
+  basename: LEG00.PL00F00P.PBD
+  base_path: ../
+  target_path: ./disks/us/CDDATA/DAT/LEG00.BIN
+  asm_path: asm/LEG00/PL00F00P.PBD
+  asset_path: assets/LEG00/PL00F00P.PBD
+  src_path: src/LEG00/PL00F00P.PBD
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/syms.us.LEG00/generated.PL00F00P.PBD.txt
+  undefined_funcs_auto_path: config/undefined_funcs_auto.us.LEG00/PL00F00P.PBD.txt
+  undefined_syms_auto_path: config/undefined_syms_auto.us.LEG00LEG00/PL00F00P.PBD.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\PLBIN\PL00F00P.PBD
+  - name: LEG00_PL00F00P_0_header
+    type: dashchunkheader
+    start: 0x00000000
+  - name: LEG00_PL00F00P_0
+    type: code
+    start: 0x00000800
+    vram: 0x800FF400
+    exclusive_ram_id: LEG00_PL00F00P_ram_0
+    subalign: 4
+    subsegments:
+      - [0x800, data, PL00F00P_0]
+  - [0x10F8]

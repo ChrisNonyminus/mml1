@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST16_00.EM0A00.TIM
+  base_path: ../
+  target_path: ./disks/us/CDDATA/DAT/ST16_00.BIN
+  asm_path: asm/ST16_00/EM0A00.TIM
+  asset_path: assets/ST16_00/EM0A00.TIM
+  src_path: src/ST16_00/EM0A00.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/syms.us.ST16_00/generated.EM0A00.TIM.txt
+  undefined_funcs_auto_path: config/undefined_funcs_auto.us.ST16_00/EM0A00.TIM.txt
+  undefined_syms_auto_path: config/undefined_syms_auto.us.ST16_00ST16_00/EM0A00.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\OBJ\ST16\AR00A\EM0A00.TIM
+  - name: ST16_00_EM0A00_3_header
+    type: dashchunkheader
+    start: 0x0001B800
+  - name: ST16_00_EM0A00_3
+    type: bin
+    start: 0x0001C000
+  - [0x8920]

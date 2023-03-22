@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST19.PL0000.TIM
+  base_path: ../
+  target_path: ./disks/us/CDDATA/DAT/ST19.BIN
+  asm_path: asm/ST19/PL0000.TIM
+  asset_path: assets/ST19/PL0000.TIM
+  src_path: src/ST19/PL0000.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/syms.us.ST19/generated.PL0000.TIM.txt
+  undefined_funcs_auto_path: config/undefined_funcs_auto.us.ST19/PL0000.TIM.txt
+  undefined_syms_auto_path: config/undefined_syms_auto.us.ST19ST19/PL0000.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\OBJ\COMM\PL0000.TIM
+  - name: ST19_PL0000_5_header
+    type: dashchunkheader
+    start: 0x0003B000
+  - name: ST19_PL0000_5
+    type: bin
+    start: 0x0003B800
+  - [0x8920]

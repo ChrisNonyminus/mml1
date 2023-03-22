@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST19_03.t_tw04a.vab
+  base_path: ../
+  target_path: ./disks/us/CDDATA/DAT/ST19_03.BIN
+  asm_path: asm/ST19_03/t_tw04a.vab
+  asset_path: assets/ST19_03/t_tw04a.vab
+  src_path: src/ST19_03/t_tw04a.vab
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/syms.us.ST19_03/generated.t_tw04a.vab.txt
+  undefined_funcs_auto_path: config/undefined_funcs_auto.us.ST19_03/t_tw04a.vab.txt
+  undefined_syms_auto_path: config/undefined_syms_auto.us.ST19_03ST19_03/t_tw04a.vab.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\sound\moto\se\vab\t_tw04a.vab
+  - name: ST19_03_t_tw04a_7_header
+    type: dashchunkheader
+    start: 0x0003C800
+  - name: ST19_03_t_tw04a_7
+    type: bin
+    start: 0x0003D000
+  - [0x1EBD0]

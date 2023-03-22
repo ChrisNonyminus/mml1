@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST10_01.EM1600.TIM
+  base_path: ../
+  target_path: ./disks/us/CDDATA/DAT/ST10_01.BIN
+  asm_path: asm/ST10_01/EM1600.TIM
+  asset_path: assets/ST10_01/EM1600.TIM
+  src_path: src/ST10_01/EM1600.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/syms.us.ST10_01/generated.EM1600.TIM.txt
+  undefined_funcs_auto_path: config/undefined_funcs_auto.us.ST10_01/EM1600.TIM.txt
+  undefined_syms_auto_path: config/undefined_syms_auto.us.ST10_01ST10_01/EM1600.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\OBJ\ST10\AR01\EM1600.TIM
+  - name: ST10_01_EM1600_3_header
+    type: dashchunkheader
+    start: 0x0000E800
+  - name: ST10_01_EM1600_3
+    type: bin
+    start: 0x0000F000
+  - [0x3920]

@@ -1,0 +1,31 @@
+options:
+  platform: psx
+  basename: ST1A_01C.ST1A_00.MSG
+  base_path: ../
+  target_path: ./disks/us/CDDATA/DAT/ST1A_01C.BIN
+  asm_path: asm/ST1A_01C/ST1A_00.MSG
+  asset_path: assets/ST1A_01C/ST1A_00.MSG
+  src_path: src/ST1A_01C/ST1A_00.MSG
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/syms.us.ST1A_01C/generated.ST1A_00.MSG.txt
+  undefined_funcs_auto_path: config/undefined_funcs_auto.us.ST1A_01C/ST1A_00.MSG.txt
+  undefined_syms_auto_path: config/undefined_syms_auto.us.ST1A_01CST1A_01C/ST1A_00.MSG.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\MESS\ST1A_00.MSG
+  - name: ST1A_01C_ST1A_00_5_header
+    type: dashchunkheader
+    start: 0x00046000
+  - name: ST1A_01C_ST1A_00_5
+    type: code
+    start: 0x00046800
+    vram: 0x80153000
+    exclusive_ram_id: ST1A_01C_ST1A_00_ram_5
+    subalign: 4
+    subsegments:
+      - [0x46800, data, ST1A_00_5]
+  - [0x1EAE]

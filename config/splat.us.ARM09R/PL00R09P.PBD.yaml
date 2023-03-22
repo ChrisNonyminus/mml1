@@ -1,0 +1,31 @@
+options:
+  platform: psx
+  basename: ARM09R.PL00R09P.PBD
+  base_path: ../
+  target_path: ./disks/us/CDDATA/DAT/ARM09R.BIN
+  asm_path: asm/ARM09R/PL00R09P.PBD
+  asset_path: assets/ARM09R/PL00R09P.PBD
+  src_path: src/ARM09R/PL00R09P.PBD
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/syms.us.ARM09R/generated.PL00R09P.PBD.txt
+  undefined_funcs_auto_path: config/undefined_funcs_auto.us.ARM09R/PL00R09P.PBD.txt
+  undefined_syms_auto_path: config/undefined_syms_auto.us.ARM09RARM09R/PL00R09P.PBD.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\PLBIN\PL00R09P.PBD
+  - name: ARM09R_PL00R09P_3_header
+    type: dashchunkheader
+    start: 0x00003800
+  - name: ARM09R_PL00R09P_3
+    type: code
+    start: 0x00004000
+    vram: 0x800FB500
+    exclusive_ram_id: ARM09R_PL00R09P_ram_3
+    subalign: 4
+    subsegments:
+      - [0x4000, data, PL00R09P_3]
+  - [0x183C]

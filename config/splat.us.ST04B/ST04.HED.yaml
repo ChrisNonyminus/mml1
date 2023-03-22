@@ -1,0 +1,31 @@
+options:
+  platform: psx
+  basename: ST04B.ST04.HED
+  base_path: ../
+  target_path: ./disks/us/CDDATA/DAT/ST04B.BIN
+  asm_path: asm/ST04B/ST04.HED
+  asset_path: assets/ST04B/ST04.HED
+  src_path: src/ST04B/ST04.HED
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/syms.us.ST04B/generated.ST04.HED.txt
+  undefined_funcs_auto_path: config/undefined_funcs_auto.us.ST04B/ST04.HED.txt
+  undefined_syms_auto_path: config/undefined_syms_auto.us.ST04BST04B/ST04.HED.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\SCR\DATA\ST04.HED
+  - name: ST04B_ST04_4_header
+    type: dashchunkheader
+    start: 0x0002C000
+  - name: ST04B_ST04_4
+    type: code
+    start: 0x0002C800
+    vram: 0x8013A000
+    exclusive_ram_id: ST04B_ST04_ram_4
+    subalign: 4
+    subsegments:
+      - [0x2C800, data, ST04_4]
+  - [0xA40]

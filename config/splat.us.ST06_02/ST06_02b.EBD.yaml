@@ -1,0 +1,31 @@
+options:
+  platform: psx
+  basename: ST06_02.ST06_02b.EBD
+  base_path: ../
+  target_path: ./disks/us/CDDATA/DAT/ST06_02.BIN
+  asm_path: asm/ST06_02/ST06_02b.EBD
+  asset_path: assets/ST06_02/ST06_02b.EBD
+  src_path: src/ST06_02/ST06_02b.EBD
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/syms.us.ST06_02/generated.ST06_02b.EBD.txt
+  undefined_funcs_auto_path: config/undefined_funcs_auto.us.ST06_02/ST06_02b.EBD.txt
+  undefined_syms_auto_path: config/undefined_syms_auto.us.ST06_02ST06_02/ST06_02b.EBD.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\EMBIN\ST06_02b.EBD
+  - name: ST06_02_ST06_02b_1_header
+    type: dashchunkheader
+    start: 0x0001E800
+  - name: ST06_02_ST06_02b_1
+    type: code
+    start: 0x0001F000
+    vram: 0x80190000
+    exclusive_ram_id: ST06_02_ST06_02b_ram_1
+    subalign: 4
+    subsegments:
+      - [0x1F000, data, ST06_02b_1]
+  - [0x4200]

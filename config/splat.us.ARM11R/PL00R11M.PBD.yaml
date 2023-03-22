@@ -1,0 +1,31 @@
+options:
+  platform: psx
+  basename: ARM11R.PL00R11M.PBD
+  base_path: ../
+  target_path: ./disks/us/CDDATA/DAT/ARM11R.BIN
+  asm_path: asm/ARM11R/PL00R11M.PBD
+  asset_path: assets/ARM11R/PL00R11M.PBD
+  src_path: src/ARM11R/PL00R11M.PBD
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/syms.us.ARM11R/generated.PL00R11M.PBD.txt
+  undefined_funcs_auto_path: config/undefined_funcs_auto.us.ARM11R/PL00R11M.PBD.txt
+  undefined_syms_auto_path: config/undefined_syms_auto.us.ARM11RARM11R/PL00R11M.PBD.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\PLBIN\PL00R11M.PBD
+  - name: ARM11R_PL00R11M_2_header
+    type: dashchunkheader
+    start: 0x00002800
+  - name: ARM11R_PL00R11M_2
+    type: code
+    start: 0x00003000
+    vram: 0x800EF600
+    exclusive_ram_id: ARM11R_PL00R11M_ram_2
+    subalign: 4
+    subsegments:
+      - [0x3000, data, PL00R11M_2]
+  - [0xC80]

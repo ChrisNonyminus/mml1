@@ -1,0 +1,31 @@
+options:
+  platform: psx
+  basename: ST03_05.st03_05.msg
+  base_path: ../
+  target_path: ./disks/us/CDDATA/DAT/ST03_05.BIN
+  asm_path: asm/ST03_05/st03_05.msg
+  asset_path: assets/ST03_05/st03_05.msg
+  src_path: src/ST03_05/st03_05.msg
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/syms.us.ST03_05/generated.st03_05.msg.txt
+  undefined_funcs_auto_path: config/undefined_funcs_auto.us.ST03_05/st03_05.msg.txt
+  undefined_syms_auto_path: config/undefined_syms_auto.us.ST03_05ST03_05/st03_05.msg.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\mess\st03_05.msg
+  - name: ST03_05_st03_05_5_header
+    type: dashchunkheader
+    start: 0x00065000
+  - name: ST03_05_st03_05_5
+    type: code
+    start: 0x00065800
+    vram: 0x80153000
+    exclusive_ram_id: ST03_05_st03_05_ram_5
+    subalign: 4
+    subsegments:
+      - [0x65800, data, st03_05_5]
+  - [0xD06]

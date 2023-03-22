@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST04_00D.EM4c00.TIM
+  base_path: ../
+  target_path: ./disks/us/CDDATA/DAT/ST04_00D.BIN
+  asm_path: asm/ST04_00D/EM4c00.TIM
+  asset_path: assets/ST04_00D/EM4c00.TIM
+  src_path: src/ST04_00D/EM4c00.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/syms.us.ST04_00D/generated.EM4c00.TIM.txt
+  undefined_funcs_auto_path: config/undefined_funcs_auto.us.ST04_00D/EM4c00.TIM.txt
+  undefined_syms_auto_path: config/undefined_syms_auto.us.ST04_00DST04_00D/EM4c00.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\OBJ\ST04\AR00D\EM4c00.TIM
+  - name: ST04_00D_EM4c00_6_header
+    type: dashchunkheader
+    start: 0x0002C800
+  - name: ST04_00D_EM4c00_6
+    type: bin
+    start: 0x0002D000
+  - [0x4920]

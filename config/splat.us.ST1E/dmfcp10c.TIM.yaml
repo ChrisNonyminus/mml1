@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST1E.dmfcp10c.TIM
+  base_path: ../
+  target_path: ./disks/us/CDDATA/DAT/ST1E.BIN
+  asm_path: asm/ST1E/dmfcp10c.TIM
+  asset_path: assets/ST1E/dmfcp10c.TIM
+  src_path: src/ST1E/dmfcp10c.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/syms.us.ST1E/generated.dmfcp10c.TIM.txt
+  undefined_funcs_auto_path: config/undefined_funcs_auto.us.ST1E/dmfcp10c.TIM.txt
+  undefined_syms_auto_path: config/undefined_syms_auto.us.ST1EST1E/dmfcp10c.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\SCR\st17\dmfcp10c.TIM
+  - name: ST1E_dmfcp10c_8_header
+    type: dashchunkheader
+    start: 0x0004F800
+  - name: ST1E_dmfcp10c_8
+    type: bin
+    start: 0x00050000
+  - [0x8920]

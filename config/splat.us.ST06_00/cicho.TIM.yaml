@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST06_00.cicho.TIM
+  base_path: ../
+  target_path: ./disks/us/CDDATA/DAT/ST06_00.BIN
+  asm_path: asm/ST06_00/cicho.TIM
+  asset_path: assets/ST06_00/cicho.TIM
+  src_path: src/ST06_00/cicho.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/syms.us.ST06_00/generated.cicho.TIM.txt
+  undefined_funcs_auto_path: config/undefined_funcs_auto.us.ST06_00/cicho.TIM.txt
+  undefined_syms_auto_path: config/undefined_syms_auto.us.ST06_00ST06_00/cicho.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\SCR\st06\cicho.TIM
+  - name: ST06_00_cicho_11_header
+    type: dashchunkheader
+    start: 0x0004A800
+  - name: ST06_00_cicho_11
+    type: bin
+    start: 0x0004B000
+  - [0x8920]

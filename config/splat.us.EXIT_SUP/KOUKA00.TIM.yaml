@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: EXIT_SUP.KOUKA00.TIM
+  base_path: ../
+  target_path: ./disks/us/CDDATA/DAT/EXIT_SUP.BIN
+  asm_path: asm/EXIT_SUP/KOUKA00.TIM
+  asset_path: assets/EXIT_SUP/KOUKA00.TIM
+  src_path: src/EXIT_SUP/KOUKA00.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/syms.us.EXIT_SUP/generated.KOUKA00.TIM.txt
+  undefined_funcs_auto_path: config/undefined_funcs_auto.us.EXIT_SUP/KOUKA00.TIM.txt
+  undefined_syms_auto_path: config/undefined_syms_auto.us.EXIT_SUPEXIT_SUP/KOUKA00.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\OBJ\COMM\KOUKA00.TIM
+  - name: EXIT_SUP_KOUKA00_2_header
+    type: dashchunkheader
+    start: 0x00011800
+  - name: EXIT_SUP_KOUKA00_2
+    type: bin
+    start: 0x00012000
+  - [0x8920]

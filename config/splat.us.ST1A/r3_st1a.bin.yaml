@@ -1,0 +1,31 @@
+options:
+  platform: psx
+  basename: ST1A.r3_st1a.bin
+  base_path: ../
+  target_path: ./disks/us/CDDATA/DAT/ST1A.BIN
+  asm_path: asm/ST1A/r3_st1a.bin
+  asset_path: assets/ST1A/r3_st1a.bin
+  src_path: src/ST1A/r3_st1a.bin
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/syms.us.ST1A/generated.r3_st1a.bin.txt
+  undefined_funcs_auto_path: config/undefined_funcs_auto.us.ST1A/r3_st1a.bin.txt
+  undefined_syms_auto_path: config/undefined_syms_auto.us.ST1AST1A/r3_st1a.bin.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\progbin\r3_st1a.bin
+  - name: ST1A_r3_st1a_0_header
+    type: dashchunkheader
+    start: 0x00000000
+  - name: ST1A_r3_st1a_0
+    type: code
+    start: 0x00000800
+    vram: 0x80100000
+    exclusive_ram_id: ST1A_r3_st1a_ram_0
+    subalign: 4
+    subsegments:
+      - [0x800, data, r3_st1a_0]
+  - [0x39FE4]
