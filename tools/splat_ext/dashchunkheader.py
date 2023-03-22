@@ -64,6 +64,10 @@ class PSXSegDashchunkheader(CommonSegHeader):
         header_lines.append(
             self.new_get_line("ascii", rom_bytes[0x40:0x60], "Original filename")
         )
+        for i in range (0x60, 0x800, 4):
+            header_lines.append(
+                self.new_get_line("word", rom_bytes[i:i+4][::-1], "???")
+            )
 
         return header_lines
 
