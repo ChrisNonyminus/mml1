@@ -190,7 +190,7 @@ $(BUILD_DIR)/$(ROCK_NEO).exe: $(BUILD_DIR)/$(ROCK_NEO).elf
 $(BUILD_DIR)/$(ROCK_NEO).elf: rock_neo_build_dirs $(call list_o_files,$(ROCK_NEO))
 	$(call link,$(ROCK_NEO),$@)
 
-chunks:
+chunks: $(BUILD_DIR)/$(ROCK_NEO).exe
 	@echo "Building chunks..."
 
 
