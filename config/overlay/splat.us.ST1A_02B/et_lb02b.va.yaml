@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST1A_02B.et_lb02b.va
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST1A_02B.BIN
+  asm_path: asm/ST1A_02B/et_lb02b.va
+  asset_path: assets/ST1A_02B/et_lb02b.va
+  src_path: src/ST1A_02B/et_lb02b.va
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST1A_02B/generated.syms.et_lb02b.va.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST1A_02B/undefined_funcs_auto.us.et_lb02b.va.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST1A_02B/undefined_syms_auto.us.et_lb02b.va.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\sound\moto\se\vab\et_lb02b.va
+  - name: ST1A_02B_et_lb02b_2_header
+    type: dashchunkheader
+    start: 0x00022800
+  - name: ST1A_02B_et_lb02b_2
+    type: bin
+    start: 0x00023000
+  - [0x46D20]

@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST1A_02C.PL00B09.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST1A_02C.BIN
+  asm_path: asm/ST1A_02C/PL00B09.TIM
+  asset_path: assets/ST1A_02C/PL00B09.TIM
+  src_path: src/ST1A_02C/PL00B09.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST1A_02C/generated.syms.PL00B09.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST1A_02C/undefined_funcs_auto.us.PL00B09.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST1A_02C/undefined_syms_auto.us.PL00B09.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\OBJ\FACE\PL00B09.TIM
+  - name: ST1A_02C_PL00B09_9_header
+    type: dashchunkheader
+    start: 0x00051000
+  - name: ST1A_02C_PL00B09_9
+    type: bin
+    start: 0x00051800
+  - [0x59920]

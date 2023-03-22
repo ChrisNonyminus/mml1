@@ -44,6 +44,7 @@ SOTNDISK		:= $(GOPATH)/bin/sotn-disk
 PYPATCHASM := $(TOOLS_DIR)/patchasm.py
 DUMPSXISO := dumpsxiso
 MKPSXISO := mkpsxiso
+REGEXR := python3 $(TOOLS_DIR)/regexr.py
 
 DIFF := diff -u --color=never
 XXD := xxd -u -g 4
@@ -75,6 +76,19 @@ define link
 
 endef
 
+define link_overlay_chunk
+	$(LD) -o $(2) \
+		-Map $(BUILD_DIR)/$(1).map \
+		-T $(1).ld \
+		-T $(CONFIG_DIR)/syms.$(VERSION).rock_neo.txt \
+		-T $(CONFIG_DIR)/overlay/$(3)/undefined_syms_auto.$(VERSION).$(1).txt \
+		-T $(CONFIG_DIR)/overlay/$(3)/undefined_funcs_auto.$(VERSION).$(1).txt \
+		--no-check-sections \
+		-nostdlib \
+		-s
+
+endef
+
 define copy_syms_txt
 
 	cpp $(1) > $(CONFIG_DIR)/generated.syms.$(VERSION).$(patsubst $(CONFIG_DIR)/syms.$(VERSION).%.txt,%,$(1)).txt
@@ -86,10 +100,15 @@ define split_yaml
 
 endef
 
-ALL_YAMLS := $(wildcard $(SPLATYAML_FOLDER)/splat.$(VERSION).*.yaml)
-ALL_BINARIES := $(patsubst $(SPLATYAML_FOLDER)/splat.$(VERSION).%.yaml,$(BUILD_DIR)/%.bin,$(ALL_YAMLS))
-ALL_MODULE_NAMES := $(patsubst $(SPLATYAML_FOLDER)/splat.$(VERSION).%.yaml,%,$(ALL_YAMLS))
-ALL_SYMBOL_LISTS := $(patsubst $(SPLATYAML_FOLDER)/splat.$(VERSION).%.yaml,$(CONFIG_DIR)/syms.$(VERSION).%.txt,$(ALL_YAMLS))
+ROCK_NEO_YAML := $(SPLATYAML_FOLDER)/splat.$(VERSION).rock_neo.yaml
+ROCK_NEO_SYMBOL_LIST := $(CONFIG_DIR)/syms.$(VERSION).rock_neo.txt
+ROCK_NEO_TARGET := $(BUILD_DIR)/rock_neo.exe
+
+ALL_BIN_YAML_SUBDIRS := $(shell find $(SPLATYAML_FOLDER)/overlay -type d -name "*")
+# remove "." and ".." from the list
+ALL_BIN_YAML_SUBDIRS := $(filter-out . ..,$(ALL_BIN_YAML_SUBDIRS))
+ALL_BIN_YAML_FILES := $(foreach dir,$(ALL_BIN_YAML_SUBDIRS),$(wildcard $(dir)/*.yaml))
+
 
 default: all
 all: build check
@@ -97,46 +116,47 @@ build: logs $(ALL_BINARIES)
 
 logs:
 	@mkdir -p logs/
-	@echo $(ALL_YAMLS) > logs/all_yamls.log
-	@echo $(ALL_BINARIES) > logs/all_binaries.log
 
 clean:
 	rm -rf $(BUILD_DIR) asm/ assets/ logs/
 
-define debug_log
-	@echo $* > logs/debug_$*.log
+define get_overlay_parent_file
+$(shell echo $(1) | sed -e 's/config\/overlay\/\(.*\)\/.*\.yaml/\1/')
 endef
 
+define get_overlay_name
+$(shell echo $(1) | sed -e 's/config\/overlay\/.*\/\(.*\)\.yaml/\1/')
+endef
+
+
+
+define generate_symbol_list
+	@$(shell if [ ! -f "$(CONFIG_DIR)/overlay/$(call get_overlay_parent_file,$(1))/syms.$(VERSION).$(call get_overlay_name,$(1)).txt" ]; then touch "$(CONFIG_DIR)/overlay/$(call get_overlay_parent_file,$(1))/syms.$(VERSION).$(call get_overlay_name,$(1)).txt"; fi)
+	@$(shell cat $(ROCK_NEO_SYMBOL_LIST) "$(CONFIG_DIR)/overlay/$(call get_overlay_parent_file,$(1))/syms.$(VERSION).$(call get_overlay_name,$(1)).txt" > "$(CONFIG_DIR)/overlay/$(call get_overlay_parent_file,$(1))/generated.syms.$(VERSION).$(call get_overlay_name,$(1)).txt")
+endef
+	
 
 dosplit_%:
 	$(call split_yaml,config/splat.$(VERSION).$(patsubst dosplit_%,%,$@).yaml)
 
 split_all:
 	@mkdir -p logs/
-	@echo $(ALL_SYMBOL_LISTS) > logs/ALL_SYMBOL_LISTS.log
-	$(foreach yaml,$(ALL_YAMLS),$(call split_yaml,$(yaml)))
-	$(foreach yaml,$(ALL_SYMBOL_LISTS),$(call copy_syms_txt,$(yaml)))
+	$(call split_yaml,$(ROCK_NEO_YAML))
+	$(foreach file,$(ALL_BIN_YAML_FILES),$(call generate_symbol_list,$(file)))
+	$(foreach file,$(ALL_BIN_YAML_FILES),$(call split_yaml,$(file)))
 
 # make a sha1 file for each binary, and edit it so that the path in the sha1 points to the binary in the build dir
 define make_sha1_file
 
-	$(shell sha1sum $(1) > hash/$(VERSION)/$(notdir $(1)).sha1)
-	$(shell cat hash/$(VERSION)/$(notdir $(1)).sha1 | python3 tools/regexr.py "disks/$(VERSION)/cddata/dat/(.*).bin" "$(BUILD_DIR)/$(notdir $(1))" > hash/$(VERSION)/$(notdir $(1)).sha1.tmp)
-	$(shell mv hash/$(VERSION)/$(notdir $(1)).sha1.tmp hash/$(VERSION)/$(notdir $(1)).sha1)
+	@$(shell sha1sum $(1) > hash/$(VERSION)/$(notdir $(1)).sha1)
+	@$(shell cat hash/$(VERSION)/$(notdir $(1)).sha1 | python3 tools/regexr.py "disks/$(VERSION)/CDDATA/DAT/(.*).BIN" "$(BUILD_DIR)/$(notdir $(1))" > hash/$(VERSION)/$(notdir $(1)).sha1.tmp)
+	@$(shell mv hash/$(VERSION)/$(notdir $(1)).sha1.tmp hash/$(VERSION)/$(notdir $(1)).sha1)
 	
 endef
 
 make_sha1_files:
 	@mkdir -p hash/$(VERSION)
-	$(foreach file,$(wildcard disks/$(VERSION)/cddata/dat/*.bin),$(call make_sha1_file,$(file)))
-
-	$(shell sha1sum disks/$(VERSION)/slus_006.03 > hash/$(VERSION)/main.sha1)
-	$(shell cat hash/$(VERSION)/main.sha1 | python3 tools/regexr.py "disks/$(VERSION)/slus_006.03" "$(BUILD_DIR)/main.exe" > hash/$(VERSION)/main.sha1.tmp)
-	$(shell mv hash/$(VERSION)/main.sha1.tmp hash/$(VERSION)/main.sha1)
-
-	$(shell sha1sum disks/$(VERSION)/rock_neo.exe > hash/$(VERSION)/rock_neo.sha1)
-	$(shell cat hash/$(VERSION)/rock_neo.sha1 | python3 tools/regexr.py "disks/$(VERSION)/rock_neo.exe" "$(BUILD_DIR)/rock_neo.exe" > hash/$(VERSION)/rock_neo.sha1.tmp)
-	$(shell mv hash/$(VERSION)/rock_neo.sha1.tmp hash/$(VERSION)/rock_neo.sha1)
+	$(foreach file,$(wildcard disks/$(VERSION)/CDDATA/DAT/*.BIN),$(call make_sha1_file,$(file)))
 
 define get_dirname_from_file
 	$(dir $(1))

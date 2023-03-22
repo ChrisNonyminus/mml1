@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST1B_00B.scm911.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST1B_00B.BIN
+  asm_path: asm/ST1B_00B/scm911.TIM
+  asset_path: assets/ST1B_00B/scm911.TIM
+  src_path: src/ST1B_00B/scm911.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST1B_00B/generated.syms.scm911.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST1B_00B/undefined_funcs_auto.us.scm911.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST1B_00B/undefined_syms_auto.us.scm911.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\SCR\st03\scm911.TIM
+  - name: ST1B_00B_scm911_11_header
+    type: dashchunkheader
+    start: 0x00077000
+  - name: ST1B_00B_scm911_11
+    type: bin
+    start: 0x00077800
+  - [0x7F920]

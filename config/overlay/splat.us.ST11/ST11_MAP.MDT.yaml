@@ -1,0 +1,31 @@
+options:
+  platform: psx
+  basename: ST11.ST11_MAP.MDT
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST11.BIN
+  asm_path: asm/ST11/ST11_MAP.MDT
+  asset_path: assets/ST11/ST11_MAP.MDT
+  src_path: src/ST11/ST11_MAP.MDT
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST11/generated.syms.ST11_MAP.MDT.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST11/undefined_funcs_auto.us.ST11_MAP.MDT.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST11/undefined_syms_auto.us.ST11_MAP.MDT.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\MAP\DATA\ST11_MAP.MDT
+  - name: ST11_ST11_MAP_2_header
+    type: dashchunkheader
+    start: 0x00011000
+  - name: ST11_ST11_MAP_2
+    type: code
+    start: 0x00011800
+    vram: 0x80164000
+    exclusive_ram_id: ST11_ST11_MAP_ram_2
+    subalign: 4
+    subsegments:
+      - [0x11800, data, ST11_MAP_2]
+  - [0x13B3E]

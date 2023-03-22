@@ -1,0 +1,31 @@
+options:
+  platform: psx
+  basename: ST1A.ST1A_MAP.IDX
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST1A.BIN
+  asm_path: asm/ST1A/ST1A_MAP.IDX
+  asset_path: assets/ST1A/ST1A_MAP.IDX
+  src_path: src/ST1A/ST1A_MAP.IDX
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST1A/generated.syms.ST1A_MAP.IDX.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST1A/undefined_funcs_auto.us.ST1A_MAP.IDX.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST1A/undefined_syms_auto.us.ST1A_MAP.IDX.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\MAP\DATA\ST1A_MAP.IDX
+  - name: ST1A_ST1A_MAP_1_header
+    type: dashchunkheader
+    start: 0x0003A000
+  - name: ST1A_ST1A_MAP_1
+    type: code
+    start: 0x0003A800
+    vram: 0x8015C000
+    exclusive_ram_id: ST1A_ST1A_MAP_ram_1
+    subalign: 4
+    subsegments:
+      - [0x3A800, data, ST1A_MAP_1]
+  - [0x3D41C]

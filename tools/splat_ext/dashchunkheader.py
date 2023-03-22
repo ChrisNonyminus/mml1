@@ -11,21 +11,24 @@ sys.path.append(f"{os.getcwd()}/tools/splat")
 sys.path.append(f"{os.getcwd()}/tools/splat_ext")
 from util import options, log, symbols
 from segtypes.common.header import CommonSegHeader
-import utils
 
 class PSXSegDashchunkheader(CommonSegHeader):
     def should_split(self):
         return self.extract and options.opts.is_mode_active("code")
 
     def new_get_line(self, typ, data, comment):
+        dword = None
+        if len(data) == 4:
+            dword = int.from_bytes(data, "big")
+            print(dword)
         if typ == "ascii":
             text = data.decode("ASCII").strip()
             text = text.replace("\x00", "\\0")  # escape NUL chars
             dstr = '"' + text + '"'
-        if typ == "symbol" and data in self.symbols:
+        elif typ == "symbol" and dword in self.symbols:
             typ = "word"
-            dstr = self.symbols[data]
-        if typ == "symbol" and data not in self.symbols:
+            dstr = self.symbols[dword]
+        elif typ == "symbol" and dword not in self.symbols:
             typ = "word"
             dstr = "0x" + data.hex().upper()
         else:  # .word, .byte
@@ -49,26 +52,24 @@ class PSXSegDashchunkheader(CommonSegHeader):
         header_lines.append(
             self.new_get_line("word", rom_bytes[0x04:0x08][::-1], "Chunk Size")
         )
-        header_lines.append(self.new_get_line("word", rom_bytes[0x8][0xC][::-1], "???"))
+        header_lines.append(self.new_get_line("word", rom_bytes[0x8:0xC][::-1], "???"))
 
         header_lines.append(
             self.new_get_line("symbol", rom_bytes[0xC:0x10][::-1], "Load Address if type 0")
         )
         for i in range (0x10, 0x40, 4):
             header_lines.append(
-                self.new_get_line("word", rom_bytes[i][i+4][::-1], "???")
+                self.new_get_line("word", rom_bytes[i:i+4][::-1], "???")
             )
         header_lines.append(
-            self.new_get_line("ascii", rom_bytes[0x40:0x800], "Original filename")
+            self.new_get_line("ascii", rom_bytes[0x40:0x60], "Original filename")
         )
 
-        header_lines.append(
-            self.new_get_line("symbol", rom_bytes[0xC:0x10][::-1], "unknown")
-        )
         return header_lines
 
 
     def split(self, rom_bytes):
+        rom_bytes = rom_bytes[self.rom_start : self.rom_end]
         self.symbols = {
             0x801F6000: "SUPPORT_STG_LOAD_ADDRESS",
             0x801F2000: "SUPPORT_EBD_LOAD_ADDRESS",

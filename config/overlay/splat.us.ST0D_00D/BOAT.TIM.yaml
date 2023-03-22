@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST0D_00D.BOAT.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST0D_00D.BIN
+  asm_path: asm/ST0D_00D/BOAT.TIM
+  asset_path: assets/ST0D_00D/BOAT.TIM
+  src_path: src/ST0D_00D/BOAT.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST0D_00D/generated.syms.BOAT.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST0D_00D/undefined_funcs_auto.us.BOAT.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST0D_00D/undefined_syms_auto.us.BOAT.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\OBJ\ST0D\AR00\BOAT.TIM
+  - name: ST0D_00D_BOAT_8_header
+    type: dashchunkheader
+    start: 0x00035000
+  - name: ST0D_00D_BOAT_8
+    type: bin
+    start: 0x00035800
+  - [0x3D920]

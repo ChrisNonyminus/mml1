@@ -1,0 +1,31 @@
+options:
+  platform: psx
+  basename: ST15.ST15.STG
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST15.BIN
+  asm_path: asm/ST15/ST15.STG
+  asset_path: assets/ST15/ST15.STG
+  src_path: src/ST15/ST15.STG
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST15/generated.syms.ST15.STG.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST15/undefined_funcs_auto.us.ST15.STG.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST15/undefined_syms_auto.us.ST15.STG.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\SCR\DATA\ST15.STG
+  - name: ST15_ST15_3_header
+    type: dashchunkheader
+    start: 0x0000D000
+  - name: ST15_ST15_3
+    type: code
+    start: 0x0000D800
+    vram: 0x80194000
+    exclusive_ram_id: ST15_ST15_ram_3
+    subalign: 4
+    subsegments:
+      - [0xD800, data, ST15_3]
+  - [0xF098]

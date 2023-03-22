@@ -1,0 +1,31 @@
+options:
+  platform: psx
+  basename: SUB_KEY.STFF_FE.MSG
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/SUB_KEY.BIN
+  asm_path: asm/SUB_KEY/STFF_FE.MSG
+  asset_path: assets/SUB_KEY/STFF_FE.MSG
+  src_path: src/SUB_KEY/STFF_FE.MSG
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.SUB_KEY/generated.syms.STFF_FE.MSG.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.SUB_KEY/undefined_funcs_auto.us.STFF_FE.MSG.txt
+  undefined_syms_auto_path: config/overlay/splat.us.SUB_KEY/undefined_syms_auto.us.STFF_FE.MSG.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\MESS\STFF_FE.MSG
+  - name: SUB_KEY_STFF_FE_1_header
+    type: dashchunkheader
+    start: 0x00008800
+  - name: SUB_KEY_STFF_FE_1
+    type: code
+    start: 0x00009000
+    vram: 0x801F2000
+    exclusive_ram_id: SUB_KEY_STFF_FE_ram_1
+    subalign: 4
+    subsegments:
+      - [0x9000, data, STFF_FE_1]
+  - [0xC8C7]

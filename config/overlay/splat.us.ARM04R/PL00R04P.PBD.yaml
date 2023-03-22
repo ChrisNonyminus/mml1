@@ -1,0 +1,31 @@
+options:
+  platform: psx
+  basename: ARM04R.PL00R04P.PBD
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ARM04R.BIN
+  asm_path: asm/ARM04R/PL00R04P.PBD
+  asset_path: assets/ARM04R/PL00R04P.PBD
+  src_path: src/ARM04R/PL00R04P.PBD
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ARM04R/generated.syms.PL00R04P.PBD.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ARM04R/undefined_funcs_auto.us.PL00R04P.PBD.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ARM04R/undefined_syms_auto.us.PL00R04P.PBD.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\PLBIN\PL00R04P.PBD
+  - name: ARM04R_PL00R04P_2_header
+    type: dashchunkheader
+    start: 0x00003000
+  - name: ARM04R_PL00R04P_2
+    type: code
+    start: 0x00003800
+    vram: 0x800FB500
+    exclusive_ram_id: ARM04R_PL00R04P_ram_2
+    subalign: 4
+    subsegments:
+      - [0x3800, data, PL00R04P_2]
+  - [0x485C]

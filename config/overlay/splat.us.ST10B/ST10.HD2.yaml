@@ -1,0 +1,31 @@
+options:
+  platform: psx
+  basename: ST10B.ST10.HD2
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST10B.BIN
+  asm_path: asm/ST10B/ST10.HD2
+  asset_path: assets/ST10B/ST10.HD2
+  src_path: src/ST10B/ST10.HD2
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST10B/generated.syms.ST10.HD2.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST10B/undefined_funcs_auto.us.ST10.HD2.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST10B/undefined_syms_auto.us.ST10.HD2.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\SCR\DATA\ST10.HD2
+  - name: ST10B_ST10_5_header
+    type: dashchunkheader
+    start: 0x0002D000
+  - name: ST10B_ST10_5
+    type: code
+    start: 0x0002D800
+    vram: 0x80139F00
+    exclusive_ram_id: ST10B_ST10_ram_5
+    subalign: 4
+    subsegments:
+      - [0x2D800, data, ST10_5]
+  - [0x2D818]

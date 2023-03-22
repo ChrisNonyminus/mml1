@@ -53,21 +53,21 @@ def get_yaml(file, chunks):
             chunk_id = chunk_id.split("/")[-1]
         if "\\" in chunk_id:
             chunk_id = chunk_id.split("\\")[-1]
-        os.makedirs(f"config/splat.us.{file.replace('.BIN', '')}/", exist_ok= True)
-        with open(f"config/splat.us.{file.replace('.BIN', '')}/{chunk_id}.yaml", "w") as f:
+        os.makedirs(f"config/overlay/splat.us.{file.replace('.BIN', '')}/", exist_ok= True)
+        with open(f"config/overlay/splat.us.{file.replace('.BIN', '')}/{chunk_id}.yaml", "w") as f:
             f.write(f"options:\n")
             f.write(f"  platform: psx\n")
             f.write(f"  basename: {file.replace('.BIN', '')}.{chunk_id}\n")
-            f.write(f"  base_path: ../\n")
+            f.write(f"  base_path: ../../../\n")
             f.write(f"  target_path: ./disks/us/CDDATA/DAT/{file}\n")
             f.write(f"  asm_path: asm/{file.replace('.BIN', '')}/{chunk_id}\n")
             f.write(f"  asset_path: assets/{file.replace('.BIN', '')}/{chunk_id}\n")
             f.write(f"  src_path: src/{file.replace('.BIN', '')}/{chunk_id}\n")
             f.write(f"  compiler: GCC\n")
             f.write(f"  extensions_path: tools/splat_ext\n")
-            f.write(f"  symbol_addrs_path: config/syms.us.{file.replace('.BIN', '')}/generated.{chunk_id}.txt\n")
-            f.write(f"  undefined_funcs_auto_path: config/undefined_funcs_auto.us.{file.replace('.BIN', '')}/{chunk_id}.txt\n")
-            f.write(f"  undefined_syms_auto_path: config/undefined_syms_auto.us.{file.replace('.BIN', '')}{file.replace('.BIN', '')}/{chunk_id}.txt\n")
+            f.write(f"  symbol_addrs_path: config/overlay/splat.us.{file.replace('.BIN', '')}/generated.syms.{chunk_id}.txt\n")
+            f.write(f"  undefined_funcs_auto_path: config/overlay/splat.us.{file.replace('.BIN', '')}/undefined_funcs_auto.us.{chunk_id}.txt\n")
+            f.write(f"  undefined_syms_auto_path: config/overlay/splat.us.{file.replace('.BIN', '')}/undefined_syms_auto.us.{chunk_id}.txt\n")
             f.write(f"  find_file_boundaries: yes\n")
             f.write(f"  use_legacy_include_asm: no\n")
             f.write(f"  migrate_rodata_to_functions: no\n")
@@ -103,7 +103,7 @@ def get_yaml(file, chunks):
                 f.write(f"  - name: {file.replace('.BIN', '')}_{chunk_name}_{i}\n")
                 f.write(f"    type: bin\n")
                 f.write(f"    start: 0x{chunk_offset + 0x800:08X}\n")
-            f.write(f"  - [0x{(chunk_size + 0x800):X}]\n")
+            f.write(f"  - [0x{(chunk_offset + chunk_size + 0x800):X}]\n")
 
 if __name__ == "__main__":
     import sys

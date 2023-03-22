@@ -8,4 +8,4 @@ logs/
 ctx.c
 .vscode/settings.json
 __pycache__/
-config/generated.*
+generated.*

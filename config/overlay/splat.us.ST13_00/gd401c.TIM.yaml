@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST13_00.gd401c.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST13_00.BIN
+  asm_path: asm/ST13_00/gd401c.TIM
+  asset_path: assets/ST13_00/gd401c.TIM
+  src_path: src/ST13_00/gd401c.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST13_00/generated.syms.gd401c.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST13_00/undefined_funcs_auto.us.gd401c.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST13_00/undefined_syms_auto.us.gd401c.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\SCR\st13\gd401c.TIM
+  - name: ST13_00_gd401c_12_header
+    type: dashchunkheader
+    start: 0x0006C000
+  - name: ST13_00_gd401c_12
+    type: bin
+    start: 0x0006C800
+  - [0x74920]

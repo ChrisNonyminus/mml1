@@ -1,0 +1,31 @@
+options:
+  platform: psx
+  basename: ST0CB.ST0C_MAP.MDT
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST0CB.BIN
+  asm_path: asm/ST0CB/ST0C_MAP.MDT
+  asset_path: assets/ST0CB/ST0C_MAP.MDT
+  src_path: src/ST0CB/ST0C_MAP.MDT
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST0CB/generated.syms.ST0C_MAP.MDT.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST0CB/undefined_funcs_auto.us.ST0C_MAP.MDT.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST0CB/undefined_syms_auto.us.ST0C_MAP.MDT.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\MAP\DATA\ST0C_MAP.MDT
+  - name: ST0CB_ST0C_MAP_2_header
+    type: dashchunkheader
+    start: 0x00017000
+  - name: ST0CB_ST0C_MAP_2
+    type: code
+    start: 0x00017800
+    vram: 0x80164000
+    exclusive_ram_id: ST0CB_ST0C_MAP_ram_2
+    subalign: 4
+    subsegments:
+      - [0x17800, data, ST0C_MAP_2]
+  - [0x18E04]

@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST04_00F.EM0900.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST04_00F.BIN
+  asm_path: asm/ST04_00F/EM0900.TIM
+  asset_path: assets/ST04_00F/EM0900.TIM
+  src_path: src/ST04_00F/EM0900.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST04_00F/generated.syms.EM0900.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST04_00F/undefined_funcs_auto.us.EM0900.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST04_00F/undefined_syms_auto.us.EM0900.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\OBJ\ST04\AR00F\EM0900.TIM
+  - name: ST04_00F_EM0900_1_header
+    type: dashchunkheader
+    start: 0x0001E800
+  - name: ST04_00F_EM0900_1
+    type: bin
+    start: 0x0001F000
+  - [0x23120]

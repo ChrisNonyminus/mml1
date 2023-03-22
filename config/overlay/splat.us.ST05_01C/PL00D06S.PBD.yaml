@@ -1,0 +1,31 @@
+options:
+  platform: psx
+  basename: ST05_01C.PL00D06S.PBD
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST05_01C.BIN
+  asm_path: asm/ST05_01C/PL00D06S.PBD
+  asset_path: assets/ST05_01C/PL00D06S.PBD
+  src_path: src/ST05_01C/PL00D06S.PBD
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST05_01C/generated.syms.PL00D06S.PBD.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST05_01C/undefined_funcs_auto.us.PL00D06S.PBD.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST05_01C/undefined_syms_auto.us.PL00D06S.PBD.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\PLBIN\PL00D06S.PBD
+  - name: ST05_01C_PL00D06S_5_header
+    type: dashchunkheader
+    start: 0x00042000
+  - name: ST05_01C_PL00D06S_5
+    type: code
+    start: 0x00042800
+    vram: 0x800DBA00
+    exclusive_ram_id: ST05_01C_PL00D06S_ram_5
+    subalign: 4
+    subsegments:
+      - [0x42800, data, PL00D06S_5]
+  - [0x42A68]

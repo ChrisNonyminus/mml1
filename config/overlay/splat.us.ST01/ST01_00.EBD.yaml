@@ -1,0 +1,31 @@
+options:
+  platform: psx
+  basename: ST01.ST01_00.EBD
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST01.BIN
+  asm_path: asm/ST01/ST01_00.EBD
+  asset_path: assets/ST01/ST01_00.EBD
+  src_path: src/ST01/ST01_00.EBD
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST01/generated.syms.ST01_00.EBD.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST01/undefined_funcs_auto.us.ST01_00.EBD.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST01/undefined_syms_auto.us.ST01_00.EBD.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\EMBIN\ST01_00.EBD
+  - name: ST01_ST01_00_5_header
+    type: dashchunkheader
+    start: 0x00009800
+  - name: ST01_ST01_00_5
+    type: code
+    start: 0x0000A000
+    vram: 0x8016C000
+    exclusive_ram_id: ST01_ST01_00_ram_5
+    subalign: 4
+    subsegments:
+      - [0xA000, data, ST01_00_5]
+  - [0xC6E4]

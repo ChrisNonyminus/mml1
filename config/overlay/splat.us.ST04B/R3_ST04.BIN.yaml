@@ -1,0 +1,31 @@
+options:
+  platform: psx
+  basename: ST04B.R3_ST04.BIN
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST04B.BIN
+  asm_path: asm/ST04B/R3_ST04.BIN
+  asset_path: assets/ST04B/R3_ST04.BIN
+  src_path: src/ST04B/R3_ST04.BIN
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST04B/generated.syms.R3_ST04.BIN.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST04B/undefined_funcs_auto.us.R3_ST04.BIN.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST04B/undefined_syms_auto.us.R3_ST04.BIN.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\PROGBIN\R3_ST04.BIN
+  - name: ST04B_R3_ST04_0_header
+    type: dashchunkheader
+    start: 0x00000000
+  - name: ST04B_R3_ST04_0
+    type: code
+    start: 0x00000800
+    vram: 0x80100000
+    exclusive_ram_id: ST04B_R3_ST04_ram_0
+    subalign: 4
+    subsegments:
+      - [0x800, data, R3_ST04_0]
+  - [0x125D8]

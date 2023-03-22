@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST01.OPENG2.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST01.BIN
+  asm_path: asm/ST01/OPENG2.TIM
+  asset_path: assets/ST01/OPENG2.TIM
+  src_path: src/ST01/OPENG2.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST01/generated.syms.OPENG2.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST01/undefined_funcs_auto.us.OPENG2.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST01/undefined_syms_auto.us.OPENG2.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\SCR\ST01\OPENG2.TIM
+  - name: ST01_OPENG2_9_header
+    type: dashchunkheader
+    start: 0x00026000
+  - name: ST01_OPENG2_9
+    type: bin
+    start: 0x00026800
+  - [0x2E840]

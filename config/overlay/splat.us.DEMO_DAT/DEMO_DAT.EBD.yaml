@@ -1,0 +1,31 @@
+options:
+  platform: psx
+  basename: DEMO_DAT.DEMO_DAT.EBD
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/DEMO_DAT.BIN
+  asm_path: asm/DEMO_DAT/DEMO_DAT.EBD
+  asset_path: assets/DEMO_DAT/DEMO_DAT.EBD
+  src_path: src/DEMO_DAT/DEMO_DAT.EBD
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.DEMO_DAT/generated.syms.DEMO_DAT.EBD.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.DEMO_DAT/undefined_funcs_auto.us.DEMO_DAT.EBD.txt
+  undefined_syms_auto_path: config/overlay/splat.us.DEMO_DAT/undefined_syms_auto.us.DEMO_DAT.EBD.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\EMBIN\DEMO_DAT.EBD
+  - name: DEMO_DAT_DEMO_DAT_0_header
+    type: dashchunkheader
+    start: 0x00000000
+  - name: DEMO_DAT_DEMO_DAT_0
+    type: code
+    start: 0x00000800
+    vram: 0x8016C000
+    exclusive_ram_id: DEMO_DAT_DEMO_DAT_ram_0
+    subalign: 4
+    subsegments:
+      - [0x800, data, DEMO_DAT_0]
+  - [0x6AA8]

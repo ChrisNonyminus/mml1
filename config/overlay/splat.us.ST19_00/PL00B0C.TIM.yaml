@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST19_00.PL00B0C.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST19_00.BIN
+  asm_path: asm/ST19_00/PL00B0C.TIM
+  asset_path: assets/ST19_00/PL00B0C.TIM
+  src_path: src/ST19_00/PL00B0C.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST19_00/generated.syms.PL00B0C.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST19_00/undefined_funcs_auto.us.PL00B0C.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST19_00/undefined_syms_auto.us.PL00B0C.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\OBJ\FACE\PL00B0C.TIM
+  - name: ST19_00_PL00B0C_7_header
+    type: dashchunkheader
+    start: 0x0004E800
+  - name: ST19_00_PL00B0C_7
+    type: bin
+    start: 0x0004F000
+  - [0x57120]

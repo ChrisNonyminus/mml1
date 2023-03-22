@@ -1,0 +1,31 @@
+options:
+  platform: psx
+  basename: INIT_DAT.PL00L04M.PBD
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/INIT_DAT.BIN
+  asm_path: asm/INIT_DAT/PL00L04M.PBD
+  asset_path: assets/INIT_DAT/PL00L04M.PBD
+  src_path: src/INIT_DAT/PL00L04M.PBD
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.INIT_DAT/generated.syms.PL00L04M.PBD.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.INIT_DAT/undefined_funcs_auto.us.PL00L04M.PBD.txt
+  undefined_syms_auto_path: config/overlay/splat.us.INIT_DAT/undefined_syms_auto.us.PL00L04M.PBD.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\PLBIN\PL00L04M.PBD
+  - name: INIT_DAT_PL00L04M_10_header
+    type: dashchunkheader
+    start: 0x0001A800
+  - name: INIT_DAT_PL00L04M_10
+    type: code
+    start: 0x0001B000
+    vram: 0x800F3600
+    exclusive_ram_id: INIT_DAT_PL00L04M_ram_10
+    subalign: 4
+    subsegments:
+      - [0x1B000, data, PL00L04M_10]
+  - [0x1C480]

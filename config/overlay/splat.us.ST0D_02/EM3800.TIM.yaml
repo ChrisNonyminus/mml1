@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST0D_02.EM3800.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST0D_02.BIN
+  asm_path: asm/ST0D_02/EM3800.TIM
+  asset_path: assets/ST0D_02/EM3800.TIM
+  src_path: src/ST0D_02/EM3800.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST0D_02/generated.syms.EM3800.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST0D_02/undefined_funcs_auto.us.EM3800.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST0D_02/undefined_syms_auto.us.EM3800.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\OBJ\ST0D\AR02\EM3800.TIM
+  - name: ST0D_02_EM3800_3_header
+    type: dashchunkheader
+    start: 0x00025800
+  - name: ST0D_02_EM3800_3
+    type: bin
+    start: 0x00026000
+  - [0x2A120]

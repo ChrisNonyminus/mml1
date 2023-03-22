@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST1E_06.STAFF08U.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST1E_06.BIN
+  asm_path: asm/ST1E_06/STAFF08U.TIM
+  asset_path: assets/ST1E_06/STAFF08U.TIM
+  src_path: src/ST1E_06/STAFF08U.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST1E_06/generated.syms.STAFF08U.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST1E_06/undefined_funcs_auto.us.STAFF08U.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST1E_06/undefined_syms_auto.us.STAFF08U.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\BG\CHAR\STAFF08U.TIM
+  - name: ST1E_06_STAFF08U_8_header
+    type: dashchunkheader
+    start: 0x00044000
+  - name: ST1E_06_STAFF08U_8
+    type: bin
+    start: 0x00044800
+  - [0x4C840]

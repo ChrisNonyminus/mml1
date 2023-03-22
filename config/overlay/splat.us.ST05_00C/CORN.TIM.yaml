@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST05_00C.CORN.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST05_00C.BIN
+  asm_path: asm/ST05_00C/CORN.TIM
+  asset_path: assets/ST05_00C/CORN.TIM
+  src_path: src/ST05_00C/CORN.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST05_00C/generated.syms.CORN.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST05_00C/undefined_funcs_auto.us.CORN.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST05_00C/undefined_syms_auto.us.CORN.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\OBJ\ST05\AR00C\CORN.TIM
+  - name: ST05_00C_CORN_1_header
+    type: dashchunkheader
+    start: 0x0000C800
+  - name: ST05_00C_CORN_1
+    type: bin
+    start: 0x0000D000
+  - [0x11120]
