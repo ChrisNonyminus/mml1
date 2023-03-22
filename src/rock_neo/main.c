@@ -1,5 +1,8 @@
 #include "common.h"
 
+
+// clang-format off
+
 INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/main", main);
 
 INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/main", idk_Init_system_maybe);
