@@ -109,10 +109,11 @@ ALL_BIN_YAML_SUBDIRS := $(shell find $(SPLATYAML_FOLDER)/overlay -type d -name "
 ALL_BIN_YAML_SUBDIRS := $(filter-out . ..,$(ALL_BIN_YAML_SUBDIRS))
 ALL_BIN_YAML_FILES := $(foreach dir,$(ALL_BIN_YAML_SUBDIRS),$(wildcard $(dir)/*.yaml))
 
+ALL_MODULE_NAMES := $(foreach dir,$(ALL_BIN_YAML_FILES),$(call get_overlay_parent_file,$(dir))) rock_neo
 
 default: all
 all: build check
-build: logs $(ALL_BINARIES)
+build: logs $(ROCK_NEO_TARGET) chunks
 
 logs:
 	@mkdir -p logs/
@@ -162,17 +163,20 @@ define get_dirname_from_file
 	$(dir $(1))
 endef
 
-# make build dirs for module
-# also, if config/syms.$(VERSION).$(1).txt doesn't exist, make it
+# make build dirs for module at disk's root folder
 %_build_dirs:
 	$(foreach file,$(call list_src_files,$*),$(shell mkdir -p $(BUILD_DIR)/$(dir $(file))))
-	$(shell if [ ! -f $(CONFIG_DIR)/syms.$(VERSION).$*.txt ]; then touch $(CONFIG_DIR)/syms.$(VERSION).$*.txt; fi)
 
-$(BUILD_DIR)/%.bin: $(BUILD_DIR)/%.elf
-	$(OBJCOPY) -O binary $< $@
+# make build dirs for module contained in a BIN file
+# Arg 1: The file name.
+# Arg 2: The overlay/chunk name.
+define make_build_dirs
+	@$(foreach file,$(call list_src_files,$(1)/$(2)),$(shell mkdir -p $(BUILD_DIR)/$(dir $(file))))
+endef
 
-$(BUILD_DIR)/%.elf: %_build_dirs $$(call list_o_files,$$*)
-	$(call link,$*,$@)
+define list_chunks_for_file
+$(shell find $(SPLATYAML_FOLDER)/overlay/$(1) -type f -name "*.yaml" | sed -e 's/.*\/\(.*\)\.yaml/\1/')
+endef
 
 $(BUILD_DIR)/$(MAIN).exe: $(BUILD_DIR)/$(MAIN).elf
 	$(OBJCOPY) -O binary $< $@
@@ -180,17 +184,15 @@ $(BUILD_DIR)/$(MAIN).exe: $(BUILD_DIR)/$(MAIN).elf
 $(BUILD_DIR)/$(MAIN).elf: $(call list_o_files,$(MAIN))
 	$(call link,$(MAIN),$@)
 
-$(BUILD_DIR)/main.bin: main_build_dirs $(BUILD_DIR)/main.exe
-	rm -f $(BUILD_DIR)/main.bin
-
 $(BUILD_DIR)/$(ROCK_NEO).exe: $(BUILD_DIR)/$(ROCK_NEO).elf
 	$(OBJCOPY) -O binary $< $@
 
-$(BUILD_DIR)/$(ROCK_NEO).elf: $(call list_o_files,$(ROCK_NEO))
+$(BUILD_DIR)/$(ROCK_NEO).elf: rock_neo_build_dirs $(call list_o_files,$(ROCK_NEO))
 	$(call link,$(ROCK_NEO),$@)
 
-$(BUILD_DIR)/rock_neo.bin: rock_neo_build_dirs $(BUILD_DIR)/rock_neo.exe
-	rm -f $(BUILD_DIR)/rock_neo.bin
+chunks:
+	@echo "Building chunks..."
+
 
 UC = $(shell echo '$1' | tr '[:lower:]' '[:upper:]')
 
@@ -250,4 +252,4 @@ check:
 
 
 .PHONY: all, build, clean, disk, extract_disk, split_all, make_sha1_files, check, tools, default, debug_log_%, dosplit_%, make_sha1_file, %_build_dirs, %_bin
-.PHONY: logs, diff_%, diff_main, diff_rock_neo
+.PHONY: logs, diff_%, diff_main, diff_rock_neo, chunks
