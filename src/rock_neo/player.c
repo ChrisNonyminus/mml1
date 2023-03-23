@@ -96,13 +96,11 @@ INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/player", func_80040178);
 
 INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/player", func_80040224);
 
-INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/player", SeVibOn);
+INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/player", func_80040294);
 
-INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/player", SetVib);
+INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/player", func_8004029C);
 
-INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/player", SsUtVibrateOn);
-
-INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/player", SsUtVibrateOff);
+INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/player", func_800402A4);
 
 INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/player", func_800402AC);
 

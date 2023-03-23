@@ -221,7 +221,7 @@ extract_disk: $(SOTNDISK)
 	$(DUMPSXISO) -x disks/$(VERSION) -s disks/mml1.$(VERSION).xml disks/mml1.$(VERSION).track1.bin 
 
 #TODO: cp $(BUILD_DIR)/$(MAIN).exe $(DISK_DIR)/SLUS_006.03
-disk: $(BUILD_DIR)/$(ROCK_NEO).exe $(SOTNDISK)
+disk: build
 	mkdir -p $(DISK_DIR)
 	cp -r disks/$(VERSION)/* $(DISK_DIR)
 	cp $(BUILD_DIR)/$(ROCK_NEO).exe $(DISK_DIR)/ROCK_NEO.EXE
