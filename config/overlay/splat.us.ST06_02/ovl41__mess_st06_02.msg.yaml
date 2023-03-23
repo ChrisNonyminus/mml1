@@ -24,7 +24,7 @@ segments:
     type: code
     start: 0x000C1000
     vram: 0x80153000
-    exclusive_ram_id: ST06_02_st06_02_ram_41
+    
     subalign: 4
     subsegments:
       - [0xC1000, data, st06_02_41]

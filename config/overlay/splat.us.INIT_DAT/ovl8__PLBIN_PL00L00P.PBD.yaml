@@ -24,7 +24,7 @@ segments:
     type: code
     start: 0x00018000
     vram: 0x800FCA00
-    exclusive_ram_id: INIT_DAT_PL00L00P_ram_8
+    
     subalign: 4
     subsegments:
       - [0x18000, data, PL00L00P_8]

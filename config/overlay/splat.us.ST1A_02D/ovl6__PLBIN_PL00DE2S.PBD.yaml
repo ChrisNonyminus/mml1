@@ -24,7 +24,7 @@ segments:
     type: code
     start: 0x00027800
     vram: 0x800DBA00
-    exclusive_ram_id: ST1A_02D_PL00DE2S_ram_6
+    
     subalign: 4
     subsegments:
       - [0x27800, data, PL00DE2S_6]

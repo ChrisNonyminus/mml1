@@ -24,7 +24,7 @@ segments:
     type: code
     start: 0x00003800
     vram: 0x800FB500
-    exclusive_ram_id: ARM12R_PL00R05P_ram_3
+    
     subalign: 4
     subsegments:
       - [0x3800, data, PL00R05P_3]

@@ -24,7 +24,7 @@ segments:
     type: code
     start: 0x000FB000
     vram: 0x80153000
-    exclusive_ram_id: ST08_00_st08_00_ram_43
+    
     subalign: 4
     subsegments:
       - [0xFB000, data, st08_00_43]

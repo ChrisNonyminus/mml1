@@ -24,7 +24,7 @@ segments:
     type: code
     start: 0x000C2800
     vram: 0x800DBA00
-    exclusive_ram_id: ST06_02_PL00S06S_ram_42
+    
     subalign: 4
     subsegments:
       - [0xC2800, data, PL00S06S_42]

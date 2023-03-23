@@ -24,7 +24,7 @@ segments:
     type: code
     start: 0x00005800
     vram: 0x801F2000
-    exclusive_ram_id: SUPPORT2_SUPPORT_ram_1
+    
     subalign: 4
     subsegments:
       - [0x5800, data, SUPPORT_1]

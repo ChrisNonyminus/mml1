@@ -24,7 +24,7 @@ segments:
     type: code
     start: 0x00011800
     vram: 0x80153000
-    exclusive_ram_id: ST03_03_st03_ff_ram_2
+    
     subalign: 4
     subsegments:
       - [0x11800, data, st03_ff_2]

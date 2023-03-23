@@ -24,7 +24,7 @@ segments:
     type: code
     start: 0x00090000
     vram: 0x800DBA00
-    exclusive_ram_id: ST0A_00_PL00D15S_ram_22
+    
     subalign: 4
     subsegments:
       - [0x90000, data, PL00D15S_22]

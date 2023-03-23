@@ -24,7 +24,7 @@ segments:
     type: code
     start: 0x00054800
     vram: 0x8013A000
-    exclusive_ram_id: ST06_ST06_ram_4
+    
     subalign: 4
     subsegments:
       - [0x54800, data, ST06_4]

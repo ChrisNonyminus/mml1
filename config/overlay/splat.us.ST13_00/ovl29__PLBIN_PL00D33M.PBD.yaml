@@ -24,7 +24,7 @@ segments:
     type: code
     start: 0x0009F800
     vram: 0x800E9600
-    exclusive_ram_id: ST13_00_PL00D33M_ram_29
+    
     subalign: 4
     subsegments:
       - [0x9F800, data, PL00D33M_29]

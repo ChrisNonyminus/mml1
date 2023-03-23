@@ -24,7 +24,7 @@ segments:
     type: code
     start: 0x00059800
     vram: 0x80194000
-    exclusive_ram_id: ST12_ST12_ram_5
+    
     subalign: 4
     subsegments:
       - [0x59800, data, ST12_5]

@@ -24,7 +24,7 @@ segments:
     type: code
     start: 0x00023800
     vram: 0x8015C000
-    exclusive_ram_id: ST13_ST13_MAP_ram_4
+    
     subalign: 4
     subsegments:
       - [0x23800, data, ST13_MAP_4]

@@ -24,7 +24,7 @@ segments:
     type: code
     start: 0x000E9800
     vram: 0x800DBA00
-    exclusive_ram_id: ST17_PL00D34S_ram_34
+    
     subalign: 4
     subsegments:
       - [0xE9800, data, PL00D34S_34]

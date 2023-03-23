@@ -24,7 +24,7 @@ segments:
     type: code
     start: 0x0005A000
     vram: 0x800DBA00
-    exclusive_ram_id: ST1A_02C_PL00DE1S_ram_11
+    
     subalign: 4
     subsegments:
       - [0x5A000, data, PL00DE1S_11]

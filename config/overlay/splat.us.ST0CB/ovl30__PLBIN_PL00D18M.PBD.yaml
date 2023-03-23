@@ -24,7 +24,7 @@ segments:
     type: code
     start: 0x000A8800
     vram: 0x800E9600
-    exclusive_ram_id: ST0CB_PL00D18M_ram_30
+    
     subalign: 4
     subsegments:
       - [0xA8800, data, PL00D18M_30]

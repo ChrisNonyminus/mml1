@@ -1,0 +1,2 @@
+D_8011BE9C = 0x8011BE9C; // type:u16 size:4
+D_8011BF54 = 0x8011BF54; // type:u16 size:4

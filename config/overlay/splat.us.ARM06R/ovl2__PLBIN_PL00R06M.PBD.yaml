@@ -24,7 +24,7 @@ segments:
     type: code
     start: 0x00003000
     vram: 0x800EF600
-    exclusive_ram_id: ARM06R_PL00R06M_ram_2
+    
     subalign: 4
     subsegments:
       - [0x3000, data, PL00R06M_2]

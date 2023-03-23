@@ -24,7 +24,7 @@ segments:
     type: code
     start: 0x0008D000
     vram: 0x80153000
-    exclusive_ram_id: ST02_01_DUMMY_ram_28
+    
     subalign: 4
     subsegments:
       - [0x8D000, data, DUMMY_28]
