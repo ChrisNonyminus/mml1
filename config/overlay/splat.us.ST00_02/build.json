@@ -9,6 +9,7 @@
 ["ovl6__OBJ_ST00_AR01_BATTERY.TIM", 1, 16384, 8], 
 ["ovl7__OBJ_ST00_AR01_KONTE.TIM", 1, 8192, 8], 
 ["ovl8__SCR_st00_tcc630.CLT", 4, 256, 1], 
-["ovl9__mess_st00_02.msg", 0, 2917, 0]
+["ovl9__SCR_st00_tcc631.CLT", 4, 256, 1], 
+["ovl10__mess_st00_02.msg", 0, 2917, 0]
 ]
 }

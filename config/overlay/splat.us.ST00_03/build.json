@@ -6,6 +6,7 @@
 ["ovl3__OBJ_FACE_PL00B00N.TIM", 1, 32768, 8], 
 ["ovl4__OBJ_ST00_AR01_BS0200x.TIM", 1, 32768, 8], 
 ["ovl5__SCR_st00_tcca10.CLT", 4, 256, 1], 
-["ovl6__MESS_DUMMY.MSG", 0, 26, 0]
+["ovl6__SCR_st00_tcca11.CLT", 4, 256, 1], 
+["ovl7__MESS_DUMMY.MSG", 0, 26, 0]
 ]
 }

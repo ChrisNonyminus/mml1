@@ -22,5 +22,5 @@ segments:
     start: 0x00034800
   - name: ST00_01_tcc600_7
     type: bin
-    start: 0x00035000
-  - [0x35100]
+    start: 0x00034900
+  - [0x34A00]

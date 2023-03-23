@@ -64,7 +64,7 @@ class PSXSegDashchunkheader(CommonSegHeader):
         header_lines.append(
             self.new_get_line("ascii", rom_bytes[0x40:0x60], "Original filename")
         )
-        for i in range (0x60, 0x800, 4):
+        for i in range (0x60, (0x800 if rom_bytes[0x00:0x04][::-1] != 4 else 0x100), 4):
             header_lines.append(
                 self.new_get_line("word", rom_bytes[i:i+4][::-1], "???")
             )
@@ -73,7 +73,7 @@ class PSXSegDashchunkheader(CommonSegHeader):
 
 
     def split(self, rom_bytes):
-        rom_bytes = rom_bytes[self.rom_start : self.rom_end]
+        rom_bytes = rom_bytes[self.rom_start :]
         self.symbols = {
             0x801F6000: "SUPPORT_STG_LOAD_ADDRESS",
             0x801F2000: "SUPPORT_EBD_LOAD_ADDRESS",

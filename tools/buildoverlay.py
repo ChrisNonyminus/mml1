@@ -189,6 +189,8 @@ def get_next_offset(file, offset, chunk_size, unk, chunk_type):
         return align_up(offset, 0x800) + 0x800
     elif chunk_type == 5 and unk in [0x1820]:
         return align_up(offset, 0x800) + 0x800
+    elif chunk_type == 4:
+        return align_up(offset - chunk_size, 0x800)
     else:
         return align_up(offset, 0x800)
 def build_overlay(parent_archive_filename):

@@ -22,5 +22,5 @@ segments:
     start: 0x00060800
   - name: ST00_tcc100_10
     type: bin
-    start: 0x00061000
-  - [0x61020]
+    start: 0x00060900
+  - [0x60920]

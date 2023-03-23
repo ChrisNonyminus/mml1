@@ -8,6 +8,7 @@
 ["ovl5__OBJ_ST00_AR01_EM0400.TIM", 1, 16384, 8], 
 ["ovl6__OBJ_ST00_AR01_EM3500.TIM", 1, 16384, 8], 
 ["ovl7__SCR_st00_tcc600.CLT", 4, 256, 1], 
-["ovl8__mess_st00_01.msg", 0, 1515, 0]
+["ovl8__SCR_st00_tcc601.CLT", 4, 256, 1], 
+["ovl9__mess_st00_01.msg", 0, 1515, 0]
 ]
 }

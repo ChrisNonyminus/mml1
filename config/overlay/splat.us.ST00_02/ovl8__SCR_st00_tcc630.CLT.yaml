@@ -22,5 +22,5 @@ segments:
     start: 0x00033000
   - name: ST00_02_tcc630_8
     type: bin
-    start: 0x00033800
-  - [0x33900]
+    start: 0x00033100
+  - [0x33200]
