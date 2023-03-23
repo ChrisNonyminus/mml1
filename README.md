@@ -12,6 +12,7 @@ Contributions and help are more than appreciated!
 - mipsel-linux-gnu toolchain
 - [mkpsxiso](https://github.com/Lameguy64/mkpsxiso) (install the latest deb artifact from the latest commit action)
 - python3 (see https://github.com/ethteck/splat for pip package requirements)
+  - *An additional pip package required is pyelftools.*
 
 # BUILDING
 - Take a cue and bin of the US release of Mega Man Legends, and place it in the disks folder.
