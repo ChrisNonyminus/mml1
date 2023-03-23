@@ -11,8 +11,8 @@ Contributions and help are more than appreciated!
 - A Debian-based Linux distro. Arch-based distros and Gentoo *might* work, but I'm not positive.
 - mipsel-linux-gnu toolchain
 - [mkpsxiso](https://github.com/Lameguy64/mkpsxiso) (install the latest deb artifact from the latest commit action)
-- python3 (see https://github.com/ethteck/splat for pip package requirements)
-  - *An additional pip package required is pyelftools.*
+- python3
+  - Run ``python3 -m pip install -U -r requirements.txt``
 
 # BUILDING
 - Take a cue and bin of the US release of Mega Man Legends, and place it in the disks folder.
