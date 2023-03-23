@@ -72,7 +72,7 @@ define link
 		-T $(CONFIG_DIR)/undefined_syms_auto.$(VERSION).$(1).txt \
 		-T $(CONFIG_DIR)/undefined_funcs_auto.$(VERSION).$(1).txt \
 		--no-check-sections \
-		-nostdlib
+		-nostdlib -g
 	$(LD) -o $(2) \
 		-Map $(BUILD_DIR)/$(1).map \
 		-T $(1).ld \
@@ -272,6 +272,11 @@ check: diff_rock_neo $$(foreach module,$$(ALL_ARCHIVES),diff_$$(module))
 	$(foreach module,$(ALL_MODULE_NAMES),$(shell if [ -f hash/$(VERSION)/$(module).BIN.sha1 ]; then sha1sum -c --quiet hash/$(VERSION)/$(module).BIN.sha1; fi))
 	@echo "OK"
 
+check_rock_neo_only: build_rock_neo_only diff_rock_neo 
+	sha1sum -c --quiet hash/$(VERSION)/rock_neo.BIN.sha1
+	@echo "OK"
+
+build_rock_neo_only: $(BUILD_DIR)/$(ROCK_NEO).exe
 
 .PHONY: all, build, clean, disk, extract_disk, split_all, make_sha1_files, check, tools, default, debug_log_%, dosplit_%, make_sha1_file, %_build_dirs, %_bin
-.PHONY: logs, diff_%, diff_main, diff_rock_neo, chunks
+.PHONY: logs, diff_%, diff_main, diff_rock_neo, chunks, check_rock_neo_only, format, build_rock_neo_only
