@@ -23,4 +23,4 @@ segments:
   - name: ST08_00B_e_tw01a_40
     type: bin
     start: 0x000A8800
-  - [0xC1A70]
+  - [0xC2270]

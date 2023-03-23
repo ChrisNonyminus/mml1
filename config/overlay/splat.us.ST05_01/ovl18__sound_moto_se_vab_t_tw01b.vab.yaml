@@ -23,4 +23,4 @@ segments:
   - name: ST05_01_t_tw01b_18
     type: bin
     start: 0x00078800
-  - [0x8CAB0]
+  - [0x8D2B0]

@@ -23,4 +23,4 @@ segments:
   - name: ST0D_m_tw03a_13
     type: bin
     start: 0x00056000
-  - [0x87BA0]
+  - [0x883A0]

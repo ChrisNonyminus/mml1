@@ -23,4 +23,4 @@ segments:
   - name: ST0B_t_kb01b_9
     type: bin
     start: 0x00052000
-  - [0x6C9E0]
+  - [0x6D1E0]

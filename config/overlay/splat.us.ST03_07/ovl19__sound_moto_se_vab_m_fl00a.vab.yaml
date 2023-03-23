@@ -23,4 +23,4 @@ segments:
   - name: ST03_07_m_fl00a_19
     type: bin
     start: 0x0006C000
-  - [0xB0D90]
+  - [0xB1590]

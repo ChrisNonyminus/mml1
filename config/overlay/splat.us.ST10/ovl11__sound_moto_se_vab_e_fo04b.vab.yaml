@@ -23,4 +23,4 @@ segments:
   - name: ST10_e_fo04b_11
     type: bin
     start: 0x00048800
-  - [0x586D0]
+  - [0x58ED0]

@@ -23,4 +23,4 @@ segments:
   - name: ST08_00_m_tw03a_41
     type: bin
     start: 0x000C6000
-  - [0xF7BA0]
+  - [0xF83A0]

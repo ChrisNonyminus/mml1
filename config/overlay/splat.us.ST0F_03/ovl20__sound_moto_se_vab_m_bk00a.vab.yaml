@@ -23,4 +23,4 @@ segments:
   - name: ST0F_03_m_bk00a_20
     type: bin
     start: 0x0006A000
-  - [0x98550]
+  - [0x98D50]

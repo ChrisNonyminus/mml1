@@ -23,4 +23,4 @@ segments:
   - name: ST19_03_t_tw04a_7
     type: bin
     start: 0x0003D000
-  - [0x5B3D0]
+  - [0x5BBD0]

@@ -23,4 +23,4 @@ segments:
   - name: ST03_07_e_fl00a_18
     type: bin
     start: 0x0005F800
-  - [0x6B330]
+  - [0x6BB30]

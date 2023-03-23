@@ -23,4 +23,4 @@ segments:
   - name: ST0CB_e_fo03b_32
     type: bin
     start: 0x000B6000
-  - [0xD4080]
+  - [0xD4880]

@@ -23,4 +23,4 @@ segments:
   - name: ST05_04_e_tw01a_18
     type: bin
     start: 0x0004D000
-  - [0x66270]
+  - [0x66A70]

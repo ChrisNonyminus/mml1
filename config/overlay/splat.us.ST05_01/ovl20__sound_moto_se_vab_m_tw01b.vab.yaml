@@ -23,4 +23,4 @@ segments:
   - name: ST05_01_m_tw01b_20
     type: bin
     start: 0x0009A000
-  - [0xCBAC0]
+  - [0xCC2C0]

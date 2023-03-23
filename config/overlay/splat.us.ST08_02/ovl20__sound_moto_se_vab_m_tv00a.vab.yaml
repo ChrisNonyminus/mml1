@@ -23,4 +23,4 @@ segments:
   - name: ST08_02_m_tv00a_20
     type: bin
     start: 0x0008A000
-  - [0xB8550]
+  - [0xB8D50]

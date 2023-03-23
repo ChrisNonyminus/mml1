@@ -23,4 +23,4 @@ segments:
   - name: ST1D_01_e_tw05b_26
     type: bin
     start: 0x00092000
-  - [0x99330]
+  - [0x99B30]

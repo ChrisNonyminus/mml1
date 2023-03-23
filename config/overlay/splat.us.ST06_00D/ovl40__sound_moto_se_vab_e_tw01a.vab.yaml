@@ -23,4 +23,4 @@ segments:
   - name: ST06_00D_e_tw01a_40
     type: bin
     start: 0x000C1000
-  - [0xDA270]
+  - [0xDAA70]

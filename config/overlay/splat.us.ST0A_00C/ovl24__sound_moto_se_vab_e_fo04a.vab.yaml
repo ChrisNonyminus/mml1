@@ -23,4 +23,4 @@ segments:
   - name: ST0A_00C_e_fo04a_24
     type: bin
     start: 0x00089800
-  - [0xCEB40]
+  - [0xCF340]

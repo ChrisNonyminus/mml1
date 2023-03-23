@@ -41,6 +41,8 @@ def get_next_offset(file, offset, chunk_size, unk, chunk_type):
         return offset + align_up(chunk_size + 0x800, 0x800) + 0x800
     elif "ST05_02.BIN" in file and offset == 0x72800:
         return offset + align_up(chunk_size + 0x800, 0x800) + 0x800
+    elif "ST00.BIN" in file and offset in [0x0009E000, 0x000C2800]:
+        return offset + align_up(chunk_size + 0x800, 0x800) + 0x800
     elif chunk_type == 5 and unk in [0x1820]:
         return offset + align_up(chunk_size + 0x800, 0x800) + 0x800
     elif chunk_type == 4:
@@ -132,7 +134,7 @@ def get_yaml(file, chunks):
                     f.write(f"  - name: {file.replace('.BIN', '')}_{chunk_name}_{i}\n")
                     f.write(f"    type: bin\n")
                     f.write(f"    start: 0x{chunk_offset + (0x800 if chunk_type != 4 else 0x100):08X}\n")
-            f.write(f"  - [0x{(chunk_offset + chunk_size + (0x800 if chunk_type != 4 else 0x100)):X}]\n")
+            f.write(f"  - [0x{(chunk_offset + chunk_size + (0x800 if chunk_type != 4 else 0x100) + (0x800 if chunk_type == 5 else 0)):X}]\n")
 
 def make_json(file, chunks):
     with open(f"config/overlay/splat.us.{file.replace('.BIN', '')}/build.json", "w") as f:

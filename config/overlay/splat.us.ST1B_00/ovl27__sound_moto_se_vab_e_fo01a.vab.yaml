@@ -23,4 +23,4 @@ segments:
   - name: ST1B_00_e_fo01a_27
     type: bin
     start: 0x00091000
-  - [0xD4C30]
+  - [0xD5430]

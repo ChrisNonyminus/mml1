@@ -23,4 +23,4 @@ segments:
   - name: ST0F_02_m_tw02a_13
     type: bin
     start: 0x00051800
-  - [0x82C80]
+  - [0x83480]

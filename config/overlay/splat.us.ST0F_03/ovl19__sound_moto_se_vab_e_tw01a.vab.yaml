@@ -23,4 +23,4 @@ segments:
   - name: ST0F_03_e_tw01a_19
     type: bin
     start: 0x00050000
-  - [0x69270]
+  - [0x69A70]

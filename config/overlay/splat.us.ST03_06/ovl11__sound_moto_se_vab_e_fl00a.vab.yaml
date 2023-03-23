@@ -23,4 +23,4 @@ segments:
   - name: ST03_06_e_fl00a_11
     type: bin
     start: 0x0004C000
-  - [0x57B30]
+  - [0x58330]

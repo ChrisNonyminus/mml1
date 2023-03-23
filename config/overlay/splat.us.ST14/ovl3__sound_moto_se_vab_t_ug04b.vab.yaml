@@ -23,4 +23,4 @@ segments:
   - name: ST14_t_ug04b_3
     type: bin
     start: 0x0001C800
-  - [0x38DF0]
+  - [0x395F0]

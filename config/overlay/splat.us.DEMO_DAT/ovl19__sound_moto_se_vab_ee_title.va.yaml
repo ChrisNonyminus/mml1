@@ -23,4 +23,4 @@ segments:
   - name: DEMO_DAT_ee_title_19
     type: bin
     start: 0x00074000
-  - [0xC7CF0]
+  - [0xC84F0]

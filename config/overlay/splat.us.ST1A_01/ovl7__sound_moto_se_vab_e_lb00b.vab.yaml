@@ -23,4 +23,4 @@ segments:
   - name: ST1A_01_e_lb00b_7
     type: bin
     start: 0x0003D800
-  - [0x46920]
+  - [0x47120]

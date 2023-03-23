@@ -23,4 +23,4 @@ segments:
   - name: ARM13R_r_bom2_4
     type: bin
     start: 0x00006800
-  - [0xAA20]
+  - [0xB220]

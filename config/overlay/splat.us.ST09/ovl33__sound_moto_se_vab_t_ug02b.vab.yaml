@@ -23,4 +23,4 @@ segments:
   - name: ST09_t_ug02b_33
     type: bin
     start: 0x00090800
-  - [0xB0910]
+  - [0xB1110]

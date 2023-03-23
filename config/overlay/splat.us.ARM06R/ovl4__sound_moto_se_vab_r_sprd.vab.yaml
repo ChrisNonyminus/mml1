@@ -23,4 +23,4 @@ segments:
   - name: ARM06R_r_sprd_4
     type: bin
     start: 0x00006800
-  - [0xA8E0]
+  - [0xB0E0]

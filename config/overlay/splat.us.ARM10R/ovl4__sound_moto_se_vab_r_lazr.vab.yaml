@@ -23,4 +23,4 @@ segments:
   - name: ARM10R_r_lazr_4
     type: bin
     start: 0x00006000
-  - [0xA1F0]
+  - [0xA9F0]

@@ -23,4 +23,4 @@ segments:
   - name: SUPPORT2_common2_9
     type: bin
     start: 0x00026000
-  - [0x49970]
+  - [0x4A170]

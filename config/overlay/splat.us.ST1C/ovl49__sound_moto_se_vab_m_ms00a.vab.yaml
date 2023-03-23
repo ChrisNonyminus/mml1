@@ -23,4 +23,4 @@ segments:
   - name: ST1C_m_ms00a_49
     type: bin
     start: 0x00094800
-  - [0xC6890]
+  - [0xC7090]

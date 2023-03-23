@@ -23,4 +23,4 @@ segments:
   - name: ST13_00B_e_ug05b_27
     type: bin
     start: 0x00099000
-  - [0xAEF90]
+  - [0xAF790]

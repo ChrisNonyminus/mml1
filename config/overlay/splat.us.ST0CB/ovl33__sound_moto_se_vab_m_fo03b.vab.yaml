@@ -23,4 +23,4 @@ segments:
   - name: ST0CB_m_fo03b_33
     type: bin
     start: 0x000D5000
-  - [0xF9EE0]
+  - [0xFA6E0]

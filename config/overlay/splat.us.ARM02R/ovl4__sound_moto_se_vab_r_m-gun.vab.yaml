@@ -23,4 +23,4 @@ segments:
   - name: ARM02R_r_m-gun_4
     type: bin
     start: 0x00007000
-  - [0xA0E0]
+  - [0xA8E0]

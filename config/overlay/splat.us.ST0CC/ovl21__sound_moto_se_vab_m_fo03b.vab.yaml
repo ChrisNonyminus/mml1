@@ -23,4 +23,4 @@ segments:
   - name: ST0CC_m_fo03b_21
     type: bin
     start: 0x0008A000
-  - [0xAEEE0]
+  - [0xAF6E0]

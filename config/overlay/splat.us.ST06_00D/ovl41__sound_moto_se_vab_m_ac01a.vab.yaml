@@ -23,4 +23,4 @@ segments:
   - name: ST06_00D_m_ac01a_41
     type: bin
     start: 0x000DB000
-  - [0x116B00]
+  - [0x117300]

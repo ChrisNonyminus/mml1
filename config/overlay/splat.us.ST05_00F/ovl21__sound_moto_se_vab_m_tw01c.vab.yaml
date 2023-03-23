@@ -23,4 +23,4 @@ segments:
   - name: ST05_00F_m_tw01c_21
     type: bin
     start: 0x0008C800
-  - [0xB51D0]
+  - [0xB59D0]

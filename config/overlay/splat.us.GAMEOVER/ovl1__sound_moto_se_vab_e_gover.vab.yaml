@@ -23,4 +23,4 @@ segments:
   - name: GAMEOVER_e_gover_1
     type: bin
     start: 0x00005000
-  - [0x23E10]
+  - [0x24610]

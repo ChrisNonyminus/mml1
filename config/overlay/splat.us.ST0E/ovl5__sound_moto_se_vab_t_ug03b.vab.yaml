@@ -23,4 +23,4 @@ segments:
   - name: ST0E_t_ug03b_5
     type: bin
     start: 0x00033000
-  - [0x3CE10]
+  - [0x3D610]

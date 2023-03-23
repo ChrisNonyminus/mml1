@@ -23,4 +23,4 @@ segments:
   - name: BS16VAB1_et_lb01b_0
     type: bin
     start: 0x00000800
-  - [0x23230]
+  - [0x23A30]

@@ -23,4 +23,4 @@ segments:
   - name: ST05_00C_e_mg01a_10
     type: bin
     start: 0x0002D800
-  - [0x3B510]
+  - [0x3BD10]

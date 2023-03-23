@@ -23,4 +23,4 @@ segments:
   - name: ST0C_e_fo03a_30
     type: bin
     start: 0x000A2000
-  - [0xDCE30]
+  - [0xDD630]

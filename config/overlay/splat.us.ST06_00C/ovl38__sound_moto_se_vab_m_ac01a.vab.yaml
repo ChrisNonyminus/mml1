@@ -23,4 +23,4 @@ segments:
   - name: ST06_00C_m_ac01a_38
     type: bin
     start: 0x000CF800
-  - [0x10B300]
+  - [0x10BB00]

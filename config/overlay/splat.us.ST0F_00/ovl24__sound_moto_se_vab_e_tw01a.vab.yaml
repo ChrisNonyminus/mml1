@@ -23,4 +23,4 @@ segments:
   - name: ST0F_00_e_tw01a_24
     type: bin
     start: 0x00066800
-  - [0x7FA70]
+  - [0x80270]

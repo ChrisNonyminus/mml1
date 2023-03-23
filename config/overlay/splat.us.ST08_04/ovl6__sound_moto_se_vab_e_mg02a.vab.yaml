@@ -23,4 +23,4 @@ segments:
   - name: ST08_04_e_mg02a_6
     type: bin
     start: 0x00023800
-  - [0x335A0]
+  - [0x33DA0]

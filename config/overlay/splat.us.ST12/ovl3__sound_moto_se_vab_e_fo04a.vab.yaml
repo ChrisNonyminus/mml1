@@ -23,4 +23,4 @@ segments:
   - name: ST12_e_fo04a_3
     type: bin
     start: 0x00012800
-  - [0x57B40]
+  - [0x58340]

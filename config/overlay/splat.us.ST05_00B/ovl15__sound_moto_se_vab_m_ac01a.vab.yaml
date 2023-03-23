@@ -23,4 +23,4 @@ segments:
   - name: ST05_00B_m_ac01a_15
     type: bin
     start: 0x00073800
-  - [0xAF300]
+  - [0xAFB00]

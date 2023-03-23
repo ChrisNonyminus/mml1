@@ -23,4 +23,4 @@ segments:
   - name: ST06_00C_e_tw01a_37
     type: bin
     start: 0x000B5800
-  - [0xCEA70]
+  - [0xCF270]

@@ -23,4 +23,4 @@ segments:
   - name: ST0F_02C_m_tw02a_14
     type: bin
     start: 0x00056000
-  - [0x87480]
+  - [0x87C80]

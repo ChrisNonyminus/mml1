@@ -23,4 +23,4 @@ segments:
   - name: ST10B_t_fo04b_10
     type: bin
     start: 0x00040800
-  - [0x47920]
+  - [0x48120]

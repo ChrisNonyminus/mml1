@@ -23,4 +23,4 @@ segments:
   - name: ST04_e_ac01a_9
     type: bin
     start: 0x00038000
-  - [0x42810]
+  - [0x43010]

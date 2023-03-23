@@ -23,4 +23,4 @@ segments:
   - name: ST09_e_ug02b_34
     type: bin
     start: 0x000B1800
-  - [0xBF310]
+  - [0xBFB10]

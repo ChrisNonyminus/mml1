@@ -23,4 +23,4 @@ segments:
   - name: DEMO_DAT_common_18
     type: bin
     start: 0x0004E800
-  - [0x73010]
+  - [0x73810]

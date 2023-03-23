@@ -23,4 +23,4 @@ segments:
   - name: ST0CC_t_fo03b_19
     type: bin
     start: 0x0005E800
-  - [0x6A0E0]
+  - [0x6A8E0]

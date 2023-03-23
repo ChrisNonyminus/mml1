@@ -23,4 +23,4 @@ segments:
   - name: ST03_06_m_fl00a_12
     type: bin
     start: 0x00058800
-  - [0x9D590]
+  - [0x9DD90]

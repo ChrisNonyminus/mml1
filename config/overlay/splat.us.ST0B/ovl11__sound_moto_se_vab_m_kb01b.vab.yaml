@@ -23,4 +23,4 @@ segments:
   - name: ST0B_m_kb01b_11
     type: bin
     start: 0x00076800
-  - [0xA4C40]
+  - [0xA5440]

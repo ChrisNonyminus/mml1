@@ -134,7 +134,7 @@ def build_chunk(parent_archive_file_name, chunk_file_name):
     if os.path.exists(json_path):
         with open(json_path, "r") as f:
             src_files_hash_cache = json.load(f)
-    need_to_link = False
+    need_to_link = ("rock_neo.elf" not in src_files_hash_cache or src_files_hash_cache["rock_neo.elf"] != hashlib.sha256(open(f"{BUILD_DIR}/rock_neo.elf", "rb").read()).hexdigest())
     for o_file in list_o_files(parent_archive_file_name, chunk_file_name):
         s_file = o_file[:-2].replace(BUILD_DIR + "/", "")
         if s_file.endswith(".s") and (s_file not in src_files_hash_cache or src_files_hash_cache[s_file] != hashlib.sha256(open(s_file, "rb").read()).hexdigest()):
@@ -172,22 +172,24 @@ def align_up(val, align):
     return (val + align - 1) & ~(align - 1)
 
 def get_next_offset(file, offset, chunk_size, unk, chunk_type):
-    if ("ST05_00E.BIN" in file) and offset == 0x89800:
+    if ("ST05_00E.BIN" in file) and (offset - chunk_size) == 0x89800:
         # hacky workaround
         return align_up(offset, 0x800) + 0x800
-    elif "ST04B.BIN" in file and offset == 0x43000:
+    elif "ST04B.BIN" in file and (offset - chunk_size - 0x800) == 0x43000:
         return align_up(offset, 0x800) + 0x800
-    elif "ST08_01.BIN" in file and offset == 0x8B800:
+    elif "ST08_01.BIN" in file and (offset - chunk_size- 0x800) == 0x8B800:
         return align_up(offset, 0x800) + 0x800
-    elif "ST14.BIN" in file and offset == 0x4B800:
+    elif "ST14.BIN" in file and (offset - chunk_size- 0x800) == 0x4B800:
         return align_up(offset, 0x800) + 0x800
-    elif "ST08_02.BIN" in file and offset == 0x89800:
+    elif "ST08_02.BIN" in file and (offset - chunk_size- 0x800) == 0x89800:
         return align_up(offset, 0x800) + 0x800
-    elif "ST0F_03.BIN" in file and offset == 0x69800:
+    elif "ST0F_03.BIN" in file and (offset - chunk_size- 0x800) == 0x69800:
         return align_up(offset, 0x800) + 0x800
-    elif "ST05_02.BIN" in file and offset == 0x72800:
+    elif "ST05_02.BIN" in file and (offset - chunk_size- 0x800) == 0x72800:
         return align_up(offset, 0x800) + 0x800
-    elif chunk_type == 5 and unk in [0x1820]:
+    elif "ST00.BIN" in file and (offset - chunk_size- 0x800) in [0x0009E000]:
+        return align_up(offset, 0x800) + 0x800
+    elif chunk_type == 5 and unk in [0x1820, 0x1220]:
         return align_up(offset, 0x800) + 0x800
     elif chunk_type == 4:
         return align_up(offset - chunk_size, 0x800)

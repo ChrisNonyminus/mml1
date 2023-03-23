@@ -23,4 +23,4 @@ segments:
   - name: ST05_00D_e_tw01a_18
     type: bin
     start: 0x00068000
-  - [0x81270]
+  - [0x81A70]

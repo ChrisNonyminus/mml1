@@ -37,6 +37,8 @@
 ["ovl34__SCR_st00_TOUa00.TIM", 1, 32768, 8], 
 ["ovl35__SCR_st00_TOUa10.TIM", 9, 0, 8], 
 ["ovl36__sound_moto_se_vab_t_op01b.vab", 5, 76928, 4128], 
-["ovl37_", 4041277490, 3290235405, 551693540]
+["ovl37__sound_moto_se_vab_e_op01b.vab", 5, 64960, 5664], 
+["ovl38__sound_moto_se_vab_m_op01b.vab", 5, 202432, 4640], 
+["ovl39__sound_moto_se_seq_m_op01b.sep", 8, 14859, 0]
 ]
 }

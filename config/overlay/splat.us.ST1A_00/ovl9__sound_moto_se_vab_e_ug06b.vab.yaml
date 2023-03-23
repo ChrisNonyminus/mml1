@@ -23,4 +23,4 @@ segments:
   - name: ST1A_00_e_ug06b_9
     type: bin
     start: 0x00056000
-  - [0x6CED0]
+  - [0x6D6D0]

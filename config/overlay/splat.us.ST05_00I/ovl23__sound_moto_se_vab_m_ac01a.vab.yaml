@@ -23,4 +23,4 @@ segments:
   - name: ST05_00I_m_ac01a_23
     type: bin
     start: 0x0008D800
-  - [0xC9300]
+  - [0xC9B00]

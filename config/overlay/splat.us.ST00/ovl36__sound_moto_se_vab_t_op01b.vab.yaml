@@ -23,4 +23,4 @@ segments:
   - name: ST00_t_op01b_36
     type: bin
     start: 0x0009E800
-  - [0xB1480]
+  - [0xB1C80]

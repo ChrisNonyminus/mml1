@@ -23,4 +23,4 @@ segments:
   - name: ST04_m_ac01a_10
     type: bin
     start: 0x00043800
-  - [0x7F300]
+  - [0x7FB00]

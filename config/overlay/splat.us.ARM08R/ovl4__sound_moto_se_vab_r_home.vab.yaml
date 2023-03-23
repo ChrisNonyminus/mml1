@@ -23,4 +23,4 @@ segments:
   - name: ARM08R_r_home_4
     type: bin
     start: 0x00006000
-  - [0xA260]
+  - [0xAA60]

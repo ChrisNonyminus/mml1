@@ -23,4 +23,4 @@ segments:
   - name: ST0F_02_e_tw01a_12
     type: bin
     start: 0x00037800
-  - [0x50A70]
+  - [0x51270]

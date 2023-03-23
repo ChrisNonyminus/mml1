@@ -23,4 +23,4 @@ segments:
   - name: ST0CC_e_fo03b_20
     type: bin
     start: 0x0006B000
-  - [0x89080]
+  - [0x89880]

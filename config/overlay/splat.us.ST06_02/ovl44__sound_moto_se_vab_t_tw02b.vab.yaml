@@ -23,4 +23,4 @@ segments:
   - name: ST06_02_t_tw02b_44
     type: bin
     start: 0x000C5800
-  - [0xDE380]
+  - [0xDEB80]

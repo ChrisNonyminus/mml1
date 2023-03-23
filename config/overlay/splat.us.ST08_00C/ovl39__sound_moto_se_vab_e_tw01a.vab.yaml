@@ -23,4 +23,4 @@ segments:
   - name: ST08_00C_e_tw01a_39
     type: bin
     start: 0x000A3000
-  - [0xBC270]
+  - [0xBCA70]

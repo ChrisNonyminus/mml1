@@ -23,4 +23,4 @@ segments:
   - name: ARM12R_r_mine_4
     type: bin
     start: 0x00005800
-  - [0x8AB0]
+  - [0x92B0]

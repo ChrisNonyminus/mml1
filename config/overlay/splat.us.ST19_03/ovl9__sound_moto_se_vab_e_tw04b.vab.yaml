@@ -23,4 +23,4 @@ segments:
   - name: ST19_03_e_tw04b_9
     type: bin
     start: 0x0005C800
-  - [0x67720]
+  - [0x67F20]

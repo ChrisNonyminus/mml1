@@ -23,4 +23,4 @@ segments:
   - name: ST11_t_fo04b_9
     type: bin
     start: 0x00033000
-  - [0x3A120]
+  - [0x3A920]

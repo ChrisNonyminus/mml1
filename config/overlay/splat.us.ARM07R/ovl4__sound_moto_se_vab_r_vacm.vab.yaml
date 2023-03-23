@@ -23,4 +23,4 @@ segments:
   - name: ARM07R_r_vacm_4
     type: bin
     start: 0x00006800
-  - [0xA950]
+  - [0xB150]

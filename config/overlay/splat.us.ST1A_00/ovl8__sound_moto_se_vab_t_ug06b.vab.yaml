@@ -23,4 +23,4 @@ segments:
   - name: ST1A_00_t_ug06b_8
     type: bin
     start: 0x0003F800
-  - [0x54B10]
+  - [0x55310]

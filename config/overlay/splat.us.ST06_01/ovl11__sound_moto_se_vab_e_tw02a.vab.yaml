@@ -23,4 +23,4 @@ segments:
   - name: ST06_01_e_tw02a_11
     type: bin
     start: 0x0004C000
-  - [0x58580]
+  - [0x58D80]

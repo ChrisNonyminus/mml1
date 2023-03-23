@@ -23,4 +23,4 @@ segments:
   - name: ST05_00G_m_ac01a_21
     type: bin
     start: 0x0008E800
-  - [0xCA300]
+  - [0xCAB00]

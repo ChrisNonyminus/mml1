@@ -23,4 +23,4 @@ segments:
   - name: ST17_t_gb01b_36
     type: bin
     start: 0x000ED800
-  - [0x10D7F0]
+  - [0x10DFF0]

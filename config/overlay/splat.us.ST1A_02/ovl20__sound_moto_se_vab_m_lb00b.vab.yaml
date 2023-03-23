@@ -23,4 +23,4 @@ segments:
   - name: ST1A_02_m_lb00b_20
     type: bin
     start: 0x0008A800
-  - [0xBB890]
+  - [0xBC090]

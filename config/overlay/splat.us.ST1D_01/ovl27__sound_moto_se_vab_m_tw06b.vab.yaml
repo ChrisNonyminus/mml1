@@ -23,4 +23,4 @@ segments:
   - name: ST1D_01_m_tw06b_27
     type: bin
     start: 0x0009A000
-  - [0xC3540]
+  - [0xC3D40]

@@ -23,4 +23,4 @@ segments:
   - name: ST13_00_t_ug05b_30
     type: bin
     start: 0x000A2000
-  - [0xB6320]
+  - [0xB6B20]

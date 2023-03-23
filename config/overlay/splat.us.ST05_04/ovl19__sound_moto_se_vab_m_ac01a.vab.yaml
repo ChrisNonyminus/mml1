@@ -23,4 +23,4 @@ segments:
   - name: ST05_04_m_ac01a_19
     type: bin
     start: 0x00067000
-  - [0xA2B00]
+  - [0xA3300]

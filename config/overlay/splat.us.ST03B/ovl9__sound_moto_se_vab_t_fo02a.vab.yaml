@@ -23,4 +23,4 @@ segments:
   - name: ST03B_t_fo02a_9
     type: bin
     start: 0x00057800
-  - [0x62900]
+  - [0x63100]

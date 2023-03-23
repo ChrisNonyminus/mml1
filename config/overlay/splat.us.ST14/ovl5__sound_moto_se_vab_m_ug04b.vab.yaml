@@ -23,4 +23,4 @@ segments:
   - name: ST14_m_ug04b_5
     type: bin
     start: 0x0004C000
-  - [0x74DD0]
+  - [0x755D0]

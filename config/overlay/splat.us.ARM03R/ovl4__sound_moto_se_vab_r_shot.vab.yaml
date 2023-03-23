@@ -23,4 +23,4 @@ segments:
   - name: ARM03R_r_shot_4
     type: bin
     start: 0x00006000
-  - [0x94A0]
+  - [0x9CA0]

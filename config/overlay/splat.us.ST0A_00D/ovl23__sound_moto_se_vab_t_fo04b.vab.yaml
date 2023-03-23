@@ -23,4 +23,4 @@ segments:
   - name: ST0A_00D_t_fo04b_23
     type: bin
     start: 0x0007E800
-  - [0x85920]
+  - [0x86120]

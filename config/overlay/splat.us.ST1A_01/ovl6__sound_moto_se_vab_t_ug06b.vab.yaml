@@ -23,4 +23,4 @@ segments:
   - name: ST1A_01_t_ug06b_6
     type: bin
     start: 0x00027000
-  - [0x3C310]
+  - [0x3CB10]

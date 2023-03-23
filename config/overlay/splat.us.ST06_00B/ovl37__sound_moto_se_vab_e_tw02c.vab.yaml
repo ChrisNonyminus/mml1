@@ -23,4 +23,4 @@ segments:
   - name: ST06_00B_e_tw02c_37
     type: bin
     start: 0x000B8000
-  - [0xD0CD0]
+  - [0xD14D0]

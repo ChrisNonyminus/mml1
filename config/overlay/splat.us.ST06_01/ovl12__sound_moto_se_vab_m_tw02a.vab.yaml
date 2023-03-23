@@ -23,4 +23,4 @@ segments:
   - name: ST06_01_m_tw02a_12
     type: bin
     start: 0x00059000
-  - [0x8A480]
+  - [0x8AC80]

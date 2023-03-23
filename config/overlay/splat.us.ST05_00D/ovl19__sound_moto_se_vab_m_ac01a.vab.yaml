@@ -23,4 +23,4 @@ segments:
   - name: ST05_00D_m_ac01a_19
     type: bin
     start: 0x00082000
-  - [0xBDB00]
+  - [0xBE300]

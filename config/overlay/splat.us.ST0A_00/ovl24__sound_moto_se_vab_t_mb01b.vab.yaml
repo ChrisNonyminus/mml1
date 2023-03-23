@@ -23,4 +23,4 @@ segments:
   - name: ST0A_00_t_mb01b_24
     type: bin
     start: 0x00093800
-  - [0xAE050]
+  - [0xAE850]

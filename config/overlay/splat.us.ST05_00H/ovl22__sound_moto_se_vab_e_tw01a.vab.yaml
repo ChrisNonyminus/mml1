@@ -23,4 +23,4 @@ segments:
   - name: ST05_00H_e_tw01a_22
     type: bin
     start: 0x00078000
-  - [0x91270]
+  - [0x91A70]

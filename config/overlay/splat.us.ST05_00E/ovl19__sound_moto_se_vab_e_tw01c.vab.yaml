@@ -23,4 +23,4 @@ segments:
   - name: ST05_00E_e_tw01c_19
     type: bin
     start: 0x00071800
-  - [0x89620]
+  - [0x89E20]

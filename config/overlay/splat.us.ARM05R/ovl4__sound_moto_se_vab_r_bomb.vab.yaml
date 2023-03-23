@@ -23,4 +23,4 @@ segments:
   - name: ARM05R_r_bomb_4
     type: bin
     start: 0x00007000
-  - [0xB220]
+  - [0xBA20]

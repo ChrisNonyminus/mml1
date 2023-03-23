@@ -23,4 +23,4 @@ segments:
   - name: ARM09R_r_blad_4
     type: bin
     start: 0x00006000
-  - [0xA240]
+  - [0xAA40]

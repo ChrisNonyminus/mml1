@@ -23,4 +23,4 @@ segments:
   - name: ST09_m_ug02b_35
     type: bin
     start: 0x000C0000
-  - [0xE2AA0]
+  - [0xE32A0]
