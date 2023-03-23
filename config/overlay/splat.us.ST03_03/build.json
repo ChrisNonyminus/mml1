@@ -1,7 +1,6 @@
 {
 "overlays": [
-["ovl0__SCR_st03_inkik00.TIM", 1, 32768, 1], 
-["ovl1__SCR_st03_inref00.TIM", 1, 32768, 1], 
-["ovl2__mess_st03_ff.msg", 0, 12377, 0]
+["ovl2__mess_st03_ff.msg", 69632, 0, 12377, 0],
+["ignore",0,0,0,0]
 ]
 }

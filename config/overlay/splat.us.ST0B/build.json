@@ -1,17 +1,10 @@
 {
 "overlays": [
-["ovl0__progbin_r3_st0b.bin", 0, 132096, 0], 
-["ovl1__MAP_DATA_ST0B_MAP.IDX", 0, 14088, 0], 
-["ovl2__MAP_DATA_ST0B_MAP.MDT", 0, 16082, 0], 
-["ovl3__SCR_DATA_ST0B.STG", 0, 83116, 0], 
-["ovl4__SCR_DATA_ST0B.HED", 0, 1040, 0], 
-["ovl5__OBJ_COMM_PL0000.TIM", 9, 0, 8], 
-["ovl6__OBJ_COMM_PL0001.TIM", 9, 0, 8], 
-["ovl7__OBJ_FACE_PL00B00.TIM", 1, 32768, 8], 
-["ovl8__BG_CHAR_ST0BBG00.TIM", 1, 32768, 2], 
-["ovl9__sound_moto_se_vab_t_kb01b.vab", 5, 109024, 5152], 
-["ovl10__sound_moto_se_vab_e_kb01b.vab", 5, 33552, 3104], 
-["ovl11__sound_moto_se_vab_m_kb01b.vab", 5, 189504, 5664], 
-["ovl12__sound_moto_se_seq_m_kb01b.sep", 8, 20229, 0]
+["ovl0__progbin_r3_st0b.bin", 0, 0, 132096, 0],
+["ovl1__MAP_DATA_ST0B_MAP.IDX", 135168, 0, 14088, 0],
+["ovl2__MAP_DATA_ST0B_MAP.MDT", 151552, 0, 16082, 0],
+["ovl3__SCR_DATA_ST0B.STG", 169984, 0, 83116, 0],
+["ovl4__SCR_DATA_ST0B.HED", 256000, 0, 1040, 0],
+["ignore",0,0,0,0]
 ]
 }

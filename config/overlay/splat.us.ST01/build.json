@@ -1,18 +1,11 @@
 {
 "overlays": [
-["ovl0__PROGBIN_R3_ST01.BIN", 0, 7004, 0], 
-["ovl1__MAP_DATA_ST01_MAP.IDX", 0, 12, 0], 
-["ovl2__MAP_DATA_ST01_MAP.MDT", 0, 13134, 0], 
-["ovl3__SCR_DATA_ST01.STG", 0, 812, 0], 
-["ovl4__SCR_DATA_ST01.HED", 0, 16, 0], 
-["ovl5__EMBIN_ST01_00.EBD", 0, 9956, 0], 
-["ovl6__OBJ_ST00_AR04_EM0A00.TIM", 1, 32768, 8], 
-["ovl7__SCR_ST01_OPENG0.TIM", 1, 32768, 1], 
-["ovl8__SCR_ST01_OPENG1.TIM", 1, 32768, 1], 
-["ovl9__SCR_ST01_OPENG2.TIM", 1, 32768, 1], 
-["ovl10__SCR_ST01_OPENG3.TIM", 1, 32768, 1], 
-["ovl11__BG_CHAR_ST01BG00.TIM", 1, 32768, 2], 
-["ovl12__BG_CHAR_ST01BG01.TIM", 1, 32768, 1], 
-["ovl13__BG_CHAR_ST01BG02.TIM", 1, 32768, 1]
+["ovl0__PROGBIN_R3_ST01.BIN", 0, 0, 7004, 0],
+["ovl1__MAP_DATA_ST01_MAP.IDX", 10240, 0, 12, 0],
+["ovl2__MAP_DATA_ST01_MAP.MDT", 14336, 0, 13134, 0],
+["ovl3__SCR_DATA_ST01.STG", 30720, 0, 812, 0],
+["ovl4__SCR_DATA_ST01.HED", 34816, 0, 16, 0],
+["ovl5__EMBIN_ST01_00.EBD", 38912, 0, 9956, 0],
+["ignore",0,0,0,0]
 ]
 }

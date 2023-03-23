@@ -1,32 +1,7 @@
 {
 "overlays": [
-["ovl0__EMBIN_ST10_00C.EBD", 0, 96116, 0], 
-["ovl1__OBJ_ST10_AR00C_EM1300.TIM", 1, 16384, 8], 
-["ovl2__OBJ_ST10_AR00C_EM1300C.TIM", 9, 0, 8], 
-["ovl3__OBJ_ST10_AR00C_EM2400.TIM", 1, 16384, 8], 
-["ovl4__OBJ_ST10_AR00C_EM4200.TIM", 1, 16384, 8], 
-["ovl5__OBJ_ST10_AR00C_SCKO00.TIM", 1, 16384, 8], 
-["ovl6__OBJ_ST10_AR00C_SCKO01C.TIM", 9, 0, 8], 
-["ovl7__OBJ_ST10_AR00C_KABUTO.TIM", 1, 16384, 8], 
-["ovl8__SCR_st03_st1b201.TIM", 1, 16384, 8], 
-["ovl9__SCR_st03_scm500.TIM", 1, 16384, 8], 
-["ovl10__SCR_st03_scm910.TIM", 1, 32768, 8], 
-["ovl11__SCR_st03_scm911.TIM", 9, 0, 8], 
-["ovl12__SCR_st03_scm912.TIM", 9, 0, 8], 
-["ovl13__SCR_st03_mmori00.TIM", 1, 16384, 8], 
-["ovl14__SCR_st03_mmori01c.TIM", 9, 0, 8], 
-["ovl15__SCR_st05_sc100.TIM", 1, 32768, 8], 
-["ovl16__SCR_st05_sc101c.TIM", 9, 0, 8], 
-["ovl17__SCR_st10_st5_401.TIM", 1, 16384, 8], 
-["ovl18__SCR_st10_st5_901.TIM", 1, 32768, 8], 
-["ovl19__SCR_st10_st5_902c.TIM", 9, 0, 8], 
-["ovl20__SCR_st10_st5a903c.TIM", 9, 0, 8], 
-["ovl21__SCR_st10_st5a210.TIM", 1, 16384, 8], 
-["ovl22__SCR_st10_st5a301.TIM", 1, 32768, 8], 
-["ovl23__SCR_st10_st5a302c.TIM", 9, 0, 8], 
-["ovl24__SCR_st10_st5a303c.TIM", 9, 0, 8], 
-["ovl25__SCR_st10_st5a304c.TIM", 9, 0, 8], 
-["ovl26__SCR_st10_st5a305c.TIM", 9, 0, 8], 
-["ovl27__MESS_ST10_00.MSG", 0, 2989, 0]
+["ovl0__EMBIN_ST10_00C.EBD", 0, 0, 96116, 0],
+["ovl27__MESS_ST10_00.MSG", 446464, 0, 2989, 0],
+["ignore",0,0,0,0]
 ]
 }

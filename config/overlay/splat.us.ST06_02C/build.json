@@ -1,5 +1,6 @@
 {
 "overlays": [
-["ovl0__EMBIN_ST06_02c.EBD", 0, 79932, 0]
+["ovl0__EMBIN_ST06_02c.EBD", 0, 0, 79932, 0],
+["ignore",0,0,0,0]
 ]
 }

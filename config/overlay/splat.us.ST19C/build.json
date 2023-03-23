@@ -1,12 +1,8 @@
 {
 "overlays": [
-["ovl0__EMBIN_ST19_00C.EBD", 0, 116536, 0], 
-["ovl1__OBJ_ST19_AR00_BS0907.TIM", 1, 32768, 8], 
-["ovl2__OBJ_ST19_AR00_BS0A00.TIM", 1, 32768, 8], 
-["ovl3__OBJ_ST19_AR00_BS0F00.TIM", 1, 32768, 8], 
-["ovl4__OBJ_FACE_BS0B09.TIM", 1, 32768, 8], 
-["ovl5__OBJ_FACE_PL00B0A.TIM", 1, 32768, 8], 
-["ovl6__PLBIN_PL00D42S.PBD", 0, 920, 0], 
-["ovl7__PLBIN_PL00D42M.PBD", 0, 6912, 0]
+["ovl0__EMBIN_ST19_00C.EBD", 0, 0, 116536, 0],
+["ovl6__PLBIN_PL00D42S.PBD", 292864, 0, 920, 0],
+["ovl7__PLBIN_PL00D42M.PBD", 296960, 0, 6912, 0],
+["ignore",0,0,0,0]
 ]
 }

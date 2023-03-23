@@ -127,6 +127,7 @@ logs:
 
 clean:
 	rm -rf $(BUILD_DIR) asm/ assets/ logs/
+	rm *.ld
 
 define get_overlay_parent_file
 $(shell echo $(1) | sed -e 's/config\/overlay\/\(.*\)\/.*\.yaml/\1/')

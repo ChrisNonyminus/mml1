@@ -1,9 +1,9 @@
 {
 "overlays": [
-["ovl0__progbin_r3_shl09.bin", 0, 4088, 0], 
-["ovl1__PLBIN_PL00R09S.PBD", 0, 320, 0], 
-["ovl2__PLBIN_PL00R09M.PBD", 0, 1664, 0], 
-["ovl3__PLBIN_PL00R09P.PBD", 0, 4156, 0], 
-["ovl4__sound_moto_se_vab_r_blad.vab", 5, 16960, 3104]
+["ovl0__progbin_r3_shl09.bin", 0, 0, 4088, 0],
+["ovl1__PLBIN_PL00R09S.PBD", 6144, 0, 320, 0],
+["ovl2__PLBIN_PL00R09M.PBD", 10240, 0, 1664, 0],
+["ovl3__PLBIN_PL00R09P.PBD", 14336, 0, 4156, 0],
+["ignore",0,0,0,0]
 ]
 }

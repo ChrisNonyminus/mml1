@@ -81,70 +81,75 @@ load_addresses = {}
 def get_yaml(file, chunks):
     for i, chunk in enumerate(chunks):
         (chunk_type, chunk_size, chunk_load_addr, chunk_name, chunk_offset, _, _) = chunk
-        chunk_id = chunk_name
-        chunk_id = f"ovl{i}_" + chunk_id.replace("\\", "_")[2:]
-        os.makedirs(f"config/overlay/splat.us.{file.replace('.BIN', '')}/", exist_ok= True)
-        with open(f"config/overlay/splat.us.{file.replace('.BIN', '')}/{chunk_id}.yaml", "w") as f:
-            f.write(f"options:\n")
-            f.write(f"  platform: psx\n")
-            f.write(f"  basename: {file.replace('.BIN', '')}.{chunk_id}\n")
-            f.write(f"  base_path: ../../../\n")
-            f.write(f"  target_path: ./disks/us/CDDATA/DAT/{file}\n")
-            f.write(f"  asm_path: asm/{file.replace('.BIN', '')}/{chunk_id}\n")
-            f.write(f"  asset_path: assets/{file.replace('.BIN', '')}/{chunk_id}\n")
-            f.write(f"  src_path: src/{file.replace('.BIN', '')}/{chunk_id}\n")
-            f.write(f"  compiler: GCC\n")
-            f.write(f"  extensions_path: tools/splat_ext\n")
-            f.write(f"  symbol_addrs_path: config/overlay/splat.us.{file.replace('.BIN', '')}/generated.syms.{chunk_id}.txt\n")
-            f.write(f"  undefined_funcs_auto_path: config/overlay/splat.us.{file.replace('.BIN', '')}/undefined_funcs_auto.us.{chunk_id}.txt\n")
-            f.write(f"  undefined_syms_auto_path: config/overlay/splat.us.{file.replace('.BIN', '')}/undefined_syms_auto.us.{chunk_id}.txt\n")
-            f.write(f"  find_file_boundaries: yes\n")
-            f.write(f"  use_legacy_include_asm: no\n")
-            f.write(f"  migrate_rodata_to_functions: no\n")
-            f.write(f"  auto_decompile_empty_functions: no\n")
-            f.write(f"segments:\n")
-            # strip chunkname to just the filename
-            f.write (f"# {chunk_name}\n")
-            if "/" in chunk_name:
-                chunk_name = chunk_name.split("/")[-1]
-            if "\\" in chunk_name:
-                chunk_name = chunk_name.split("\\")[-1]
-            if "." in chunk_name:
-                chunk_name = chunk_name.split(".")[0]
-            
-            if chunk_type == 0 and chunk_load_addr != 0:
-                if chunk_load_addr not in load_addresses:
-                    load_addresses[chunk_load_addr] = chunk_id
-                f.write(f"  - name: {file.replace('.BIN', '')}_{('ovl') if chunk_name == '' else chunk_name}_{i}_header\n")
-                f.write(f"    type: dashchunkheader\n")
-                f.write(f"    start: 0x{chunk_offset:08X}\n")
-                f.write(f"  - name: {file.replace('.BIN', '')}_{('ovl') if chunk_name == '' else chunk_name}_{i}\n")
-                f.write(f"    type: code\n")
-                f.write(f"    start: 0x{chunk_offset + 0x800:08X}\n")
-                f.write(f"    vram: 0x{chunk_load_addr:08X}\n")
-                f.write(f"    exclusive_ram_id: {file.replace('.BIN', '')}_{('ovl') if chunk_name == '' else chunk_name}_ram_{i}\n")
-                f.write(f"    subalign: 4\n")
-                f.write(f"    subsegments:\n")
-                f.write(f"      - [0x{chunk_offset + 0x800:X}, data, {('ovl') if chunk_name == '' else chunk_name}_{i}]\n")
-            else:
-                f.write(f"  - name: {file.replace('.BIN', '')}_{chunk_name}_{i}_header\n")
-                f.write(f"    type: dashchunkheader\n")
-                f.write(f"    start: 0x{chunk_offset:08X}\n")
-                if (chunk_type not in [1, 9, 10] or chunk_size > 0):
-                    f.write(f"  - name: {file.replace('.BIN', '')}_{chunk_name}_{i}\n")
-                    f.write(f"    type: bin\n")
-                    f.write(f"    start: 0x{chunk_offset + (0x800 if chunk_type != 4 else 0x100):08X}\n")
-            f.write(f"  - [0x{(chunk_offset + chunk_size + (0x800 if chunk_type != 4 else 0x100) + (0x800 if chunk_type == 5 else 0)):X}]\n")
+        if chunk_type == 0 and chunk_load_addr != 0:
+            chunk_id = chunk_name
+            chunk_id = f"ovl{i}_" + chunk_id.replace("\\", "_")[2:]
+            os.makedirs(f"config/overlay/splat.us.{file.replace('.BIN', '')}/", exist_ok= True)
+            with open(f"config/overlay/splat.us.{file.replace('.BIN', '')}/{chunk_id}.yaml", "w") as f:
+                f.write(f"options:\n")
+                f.write(f"  platform: psx\n")
+                f.write(f"  basename: {file.replace('.BIN', '')}.{chunk_id}\n")
+                f.write(f"  base_path: ../../../\n")
+                f.write(f"  target_path: ./disks/us/CDDATA/DAT/{file}\n")
+                f.write(f"  asm_path: asm/{file.replace('.BIN', '')}/{chunk_id}\n")
+                f.write(f"  asset_path: assets/{file.replace('.BIN', '')}/{chunk_id}\n")
+                f.write(f"  src_path: src/{file.replace('.BIN', '')}/{chunk_id}\n")
+                f.write(f"  compiler: GCC\n")
+                f.write(f"  extensions_path: tools/splat_ext\n")
+                f.write(f"  symbol_addrs_path: config/overlay/splat.us.{file.replace('.BIN', '')}/generated.syms.{chunk_id}.txt\n")
+                f.write(f"  undefined_funcs_auto_path: config/overlay/splat.us.{file.replace('.BIN', '')}/undefined_funcs_auto.us.{chunk_id}.txt\n")
+                f.write(f"  undefined_syms_auto_path: config/overlay/splat.us.{file.replace('.BIN', '')}/undefined_syms_auto.us.{chunk_id}.txt\n")
+                f.write(f"  find_file_boundaries: yes\n")
+                f.write(f"  use_legacy_include_asm: no\n")
+                f.write(f"  migrate_rodata_to_functions: no\n")
+                f.write(f"  auto_decompile_empty_functions: no\n")
+                f.write(f"segments:\n")
+                # strip chunkname to just the filename
+                f.write (f"# {chunk_name}\n")
+                if "/" in chunk_name:
+                    chunk_name = chunk_name.split("/")[-1]
+                if "\\" in chunk_name:
+                    chunk_name = chunk_name.split("\\")[-1]
+                if "." in chunk_name:
+                    chunk_name = chunk_name.split(".")[0]
+                
+                if chunk_type == 0 and chunk_load_addr != 0:
+                    if chunk_load_addr not in load_addresses:
+                        load_addresses[chunk_load_addr] = chunk_id
+                    f.write(f"  - name: {file.replace('.BIN', '')}_{('ovl') if chunk_name == '' else chunk_name}_{i}_header\n")
+                    f.write(f"    type: dashchunkheader\n")
+                    f.write(f"    start: 0x{chunk_offset:08X}\n")
+                    f.write(f"  - name: {file.replace('.BIN', '')}_{('ovl') if chunk_name == '' else chunk_name}_{i}\n")
+                    f.write(f"    type: code\n")
+                    f.write(f"    start: 0x{chunk_offset + 0x800:08X}\n")
+                    f.write(f"    vram: 0x{chunk_load_addr:08X}\n")
+                    f.write(f"    exclusive_ram_id: {file.replace('.BIN', '')}_{('ovl') if chunk_name == '' else chunk_name}_ram_{i}\n")
+                    f.write(f"    subalign: 4\n")
+                    f.write(f"    subsegments:\n")
+                    f.write(f"      - [0x{chunk_offset + 0x800:X}, data, {('ovl') if chunk_name == '' else chunk_name}_{i}]\n")
+                else:
+                    f.write(f"  - name: {file.replace('.BIN', '')}_{chunk_name}_{i}_header\n")
+                    f.write(f"    type: dashchunkheader\n")
+                    f.write(f"    start: 0x{chunk_offset:08X}\n")
+                    if (chunk_type not in [1, 9, 10] or chunk_size > 0):
+                        f.write(f"  - name: {file.replace('.BIN', '')}_{chunk_name}_{i}\n")
+                        f.write(f"    type: bin\n")
+                        f.write(f"    start: 0x{chunk_offset + (0x800 if chunk_type != 4 else 0x100):08X}\n")
+                f.write(f"  - [0x{(chunk_offset + chunk_size + (0x800 if chunk_type != 4 else 0x100) + (0x800 if chunk_type == 5 else 0)):X}]\n")
 
 def make_json(file, chunks):
+    if not os.path.exists(f"config/overlay/splat.us.{file.replace('.BIN', '')}/"):
+        return
     with open(f"config/overlay/splat.us.{file.replace('.BIN', '')}/build.json", "w") as f:
         f.write("{\n")
         f.write(f"\"overlays\": [\n")
         for i, chunk in enumerate(chunks):
             (chunk_type, chunk_size, chunk_load_addr, chunk_name, chunk_offset, fsize, unk) = chunk
-            chunk_id = chunk_name
-            chunk_id = f"ovl{i}_" + chunk_id.replace("\\", "_")[2:]
-            f.write(f"[\"{chunk_id}\", {chunk_type}, {chunk_size}, {unk}]{', ' if i < len(chunks) - 1 else ''}\n")
+            if chunk_type == 0 and chunk_load_addr != 0:
+                chunk_id = chunk_name
+                chunk_id = f"ovl{i}_" + chunk_id.replace("\\", "_")[2:]
+                f.write(f"[\"{chunk_id}\", {chunk_offset}, {chunk_type}, {chunk_size}, {unk}],\n")
+        f.write(f"[\"ignore\",0,0,0,0]\n")
         f.write(f"]\n")
         f.write("}\n")
 

@@ -1,22 +1,7 @@
 {
 "overlays": [
-["ovl0__EMBIN_ST04_02.EBD", 0, 66192, 0], 
-["ovl1__OBJ_ST04_AR02_EM0000.TIM", 1, 16384, 8], 
-["ovl2__OBJ_ST04_AR02_EM0900.TIM", 1, 16384, 8], 
-["ovl3__OBJ_ST04_AR02_EM1300B.TIM", 1, 16384, 8], 
-["ovl4__OBJ_ST04_AR02_EM3000.TIM", 1, 8192, 8], 
-["ovl5__OBJ_ST04_AR02_EM3800.TIM", 1, 16384, 8], 
-["ovl6__OBJ_ST04_AR02_EM4200.TIM", 1, 16384, 8], 
-["ovl7__OBJ_ST04_AR02_EM5300B.TIM", 1, 16384, 8], 
-["ovl8__SCR_ST04_insde00.TIM", 1, 32768, 1], 
-["ovl9__SCR_ST04_insde01c.TIM", 9, 0, 1], 
-["ovl10__SCR_ST04_insde02c.TIM", 9, 0, 1], 
-["ovl11__SCR_ST04_insde03.TIM", 1, 32768, 1], 
-["ovl12__SCR_ST04_insde04c.TIM", 9, 0, 1], 
-["ovl13__SCR_ST04_insde05c.TIM", 9, 0, 1], 
-["ovl14__SCR_ST04_insde06c.TIM", 9, 0, 1], 
-["ovl15__SCR_ST04_insde07.TIM", 1, 32768, 1], 
-["ovl16__SCR_ST04_insde08c.TIM", 9, 0, 1], 
-["ovl17__MESS_ST04_02.MSG", 0, 4064, 0]
+["ovl0__EMBIN_ST04_02.EBD", 0, 0, 66192, 0],
+["ovl17__MESS_ST04_02.MSG", 307200, 0, 4064, 0],
+["ignore",0,0,0,0]
 ]
 }

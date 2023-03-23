@@ -1,12 +1,6 @@
 {
 "overlays": [
-["ovl0__EMBIN_ST08_03.EBD", 0, 32512, 0], 
-["ovl1__OBJ_ST08_AR03_EM5200.TIM", 1, 16384, 8], 
-["ovl2__OBJ_ST08_AR03_EM5400.TIM", 1, 16384, 8], 
-["ovl3__OBJ_ST08_AR03_EM5500.TIM", 1, 16384, 8], 
-["ovl4__OBJ_ST08_AR03_BALL.TIM", 1, 32768, 8], 
-["ovl5__OBJ_ST08_AR03_BALLOON.TIM", 1, 16384, 8], 
-["ovl6__sound_moto_se_vab_e_mg00a.vab", 5, 47568, 4128], 
-["ovl7_", 556072982, 66101998, 892321604]
+["ovl0__EMBIN_ST08_03.EBD", 0, 0, 32512, 0],
+["ignore",0,0,0,0]
 ]
 }

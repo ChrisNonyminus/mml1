@@ -1,10 +1,7 @@
 {
 "overlays": [
-["ovl0__EMBIN_ST1A_01C.EBD", 0, 143656, 0], 
-["ovl1__OBJ_ST1A_AR01_BS0900.TIM", 1, 32768, 8], 
-["ovl2__OBJ_ST1A_AR01_BS0B00.TIM", 1, 32768, 8], 
-["ovl3__OBJ_ST1A_AR01_BS0909.TIM", 1, 32768, 8], 
-["ovl4__OBJ_FACE_BS0B0C.TIM", 1, 32768, 8], 
-["ovl5__MESS_ST1A_00.MSG", 0, 5806, 0]
+["ovl0__EMBIN_ST1A_01C.EBD", 0, 0, 143656, 0],
+["ovl5__MESS_ST1A_00.MSG", 286720, 0, 5806, 0],
+["ignore",0,0,0,0]
 ]
 }

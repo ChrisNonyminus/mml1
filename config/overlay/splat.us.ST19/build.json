@@ -1,31 +1,11 @@
 {
 "overlays": [
-["ovl0__progbin_r3_st19.bin", 0, 128228, 0], 
-["ovl1__MAP_DATA_ST19_MAP.IDX", 0, 2232, 0], 
-["ovl2__MAP_DATA_ST19_MAP.MDT", 0, 6868, 0], 
-["ovl3__SCR_DATA_ST19.STG", 0, 87284, 0], 
-["ovl4__SCR_DATA_ST19.HED", 0, 456, 0], 
-["ovl5__OBJ_COMM_PL0000.TIM", 9, 0, 8], 
-["ovl6__OBJ_COMM_PL0001.TIM", 9, 0, 8], 
-["ovl7__SCR_ST19_ST9_201.TIM", 1, 32768, 8], 
-["ovl8__SCR_ST19_ST9_202c.TIM", 9, 0, 8], 
-["ovl9__SCR_ST19_ST9_301.TIM", 1, 32768, 8], 
-["ovl10__SCR_ST19_ST9_302c.TIM", 9, 0, 8], 
-["ovl11__SCR_ST19_ST9_601.TIM", 1, 32768, 8], 
-["ovl12__SCR_ST19_ST9_602c.TIM", 9, 0, 8], 
-["ovl13__SCR_ST19_ST9_603c.TIM", 9, 0, 8], 
-["ovl14__SCR_ST19_ST9_100.TIM", 1, 32768, 8], 
-["ovl15__SCR_ST19_ST9_101c.TIM", 9, 0, 8], 
-["ovl16__SCR_ST19_ST9_401.TIM", 1, 32768, 8], 
-["ovl17__SCR_ST19_ST9_402c.TIM", 9, 0, 8], 
-["ovl18__SCR_ST19_ST9_501.TIM", 1, 32768, 8], 
-["ovl19__SCR_ST19_ST9_502c.TIM", 9, 0, 8], 
-["ovl20__SCR_ST19_ST9_503c.TIM", 9, 0, 8], 
-["ovl21__SCR_ST19_ST9_801.TIM", 1, 32768, 8], 
-["ovl22__SCR_ST19_ST9_802c.TIM", 9, 0, 8], 
-["ovl23__SCR_ST19_ST9_901.TIM", 1, 32768, 8], 
-["ovl24__SCR_ST19_ST9_902c.TIM", 9, 0, 8], 
-["ovl25__BG_CHAR_ST19BG00.TIM", 1, 32768, 4], 
-["ovl26__MESS_ST19_00.MSG", 0, 5826, 0]
+["ovl0__progbin_r3_st19.bin", 0, 0, 128228, 0],
+["ovl1__MAP_DATA_ST19_MAP.IDX", 131072, 0, 2232, 0],
+["ovl2__MAP_DATA_ST19_MAP.MDT", 137216, 0, 6868, 0],
+["ovl3__SCR_DATA_ST19.STG", 147456, 0, 87284, 0],
+["ovl4__SCR_DATA_ST19.HED", 237568, 0, 456, 0],
+["ovl26__MESS_ST19_00.MSG", 579584, 0, 5826, 0],
+["ignore",0,0,0,0]
 ]
 }

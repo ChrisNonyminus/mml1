@@ -1,32 +1,10 @@
 {
 "overlays": [
-["ovl0__EMBIN_ST0A_00A.EBD", 0, 143256, 0], 
-["ovl1__EMBIN_ST0A_00B.EBD", 0, 13780, 0], 
-["ovl2__OBJ_ST0A_AR00A_EM0000.TIM", 1, 16384, 8], 
-["ovl3__OBJ_ST0A_AR00A_EM0B00.TIM", 1, 32768, 8], 
-["ovl4__OBJ_ST0A_AR00A_EM3300.TIM", 1, 16384, 8], 
-["ovl5__OBJ_ST0A_AR00A_BS0100.TIM", 1, 32768, 8], 
-["ovl6__OBJ_ST0A_AR00A_BS0B00.TIM", 1, 32768, 8], 
-["ovl7__OBJ_ST0A_AR00A_BS0B01.TIM", 1, 32768, 8], 
-["ovl8__OBJ_ST0A_AR00A_CA0800.TIM", 1, 16384, 8], 
-["ovl9__OBJ_ST0A_AR00A_DODAI01.TIM", 1, 16384, 8], 
-["ovl10__SCR_st0a_st6_201.TIM", 1, 8192, 8], 
-["ovl11__SCR_st0a_st6_401.TIM", 1, 32768, 8], 
-["ovl12__SCR_st0a_st6_402c.TIM", 9, 0, 8], 
-["ovl13__SCR_st0a_st6_501.TIM", 1, 16384, 8], 
-["ovl14__SCR_st0a_st6_601.TIM", 1, 32768, 8], 
-["ovl15__SCR_st0a_st6_701.TIM", 1, 16384, 8], 
-["ovl16__SCR_st0a_st6_702c.TIM", 9, 0, 8], 
-["ovl17__SCR_st0a_st6_801.TIM", 1, 32768, 8], 
-["ovl18__SCR_st0a_st6_802c.TIM", 9, 0, 8], 
-["ovl19__SCR_st0a_st6_803c.TIM", 9, 0, 8], 
-["ovl20__SCR_st0a_st6_901.TIM", 1, 16384, 8], 
-["ovl21__BG_CHAR_ST0ABG00.TIM", 1, 32768, 1], 
-["ovl22__PLBIN_PL00D15S.PBD", 0, 944, 0], 
-["ovl23__PLBIN_PL00D15M.PBD", 0, 7104, 0], 
-["ovl24__sound_moto_se_vab_t_mb01b.vab", 5, 108624, 5152], 
-["ovl25__sound_moto_se_vab_m_mb01b.vab", 5, 205584, 6176], 
-["ovl26__sound_moto_se_seq_m_mb01b.sep", 8, 18961, 0], 
-["ovl27__MESS_ST0A_00.MSG", 0, 4779, 0]
+["ovl0__EMBIN_ST0A_00A.EBD", 0, 0, 143256, 0],
+["ovl1__EMBIN_ST0A_00B.EBD", 145408, 0, 13780, 0],
+["ovl22__PLBIN_PL00D15S.PBD", 587776, 0, 944, 0],
+["ovl23__PLBIN_PL00D15M.PBD", 591872, 0, 7104, 0],
+["ovl27__MESS_ST0A_00.MSG", 948224, 0, 4779, 0],
+["ignore",0,0,0,0]
 ]
 }

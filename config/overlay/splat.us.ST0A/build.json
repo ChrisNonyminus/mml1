@@ -1,12 +1,10 @@
 {
 "overlays": [
-["ovl0__progbin_r3_st0a.bin", 0, 112156, 0], 
-["ovl1__MAP_DATA_ST0A_MAP.IDX", 0, 6516, 0], 
-["ovl2__MAP_DATA_ST0A_MAP.MDT", 0, 2388, 0], 
-["ovl3__OBJ_COMM_PL0000.TIM", 9, 0, 8], 
-["ovl4__OBJ_COMM_PL0001.TIM", 9, 0, 8], 
-["ovl5__OBJ_FACE_PL00B00.TIM", 1, 32768, 8], 
-["ovl6__SCR_DATA_ST0A.STG", 0, 108856, 0], 
-["ovl7__SCR_DATA_ST0A.HED", 0, 1040, 0]
+["ovl0__progbin_r3_st0a.bin", 0, 0, 112156, 0],
+["ovl1__MAP_DATA_ST0A_MAP.IDX", 114688, 0, 6516, 0],
+["ovl2__MAP_DATA_ST0A_MAP.MDT", 124928, 0, 2388, 0],
+["ovl6__SCR_DATA_ST0A.STG", 169984, 0, 108856, 0],
+["ovl7__SCR_DATA_ST0A.HED", 282624, 0, 1040, 0],
+["ignore",0,0,0,0]
 ]
 }

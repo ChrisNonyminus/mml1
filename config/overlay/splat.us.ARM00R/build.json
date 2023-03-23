@@ -1,7 +1,8 @@
 {
 "overlays": [
-["ovl0__PLBIN_PL00R00S.PBD", 0, 248, 0], 
-["ovl1__PLBIN_PL00R00M.PBD", 0, 1088, 0], 
-["ovl2__PLBIN_PL00R00P.PBD", 0, 4232, 0]
+["ovl0__PLBIN_PL00R00S.PBD", 0, 0, 248, 0],
+["ovl1__PLBIN_PL00R00M.PBD", 4096, 0, 1088, 0],
+["ovl2__PLBIN_PL00R00P.PBD", 8192, 0, 4232, 0],
+["ignore",0,0,0,0]
 ]
 }

@@ -3,7 +3,7 @@
 
 #include "rock_neo.h"
 
-// my guess is this is EXIT_SUB_BIN is part of an enumerator of all files in the CD, with the CDDATA files starting at index 3.
+// my guess is EXIT_SUB_BIN is part of an enumerator of all files in the CD, with the CDDATA files starting at index 3.
 typedef enum _CD_COMB {
     ARM00L_BIN = 3,
     ARM00R_BIN,

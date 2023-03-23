@@ -161,6 +161,7 @@ def get_chunk_list(parent_archive_filename):
     build_log.write(json_path + "\n")
     with open(json_path, "r") as f:
         data = json.load(f)
+    build_log.write(str(data) + "\n")
     return data["overlays"]
 
 def get_chunk_file_names(parent_archive_filename):
@@ -198,7 +199,7 @@ def get_next_offset(file, offset, chunk_size, unk, chunk_type):
 def build_overlay(parent_archive_filename):
     chunk_file_names = get_chunk_list(parent_archive_filename)
     need_to_rebuild = False
-    for chunk_file_name, _, _, _ in chunk_file_names:
+    for chunk_file_name, _, _, _, _ in chunk_file_names:
         if not os.path.exists(f"config/overlay/splat.{VERSION}.{parent_archive_filename}/{chunk_file_name}.yaml"):
             continue
         if build_chunk(parent_archive_filename, chunk_file_name):
@@ -206,22 +207,28 @@ def build_overlay(parent_archive_filename):
             binarize_chunk(parent_archive_filename, chunk_file_name)
             build_hash_cache(parent_archive_filename, chunk_file_name)
     if need_to_rebuild:
-        f = open(f"{BUILD_DIR}/{parent_archive_filename}.BIN", "wb")
-        for chunk_file_name, chunk_type, chunk_size, unk in chunk_file_names:
+        # TEMP: instead of rebuilding entire bin files, let's just take the existing bin file and emplace the progbins into them (for now)
+        shutil.copyfile(f"disks/{VERSION}/CDDATA/DAT/{parent_archive_filename}.BIN", f"{BUILD_DIR}/{parent_archive_filename}.BIN")
+        #f = open(f"{BUILD_DIR}/{parent_archive_filename}.BIN", "wb")
+        archive_bytes = bytearray(open(f"{BUILD_DIR}/{parent_archive_filename}.BIN", "rb").read())
+        for chunk_file_name, chunk_offset, chunk_type, chunk_size, unk in chunk_file_names:
             if not os.path.exists(f"config/overlay/splat.{VERSION}.{parent_archive_filename}/{chunk_file_name}.yaml"):
                 continue
             with open(f"{BUILD_DIR}/{parent_archive_filename}.{chunk_file_name}.elf.bin", "rb") as chunk:
-                f.write(chunk.read())
-                # align next offset by 0x800
-                if (chunk_type not in [1,9,10] or chunk_size > 0):
-                    f.seek(get_next_offset(parent_archive_filename, f.tell(), chunk_size, unk, chunk_type), 0)
-                else:
-                    pass
-        # add last chunk: an empty chunk with type 0xFFFFFFFF and every other value set to 0
-        f.write(b"\xFF\xFF\xFF\xFF\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00")
-        for _ in range(0, 0x800 - 0x10):
-            f.write(b"\x00")
-        f.close()
+                # f.write(chunk.read())
+                # # align next offset by 0x800
+                # if (chunk_type not in [1,9,10] or chunk_size > 0):
+                #     f.seek(get_next_offset(parent_archive_filename, f.tell(), chunk_size, unk, chunk_type), 0)
+                # else:
+                #     pass
+                archive_bytes[chunk_offset: chunk_offset + os.path.getsize(f"{BUILD_DIR}/{parent_archive_filename}.{chunk_file_name}.elf.bin")] = chunk.read()
+        # # add last chunk: an empty chunk with type 0xFFFFFFFF and every other value set to 0
+        # f.write(b"\xFF\xFF\xFF\xFF\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00")
+        # for _ in range(0, 0x800 - 0x10):
+        #     f.write(b"\x00")
+        # f.close()
+        with open(f"{BUILD_DIR}/{parent_archive_filename}.BIN", "wb") as f:
+            f.write(archive_bytes)
         build_log.write(f"build/{parent_archive_filename}.BIN\n")
 
     

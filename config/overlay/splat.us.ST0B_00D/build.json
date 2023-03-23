@@ -1,8 +1,0 @@
-{
-"overlays": [
-["ovl0__OBJ_ST0B_AR00_BS0900.TIM", 1, 32768, 8], 
-["ovl1__OBJ_ST0B_AR00_EM2B00.TIM", 1, 16384, 8], 
-["ovl2__OBJ_ST0B_AR00_EM1D00.TIM", 1, 16384, 8], 
-["ovl3__OBJ_ST0B_AR00_BS0903.TIM", 1, 32768, 8]
-]
-}

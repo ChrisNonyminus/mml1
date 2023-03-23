@@ -1,8 +1,7 @@
 {
 "overlays": [
-["ovl0__EMBIN_ST0D_03.EBD", 0, 18328, 0], 
-["ovl1__OBJ_ST0D_AR03_BS0600.TIM", 1, 32768, 8], 
-["ovl2__OBJ_FACE_BS0604.TIM", 1, 32768, 8], 
-["ovl3__MESS_DUMMY.MSG", 0, 26, 0]
+["ovl0__EMBIN_ST0D_03.EBD", 0, 0, 18328, 0],
+["ovl3__MESS_DUMMY.MSG", 90112, 0, 26, 0],
+["ignore",0,0,0,0]
 ]
 }

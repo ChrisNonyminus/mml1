@@ -1,32 +1,6 @@
 {
 "overlays": [
-["ovl0__EMBIN_ST1D_02.EBD", 0, 118956, 0], 
-["ovl1__SCR_ST1D_b3ct10.TIM", 1, 32768, 1], 
-["ovl2__SCR_ST1D_b3ct11c.TIM", 9, 0, 1], 
-["ovl3__SCR_ST1D_b3ct12c.TIM", 9, 0, 1], 
-["ovl4__SCR_ST1D_b3ct13c.TIM", 9, 0, 1], 
-["ovl5__SCR_ST1D_b3ct20.TIM", 1, 32768, 8], 
-["ovl6__SCR_ST1D_b3ct30.TIM", 1, 32768, 8], 
-["ovl7__SCR_ST1D_b3ct31c.TIM", 9, 0, 8], 
-["ovl8__SCR_ST1D_b3ct40.TIM", 1, 32768, 8], 
-["ovl9__SCR_ST1D_b3ct41c.TIM", 9, 0, 8], 
-["ovl10__SCR_ST1D_b3ct42c.TIM", 9, 0, 8], 
-["ovl11__SCR_ST1D_b3ct43c.TIM", 9, 0, 8], 
-["ovl12__SCR_ST1D_b3ct44c.TIM", 9, 0, 8], 
-["ovl13__SCR_ST1D_b3ct50.TIM", 1, 32768, 8], 
-["ovl14__SCR_ST1D_b3ct60.TIM", 1, 32768, 8], 
-["ovl15__SCR_ST1D_b3ct63c.TIM", 9, 0, 8], 
-["ovl16__SCR_ST1D_b3ct70.TIM", 1, 16384, 8], 
-["ovl17__SCR_ST1D_b3ct90.TIM", 1, 24576, 8], 
-["ovl18__SCR_ST1D_b3ct91.TIM", 1, 12288, 8], 
-["ovl19__BG_CHAR_ST1DBG21.TIM", 9, 0, 8], 
-["ovl20__OBJ_ST1D_AR02_BS1400.TIM", 1, 32768, 8], 
-["ovl21__OBJ_ST1D_AR02_EM0301.TIM", 1, 16384, 8], 
-["ovl22__OBJ_ST1D_AR02_EM3500.TIM", 1, 16384, 8], 
-["ovl23__OBJ_ST1D_AR02_EM3700.TIM", 1, 16384, 8], 
-["ovl24__sound_moto_se_vab_t_tw05b.vab", 5, 105776, 6176], 
-["ovl25__sound_moto_se_vab_e_tw05b.vab", 5, 29488, 5664], 
-["ovl26__sound_moto_se_vab_m_tw07b.vab", 5, 153504, 5664], 
-["ovl27_", 1866530858, 71381568, 826475780]
+["ovl0__EMBIN_ST1D_02.EBD", 0, 0, 118956, 0],
+["ignore",0,0,0,0]
 ]
 }
