@@ -8,7 +8,7 @@ options:
   src_path: src/ST09/ovl1__MAP_DATA_ST09_MAP.IDX
   compiler: GCC
   extensions_path: tools/splat_ext
-  symbol_addrs_path: config/overlay/splat.us.ST09/generated.syms.ovl1__MAP_DATA_ST09_MAP.IDX.txt
+  symbol_addrs_path: config/overlay/splat.us.ST09/generated.syms.us.ovl1__MAP_DATA_ST09_MAP.IDX.txt
   undefined_funcs_auto_path: config/overlay/splat.us.ST09/undefined_funcs_auto.us.ovl1__MAP_DATA_ST09_MAP.IDX.txt
   undefined_syms_auto_path: config/overlay/splat.us.ST09/undefined_syms_auto.us.ovl1__MAP_DATA_ST09_MAP.IDX.txt
   find_file_boundaries: yes

@@ -8,7 +8,7 @@ options:
   src_path: src/SUPPORT2/ovl10__MESS_STFF_FD.MSG
   compiler: GCC
   extensions_path: tools/splat_ext
-  symbol_addrs_path: config/overlay/splat.us.SUPPORT2/generated.syms.ovl10__MESS_STFF_FD.MSG.txt
+  symbol_addrs_path: config/overlay/splat.us.SUPPORT2/generated.syms.us.ovl10__MESS_STFF_FD.MSG.txt
   undefined_funcs_auto_path: config/overlay/splat.us.SUPPORT2/undefined_funcs_auto.us.ovl10__MESS_STFF_FD.MSG.txt
   undefined_syms_auto_path: config/overlay/splat.us.SUPPORT2/undefined_syms_auto.us.ovl10__MESS_STFF_FD.MSG.txt
   find_file_boundaries: yes

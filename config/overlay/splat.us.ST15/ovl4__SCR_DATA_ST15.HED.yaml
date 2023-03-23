@@ -8,7 +8,7 @@ options:
   src_path: src/ST15/ovl4__SCR_DATA_ST15.HED
   compiler: GCC
   extensions_path: tools/splat_ext
-  symbol_addrs_path: config/overlay/splat.us.ST15/generated.syms.ovl4__SCR_DATA_ST15.HED.txt
+  symbol_addrs_path: config/overlay/splat.us.ST15/generated.syms.us.ovl4__SCR_DATA_ST15.HED.txt
   undefined_funcs_auto_path: config/overlay/splat.us.ST15/undefined_funcs_auto.us.ovl4__SCR_DATA_ST15.HED.txt
   undefined_syms_auto_path: config/overlay/splat.us.ST15/undefined_syms_auto.us.ovl4__SCR_DATA_ST15.HED.txt
   find_file_boundaries: yes

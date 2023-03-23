@@ -8,7 +8,7 @@ options:
   src_path: src/ST0CB/ovl5__EMBIN_ST0C_00B.EBD
   compiler: GCC
   extensions_path: tools/splat_ext
-  symbol_addrs_path: config/overlay/splat.us.ST0CB/generated.syms.ovl5__EMBIN_ST0C_00B.EBD.txt
+  symbol_addrs_path: config/overlay/splat.us.ST0CB/generated.syms.us.ovl5__EMBIN_ST0C_00B.EBD.txt
   undefined_funcs_auto_path: config/overlay/splat.us.ST0CB/undefined_funcs_auto.us.ovl5__EMBIN_ST0C_00B.EBD.txt
   undefined_syms_auto_path: config/overlay/splat.us.ST0CB/undefined_syms_auto.us.ovl5__EMBIN_ST0C_00B.EBD.txt
   find_file_boundaries: yes

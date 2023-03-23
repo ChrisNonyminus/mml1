@@ -8,7 +8,7 @@ options:
   src_path: src/ARM10R/ovl0__progbin_r3_shl0d.bin
   compiler: GCC
   extensions_path: tools/splat_ext
-  symbol_addrs_path: config/overlay/splat.us.ARM10R/generated.syms.ovl0__progbin_r3_shl0d.bin.txt
+  symbol_addrs_path: config/overlay/splat.us.ARM10R/generated.syms.us.ovl0__progbin_r3_shl0d.bin.txt
   undefined_funcs_auto_path: config/overlay/splat.us.ARM10R/undefined_funcs_auto.us.ovl0__progbin_r3_shl0d.bin.txt
   undefined_syms_auto_path: config/overlay/splat.us.ARM10R/undefined_syms_auto.us.ovl0__progbin_r3_shl0d.bin.txt
   find_file_boundaries: yes

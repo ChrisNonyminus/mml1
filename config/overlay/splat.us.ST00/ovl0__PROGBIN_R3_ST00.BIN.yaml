@@ -8,7 +8,7 @@ options:
   src_path: src/ST00/ovl0__PROGBIN_R3_ST00.BIN
   compiler: GCC
   extensions_path: tools/splat_ext
-  symbol_addrs_path: config/overlay/splat.us.ST00/generated.syms.ovl0__PROGBIN_R3_ST00.BIN.txt
+  symbol_addrs_path: config/overlay/splat.us.ST00/generated.syms.us.ovl0__PROGBIN_R3_ST00.BIN.txt
   undefined_funcs_auto_path: config/overlay/splat.us.ST00/undefined_funcs_auto.us.ovl0__PROGBIN_R3_ST00.BIN.txt
   undefined_syms_auto_path: config/overlay/splat.us.ST00/undefined_syms_auto.us.ovl0__PROGBIN_R3_ST00.BIN.txt
   find_file_boundaries: yes
@@ -27,5 +27,7 @@ segments:
     exclusive_ram_id: ST00_R3_ST00_ram_0
     subalign: 4
     subsegments:
-      - [0x800, data, R3_ST00_0]
+      - [0x800, rodata]
+      - [0xB24, asm]
+      - [0x1A454, data]
   - [0x22F00]

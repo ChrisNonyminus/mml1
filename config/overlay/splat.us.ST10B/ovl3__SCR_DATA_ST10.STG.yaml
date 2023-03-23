@@ -8,7 +8,7 @@ options:
   src_path: src/ST10B/ovl3__SCR_DATA_ST10.STG
   compiler: GCC
   extensions_path: tools/splat_ext
-  symbol_addrs_path: config/overlay/splat.us.ST10B/generated.syms.ovl3__SCR_DATA_ST10.STG.txt
+  symbol_addrs_path: config/overlay/splat.us.ST10B/generated.syms.us.ovl3__SCR_DATA_ST10.STG.txt
   undefined_funcs_auto_path: config/overlay/splat.us.ST10B/undefined_funcs_auto.us.ovl3__SCR_DATA_ST10.STG.txt
   undefined_syms_auto_path: config/overlay/splat.us.ST10B/undefined_syms_auto.us.ovl3__SCR_DATA_ST10.STG.txt
   find_file_boundaries: yes

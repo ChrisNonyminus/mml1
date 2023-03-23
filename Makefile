@@ -151,7 +151,7 @@ ALL_ARCHIVES := $(sort $(ALL_ARCHIVES))
 
 define generate_symbol_list
 	@$(shell if [ ! -f "$(CONFIG_DIR)/overlay/$(call get_overlay_parent_file,$(1))/syms.$(VERSION).$(call get_overlay_name,$(1)).txt" ]; then touch "$(CONFIG_DIR)/overlay/$(call get_overlay_parent_file,$(1))/syms.$(VERSION).$(call get_overlay_name,$(1)).txt"; fi)
-	
+	@$(shell cat $(ROCK_NEO_SYMBOL_LIST) "$(CONFIG_DIR)/overlay/$(call get_overlay_parent_file,$(1))/syms.$(VERSION).$(call get_overlay_name,$(1)).txt" > "$(CONFIG_DIR)/overlay/$(call get_overlay_parent_file,$(1))/generated.syms.$(VERSION).$(call get_overlay_name,$(1)).txt")
 endef
 	
 

@@ -75,18 +75,18 @@ class PSXSegDashchunkheader(CommonSegHeader):
     def split(self, rom_bytes):
         rom_bytes = rom_bytes[self.rom_start :]
         self.symbols = {
-            0x801F6000: "SUPPORT_STG_LOAD_ADDRESS",
-            0x801F2000: "SUPPORT_EBD_LOAD_ADDRESS",
-            0x801D8000: "SUPPORT_PROGBIN_LOAD_ADDRESS",
-            0x80194000: "STAGE_STG_LOAD_ADDRESS",
-            0x80190000: "STAGE_EBD_LOAD_ADDRESS2",
-            0x8016C000: "STAGE_EBD_LOAD_ADDRESS1",
-            0x80164000: "STAGE_MDT_LOAD_ADDRESS",
-            0x8015C000: "STAGE_IDX_LOAD_ADDRESS",
-            0x80153000: "MSG_LOAD_ADDRESS",
-            0x8013A000: "STAGE_HED_LOAD_ADDRESS",
-            0x80100000: "STAGE_PROGBIN_LOAD_ADDRESS",
-            0x800D8800: "SHL_PROGBIN_LOAD_ADDRESS",
+            # 0x801F6000: "SUPPORT_STG_LOAD_ADDRESS",
+            # 0x801F2000: "SUPPORT_EBD_LOAD_ADDRESS",
+            # 0x801D8000: "SUPPORT_PROGBIN_LOAD_ADDRESS",
+            # 0x80194000: "STAGE_STG_LOAD_ADDRESS",
+            # 0x80190000: "STAGE_EBD_LOAD_ADDRESS2",
+            # 0x8016C000: "STAGE_EBD_LOAD_ADDRESS1",
+            # 0x80164000: "STAGE_MDT_LOAD_ADDRESS",
+            # 0x8015C000: "STAGE_IDX_LOAD_ADDRESS",
+            # 0x80153000: "MSG_LOAD_ADDRESS",
+            # 0x8013A000: "STAGE_HED_LOAD_ADDRESS",
+            # 0x80100000: "STAGE_PROGBIN_LOAD_ADDRESS",
+            # 0x800D8800: "SHL_PROGBIN_LOAD_ADDRESS",
         }
 
         header_lines = self.parse_header(rom_bytes)

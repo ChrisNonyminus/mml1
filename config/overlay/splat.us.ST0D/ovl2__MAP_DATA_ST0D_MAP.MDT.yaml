@@ -8,7 +8,7 @@ options:
   src_path: src/ST0D/ovl2__MAP_DATA_ST0D_MAP.MDT
   compiler: GCC
   extensions_path: tools/splat_ext
-  symbol_addrs_path: config/overlay/splat.us.ST0D/generated.syms.ovl2__MAP_DATA_ST0D_MAP.MDT.txt
+  symbol_addrs_path: config/overlay/splat.us.ST0D/generated.syms.us.ovl2__MAP_DATA_ST0D_MAP.MDT.txt
   undefined_funcs_auto_path: config/overlay/splat.us.ST0D/undefined_funcs_auto.us.ovl2__MAP_DATA_ST0D_MAP.MDT.txt
   undefined_syms_auto_path: config/overlay/splat.us.ST0D/undefined_syms_auto.us.ovl2__MAP_DATA_ST0D_MAP.MDT.txt
   find_file_boundaries: yes

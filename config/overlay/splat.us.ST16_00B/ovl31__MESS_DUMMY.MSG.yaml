@@ -8,7 +8,7 @@ options:
   src_path: src/ST16_00B/ovl31__MESS_DUMMY.MSG
   compiler: GCC
   extensions_path: tools/splat_ext
-  symbol_addrs_path: config/overlay/splat.us.ST16_00B/generated.syms.ovl31__MESS_DUMMY.MSG.txt
+  symbol_addrs_path: config/overlay/splat.us.ST16_00B/generated.syms.us.ovl31__MESS_DUMMY.MSG.txt
   undefined_funcs_auto_path: config/overlay/splat.us.ST16_00B/undefined_funcs_auto.us.ovl31__MESS_DUMMY.MSG.txt
   undefined_syms_auto_path: config/overlay/splat.us.ST16_00B/undefined_syms_auto.us.ovl31__MESS_DUMMY.MSG.txt
   find_file_boundaries: yes

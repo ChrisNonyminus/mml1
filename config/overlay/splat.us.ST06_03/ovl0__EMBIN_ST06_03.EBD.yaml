@@ -8,7 +8,7 @@ options:
   src_path: src/ST06_03/ovl0__EMBIN_ST06_03.EBD
   compiler: GCC
   extensions_path: tools/splat_ext
-  symbol_addrs_path: config/overlay/splat.us.ST06_03/generated.syms.ovl0__EMBIN_ST06_03.EBD.txt
+  symbol_addrs_path: config/overlay/splat.us.ST06_03/generated.syms.us.ovl0__EMBIN_ST06_03.EBD.txt
   undefined_funcs_auto_path: config/overlay/splat.us.ST06_03/undefined_funcs_auto.us.ovl0__EMBIN_ST06_03.EBD.txt
   undefined_syms_auto_path: config/overlay/splat.us.ST06_03/undefined_syms_auto.us.ovl0__EMBIN_ST06_03.EBD.txt
   find_file_boundaries: yes

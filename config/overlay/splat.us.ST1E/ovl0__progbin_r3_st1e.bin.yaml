@@ -8,7 +8,7 @@ options:
   src_path: src/ST1E/ovl0__progbin_r3_st1e.bin
   compiler: GCC
   extensions_path: tools/splat_ext
-  symbol_addrs_path: config/overlay/splat.us.ST1E/generated.syms.ovl0__progbin_r3_st1e.bin.txt
+  symbol_addrs_path: config/overlay/splat.us.ST1E/generated.syms.us.ovl0__progbin_r3_st1e.bin.txt
   undefined_funcs_auto_path: config/overlay/splat.us.ST1E/undefined_funcs_auto.us.ovl0__progbin_r3_st1e.bin.txt
   undefined_syms_auto_path: config/overlay/splat.us.ST1E/undefined_syms_auto.us.ovl0__progbin_r3_st1e.bin.txt
   find_file_boundaries: yes
@@ -27,5 +27,7 @@ segments:
     exclusive_ram_id: ST1E_r3_st1e_ram_0
     subalign: 4
     subsegments:
-      - [0x800, data, r3_st1e_0]
+      - [0x800, rodata]
+      - [0x8AC, asm]
+      - [0x4598, data]
   - [0xA118]

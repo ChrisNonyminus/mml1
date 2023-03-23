@@ -8,13 +8,17 @@ options:
   src_path: src/ST05/ovl0__PROGBIN_R3_ST05.BIN
   compiler: GCC
   extensions_path: tools/splat_ext
-  symbol_addrs_path: config/overlay/splat.us.ST05/generated.syms.ovl0__PROGBIN_R3_ST05.BIN.txt
+  symbol_addrs_path: config/overlay/splat.us.ST05/generated.syms.us.ovl0__PROGBIN_R3_ST05.BIN.txt
   undefined_funcs_auto_path: config/overlay/splat.us.ST05/undefined_funcs_auto.us.ovl0__PROGBIN_R3_ST05.BIN.txt
   undefined_syms_auto_path: config/overlay/splat.us.ST05/undefined_syms_auto.us.ovl0__PROGBIN_R3_ST05.BIN.txt
   find_file_boundaries: yes
   use_legacy_include_asm: no
   migrate_rodata_to_functions: no
   auto_decompile_empty_functions: no
+  section_order:
+    - ".rodata"
+    - ".text"
+    - ".data"
 segments:
 # ..\PROGBIN\R3_ST05.BIN
   - name: ST05_R3_ST05_0_header
@@ -27,5 +31,7 @@ segments:
     exclusive_ram_id: ST05_R3_ST05_ram_0
     subalign: 4
     subsegments:
-      - [0x800, data, R3_ST05_0]
+      - [0x800, rodata]
+      - [0x108C, asm]
+      - [0x2E0C4, data]
   - [0x388C4]

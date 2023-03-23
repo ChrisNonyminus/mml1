@@ -8,7 +8,7 @@ options:
   src_path: src/SUB_WPN/ovl1__MESS_STFF_FE.MSG
   compiler: GCC
   extensions_path: tools/splat_ext
-  symbol_addrs_path: config/overlay/splat.us.SUB_WPN/generated.syms.ovl1__MESS_STFF_FE.MSG.txt
+  symbol_addrs_path: config/overlay/splat.us.SUB_WPN/generated.syms.us.ovl1__MESS_STFF_FE.MSG.txt
   undefined_funcs_auto_path: config/overlay/splat.us.SUB_WPN/undefined_funcs_auto.us.ovl1__MESS_STFF_FE.MSG.txt
   undefined_syms_auto_path: config/overlay/splat.us.SUB_WPN/undefined_syms_auto.us.ovl1__MESS_STFF_FE.MSG.txt
   find_file_boundaries: yes
