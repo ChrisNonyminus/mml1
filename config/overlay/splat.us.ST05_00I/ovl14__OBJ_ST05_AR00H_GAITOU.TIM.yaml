@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST05_00I.ovl14__OBJ_ST05_AR00H_GAITOU.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST05_00I.BIN
+  asm_path: asm/ST05_00I/ovl14__OBJ_ST05_AR00H_GAITOU.TIM
+  asset_path: assets/ST05_00I/ovl14__OBJ_ST05_AR00H_GAITOU.TIM
+  src_path: src/ST05_00I/ovl14__OBJ_ST05_AR00H_GAITOU.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST05_00I/generated.syms.ovl14__OBJ_ST05_AR00H_GAITOU.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST05_00I/undefined_funcs_auto.us.ovl14__OBJ_ST05_AR00H_GAITOU.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST05_00I/undefined_syms_auto.us.ovl14__OBJ_ST05_AR00H_GAITOU.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\OBJ\ST05\AR00H\GAITOU.TIM
+  - name: ST05_00I_GAITOU_14_header
+    type: dashchunkheader
+    start: 0x00057000
+  - name: ST05_00I_GAITOU_14
+    type: bin
+    start: 0x00057800
+  - [0x5B800]

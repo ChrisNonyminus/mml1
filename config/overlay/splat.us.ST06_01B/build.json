@@ -1,0 +1,12 @@
+{
+"overlays": [
+["ovl0__SCR_st06_incit10.TIM", 1, 16384, 3], 
+["ovl1__SCR_st06_incit13.TIM", 1, 16384, 4], 
+["ovl2__SCR_st06_incit20.TIM", 1, 16384, 2], 
+["ovl3__SCR_st06_incit22.TIM", 1, 16384, 1], 
+["ovl4__mess_st06_01.msg", 0, 13401, 0], 
+["ovl5__sound_moto_se_vab_e_tw02a.vab", 5, 50560, 5664], 
+["ovl6__sound_moto_se_vab_m_tw02a.vab", 5, 201856, 6176], 
+["ovl7__sound_moto_se_seq_m_tw02a.sep", 8, 10164, 0]
+]
+}

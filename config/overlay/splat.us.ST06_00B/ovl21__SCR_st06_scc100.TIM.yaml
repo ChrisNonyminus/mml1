@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST06_00B.ovl21__SCR_st06_scc100.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST06_00B.BIN
+  asm_path: asm/ST06_00B/ovl21__SCR_st06_scc100.TIM
+  asset_path: assets/ST06_00B/ovl21__SCR_st06_scc100.TIM
+  src_path: src/ST06_00B/ovl21__SCR_st06_scc100.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST06_00B/generated.syms.ovl21__SCR_st06_scc100.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST06_00B/undefined_funcs_auto.us.ovl21__SCR_st06_scc100.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST06_00B/undefined_syms_auto.us.ovl21__SCR_st06_scc100.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\SCR\st06\scc100.TIM
+  - name: ST06_00B_scc100_21_header
+    type: dashchunkheader
+    start: 0x00082800
+  - name: ST06_00B_scc100_21
+    type: bin
+    start: 0x00083000
+  - [0x8B000]

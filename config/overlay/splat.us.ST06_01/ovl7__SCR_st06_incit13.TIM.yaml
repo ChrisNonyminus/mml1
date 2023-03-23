@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST06_01.ovl7__SCR_st06_incit13.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST06_01.BIN
+  asm_path: asm/ST06_01/ovl7__SCR_st06_incit13.TIM
+  asset_path: assets/ST06_01/ovl7__SCR_st06_incit13.TIM
+  src_path: src/ST06_01/ovl7__SCR_st06_incit13.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST06_01/generated.syms.ovl7__SCR_st06_incit13.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST06_01/undefined_funcs_auto.us.ovl7__SCR_st06_incit13.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST06_01/undefined_syms_auto.us.ovl7__SCR_st06_incit13.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\SCR\st06\incit13.TIM
+  - name: ST06_01_incit13_7_header
+    type: dashchunkheader
+    start: 0x0003A000
+  - name: ST06_01_incit13_7
+    type: bin
+    start: 0x0003A800
+  - [0x3E800]

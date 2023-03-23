@@ -1,0 +1,31 @@
+options:
+  platform: psx
+  basename: ST04_00.ovl0__EMBIN_ST04_00A.EBD
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST04_00.BIN
+  asm_path: asm/ST04_00/ovl0__EMBIN_ST04_00A.EBD
+  asset_path: assets/ST04_00/ovl0__EMBIN_ST04_00A.EBD
+  src_path: src/ST04_00/ovl0__EMBIN_ST04_00A.EBD
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST04_00/generated.syms.ovl0__EMBIN_ST04_00A.EBD.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST04_00/undefined_funcs_auto.us.ovl0__EMBIN_ST04_00A.EBD.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST04_00/undefined_syms_auto.us.ovl0__EMBIN_ST04_00A.EBD.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\EMBIN\ST04_00A.EBD
+  - name: ST04_00_ST04_00A_0_header
+    type: dashchunkheader
+    start: 0x00000000
+  - name: ST04_00_ST04_00A_0
+    type: code
+    start: 0x00000800
+    vram: 0x8016C000
+    exclusive_ram_id: ST04_00_ST04_00A_ram_0
+    subalign: 4
+    subsegments:
+      - [0x800, data, ST04_00A_0]
+  - [0x23128]

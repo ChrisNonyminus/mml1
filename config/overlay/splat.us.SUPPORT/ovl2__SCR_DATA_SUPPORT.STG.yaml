@@ -1,0 +1,31 @@
+options:
+  platform: psx
+  basename: SUPPORT.ovl2__SCR_DATA_SUPPORT.STG
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/SUPPORT.BIN
+  asm_path: asm/SUPPORT/ovl2__SCR_DATA_SUPPORT.STG
+  asset_path: assets/SUPPORT/ovl2__SCR_DATA_SUPPORT.STG
+  src_path: src/SUPPORT/ovl2__SCR_DATA_SUPPORT.STG
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.SUPPORT/generated.syms.ovl2__SCR_DATA_SUPPORT.STG.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.SUPPORT/undefined_funcs_auto.us.ovl2__SCR_DATA_SUPPORT.STG.txt
+  undefined_syms_auto_path: config/overlay/splat.us.SUPPORT/undefined_syms_auto.us.ovl2__SCR_DATA_SUPPORT.STG.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\SCR\DATA\SUPPORT.STG
+  - name: SUPPORT_SUPPORT_2_header
+    type: dashchunkheader
+    start: 0x00009000
+  - name: SUPPORT_SUPPORT_2
+    type: code
+    start: 0x00009800
+    vram: 0x801F6000
+    exclusive_ram_id: SUPPORT_SUPPORT_ram_2
+    subalign: 4
+    subsegments:
+      - [0x9800, data, SUPPORT_2]
+  - [0xA6F4]

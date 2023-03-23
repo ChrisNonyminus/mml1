@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST03_06.ovl2__OBJ_ST03_AR07_EM0900B.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST03_06.BIN
+  asm_path: asm/ST03_06/ovl2__OBJ_ST03_AR07_EM0900B.TIM
+  asset_path: assets/ST03_06/ovl2__OBJ_ST03_AR07_EM0900B.TIM
+  src_path: src/ST03_06/ovl2__OBJ_ST03_AR07_EM0900B.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST03_06/generated.syms.ovl2__OBJ_ST03_AR07_EM0900B.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST03_06/undefined_funcs_auto.us.ovl2__OBJ_ST03_AR07_EM0900B.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST03_06/undefined_syms_auto.us.ovl2__OBJ_ST03_AR07_EM0900B.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\OBJ\ST03\AR07\EM0900B.TIM
+  - name: ST03_06_EM0900B_2_header
+    type: dashchunkheader
+    start: 0x0001F000
+  - name: ST03_06_EM0900B_2
+    type: bin
+    start: 0x0001F800
+  - [0x23800]

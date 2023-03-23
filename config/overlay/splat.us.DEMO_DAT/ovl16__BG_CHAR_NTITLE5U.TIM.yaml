@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: DEMO_DAT.ovl16__BG_CHAR_NTITLE5U.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/DEMO_DAT.BIN
+  asm_path: asm/DEMO_DAT/ovl16__BG_CHAR_NTITLE5U.TIM
+  asset_path: assets/DEMO_DAT/ovl16__BG_CHAR_NTITLE5U.TIM
+  src_path: src/DEMO_DAT/ovl16__BG_CHAR_NTITLE5U.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.DEMO_DAT/generated.syms.ovl16__BG_CHAR_NTITLE5U.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.DEMO_DAT/undefined_funcs_auto.us.ovl16__BG_CHAR_NTITLE5U.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.DEMO_DAT/undefined_syms_auto.us.ovl16__BG_CHAR_NTITLE5U.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\BG\CHAR\NTITLE5U.TIM
+  - name: DEMO_DAT_NTITLE5U_16_header
+    type: dashchunkheader
+    start: 0x00042800
+  - name: DEMO_DAT_NTITLE5U_16
+    type: bin
+    start: 0x00043000
+  - [0x46000]

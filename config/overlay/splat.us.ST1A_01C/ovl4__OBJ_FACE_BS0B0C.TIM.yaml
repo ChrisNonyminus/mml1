@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST1A_01C.ovl4__OBJ_FACE_BS0B0C.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST1A_01C.BIN
+  asm_path: asm/ST1A_01C/ovl4__OBJ_FACE_BS0B0C.TIM
+  asset_path: assets/ST1A_01C/ovl4__OBJ_FACE_BS0B0C.TIM
+  src_path: src/ST1A_01C/ovl4__OBJ_FACE_BS0B0C.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST1A_01C/generated.syms.ovl4__OBJ_FACE_BS0B0C.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST1A_01C/undefined_funcs_auto.us.ovl4__OBJ_FACE_BS0B0C.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST1A_01C/undefined_syms_auto.us.ovl4__OBJ_FACE_BS0B0C.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\OBJ\FACE\BS0B0C.TIM
+  - name: ST1A_01C_BS0B0C_4_header
+    type: dashchunkheader
+    start: 0x0003D800
+  - name: ST1A_01C_BS0B0C_4
+    type: bin
+    start: 0x0003E000
+  - [0x46000]

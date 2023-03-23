@@ -45,6 +45,7 @@ PYPATCHASM := $(TOOLS_DIR)/patchasm.py
 DUMPSXISO := dumpsxiso
 MKPSXISO := mkpsxiso
 REGEXR := python3 $(TOOLS_DIR)/regexr.py
+BUILD_OVERLAY := python3 $(TOOLS_DIR)/buildoverlay.py
 
 DIFF := diff -u --color=never
 XXD := xxd -u -g 4
@@ -65,6 +66,13 @@ define list_o_files
 endef
 
 define link
+	$(LD) -o $(2).unstripped \
+		-Map $(BUILD_DIR)/$(1).map \
+		-T $(1).ld \
+		-T $(CONFIG_DIR)/undefined_syms_auto.$(VERSION).$(1).txt \
+		-T $(CONFIG_DIR)/undefined_funcs_auto.$(VERSION).$(1).txt \
+		--no-check-sections \
+		-nostdlib
 	$(LD) -o $(2) \
 		-Map $(BUILD_DIR)/$(1).map \
 		-T $(1).ld \
@@ -73,6 +81,7 @@ define link
 		--no-check-sections \
 		-nostdlib \
 		-s
+		
 
 endef
 
@@ -109,8 +118,6 @@ ALL_BIN_YAML_SUBDIRS := $(shell find $(SPLATYAML_FOLDER)/overlay -type d -name "
 ALL_BIN_YAML_SUBDIRS := $(filter-out . ..,$(ALL_BIN_YAML_SUBDIRS))
 ALL_BIN_YAML_FILES := $(foreach dir,$(ALL_BIN_YAML_SUBDIRS),$(wildcard $(dir)/*.yaml))
 
-ALL_MODULE_NAMES := $(foreach dir,$(ALL_BIN_YAML_FILES),$(call get_overlay_parent_file,$(dir))) rock_neo
-
 default: all
 all: build check
 build: logs $(ROCK_NEO_TARGET) chunks
@@ -128,6 +135,16 @@ endef
 define get_overlay_name
 $(shell echo $(1) | sed -e 's/config\/overlay\/.*\/\(.*\)\.yaml/\1/')
 endef
+
+ALL_MODULE_NAMES := rock_neo $(foreach dir,$(ALL_BIN_YAML_FILES),$(call get_overlay_parent_file,$(dir)))
+ALL_MODULE_NAMES := $(patsubst splat.us.%,%,$(ALL_MODULE_NAMES))
+
+ALL_ARCHIVES := $(foreach dir,$(ALL_BIN_YAML_FILES),$(call get_overlay_parent_file,$(dir)))
+ALL_ARCHIVES := $(patsubst splat.us.%,%,$(ALL_ARCHIVES))
+
+# remove duplicate names
+ALL_MODULE_NAMES := rock_neo $(sort $(ALL_ARCHIVES))
+ALL_ARCHIVES := $(sort $(ALL_ARCHIVES))
 
 
 
@@ -192,18 +209,22 @@ $(BUILD_DIR)/$(ROCK_NEO).elf: rock_neo_build_dirs $(call list_o_files,$(ROCK_NEO
 
 chunks: $(BUILD_DIR)/$(ROCK_NEO).exe
 	@echo "Building chunks..."
+	@echo $(ALL_ARCHIVES) > logs/chunks.log
+	$(shell python3 tools/generate_rock_neo_syms.py)
+	@$(foreach archive,$(ALL_ARCHIVES),$(shell $(BUILD_OVERLAY) $(archive)))
 
 
 UC = $(shell echo '$1' | tr '[:lower:]' '[:upper:]')
 
 extract_disk: $(SOTNDISK)
 	$(DUMPSXISO) -x disks/$(VERSION) -s disks/mml1.$(VERSION).xml disks/mml1.$(VERSION).track1.bin 
-disk: build $(SOTNDISK)
+
+#TODO: cp $(BUILD_DIR)/$(MAIN).exe $(DISK_DIR)/SLUS_006.03
+disk: $(BUILD_DIR)/$(ROCK_NEO).exe $(SOTNDISK)
 	mkdir -p $(DISK_DIR)
 	cp -r disks/$(VERSION)/* $(DISK_DIR)
-	cp $(BUILD_DIR)/$(MAIN).exe $(DISK_DIR)/SLUS_006.03
 	cp $(BUILD_DIR)/$(ROCK_NEO).exe $(DISK_DIR)/ROCK_NEO.EXE
-	$(foreach file,$(wildcard $(BUILD_DIR)/**.bin),cp $(file) $(DISK_DIR)/CDDATA/DAT/$(call UC,$(notdir $(file)));)
+	$(foreach file,$(wildcard $(BUILD_DIR)/**.BIN),cp $(file) $(DISK_DIR)/CDDATA/DAT/$(call UC,$(notdir $(file)));)
 	$(MKPSXISO) -y mml1.$(VERSION).xml
 
 $(GO):
@@ -221,9 +242,9 @@ format:
 	clang-format -i $$(find $(INCLUDE_DIR)/ -type f -name "*.h")
 
 diff_%:
-	$(XXD) $(BUILD_DIR)/$*.bin > $(BUILD_DIR)/$*.bin.xxd
-	$(XXD) disks/$(VERSION)/CDDATA/DAT/$(call UC,$*).BIN > $(BUILD_DIR)/$*.bin.good.xxd
-	$(DIFF) $(BUILD_DIR)/$*.bin.xxd $(BUILD_DIR)/$*.bin.good.xxd > $(BUILD_DIR)/$*.diff
+	@$(shell $(XXD) $(BUILD_DIR)/$*.BIN > $(BUILD_DIR)/$*.bin.xxd)
+	@$(shell $(XXD) disks/$(VERSION)/CDDATA/DAT/$(call UC,$*).BIN > $(BUILD_DIR)/$*.bin.good.xxd)
+	@$(shell $(DIFF) $(BUILD_DIR)/$*.bin.xxd $(BUILD_DIR)/$*.bin.good.xxd > $(BUILD_DIR)/$*.diff)
 
 diff_rock_neo:
 	$(XXD) $(BUILD_DIR)/rock_neo.exe > $(BUILD_DIR)/rock_neo.bin.xxd
@@ -234,6 +255,7 @@ diff_main:
 	$(XXD) $(BUILD_DIR)/main.exe > $(BUILD_DIR)/main.bin.xxd
 	$(XXD) disks/$(VERSION)/SLUS_006.03 > $(BUILD_DIR)/main.bin.good.xxd
 	$(DIFF) $(BUILD_DIR)/main.bin.xxd $(BUILD_DIR)/main.bin.good.xxd > $(BUILD_DIR)/main.diff
+
 
 $(BUILD_DIR)/%.s.o: %.s
 	$(AS) $(AS_FLAGS) -o $@ $<
@@ -246,8 +268,8 @@ CHECK_FOLDER := hash/$(VERSION)
 ALL_HASHES := $(wildcard $(CHECK_FOLDER)/**.sha1)
 
 # for each sha1 file in hash/$(VERSION), whose filename is in the ALL_MODULE_NAMES list, check it
-check:
-	$(foreach module,$(ALL_MODULE_NAMES),$(shell if [ -f hash/$(VERSION)/$(module).bin.sha1 ]; then sha1sum -c --quiet hash/$(VERSION)/$(module).bin.sha1; fi))
+check: diff_rock_neo $$(foreach module,$$(ALL_ARCHIVES),diff_$$(module))
+	$(foreach module,$(ALL_MODULE_NAMES),$(shell if [ -f hash/$(VERSION)/$(module).BIN.sha1 ]; then sha1sum -c --quiet hash/$(VERSION)/$(module).BIN.sha1; fi))
 	@echo "OK"
 
 

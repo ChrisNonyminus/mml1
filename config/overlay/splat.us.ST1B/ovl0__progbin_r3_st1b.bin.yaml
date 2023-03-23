@@ -1,0 +1,31 @@
+options:
+  platform: psx
+  basename: ST1B.ovl0__progbin_r3_st1b.bin
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST1B.BIN
+  asm_path: asm/ST1B/ovl0__progbin_r3_st1b.bin
+  asset_path: assets/ST1B/ovl0__progbin_r3_st1b.bin
+  src_path: src/ST1B/ovl0__progbin_r3_st1b.bin
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST1B/generated.syms.ovl0__progbin_r3_st1b.bin.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST1B/undefined_funcs_auto.us.ovl0__progbin_r3_st1b.bin.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST1B/undefined_syms_auto.us.ovl0__progbin_r3_st1b.bin.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\progbin\r3_st1b.bin
+  - name: ST1B_r3_st1b_0_header
+    type: dashchunkheader
+    start: 0x00000000
+  - name: ST1B_r3_st1b_0
+    type: code
+    start: 0x00000800
+    vram: 0x80100000
+    exclusive_ram_id: ST1B_r3_st1b_ram_0
+    subalign: 4
+    subsegments:
+      - [0x800, data, r3_st1b_0]
+  - [0x146C4]

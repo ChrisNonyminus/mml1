@@ -1,0 +1,23 @@
+options:
+  platform: psx
+  basename: ST11_00C.ovl21__SCR_st11_st5b603c.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST11_00C.BIN
+  asm_path: asm/ST11_00C/ovl21__SCR_st11_st5b603c.TIM
+  asset_path: assets/ST11_00C/ovl21__SCR_st11_st5b603c.TIM
+  src_path: src/ST11_00C/ovl21__SCR_st11_st5b603c.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST11_00C/generated.syms.ovl21__SCR_st11_st5b603c.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST11_00C/undefined_funcs_auto.us.ovl21__SCR_st11_st5b603c.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST11_00C/undefined_syms_auto.us.ovl21__SCR_st11_st5b603c.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\SCR\st11\st5b603c.TIM
+  - name: ST11_00C_st5b603c_21_header
+    type: dashchunkheader
+    start: 0x00058000
+  - [0x58800]

@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST17.ovl19__OBJ_FACE_BS0B0A.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST17.BIN
+  asm_path: asm/ST17/ovl19__OBJ_FACE_BS0B0A.TIM
+  asset_path: assets/ST17/ovl19__OBJ_FACE_BS0B0A.TIM
+  src_path: src/ST17/ovl19__OBJ_FACE_BS0B0A.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST17/generated.syms.ovl19__OBJ_FACE_BS0B0A.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST17/undefined_funcs_auto.us.ovl19__OBJ_FACE_BS0B0A.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST17/undefined_syms_auto.us.ovl19__OBJ_FACE_BS0B0A.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\OBJ\FACE\BS0B0A.TIM
+  - name: ST17_BS0B0A_19_header
+    type: dashchunkheader
+    start: 0x00099800
+  - name: ST17_BS0B0A_19
+    type: bin
+    start: 0x0009A000
+  - [0xA2000]

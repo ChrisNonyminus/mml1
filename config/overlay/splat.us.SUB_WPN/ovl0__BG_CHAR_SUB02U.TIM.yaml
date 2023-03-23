@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: SUB_WPN.ovl0__BG_CHAR_SUB02U.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/SUB_WPN.BIN
+  asm_path: asm/SUB_WPN/ovl0__BG_CHAR_SUB02U.TIM
+  asset_path: assets/SUB_WPN/ovl0__BG_CHAR_SUB02U.TIM
+  src_path: src/SUB_WPN/ovl0__BG_CHAR_SUB02U.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.SUB_WPN/generated.syms.ovl0__BG_CHAR_SUB02U.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.SUB_WPN/undefined_funcs_auto.us.ovl0__BG_CHAR_SUB02U.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.SUB_WPN/undefined_syms_auto.us.ovl0__BG_CHAR_SUB02U.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\BG\CHAR\SUB02U.TIM
+  - name: SUB_WPN_SUB02U_0_header
+    type: dashchunkheader
+    start: 0x00000000
+  - name: SUB_WPN_SUB02U_0
+    type: bin
+    start: 0x00000800
+  - [0x8800]

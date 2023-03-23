@@ -1,0 +1,9 @@
+{
+"overlays": [
+["ovl0__EMBIN_ST00_00.EBD", 0, 113808, 0], 
+["ovl1__OBJ_COMM_PL0000.TIM", 9, 0, 8], 
+["ovl2__OBJ_COMM_PL0001.TIM", 9, 0, 8], 
+["ovl3__OBJ_FACE_PL00B01.TIM", 1, 32768, 8], 
+["ovl4__MESS_DUMMY.MSG", 0, 26, 0]
+]
+}

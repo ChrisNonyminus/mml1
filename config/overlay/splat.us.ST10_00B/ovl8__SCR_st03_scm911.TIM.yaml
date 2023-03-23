@@ -1,0 +1,23 @@
+options:
+  platform: psx
+  basename: ST10_00B.ovl8__SCR_st03_scm911.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST10_00B.BIN
+  asm_path: asm/ST10_00B/ovl8__SCR_st03_scm911.TIM
+  asset_path: assets/ST10_00B/ovl8__SCR_st03_scm911.TIM
+  src_path: src/ST10_00B/ovl8__SCR_st03_scm911.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST10_00B/generated.syms.ovl8__SCR_st03_scm911.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST10_00B/undefined_funcs_auto.us.ovl8__SCR_st03_scm911.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST10_00B/undefined_syms_auto.us.ovl8__SCR_st03_scm911.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\SCR\st03\scm911.TIM
+  - name: ST10_00B_scm911_8_header
+    type: dashchunkheader
+    start: 0x00031000
+  - [0x31800]

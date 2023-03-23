@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST0E.ovl13__OBJ_ST0E_AR00_EM3500.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST0E.BIN
+  asm_path: asm/ST0E/ovl13__OBJ_ST0E_AR00_EM3500.TIM
+  asset_path: assets/ST0E/ovl13__OBJ_ST0E_AR00_EM3500.TIM
+  src_path: src/ST0E/ovl13__OBJ_ST0E_AR00_EM3500.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST0E/generated.syms.ovl13__OBJ_ST0E_AR00_EM3500.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST0E/undefined_funcs_auto.us.ovl13__OBJ_ST0E_AR00_EM3500.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST0E/undefined_syms_auto.us.ovl13__OBJ_ST0E_AR00_EM3500.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\OBJ\ST0E\AR00\EM3500.TIM
+  - name: ST0E_EM3500_13_header
+    type: dashchunkheader
+    start: 0x000B8800
+  - name: ST0E_EM3500_13
+    type: bin
+    start: 0x000B9000
+  - [0xBD000]

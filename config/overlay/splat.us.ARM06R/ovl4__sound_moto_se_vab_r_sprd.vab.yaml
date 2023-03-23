@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ARM06R.ovl4__sound_moto_se_vab_r_sprd.vab
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ARM06R.BIN
+  asm_path: asm/ARM06R/ovl4__sound_moto_se_vab_r_sprd.vab
+  asset_path: assets/ARM06R/ovl4__sound_moto_se_vab_r_sprd.vab
+  src_path: src/ARM06R/ovl4__sound_moto_se_vab_r_sprd.vab
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ARM06R/generated.syms.ovl4__sound_moto_se_vab_r_sprd.vab.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ARM06R/undefined_funcs_auto.us.ovl4__sound_moto_se_vab_r_sprd.vab.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ARM06R/undefined_syms_auto.us.ovl4__sound_moto_se_vab_r_sprd.vab.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\sound\moto\se\vab\r_sprd.vab
+  - name: ARM06R_r_sprd_4_header
+    type: dashchunkheader
+    start: 0x00006000
+  - name: ARM06R_r_sprd_4
+    type: bin
+    start: 0x00006800
+  - [0xA8E0]

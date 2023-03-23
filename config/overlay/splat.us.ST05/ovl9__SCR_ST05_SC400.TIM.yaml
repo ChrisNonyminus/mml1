@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST05.ovl9__SCR_ST05_SC400.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST05.BIN
+  asm_path: asm/ST05/ovl9__SCR_ST05_SC400.TIM
+  asset_path: assets/ST05/ovl9__SCR_ST05_SC400.TIM
+  src_path: src/ST05/ovl9__SCR_ST05_SC400.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST05/generated.syms.ovl9__SCR_ST05_SC400.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST05/undefined_funcs_auto.us.ovl9__SCR_ST05_SC400.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST05/undefined_syms_auto.us.ovl9__SCR_ST05_SC400.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\SCR\ST05\SC400.TIM
+  - name: ST05_SC400_9_header
+    type: dashchunkheader
+    start: 0x00066800
+  - name: ST05_SC400_9
+    type: bin
+    start: 0x00067000
+  - [0x6F000]

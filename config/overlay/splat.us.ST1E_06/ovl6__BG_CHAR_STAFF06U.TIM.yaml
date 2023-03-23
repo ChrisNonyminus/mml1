@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST1E_06.ovl6__BG_CHAR_STAFF06U.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST1E_06.BIN
+  asm_path: asm/ST1E_06/ovl6__BG_CHAR_STAFF06U.TIM
+  asset_path: assets/ST1E_06/ovl6__BG_CHAR_STAFF06U.TIM
+  src_path: src/ST1E_06/ovl6__BG_CHAR_STAFF06U.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST1E_06/generated.syms.ovl6__BG_CHAR_STAFF06U.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST1E_06/undefined_funcs_auto.us.ovl6__BG_CHAR_STAFF06U.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST1E_06/undefined_syms_auto.us.ovl6__BG_CHAR_STAFF06U.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\BG\CHAR\STAFF06U.TIM
+  - name: ST1E_06_STAFF06U_6_header
+    type: dashchunkheader
+    start: 0x00033000
+  - name: ST1E_06_STAFF06U_6
+    type: bin
+    start: 0x00033800
+  - [0x3B800]

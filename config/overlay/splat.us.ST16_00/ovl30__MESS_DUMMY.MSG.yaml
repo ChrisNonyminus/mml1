@@ -1,0 +1,31 @@
+options:
+  platform: psx
+  basename: ST16_00.ovl30__MESS_DUMMY.MSG
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST16_00.BIN
+  asm_path: asm/ST16_00/ovl30__MESS_DUMMY.MSG
+  asset_path: assets/ST16_00/ovl30__MESS_DUMMY.MSG
+  src_path: src/ST16_00/ovl30__MESS_DUMMY.MSG
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST16_00/generated.syms.ovl30__MESS_DUMMY.MSG.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST16_00/undefined_funcs_auto.us.ovl30__MESS_DUMMY.MSG.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST16_00/undefined_syms_auto.us.ovl30__MESS_DUMMY.MSG.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\MESS\DUMMY.MSG
+  - name: ST16_00_DUMMY_30_header
+    type: dashchunkheader
+    start: 0x00081000
+  - name: ST16_00_DUMMY_30
+    type: code
+    start: 0x00081800
+    vram: 0x80153000
+    exclusive_ram_id: ST16_00_DUMMY_ram_30
+    subalign: 4
+    subsegments:
+      - [0x81800, data, DUMMY_30]
+  - [0x8181A]

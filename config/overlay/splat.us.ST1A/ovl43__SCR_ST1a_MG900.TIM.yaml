@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST1A.ovl43__SCR_ST1a_MG900.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST1A.BIN
+  asm_path: asm/ST1A/ovl43__SCR_ST1a_MG900.TIM
+  asset_path: assets/ST1A/ovl43__SCR_ST1a_MG900.TIM
+  src_path: src/ST1A/ovl43__SCR_ST1a_MG900.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST1A/generated.syms.ovl43__SCR_ST1a_MG900.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST1A/undefined_funcs_auto.us.ovl43__SCR_ST1a_MG900.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST1A/undefined_syms_auto.us.ovl43__SCR_ST1a_MG900.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\SCR\ST1a\MG900.TIM
+  - name: ST1A_MG900_43_header
+    type: dashchunkheader
+    start: 0x000B5800
+  - name: ST1A_MG900_43
+    type: bin
+    start: 0x000B6000
+  - [0xBE000]

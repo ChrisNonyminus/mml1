@@ -1,0 +1,23 @@
+options:
+  platform: psx
+  basename: ST06_00C.ovl9__OBJ_ST06_AR00C_CA0001.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST06_00C.BIN
+  asm_path: asm/ST06_00C/ovl9__OBJ_ST06_AR00C_CA0001.TIM
+  asset_path: assets/ST06_00C/ovl9__OBJ_ST06_AR00C_CA0001.TIM
+  src_path: src/ST06_00C/ovl9__OBJ_ST06_AR00C_CA0001.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST06_00C/generated.syms.ovl9__OBJ_ST06_AR00C_CA0001.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST06_00C/undefined_funcs_auto.us.ovl9__OBJ_ST06_AR00C_CA0001.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST06_00C/undefined_syms_auto.us.ovl9__OBJ_ST06_AR00C_CA0001.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\OBJ\ST06\AR00C\CA0001.TIM
+  - name: ST06_00C_CA0001_9_header
+    type: dashchunkheader
+    start: 0x00049000
+  - [0x49800]

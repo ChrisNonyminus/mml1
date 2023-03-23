@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST19.ovl23__SCR_ST19_ST9_901.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST19.BIN
+  asm_path: asm/ST19/ovl23__SCR_ST19_ST9_901.TIM
+  asset_path: assets/ST19/ovl23__SCR_ST19_ST9_901.TIM
+  src_path: src/ST19/ovl23__SCR_ST19_ST9_901.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST19/generated.syms.ovl23__SCR_ST19_ST9_901.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST19/undefined_funcs_auto.us.ovl23__SCR_ST19_ST9_901.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST19/undefined_syms_auto.us.ovl23__SCR_ST19_ST9_901.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\SCR\ST19\ST9_901.TIM
+  - name: ST19_ST9_901_23_header
+    type: dashchunkheader
+    start: 0x0007C000
+  - name: ST19_ST9_901_23
+    type: bin
+    start: 0x0007C800
+  - [0x84800]

@@ -1,0 +1,10 @@
+{
+"overlays": [
+["ovl0__EMBIN_ST10_05.EBD", 0, 13756, 0], 
+["ovl1__OBJ_ST10_AR05_EM0900.TIM", 1, 16384, 8], 
+["ovl2__OBJ_ST10_AR05_EM1300B.TIM", 1, 16384, 8], 
+["ovl3__SCR_st10_inyam00.TIM", 1, 28672, 2], 
+["ovl4__SCR_st10_inyam01c.TIM", 9, 0, 1], 
+["ovl5__mess_stff_ff.msg", 0, 14187, 0]
+]
+}

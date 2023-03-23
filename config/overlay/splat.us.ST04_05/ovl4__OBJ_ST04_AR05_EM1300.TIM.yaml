@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST04_05.ovl4__OBJ_ST04_AR05_EM1300.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST04_05.BIN
+  asm_path: asm/ST04_05/ovl4__OBJ_ST04_AR05_EM1300.TIM
+  asset_path: assets/ST04_05/ovl4__OBJ_ST04_AR05_EM1300.TIM
+  src_path: src/ST04_05/ovl4__OBJ_ST04_AR05_EM1300.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST04_05/generated.syms.ovl4__OBJ_ST04_AR05_EM1300.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST04_05/undefined_funcs_auto.us.ovl4__OBJ_ST04_AR05_EM1300.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST04_05/undefined_syms_auto.us.ovl4__OBJ_ST04_AR05_EM1300.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\OBJ\ST04\AR05\EM1300.TIM
+  - name: ST04_05_EM1300_4_header
+    type: dashchunkheader
+    start: 0x00025800
+  - name: ST04_05_EM1300_4
+    type: bin
+    start: 0x00026000
+  - [0x2A000]

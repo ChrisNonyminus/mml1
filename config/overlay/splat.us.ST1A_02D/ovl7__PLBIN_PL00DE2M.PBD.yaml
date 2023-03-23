@@ -1,0 +1,31 @@
+options:
+  platform: psx
+  basename: ST1A_02D.ovl7__PLBIN_PL00DE2M.PBD
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST1A_02D.BIN
+  asm_path: asm/ST1A_02D/ovl7__PLBIN_PL00DE2M.PBD
+  asset_path: assets/ST1A_02D/ovl7__PLBIN_PL00DE2M.PBD
+  src_path: src/ST1A_02D/ovl7__PLBIN_PL00DE2M.PBD
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST1A_02D/generated.syms.ovl7__PLBIN_PL00DE2M.PBD.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST1A_02D/undefined_funcs_auto.us.ovl7__PLBIN_PL00DE2M.PBD.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST1A_02D/undefined_syms_auto.us.ovl7__PLBIN_PL00DE2M.PBD.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\PLBIN\PL00DE2M.PBD
+  - name: ST1A_02D_PL00DE2M_7_header
+    type: dashchunkheader
+    start: 0x00028000
+  - name: ST1A_02D_PL00DE2M_7
+    type: code
+    start: 0x00028800
+    vram: 0x800E9600
+    exclusive_ram_id: ST1A_02D_PL00DE2M_ram_7
+    subalign: 4
+    subsegments:
+      - [0x28800, data, PL00DE2M_7]
+  - [0x2C080]

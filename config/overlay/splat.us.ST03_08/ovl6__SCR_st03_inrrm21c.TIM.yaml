@@ -1,0 +1,23 @@
+options:
+  platform: psx
+  basename: ST03_08.ovl6__SCR_st03_inrrm21c.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST03_08.BIN
+  asm_path: asm/ST03_08/ovl6__SCR_st03_inrrm21c.TIM
+  asset_path: assets/ST03_08/ovl6__SCR_st03_inrrm21c.TIM
+  src_path: src/ST03_08/ovl6__SCR_st03_inrrm21c.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST03_08/generated.syms.ovl6__SCR_st03_inrrm21c.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST03_08/undefined_funcs_auto.us.ovl6__SCR_st03_inrrm21c.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST03_08/undefined_syms_auto.us.ovl6__SCR_st03_inrrm21c.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\SCR\st03\inrrm21c.TIM
+  - name: ST03_08_inrrm21c_6_header
+    type: dashchunkheader
+    start: 0x00018000
+  - [0x18800]

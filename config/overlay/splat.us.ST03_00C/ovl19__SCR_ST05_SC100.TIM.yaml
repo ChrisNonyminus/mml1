@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST03_00C.ovl19__SCR_ST05_SC100.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST03_00C.BIN
+  asm_path: asm/ST03_00C/ovl19__SCR_ST05_SC100.TIM
+  asset_path: assets/ST03_00C/ovl19__SCR_ST05_SC100.TIM
+  src_path: src/ST03_00C/ovl19__SCR_ST05_SC100.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST03_00C/generated.syms.ovl19__SCR_ST05_SC100.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST03_00C/undefined_funcs_auto.us.ovl19__SCR_ST05_SC100.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST03_00C/undefined_syms_auto.us.ovl19__SCR_ST05_SC100.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\SCR\ST05\SC100.TIM
+  - name: ST03_00C_SC100_19_header
+    type: dashchunkheader
+    start: 0x00074800
+  - name: ST03_00C_SC100_19
+    type: bin
+    start: 0x00075000
+  - [0x7D000]

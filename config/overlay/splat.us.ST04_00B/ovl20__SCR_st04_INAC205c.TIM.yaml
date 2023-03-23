@@ -1,0 +1,23 @@
+options:
+  platform: psx
+  basename: ST04_00B.ovl20__SCR_st04_INAC205c.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST04_00B.BIN
+  asm_path: asm/ST04_00B/ovl20__SCR_st04_INAC205c.TIM
+  asset_path: assets/ST04_00B/ovl20__SCR_st04_INAC205c.TIM
+  src_path: src/ST04_00B/ovl20__SCR_st04_INAC205c.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST04_00B/generated.syms.ovl20__SCR_st04_INAC205c.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST04_00B/undefined_funcs_auto.us.ovl20__SCR_st04_INAC205c.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST04_00B/undefined_syms_auto.us.ovl20__SCR_st04_INAC205c.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\SCR\st04\INAC205c.TIM
+  - name: ST04_00B_INAC205c_20_header
+    type: dashchunkheader
+    start: 0x00051800
+  - [0x52000]

@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST03_06.ovl8__SCR_st03_inrol00.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST03_06.BIN
+  asm_path: asm/ST03_06/ovl8__SCR_st03_inrol00.TIM
+  asset_path: assets/ST03_06/ovl8__SCR_st03_inrol00.TIM
+  src_path: src/ST03_06/ovl8__SCR_st03_inrol00.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST03_06/generated.syms.ovl8__SCR_st03_inrol00.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST03_06/undefined_funcs_auto.us.ovl8__SCR_st03_inrol00.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST03_06/undefined_syms_auto.us.ovl8__SCR_st03_inrol00.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\SCR\st03\inrol00.TIM
+  - name: ST03_06_inrol00_8_header
+    type: dashchunkheader
+    start: 0x0003A000
+  - name: ST03_06_inrol00_8
+    type: bin
+    start: 0x0003A800
+  - [0x42800]

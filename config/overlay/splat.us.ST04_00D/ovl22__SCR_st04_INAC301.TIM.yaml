@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST04_00D.ovl22__SCR_st04_INAC301.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST04_00D.BIN
+  asm_path: asm/ST04_00D/ovl22__SCR_st04_INAC301.TIM
+  asset_path: assets/ST04_00D/ovl22__SCR_st04_INAC301.TIM
+  src_path: src/ST04_00D/ovl22__SCR_st04_INAC301.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST04_00D/generated.syms.ovl22__SCR_st04_INAC301.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST04_00D/undefined_funcs_auto.us.ovl22__SCR_st04_INAC301.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST04_00D/undefined_syms_auto.us.ovl22__SCR_st04_INAC301.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\SCR\st04\INAC301.TIM
+  - name: ST04_00D_INAC301_22_header
+    type: dashchunkheader
+    start: 0x00060000
+  - name: ST04_00D_INAC301_22
+    type: bin
+    start: 0x00060800
+  - [0x68800]

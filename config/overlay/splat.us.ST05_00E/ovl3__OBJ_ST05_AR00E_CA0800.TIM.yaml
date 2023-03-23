@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST05_00E.ovl3__OBJ_ST05_AR00E_CA0800.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST05_00E.BIN
+  asm_path: asm/ST05_00E/ovl3__OBJ_ST05_AR00E_CA0800.TIM
+  asset_path: assets/ST05_00E/ovl3__OBJ_ST05_AR00E_CA0800.TIM
+  src_path: src/ST05_00E/ovl3__OBJ_ST05_AR00E_CA0800.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST05_00E/generated.syms.ovl3__OBJ_ST05_AR00E_CA0800.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST05_00E/undefined_funcs_auto.us.ovl3__OBJ_ST05_AR00E_CA0800.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST05_00E/undefined_syms_auto.us.ovl3__OBJ_ST05_AR00E_CA0800.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\OBJ\ST05\AR00E\CA0800.TIM
+  - name: ST05_00E_CA0800_3_header
+    type: dashchunkheader
+    start: 0x0002D000
+  - name: ST05_00E_CA0800_3
+    type: bin
+    start: 0x0002D800
+  - [0x31800]

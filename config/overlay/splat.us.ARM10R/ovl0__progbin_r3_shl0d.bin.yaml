@@ -1,0 +1,31 @@
+options:
+  platform: psx
+  basename: ARM10R.ovl0__progbin_r3_shl0d.bin
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ARM10R.BIN
+  asm_path: asm/ARM10R/ovl0__progbin_r3_shl0d.bin
+  asset_path: assets/ARM10R/ovl0__progbin_r3_shl0d.bin
+  src_path: src/ARM10R/ovl0__progbin_r3_shl0d.bin
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ARM10R/generated.syms.ovl0__progbin_r3_shl0d.bin.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ARM10R/undefined_funcs_auto.us.ovl0__progbin_r3_shl0d.bin.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ARM10R/undefined_syms_auto.us.ovl0__progbin_r3_shl0d.bin.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\progbin\r3_shl0d.bin
+  - name: ARM10R_r3_shl0d_0_header
+    type: dashchunkheader
+    start: 0x00000000
+  - name: ARM10R_r3_shl0d_0
+    type: code
+    start: 0x00000800
+    vram: 0x800D8800
+    exclusive_ram_id: ARM10R_r3_shl0d_ram_0
+    subalign: 4
+    subsegments:
+      - [0x800, data, r3_shl0d_0]
+  - [0x12BC]

@@ -1,0 +1,13 @@
+{
+"overlays": [
+["ovl0__EMBIN_ST17_00C.EBD", 0, 112460, 0], 
+["ovl1__OBJ_ST17_AR00_BS0A00.TIM", 1, 32768, 8], 
+["ovl2__OBJ_ST17_AR00_BS0F00.TIM", 1, 32768, 8], 
+["ovl3__SCR_st17_infwl00.TIM", 1, 32768, 1], 
+["ovl4__SCR_st17_infwl10.TIM", 1, 32768, 1], 
+["ovl5__SCR_st17_infwl10c.TIM", 9, 0, 8], 
+["ovl6__SCR_st17_infwl11c.TIM", 9, 0, 1], 
+["ovl7__SCR_st17_infwl12.TIM", 1, 32768, 1], 
+["ovl8__SCR_st17_infwl12c.TIM", 9, 0, 2]
+]
+}

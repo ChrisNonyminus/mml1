@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST1D_00.ovl29__sound_moto_se_seq_m_tw05b.sep
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST1D_00.BIN
+  asm_path: asm/ST1D_00/ovl29__sound_moto_se_seq_m_tw05b.sep
+  asset_path: assets/ST1D_00/ovl29__sound_moto_se_seq_m_tw05b.sep
+  src_path: src/ST1D_00/ovl29__sound_moto_se_seq_m_tw05b.sep
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST1D_00/generated.syms.ovl29__sound_moto_se_seq_m_tw05b.sep.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST1D_00/undefined_funcs_auto.us.ovl29__sound_moto_se_seq_m_tw05b.sep.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST1D_00/undefined_syms_auto.us.ovl29__sound_moto_se_seq_m_tw05b.sep.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\sound\moto\se\seq\m_tw05b.sep
+  - name: ST1D_00_m_tw05b_29_header
+    type: dashchunkheader
+    start: 0x000B2800
+  - name: ST1D_00_m_tw05b_29
+    type: bin
+    start: 0x000B3000
+  - [0xB3824]

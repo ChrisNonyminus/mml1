@@ -1,0 +1,19 @@
+{
+"overlays": [
+["ovl0__SCR_st03_inrrm00.TIM", 1, 28672, 1], 
+["ovl1__SCR_st03_inrrm10.TIM", 1, 28672, 1], 
+["ovl2__SCR_st03_inrrm11c.TIM", 9, 0, 1], 
+["ovl3__SCR_st03_inrrm12c.TIM", 9, 0, 1], 
+["ovl4__SCR_st03_inrrm13c.TIM", 9, 0, 1], 
+["ovl5__SCR_st03_inrrm20.TIM", 1, 28672, 1], 
+["ovl6__SCR_st03_inrrm21c.TIM", 9, 0, 1], 
+["ovl7__SCR_st03_inrrm22c.TIM", 9, 0, 1], 
+["ovl8__SCR_st03_inrrm30.TIM", 1, 28672, 1], 
+["ovl9__SCR_st03_inrrm31c.TIM", 9, 0, 1], 
+["ovl10__SCR_st03_inrrm32c.TIM", 9, 0, 1], 
+["ovl11__sound_moto_se_vab_e_fl00a.vab", 5, 47920, 5152], 
+["ovl12__sound_moto_se_vab_m_fl00a.vab", 5, 282000, 5664], 
+["ovl13__sound_moto_se_seq_m_fl00a.sep", 8, 3953, 0], 
+["ovl14__mess_st03_08.msg", 0, 759, 0]
+]
+}

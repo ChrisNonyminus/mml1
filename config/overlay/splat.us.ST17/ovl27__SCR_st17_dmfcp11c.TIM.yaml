@@ -1,0 +1,23 @@
+options:
+  platform: psx
+  basename: ST17.ovl27__SCR_st17_dmfcp11c.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST17.BIN
+  asm_path: asm/ST17/ovl27__SCR_st17_dmfcp11c.TIM
+  asset_path: assets/ST17/ovl27__SCR_st17_dmfcp11c.TIM
+  src_path: src/ST17/ovl27__SCR_st17_dmfcp11c.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST17/generated.syms.ovl27__SCR_st17_dmfcp11c.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST17/undefined_funcs_auto.us.ovl27__SCR_st17_dmfcp11c.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST17/undefined_syms_auto.us.ovl27__SCR_st17_dmfcp11c.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\SCR\st17\dmfcp11c.TIM
+  - name: ST17_dmfcp11c_27_header
+    type: dashchunkheader
+    start: 0x000CD800
+  - [0xCE000]

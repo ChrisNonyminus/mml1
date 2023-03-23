@@ -1,0 +1,21 @@
+{
+"overlays": [
+["ovl0__EMBIN_ST0D_02.EBD", 0, 96780, 0], 
+["ovl1__OBJ_ST0D_AR02_EM4600.TIM", 1, 16384, 8], 
+["ovl2__OBJ_ST0D_AR02_BS0600.TIM", 1, 32768, 8], 
+["ovl3__OBJ_ST0D_AR02_EM3800.TIM", 1, 16384, 8], 
+["ovl4__OBJ_ST0D_AR02_TONBI.TIM", 1, 16384, 8], 
+["ovl5__OBJ_ST0D_AR02_DIF01.TIM", 1, 16384, 8], 
+["ovl6__OBJ_FACE_PL00B05.TIM", 1, 32768, 8], 
+["ovl7__OBJ_FACE_BS0604.TIM", 1, 32768, 8], 
+["ovl8__OBJ_FACE_EM3801.TIM", 1, 16384, 8], 
+["ovl9__SCR_st0d_boath00.TIM", 1, 32768, 2], 
+["ovl10__SCR_st0d_boath01c.TIM", 9, 0, 1], 
+["ovl11__SCR_st0d_boath10.TIM", 1, 32768, 1], 
+["ovl12__SCR_st0d_boath20.TIM", 1, 32768, 2], 
+["ovl13__SCR_st0d_boath21c.TIM", 9, 0, 1], 
+["ovl14__SCR_st0d_boath30.TIM", 1, 32768, 2], 
+["ovl15__SCR_st0d_boath31c.TIM", 9, 0, 1], 
+["ovl16__MESS_DUMMY.MSG", 0, 26, 0]
+]
+}

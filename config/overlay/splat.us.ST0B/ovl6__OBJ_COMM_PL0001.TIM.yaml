@@ -1,0 +1,23 @@
+options:
+  platform: psx
+  basename: ST0B.ovl6__OBJ_COMM_PL0001.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST0B.BIN
+  asm_path: asm/ST0B/ovl6__OBJ_COMM_PL0001.TIM
+  asset_path: assets/ST0B/ovl6__OBJ_COMM_PL0001.TIM
+  src_path: src/ST0B/ovl6__OBJ_COMM_PL0001.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST0B/generated.syms.ovl6__OBJ_COMM_PL0001.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST0B/undefined_funcs_auto.us.ovl6__OBJ_COMM_PL0001.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST0B/undefined_syms_auto.us.ovl6__OBJ_COMM_PL0001.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\OBJ\COMM\PL0001.TIM
+  - name: ST0B_PL0001_6_header
+    type: dashchunkheader
+    start: 0x00040000
+  - [0x40800]

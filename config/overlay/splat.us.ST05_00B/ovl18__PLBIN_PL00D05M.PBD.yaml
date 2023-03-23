@@ -1,0 +1,31 @@
+options:
+  platform: psx
+  basename: ST05_00B.ovl18__PLBIN_PL00D05M.PBD
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST05_00B.BIN
+  asm_path: asm/ST05_00B/ovl18__PLBIN_PL00D05M.PBD
+  asset_path: assets/ST05_00B/ovl18__PLBIN_PL00D05M.PBD
+  src_path: src/ST05_00B/ovl18__PLBIN_PL00D05M.PBD
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST05_00B/generated.syms.ovl18__PLBIN_PL00D05M.PBD.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST05_00B/undefined_funcs_auto.us.ovl18__PLBIN_PL00D05M.PBD.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST05_00B/undefined_syms_auto.us.ovl18__PLBIN_PL00D05M.PBD.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\PLBIN\PL00D05M.PBD
+  - name: ST05_00B_PL00D05M_18_header
+    type: dashchunkheader
+    start: 0x000B4000
+  - name: ST05_00B_PL00D05M_18
+    type: code
+    start: 0x000B4800
+    vram: 0x800E9600
+    exclusive_ram_id: ST05_00B_PL00D05M_ram_18
+    subalign: 4
+    subsegments:
+      - [0xB4800, data, PL00D05M_18]
+  - [0xB7100]

@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST14.ovl33__SCR_st14_ld800.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST14.BIN
+  asm_path: asm/ST14/ovl33__SCR_st14_ld800.TIM
+  asset_path: assets/ST14/ovl33__SCR_st14_ld800.TIM
+  src_path: src/ST14/ovl33__SCR_st14_ld800.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST14/generated.syms.ovl33__SCR_st14_ld800.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST14/undefined_funcs_auto.us.ovl33__SCR_st14_ld800.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST14/undefined_syms_auto.us.ovl33__SCR_st14_ld800.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\SCR\st14\ld800.TIM
+  - name: ST14_ld800_33_header
+    type: dashchunkheader
+    start: 0x000FD000
+  - name: ST14_ld800_33
+    type: bin
+    start: 0x000FD800
+  - [0x101800]

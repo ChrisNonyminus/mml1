@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST04_02.ovl8__SCR_ST04_insde00.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST04_02.BIN
+  asm_path: asm/ST04_02/ovl8__SCR_ST04_insde00.TIM
+  asset_path: assets/ST04_02/ovl8__SCR_ST04_insde00.TIM
+  src_path: src/ST04_02/ovl8__SCR_ST04_insde00.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST04_02/generated.syms.ovl8__SCR_ST04_insde00.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST04_02/undefined_funcs_auto.us.ovl8__SCR_ST04_insde00.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST04_02/undefined_syms_auto.us.ovl8__SCR_ST04_insde00.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\SCR\ST04\insde00.TIM
+  - name: ST04_02_insde00_8_header
+    type: dashchunkheader
+    start: 0x0002E800
+  - name: ST04_02_insde00_8
+    type: bin
+    start: 0x0002F000
+  - [0x37000]

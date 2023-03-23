@@ -1,0 +1,31 @@
+options:
+  platform: psx
+  basename: ARM11R.ovl3__PLBIN_PL00R11P.PBD
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ARM11R.BIN
+  asm_path: asm/ARM11R/ovl3__PLBIN_PL00R11P.PBD
+  asset_path: assets/ARM11R/ovl3__PLBIN_PL00R11P.PBD
+  src_path: src/ARM11R/ovl3__PLBIN_PL00R11P.PBD
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ARM11R/generated.syms.ovl3__PLBIN_PL00R11P.PBD.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ARM11R/undefined_funcs_auto.us.ovl3__PLBIN_PL00R11P.PBD.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ARM11R/undefined_syms_auto.us.ovl3__PLBIN_PL00R11P.PBD.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\PLBIN\PL00R11P.PBD
+  - name: ARM11R_PL00R11P_3_header
+    type: dashchunkheader
+    start: 0x00003800
+  - name: ARM11R_PL00R11P_3
+    type: code
+    start: 0x00004000
+    vram: 0x800FB500
+    exclusive_ram_id: ARM11R_PL00R11P_ram_3
+    subalign: 4
+    subsegments:
+      - [0x4000, data, PL00R11P_3]
+  - [0x521C]

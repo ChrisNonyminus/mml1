@@ -1,0 +1,23 @@
+options:
+  platform: psx
+  basename: ST0C.ovl15__OBJ_ST0C_AR00A_HANA.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST0C.BIN
+  asm_path: asm/ST0C/ovl15__OBJ_ST0C_AR00A_HANA.TIM
+  asset_path: assets/ST0C/ovl15__OBJ_ST0C_AR00A_HANA.TIM
+  src_path: src/ST0C/ovl15__OBJ_ST0C_AR00A_HANA.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST0C/generated.syms.ovl15__OBJ_ST0C_AR00A_HANA.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST0C/undefined_funcs_auto.us.ovl15__OBJ_ST0C_AR00A_HANA.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST0C/undefined_syms_auto.us.ovl15__OBJ_ST0C_AR00A_HANA.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\OBJ\ST0C\AR00A\HANA.TIM
+  - name: ST0C_HANA_15_header
+    type: dashchunkheader
+    start: 0x0006A000
+  - [0x6A800]

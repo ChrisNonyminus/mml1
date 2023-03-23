@@ -1,0 +1,23 @@
+options:
+  platform: psx
+  basename: ST18_00.ovl29__SCR_st18_inkik24c.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST18_00.BIN
+  asm_path: asm/ST18_00/ovl29__SCR_st18_inkik24c.TIM
+  asset_path: assets/ST18_00/ovl29__SCR_st18_inkik24c.TIM
+  src_path: src/ST18_00/ovl29__SCR_st18_inkik24c.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST18_00/generated.syms.ovl29__SCR_st18_inkik24c.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST18_00/undefined_funcs_auto.us.ovl29__SCR_st18_inkik24c.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST18_00/undefined_syms_auto.us.ovl29__SCR_st18_inkik24c.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\SCR\st18\inkik24c.TIM
+  - name: ST18_00_inkik24c_29_header
+    type: dashchunkheader
+    start: 0x00089000
+  - [0x89800]

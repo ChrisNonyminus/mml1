@@ -1,0 +1,23 @@
+options:
+  platform: psx
+  basename: ST08_00C.ovl7__OBJ_ST08_AR00C_EM5001.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST08_00C.BIN
+  asm_path: asm/ST08_00C/ovl7__OBJ_ST08_AR00C_EM5001.TIM
+  asset_path: assets/ST08_00C/ovl7__OBJ_ST08_AR00C_EM5001.TIM
+  src_path: src/ST08_00C/ovl7__OBJ_ST08_AR00C_EM5001.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST08_00C/generated.syms.ovl7__OBJ_ST08_AR00C_EM5001.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST08_00C/undefined_funcs_auto.us.ovl7__OBJ_ST08_AR00C_EM5001.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST08_00C/undefined_syms_auto.us.ovl7__OBJ_ST08_AR00C_EM5001.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\OBJ\ST08\AR00C\EM5001.TIM
+  - name: ST08_00C_EM5001_7_header
+    type: dashchunkheader
+    start: 0x0003A800
+  - [0x3B000]

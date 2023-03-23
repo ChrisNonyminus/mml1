@@ -1,0 +1,31 @@
+{
+"overlays": [
+["ovl0__EMBIN_ST0A_00C.EBD", 0, 143464, 0], 
+["ovl1__OBJ_ST0A_AR00C_EM0000.TIM", 1, 16384, 8], 
+["ovl2__OBJ_ST0A_AR00C_EM0500.TIM", 1, 32768, 8], 
+["ovl3__OBJ_ST0A_AR00C_EM0600.TIM", 1, 6144, 8], 
+["ovl4__OBJ_ST0A_AR00C_EM0D00.TIM", 1, 12288, 8], 
+["ovl5__OBJ_ST0A_AR00C_EM0F00.TIM", 1, 6144, 8], 
+["ovl6__OBJ_ST0A_AR00C_EM2400.TIM", 1, 16384, 8], 
+["ovl7__OBJ_ST0A_AR00C_EM2600.TIM", 1, 16384, 8], 
+["ovl8__OBJ_ST0A_AR00C_EM3000.TIM", 1, 8192, 8], 
+["ovl9__OBJ_ST0A_AR00C_EM3A00.TIM", 1, 16384, 8], 
+["ovl10__OBJ_ST0A_AR00C_KABUTO.TIM", 1, 16384, 8], 
+["ovl11__SCR_st0a_st6_201.TIM", 1, 8192, 8], 
+["ovl12__SCR_st0a_st6_401.TIM", 1, 32768, 8], 
+["ovl13__SCR_st0a_st6_402c.TIM", 9, 0, 8], 
+["ovl14__SCR_st0a_st6_501.TIM", 1, 16384, 8], 
+["ovl15__SCR_st0a_st6_601.TIM", 1, 32768, 8], 
+["ovl16__SCR_st0a_st6_701.TIM", 1, 16384, 8], 
+["ovl17__SCR_st0a_st6_702c.TIM", 9, 0, 8], 
+["ovl18__SCR_st0a_st6_801.TIM", 1, 32768, 8], 
+["ovl19__SCR_st0a_st6_802c.TIM", 9, 0, 8], 
+["ovl20__SCR_st0a_st6_803c.TIM", 9, 0, 8], 
+["ovl21__SCR_st0a_st6_901.TIM", 1, 16384, 8], 
+["ovl22__BG_CHAR_ST0ABG00.TIM", 1, 32768, 1], 
+["ovl23__sound_moto_se_vab_t_fo04b.vab", 5, 28960, 5152], 
+["ovl24__sound_moto_se_vab_e_fo04a.vab", 5, 283456, 5152], 
+["ovl25__sound_moto_se_seq_tori00_3.se", 8, 55, 0], 
+["ovl26__MESS_ST0A_00.MSG", 0, 4779, 0]
+]
+}

@@ -1,0 +1,9 @@
+{
+"overlays": [
+["ovl0__progbin_r3_shl04.bin", 0, 1100, 0], 
+["ovl1__PLBIN_PL00R01S.PBD", 0, 704, 0], 
+["ovl2__PLBIN_PL00R01M.PBD", 0, 4736, 0], 
+["ovl3__PLBIN_PL00R01P.PBD", 0, 4316, 0], 
+["ovl4__sound_moto_se_vab_r_drill.vab", 5, 17168, 3104]
+]
+}

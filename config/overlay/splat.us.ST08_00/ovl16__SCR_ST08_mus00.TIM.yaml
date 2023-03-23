@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST08_00.ovl16__SCR_ST08_mus00.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST08_00.BIN
+  asm_path: asm/ST08_00/ovl16__SCR_ST08_mus00.TIM
+  asset_path: assets/ST08_00/ovl16__SCR_ST08_mus00.TIM
+  src_path: src/ST08_00/ovl16__SCR_ST08_mus00.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST08_00/generated.syms.ovl16__SCR_ST08_mus00.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST08_00/undefined_funcs_auto.us.ovl16__SCR_ST08_mus00.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST08_00/undefined_syms_auto.us.ovl16__SCR_ST08_mus00.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\SCR\ST08\mus00.TIM
+  - name: ST08_00_mus00_16_header
+    type: dashchunkheader
+    start: 0x0005F800
+  - name: ST08_00_mus00_16
+    type: bin
+    start: 0x00060000
+  - [0x64000]

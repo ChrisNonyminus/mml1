@@ -1,0 +1,31 @@
+options:
+  platform: psx
+  basename: ST13_00.ovl29__PLBIN_PL00D33M.PBD
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST13_00.BIN
+  asm_path: asm/ST13_00/ovl29__PLBIN_PL00D33M.PBD
+  asset_path: assets/ST13_00/ovl29__PLBIN_PL00D33M.PBD
+  src_path: src/ST13_00/ovl29__PLBIN_PL00D33M.PBD
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST13_00/generated.syms.ovl29__PLBIN_PL00D33M.PBD.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST13_00/undefined_funcs_auto.us.ovl29__PLBIN_PL00D33M.PBD.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST13_00/undefined_syms_auto.us.ovl29__PLBIN_PL00D33M.PBD.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\PLBIN\PL00D33M.PBD
+  - name: ST13_00_PL00D33M_29_header
+    type: dashchunkheader
+    start: 0x0009F000
+  - name: ST13_00_PL00D33M_29
+    type: code
+    start: 0x0009F800
+    vram: 0x800E9600
+    exclusive_ram_id: ST13_00_PL00D33M_ram_29
+    subalign: 4
+    subsegments:
+      - [0x9F800, data, PL00D33M_29]
+  - [0xA1080]

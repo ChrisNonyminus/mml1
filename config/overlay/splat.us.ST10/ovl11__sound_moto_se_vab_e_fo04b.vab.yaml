@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST10.ovl11__sound_moto_se_vab_e_fo04b.vab
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST10.BIN
+  asm_path: asm/ST10/ovl11__sound_moto_se_vab_e_fo04b.vab
+  asset_path: assets/ST10/ovl11__sound_moto_se_vab_e_fo04b.vab
+  src_path: src/ST10/ovl11__sound_moto_se_vab_e_fo04b.vab
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST10/generated.syms.ovl11__sound_moto_se_vab_e_fo04b.vab.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST10/undefined_funcs_auto.us.ovl11__sound_moto_se_vab_e_fo04b.vab.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST10/undefined_syms_auto.us.ovl11__sound_moto_se_vab_e_fo04b.vab.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\sound\moto\se\vab\e_fo04b.vab
+  - name: ST10_e_fo04b_11_header
+    type: dashchunkheader
+    start: 0x00048000
+  - name: ST10_e_fo04b_11
+    type: bin
+    start: 0x00048800
+  - [0x586D0]

@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST03_00B.ovl5__OBJ_ST03_AR00B_EM2400.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST03_00B.BIN
+  asm_path: asm/ST03_00B/ovl5__OBJ_ST03_AR00B_EM2400.TIM
+  asset_path: assets/ST03_00B/ovl5__OBJ_ST03_AR00B_EM2400.TIM
+  src_path: src/ST03_00B/ovl5__OBJ_ST03_AR00B_EM2400.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST03_00B/generated.syms.ovl5__OBJ_ST03_AR00B_EM2400.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST03_00B/undefined_funcs_auto.us.ovl5__OBJ_ST03_AR00B_EM2400.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST03_00B/undefined_syms_auto.us.ovl5__OBJ_ST03_AR00B_EM2400.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\OBJ\ST03\AR00B\EM2400.TIM
+  - name: ST03_00B_EM2400_5_header
+    type: dashchunkheader
+    start: 0x00030000
+  - name: ST03_00B_EM2400_5
+    type: bin
+    start: 0x00030800
+  - [0x34800]

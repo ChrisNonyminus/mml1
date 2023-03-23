@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST0A_00D.ovl24__sound_moto_se_vab_e_fo04a.vab
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST0A_00D.BIN
+  asm_path: asm/ST0A_00D/ovl24__sound_moto_se_vab_e_fo04a.vab
+  asset_path: assets/ST0A_00D/ovl24__sound_moto_se_vab_e_fo04a.vab
+  src_path: src/ST0A_00D/ovl24__sound_moto_se_vab_e_fo04a.vab
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST0A_00D/generated.syms.ovl24__sound_moto_se_vab_e_fo04a.vab.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST0A_00D/undefined_funcs_auto.us.ovl24__sound_moto_se_vab_e_fo04a.vab.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST0A_00D/undefined_syms_auto.us.ovl24__sound_moto_se_vab_e_fo04a.vab.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\sound\moto\se\vab\e_fo04a.vab
+  - name: ST0A_00D_e_fo04a_24_header
+    type: dashchunkheader
+    start: 0x00086000
+  - name: ST0A_00D_e_fo04a_24
+    type: bin
+    start: 0x00086800
+  - [0xCBB40]

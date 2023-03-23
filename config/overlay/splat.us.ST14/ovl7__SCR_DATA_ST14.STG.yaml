@@ -1,0 +1,31 @@
+options:
+  platform: psx
+  basename: ST14.ovl7__SCR_DATA_ST14.STG
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST14.BIN
+  asm_path: asm/ST14/ovl7__SCR_DATA_ST14.STG
+  asset_path: assets/ST14/ovl7__SCR_DATA_ST14.STG
+  src_path: src/ST14/ovl7__SCR_DATA_ST14.STG
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST14/generated.syms.ovl7__SCR_DATA_ST14.STG.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST14/undefined_funcs_auto.us.ovl7__SCR_DATA_ST14.STG.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST14/undefined_syms_auto.us.ovl7__SCR_DATA_ST14.STG.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\SCR\DATA\ST14.STG
+  - name: ST14_ST14_7_header
+    type: dashchunkheader
+    start: 0x00078000
+  - name: ST14_ST14_7
+    type: code
+    start: 0x00078800
+    vram: 0x80194000
+    exclusive_ram_id: ST14_ST14_ram_7
+    subalign: 4
+    subsegments:
+      - [0x78800, data, ST14_7]
+  - [0x93B74]

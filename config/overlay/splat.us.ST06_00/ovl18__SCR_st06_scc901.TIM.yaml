@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST06_00.ovl18__SCR_st06_scc901.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST06_00.BIN
+  asm_path: asm/ST06_00/ovl18__SCR_st06_scc901.TIM
+  asset_path: assets/ST06_00/ovl18__SCR_st06_scc901.TIM
+  src_path: src/ST06_00/ovl18__SCR_st06_scc901.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST06_00/generated.syms.ovl18__SCR_st06_scc901.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST06_00/undefined_funcs_auto.us.ovl18__SCR_st06_scc901.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST06_00/undefined_syms_auto.us.ovl18__SCR_st06_scc901.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\SCR\st06\scc901.TIM
+  - name: ST06_00_scc901_18_header
+    type: dashchunkheader
+    start: 0x0006D000
+  - name: ST06_00_scc901_18
+    type: bin
+    start: 0x0006D800
+  - [0x75800]

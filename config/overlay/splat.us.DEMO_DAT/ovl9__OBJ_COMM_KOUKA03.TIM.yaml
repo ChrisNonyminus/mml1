@@ -1,0 +1,23 @@
+options:
+  platform: psx
+  basename: DEMO_DAT.ovl9__OBJ_COMM_KOUKA03.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/DEMO_DAT.BIN
+  asm_path: asm/DEMO_DAT/ovl9__OBJ_COMM_KOUKA03.TIM
+  asset_path: assets/DEMO_DAT/ovl9__OBJ_COMM_KOUKA03.TIM
+  src_path: src/DEMO_DAT/ovl9__OBJ_COMM_KOUKA03.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.DEMO_DAT/generated.syms.ovl9__OBJ_COMM_KOUKA03.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.DEMO_DAT/undefined_funcs_auto.us.ovl9__OBJ_COMM_KOUKA03.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.DEMO_DAT/undefined_syms_auto.us.ovl9__OBJ_COMM_KOUKA03.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\OBJ\COMM\KOUKA03.TIM
+  - name: DEMO_DAT_KOUKA03_9_header
+    type: dashchunkheader
+    start: 0x0001F000
+  - [0x1F800]

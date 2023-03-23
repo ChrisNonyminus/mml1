@@ -1,0 +1,24 @@
+{
+"overlays": [
+["ovl0__EMBIN_DEMO_DAT.EBD", 0, 25256, 0], 
+["ovl1__OBJ_ST03_AR00a_EM0000.TIM", 1, 16384, 8], 
+["ovl2__BG_CHAR_GAUGE01u.TIM", 1, 32768, 8], 
+["ovl3__BG_CHAR_GAUGE01u.TIM", 10, 0, 8], 
+["ovl4__OBJ_COMM_KOUKA00.TIM", 1, 32768, 8], 
+["ovl5__OBJ_COMM_KOUKA01.TIM", 9, 0, 8], 
+["ovl6__OBJ_COMM_KOUKA01B.TIM", 10, 0, 8], 
+["ovl7__OBJ_COMM_KOUKA01C.TIM", 10, 0, 8], 
+["ovl8__OBJ_COMM_KOUKA02.TIM", 9, 0, 8], 
+["ovl9__OBJ_COMM_KOUKA03.TIM", 10, 0, 4], 
+["ovl10__OBJ_COMM_KOUKA04.TIM", 1, 16384, 8], 
+["ovl11__OBJ_COMM_KAGE.TIM", 10, 0, 4], 
+["ovl12__OBJ_COMM_EM1100.TIM", 9, 0, 8], 
+["ovl13__OBJ_COMM_SH1100.TIM", 1, 16384, 8], 
+["ovl14__OBJ_FACE_PL00B00.TIM", 1, 32768, 8], 
+["ovl15__BG_CHAR_NTITLEU.TIM", 1, 65536, 1], 
+["ovl16__BG_CHAR_NTITLE5U.TIM", 1, 12288, 9], 
+["ovl17__BG_CHAR_NTITLE3U.TIM", 1, 30720, 1], 
+["ovl18__sound_moto_se_vab_common.vab", 5, 149520, 5664], 
+["ovl19__sound_moto_se_vab_ee_title.va", 5, 343280, 6176]
+]
+}

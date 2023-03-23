@@ -1,0 +1,7 @@
+{
+"overlays": [
+["ovl0__PLBIN_PL00L04S.PBD", 0, 768, 0], 
+["ovl1__PLBIN_PL00L04M.PBD", 0, 5248, 0], 
+["ovl2__PLBIN_PL00L04P.PBD", 0, 4280, 0]
+]
+}

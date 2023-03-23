@@ -1,0 +1,17 @@
+{
+"overlays": [
+["ovl0__progbin_r3_st10.bin", 0, 84676, 0], 
+["ovl1__MAP_DATA_ST10_MAP.IDX", 0, 9120, 0], 
+["ovl2__MAP_DATA_ST10_MAP.MDT", 0, 11654, 0], 
+["ovl3__SCR_DATA_ST10.STG", 0, 62424, 0], 
+["ovl4__SCR_DATA_ST10.HED", 0, 1040, 0], 
+["ovl5__SCR_DATA_ST10.HD2", 0, 24, 0], 
+["ovl6__OBJ_COMM_PL0000.TIM", 9, 0, 8], 
+["ovl7__OBJ_COMM_PL0001.TIM", 9, 0, 8], 
+["ovl8__OBJ_FACE_PL00B00.TIM", 1, 32768, 8], 
+["ovl9__BG_CHAR_ST0BBG00.TIM", 1, 32768, 2], 
+["ovl10__sound_moto_se_vab_t_fo04b.vab", 5, 28960, 5152], 
+["ovl11__sound_moto_se_vab_e_fo04a.vab", 5, 283456, 5152], 
+["ovl12__sound_moto_se_seq_tori00_3.se", 8, 55, 0]
+]
+}

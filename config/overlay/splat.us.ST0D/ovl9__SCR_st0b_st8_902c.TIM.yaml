@@ -1,0 +1,23 @@
+options:
+  platform: psx
+  basename: ST0D.ovl9__SCR_st0b_st8_902c.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST0D.BIN
+  asm_path: asm/ST0D/ovl9__SCR_st0b_st8_902c.TIM
+  asset_path: assets/ST0D/ovl9__SCR_st0b_st8_902c.TIM
+  src_path: src/ST0D/ovl9__SCR_st0b_st8_902c.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST0D/generated.syms.ovl9__SCR_st0b_st8_902c.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST0D/undefined_funcs_auto.us.ovl9__SCR_st0b_st8_902c.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST0D/undefined_syms_auto.us.ovl9__SCR_st0b_st8_902c.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\SCR\st0b\st8_902c.TIM
+  - name: ST0D_st8_902c_9_header
+    type: dashchunkheader
+    start: 0x0002E000
+  - [0x2E800]

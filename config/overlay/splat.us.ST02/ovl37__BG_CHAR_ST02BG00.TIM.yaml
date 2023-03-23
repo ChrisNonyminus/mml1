@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST02.ovl37__BG_CHAR_ST02BG00.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST02.BIN
+  asm_path: asm/ST02/ovl37__BG_CHAR_ST02BG00.TIM
+  asset_path: assets/ST02/ovl37__BG_CHAR_ST02BG00.TIM
+  src_path: src/ST02/ovl37__BG_CHAR_ST02BG00.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST02/generated.syms.ovl37__BG_CHAR_ST02BG00.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST02/undefined_funcs_auto.us.ovl37__BG_CHAR_ST02BG00.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST02/undefined_syms_auto.us.ovl37__BG_CHAR_ST02BG00.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\BG\CHAR\ST02BG00.TIM
+  - name: ST02_ST02BG00_37_header
+    type: dashchunkheader
+    start: 0x000CD000
+  - name: ST02_ST02BG00_37
+    type: bin
+    start: 0x000CD800
+  - [0xD5800]

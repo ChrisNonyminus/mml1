@@ -1,0 +1,31 @@
+options:
+  platform: psx
+  basename: ARM00L.ovl2__PLBIN_PL00L00P.PBD
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ARM00L.BIN
+  asm_path: asm/ARM00L/ovl2__PLBIN_PL00L00P.PBD
+  asset_path: assets/ARM00L/ovl2__PLBIN_PL00L00P.PBD
+  src_path: src/ARM00L/ovl2__PLBIN_PL00L00P.PBD
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ARM00L/generated.syms.ovl2__PLBIN_PL00L00P.PBD.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ARM00L/undefined_funcs_auto.us.ovl2__PLBIN_PL00L00P.PBD.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ARM00L/undefined_syms_auto.us.ovl2__PLBIN_PL00L00P.PBD.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\PLBIN\PL00L00P.PBD
+  - name: ARM00L_PL00L00P_2_header
+    type: dashchunkheader
+    start: 0x00002000
+  - name: ARM00L_PL00L00P_2
+    type: code
+    start: 0x00002800
+    vram: 0x800FCA00
+    exclusive_ram_id: ARM00L_PL00L00P_ram_2
+    subalign: 4
+    subsegments:
+      - [0x2800, data, PL00L00P_2]
+  - [0x3888]

@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST1B_00.ovl10__OBJ_ST03_AR00B_EM0A00.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST1B_00.BIN
+  asm_path: asm/ST1B_00/ovl10__OBJ_ST03_AR00B_EM0A00.TIM
+  asset_path: assets/ST1B_00/ovl10__OBJ_ST03_AR00B_EM0A00.TIM
+  src_path: src/ST1B_00/ovl10__OBJ_ST03_AR00B_EM0A00.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST1B_00/generated.syms.ovl10__OBJ_ST03_AR00B_EM0A00.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST1B_00/undefined_funcs_auto.us.ovl10__OBJ_ST03_AR00B_EM0A00.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST1B_00/undefined_syms_auto.us.ovl10__OBJ_ST03_AR00B_EM0A00.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\OBJ\ST03\AR00B\EM0A00.TIM
+  - name: ST1B_00_EM0A00_10_header
+    type: dashchunkheader
+    start: 0x0004C000
+  - name: ST1B_00_EM0A00_10
+    type: bin
+    start: 0x0004C800
+  - [0x54800]

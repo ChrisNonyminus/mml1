@@ -1,0 +1,23 @@
+options:
+  platform: psx
+  basename: ST0E.ovl17__OBJ_ST0E_AR00_MOUSE.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST0E.BIN
+  asm_path: asm/ST0E/ovl17__OBJ_ST0E_AR00_MOUSE.TIM
+  asset_path: assets/ST0E/ovl17__OBJ_ST0E_AR00_MOUSE.TIM
+  src_path: src/ST0E/ovl17__OBJ_ST0E_AR00_MOUSE.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST0E/generated.syms.ovl17__OBJ_ST0E_AR00_MOUSE.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST0E/undefined_funcs_auto.us.ovl17__OBJ_ST0E_AR00_MOUSE.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST0E/undefined_syms_auto.us.ovl17__OBJ_ST0E_AR00_MOUSE.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\OBJ\ST0E\AR00\MOUSE.TIM
+  - name: ST0E_MOUSE_17_header
+    type: dashchunkheader
+    start: 0x000CA800
+  - [0xCB000]

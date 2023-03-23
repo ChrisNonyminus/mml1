@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST07_05B.ovl7__OBJ_ST07_AR05_BS0B06.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST07_05B.BIN
+  asm_path: asm/ST07_05B/ovl7__OBJ_ST07_AR05_BS0B06.TIM
+  asset_path: assets/ST07_05B/ovl7__OBJ_ST07_AR05_BS0B06.TIM
+  src_path: src/ST07_05B/ovl7__OBJ_ST07_AR05_BS0B06.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST07_05B/generated.syms.ovl7__OBJ_ST07_AR05_BS0B06.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST07_05B/undefined_funcs_auto.us.ovl7__OBJ_ST07_AR05_BS0B06.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST07_05B/undefined_syms_auto.us.ovl7__OBJ_ST07_AR05_BS0B06.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\OBJ\ST07\AR05\BS0B06.TIM
+  - name: ST07_05B_BS0B06_7_header
+    type: dashchunkheader
+    start: 0x0003D800
+  - name: ST07_05B_BS0B06_7
+    type: bin
+    start: 0x0003E000
+  - [0x46000]

@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST08_00C.ovl41__sound_moto_se_seq_m_tw03a.sep
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST08_00C.BIN
+  asm_path: asm/ST08_00C/ovl41__sound_moto_se_seq_m_tw03a.sep
+  asset_path: assets/ST08_00C/ovl41__sound_moto_se_seq_m_tw03a.sep
+  src_path: src/ST08_00C/ovl41__sound_moto_se_seq_m_tw03a.sep
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST08_00C/generated.syms.ovl41__sound_moto_se_seq_m_tw03a.sep.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST08_00C/undefined_funcs_auto.us.ovl41__sound_moto_se_seq_m_tw03a.sep.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST08_00C/undefined_syms_auto.us.ovl41__sound_moto_se_seq_m_tw03a.sep.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\sound\moto\se\seq\m_tw03a.sep
+  - name: ST08_00C_m_tw03a_41_header
+    type: dashchunkheader
+    start: 0x000EF000
+  - name: ST08_00C_m_tw03a_41
+    type: bin
+    start: 0x000EF800
+  - [0xF162A]

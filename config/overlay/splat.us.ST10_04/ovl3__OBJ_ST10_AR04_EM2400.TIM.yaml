@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST10_04.ovl3__OBJ_ST10_AR04_EM2400.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST10_04.BIN
+  asm_path: asm/ST10_04/ovl3__OBJ_ST10_AR04_EM2400.TIM
+  asset_path: assets/ST10_04/ovl3__OBJ_ST10_AR04_EM2400.TIM
+  src_path: src/ST10_04/ovl3__OBJ_ST10_AR04_EM2400.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST10_04/generated.syms.ovl3__OBJ_ST10_AR04_EM2400.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST10_04/undefined_funcs_auto.us.ovl3__OBJ_ST10_AR04_EM2400.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST10_04/undefined_syms_auto.us.ovl3__OBJ_ST10_AR04_EM2400.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\OBJ\ST10\AR04\EM2400.TIM
+  - name: ST10_04_EM2400_3_header
+    type: dashchunkheader
+    start: 0x00019000
+  - name: ST10_04_EM2400_3
+    type: bin
+    start: 0x00019800
+  - [0x1D800]

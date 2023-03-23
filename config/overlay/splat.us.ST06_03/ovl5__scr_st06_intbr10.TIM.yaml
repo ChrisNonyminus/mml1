@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST06_03.ovl5__scr_st06_intbr10.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST06_03.BIN
+  asm_path: asm/ST06_03/ovl5__scr_st06_intbr10.TIM
+  asset_path: assets/ST06_03/ovl5__scr_st06_intbr10.TIM
+  src_path: src/ST06_03/ovl5__scr_st06_intbr10.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST06_03/generated.syms.ovl5__scr_st06_intbr10.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST06_03/undefined_funcs_auto.us.ovl5__scr_st06_intbr10.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST06_03/undefined_syms_auto.us.ovl5__scr_st06_intbr10.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\scr\st06\intbr10.TIM
+  - name: ST06_03_intbr10_5_header
+    type: dashchunkheader
+    start: 0x0002D800
+  - name: ST06_03_intbr10_5
+    type: bin
+    start: 0x0002E000
+  - [0x36000]

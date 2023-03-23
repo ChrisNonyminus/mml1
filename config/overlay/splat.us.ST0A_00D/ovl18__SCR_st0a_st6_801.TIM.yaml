@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST0A_00D.ovl18__SCR_st0a_st6_801.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST0A_00D.BIN
+  asm_path: asm/ST0A_00D/ovl18__SCR_st0a_st6_801.TIM
+  asset_path: assets/ST0A_00D/ovl18__SCR_st0a_st6_801.TIM
+  src_path: src/ST0A_00D/ovl18__SCR_st0a_st6_801.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST0A_00D/generated.syms.ovl18__SCR_st0a_st6_801.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST0A_00D/undefined_funcs_auto.us.ovl18__SCR_st0a_st6_801.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST0A_00D/undefined_syms_auto.us.ovl18__SCR_st0a_st6_801.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\SCR\st0a\st6_801.TIM
+  - name: ST0A_00D_st6_801_18_header
+    type: dashchunkheader
+    start: 0x00067800
+  - name: ST0A_00D_st6_801_18
+    type: bin
+    start: 0x00068000
+  - [0x70000]

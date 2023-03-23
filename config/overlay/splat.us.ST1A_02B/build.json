@@ -1,0 +1,8 @@
+{
+"overlays": [
+["ovl0__EMBIN_ST1A_02B.EBD", 0, 104344, 0], 
+["ovl1__OBJ_ST1A_AR02_BS1600.TIM", 1, 32768, 8], 
+["ovl2__sound_moto_se_vab_et_lb02b.va", 5, 146720, 3616], 
+["ovl3__MESS_ST1A_00.MSG", 0, 5806, 0]
+]
+}

@@ -1,0 +1,15 @@
+{
+"overlays": [
+["ovl0__progbin_r3_sup.bin", 0, 17068, 0], 
+["ovl1__EMBIN_SUPPORT.EBD", 0, 13440, 0], 
+["ovl2__SCR_DATA_SUPPORT.STG", 0, 3828, 0], 
+["ovl3__OBJ_COMM_SELECT00.TIM", 1, 32768, 8], 
+["ovl4__SCR_SUPPORT2_rospc00.TIM", 1, 32768, 1], 
+["ovl5__SCR_SUPPORT2_rospc01c.TIM", 9, 0, 1], 
+["ovl6__SCR_SUPPORT2_rospc10.TIM", 1, 32768, 1], 
+["ovl7__SCR_SUPPORT2_rospc10c.TIM", 9, 0, 6], 
+["ovl8__SCR_SUPPORT2_rospc11c.TIM", 9, 0, 1], 
+["ovl9__sound_moto_se_vab_common2.vab", 5, 145776, 5664], 
+["ovl10__MESS_STFF_FD.MSG", 0, 26323, 0]
+]
+}

@@ -1,0 +1,23 @@
+options:
+  platform: psx
+  basename: ST07_05B.ovl13__SCR_st07_inmer04c.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST07_05B.BIN
+  asm_path: asm/ST07_05B/ovl13__SCR_st07_inmer04c.TIM
+  asset_path: assets/ST07_05B/ovl13__SCR_st07_inmer04c.TIM
+  src_path: src/ST07_05B/ovl13__SCR_st07_inmer04c.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST07_05B/generated.syms.ovl13__SCR_st07_inmer04c.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST07_05B/undefined_funcs_auto.us.ovl13__SCR_st07_inmer04c.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST07_05B/undefined_syms_auto.us.ovl13__SCR_st07_inmer04c.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\SCR\st07\inmer04c.TIM
+  - name: ST07_05B_inmer04c_13_header
+    type: dashchunkheader
+    start: 0x00050800
+  - [0x51000]

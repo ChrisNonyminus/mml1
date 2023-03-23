@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST05_00G.ovl19__SCR_ST05_SC310.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST05_00G.BIN
+  asm_path: asm/ST05_00G/ovl19__SCR_ST05_SC310.TIM
+  asset_path: assets/ST05_00G/ovl19__SCR_ST05_SC310.TIM
+  src_path: src/ST05_00G/ovl19__SCR_ST05_SC310.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST05_00G/generated.syms.ovl19__SCR_ST05_SC310.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST05_00G/undefined_funcs_auto.us.ovl19__SCR_ST05_SC310.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST05_00G/undefined_syms_auto.us.ovl19__SCR_ST05_SC310.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\SCR\ST05\SC310.TIM
+  - name: ST05_00G_SC310_19_header
+    type: dashchunkheader
+    start: 0x0006F800
+  - name: ST05_00G_SC310_19
+    type: bin
+    start: 0x00070000
+  - [0x74000]

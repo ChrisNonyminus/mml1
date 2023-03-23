@@ -1,0 +1,23 @@
+options:
+  platform: psx
+  basename: ST06_04.ovl4__OBJ_ST06_AR02_EM2501.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST06_04.BIN
+  asm_path: asm/ST06_04/ovl4__OBJ_ST06_AR02_EM2501.TIM
+  asset_path: assets/ST06_04/ovl4__OBJ_ST06_AR02_EM2501.TIM
+  src_path: src/ST06_04/ovl4__OBJ_ST06_AR02_EM2501.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST06_04/generated.syms.ovl4__OBJ_ST06_AR02_EM2501.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST06_04/undefined_funcs_auto.us.ovl4__OBJ_ST06_AR02_EM2501.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST06_04/undefined_syms_auto.us.ovl4__OBJ_ST06_AR02_EM2501.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\OBJ\ST06\AR02\EM2501.TIM
+  - name: ST06_04_EM2501_4_header
+    type: dashchunkheader
+    start: 0x00030800
+  - [0x31000]

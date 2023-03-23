@@ -1,0 +1,23 @@
+options:
+  platform: psx
+  basename: ST1A.ovl33__SCR_st1a_mg803c.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST1A.BIN
+  asm_path: asm/ST1A/ovl33__SCR_st1a_mg803c.TIM
+  asset_path: assets/ST1A/ovl33__SCR_st1a_mg803c.TIM
+  src_path: src/ST1A/ovl33__SCR_st1a_mg803c.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST1A/generated.syms.ovl33__SCR_st1a_mg803c.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST1A/undefined_funcs_auto.us.ovl33__SCR_st1a_mg803c.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST1A/undefined_syms_auto.us.ovl33__SCR_st1a_mg803c.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\SCR\st1a\mg803c.TIM
+  - name: ST1A_mg803c_33_header
+    type: dashchunkheader
+    start: 0x0009C800
+  - [0x9D000]

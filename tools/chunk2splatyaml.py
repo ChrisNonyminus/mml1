@@ -5,13 +5,14 @@
 # 0x4: Size of chunk
 # 0x8: ???
 # 0xC: Load address if type 0
-# 0x10-0x40: ???
+# 0x10-0x20: ???
+# 0x20-0x40: ???
 # 0x40-0x800: Chunk filename, as a null terminated string
 # 0x800-(0x800+chunk size): file contents
 # Chunk size, aligned up to 0x800: next chunk, starting with the header
 # ```
 
-# This python script will scan a given folder for files that follow this format, and create yamls for splat, placed in the "config" folder and named splatconfig.us.{overlay file name}.yaml.
+# This python script will scan a given folder for files that follow this format, and create yamls for splat, placed in the "config" folder and named splatconfig.us.{overlay file name}.yaml. Also creates a json for buildoverlay.py that lists the offsets of each chunk header in the file, and the name of the chunk. This is used by buildoverlay.py to build the overlay file.
 
 import json
 import os
@@ -24,6 +25,27 @@ def align_up(val, align):
         return val
     return (val + align - 1) & ~(align - 1)
 
+def get_next_offset(file, offset, chunk_size, unk, chunk_type):
+    if ("ST05_00E.BIN" in file) and offset == 0x89800:
+        # hacky workaround
+        return offset + align_up(chunk_size + 0x800, 0x800) + 0x800
+    elif "ST04B.BIN" in file and offset == 0x43000:
+        return offset + align_up(chunk_size + 0x800, 0x800) + 0x800
+    elif "ST08_01.BIN" in file and offset == 0x8B800:
+        return offset + align_up(chunk_size + 0x800, 0x800) + 0x800
+    elif "ST14.BIN" in file and offset == 0x4B800:
+        return offset + align_up(chunk_size + 0x800, 0x800) + 0x800
+    elif "ST08_02.BIN" in file and offset == 0x89800:
+        return offset + align_up(chunk_size + 0x800, 0x800) + 0x800
+    elif "ST0F_03.BIN" in file and offset == 0x69800:
+        return offset + align_up(chunk_size + 0x800, 0x800) + 0x800
+    elif "ST05_02.BIN" in file and offset == 0x72800:
+        return offset + align_up(chunk_size + 0x800, 0x800) + 0x800
+    elif chunk_type == 5 and unk in [0x1820]:
+        return offset + align_up(chunk_size + 0x800, 0x800) + 0x800
+    else:
+        return offset + align_up(chunk_size + 0x800, 0x800)
+
 def get_chunks(file):
     chunks = []
     with open(file, "rb") as f:
@@ -34,25 +56,29 @@ def get_chunks(file):
             if len(chunk) == 0:
                 break
             chunk_type, chunk_size, _, chunk_load_addr = struct.unpack("<IIII", chunk[0:0x10])
-            if chunk_size + offset + 0x800 >= os.path.getsize(file):
+            if chunk_type in [1, 9, 10]:
+                chunk_size = struct.unpack("<I", chunk[0x28:0x2C])[0] * struct.unpack("<I", chunk[0x24:0x28])[0] * 2
+            if chunk_type == 0xFFFFFFFF:
                 break
-            if chunk_size == 0:
-                offset += 0x800
-                continue
+            unk = struct.unpack("<I", chunk[0x18:0x1C])[0]
+            print(f"{file}, {offset:X}")
             chunk_name = chunk[0x40:0x60].split(b"\x00")[0].decode("ascii")
-            chunks.append((chunk_type, chunk_size, chunk_load_addr, chunk_name, offset, os.path.getsize(file)))
-            offset = align_up(offset + 0x800 + chunk_size, 0x800) if chunk_type != 1 else align_up(offset + chunk_size, 0x800)
+            chunks.append((chunk_type, chunk_size, chunk_load_addr, chunk_name, offset, os.path.getsize(file), unk))
+            if (chunk_type not in [1, 9, 10] or chunk_size > 0):
+                offset = get_next_offset(file, offset, chunk_size, unk, chunk_type)
+                print(f"Aligned to {offset:X}")
+            else:
+                offset += 0x800
+            if offset >= os.path.getsize(file):
+                break
     return chunks
 
 load_addresses = {}
 def get_yaml(file, chunks):
     for i, chunk in enumerate(chunks):
-        (chunk_type, chunk_size, chunk_load_addr, chunk_name, chunk_offset, fsize) = chunk
+        (chunk_type, chunk_size, chunk_load_addr, chunk_name, chunk_offset, _, _) = chunk
         chunk_id = chunk_name
-        if "/" in chunk_id:
-            chunk_id = chunk_id.split("/")[-1]
-        if "\\" in chunk_id:
-            chunk_id = chunk_id.split("\\")[-1]
+        chunk_id = f"ovl{i}_" + chunk_id.replace("\\", "_")[2:]
         os.makedirs(f"config/overlay/splat.us.{file.replace('.BIN', '')}/", exist_ok= True)
         with open(f"config/overlay/splat.us.{file.replace('.BIN', '')}/{chunk_id}.yaml", "w") as f:
             f.write(f"options:\n")
@@ -100,10 +126,23 @@ def get_yaml(file, chunks):
                 f.write(f"  - name: {file.replace('.BIN', '')}_{chunk_name}_{i}_header\n")
                 f.write(f"    type: dashchunkheader\n")
                 f.write(f"    start: 0x{chunk_offset:08X}\n")
-                f.write(f"  - name: {file.replace('.BIN', '')}_{chunk_name}_{i}\n")
-                f.write(f"    type: bin\n")
-                f.write(f"    start: 0x{chunk_offset + 0x800:08X}\n")
+                if (chunk_type not in [1, 9, 10] or chunk_size > 0):
+                    f.write(f"  - name: {file.replace('.BIN', '')}_{chunk_name}_{i}\n")
+                    f.write(f"    type: bin\n")
+                    f.write(f"    start: 0x{chunk_offset + 0x800:08X}\n")
             f.write(f"  - [0x{(chunk_offset + chunk_size + 0x800):X}]\n")
+
+def make_json(file, chunks):
+    with open(f"config/overlay/splat.us.{file.replace('.BIN', '')}/build.json", "w") as f:
+        f.write("{\n")
+        f.write(f"\"overlays\": [\n")
+        for i, chunk in enumerate(chunks):
+            (chunk_type, chunk_size, chunk_load_addr, chunk_name, chunk_offset, fsize, unk) = chunk
+            chunk_id = chunk_name
+            chunk_id = f"ovl{i}_" + chunk_id.replace("\\", "_")[2:]
+            f.write(f"[\"{chunk_id}\", {chunk_type}, {chunk_size}, {unk}]{', ' if i < len(chunks) - 1 else ''}\n")
+        f.write(f"]\n")
+        f.write("}\n")
 
 if __name__ == "__main__":
     import sys
@@ -114,6 +153,7 @@ if __name__ == "__main__":
         if file.endswith(".BIN"):
             chunks = get_chunks(os.path.join(sys.argv[1], file))
             get_yaml(file, chunks)
+            make_json(file, chunks)
     print("common_load_addresses_for_overlays = {")
     for load in load_addresses:
         print(f"\t0x{load:08X}: \"{load_addresses[load]}\"")

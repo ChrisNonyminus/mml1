@@ -1,0 +1,31 @@
+options:
+  platform: psx
+  basename: ST00_02.ovl9__mess_st00_02.msg
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST00_02.BIN
+  asm_path: asm/ST00_02/ovl9__mess_st00_02.msg
+  asset_path: assets/ST00_02/ovl9__mess_st00_02.msg
+  src_path: src/ST00_02/ovl9__mess_st00_02.msg
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST00_02/generated.syms.ovl9__mess_st00_02.msg.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST00_02/undefined_funcs_auto.us.ovl9__mess_st00_02.msg.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST00_02/undefined_syms_auto.us.ovl9__mess_st00_02.msg.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\mess\st00_02.msg
+  - name: ST00_02_st00_02_9_header
+    type: dashchunkheader
+    start: 0x00034000
+  - name: ST00_02_st00_02_9
+    type: code
+    start: 0x00034800
+    vram: 0x80153000
+    exclusive_ram_id: ST00_02_st00_02_ram_9
+    subalign: 4
+    subsegments:
+      - [0x34800, data, st00_02_9]
+  - [0x35365]

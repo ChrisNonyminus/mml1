@@ -1,0 +1,23 @@
+options:
+  platform: psx
+  basename: ST1C.ovl21__SCR_ST1C_inbij23.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST1C.BIN
+  asm_path: asm/ST1C/ovl21__SCR_ST1C_inbij23.TIM
+  asset_path: assets/ST1C/ovl21__SCR_ST1C_inbij23.TIM
+  src_path: src/ST1C/ovl21__SCR_ST1C_inbij23.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST1C/generated.syms.ovl21__SCR_ST1C_inbij23.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST1C/undefined_funcs_auto.us.ovl21__SCR_ST1C_inbij23.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST1C/undefined_syms_auto.us.ovl21__SCR_ST1C_inbij23.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\SCR\ST1C\inbij23.TIM
+  - name: ST1C_inbij23_21_header
+    type: dashchunkheader
+    start: 0x00046000
+  - [0x46800]

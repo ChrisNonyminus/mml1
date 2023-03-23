@@ -1,0 +1,31 @@
+options:
+  platform: psx
+  basename: ST04_00B.ovl43__MESS_ST04_00.MSG
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST04_00B.BIN
+  asm_path: asm/ST04_00B/ovl43__MESS_ST04_00.MSG
+  asset_path: assets/ST04_00B/ovl43__MESS_ST04_00.MSG
+  src_path: src/ST04_00B/ovl43__MESS_ST04_00.MSG
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST04_00B/generated.syms.ovl43__MESS_ST04_00.MSG.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST04_00B/undefined_funcs_auto.us.ovl43__MESS_ST04_00.MSG.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST04_00B/undefined_syms_auto.us.ovl43__MESS_ST04_00.MSG.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\MESS\ST04_00.MSG
+  - name: ST04_00B_ST04_00_43_header
+    type: dashchunkheader
+    start: 0x00097800
+  - name: ST04_00B_ST04_00_43
+    type: code
+    start: 0x00098000
+    vram: 0x80153000
+    exclusive_ram_id: ST04_00B_ST04_00_ram_43
+    subalign: 4
+    subsegments:
+      - [0x98000, data, ST04_00_43]
+  - [0x9BEAF]

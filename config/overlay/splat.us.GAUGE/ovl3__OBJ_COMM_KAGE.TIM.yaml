@@ -1,0 +1,23 @@
+options:
+  platform: psx
+  basename: GAUGE.ovl3__OBJ_COMM_KAGE.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/GAUGE.BIN
+  asm_path: asm/GAUGE/ovl3__OBJ_COMM_KAGE.TIM
+  asset_path: assets/GAUGE/ovl3__OBJ_COMM_KAGE.TIM
+  src_path: src/GAUGE/ovl3__OBJ_COMM_KAGE.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.GAUGE/generated.syms.ovl3__OBJ_COMM_KAGE.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.GAUGE/undefined_funcs_auto.us.ovl3__OBJ_COMM_KAGE.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.GAUGE/undefined_syms_auto.us.ovl3__OBJ_COMM_KAGE.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\OBJ\COMM\KAGE.TIM
+  - name: GAUGE_KAGE_3_header
+    type: dashchunkheader
+    start: 0x00009800
+  - [0xA000]

@@ -1,0 +1,31 @@
+options:
+  platform: psx
+  basename: ST17.ovl34__PLBIN_PL00D34S.PBD
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST17.BIN
+  asm_path: asm/ST17/ovl34__PLBIN_PL00D34S.PBD
+  asset_path: assets/ST17/ovl34__PLBIN_PL00D34S.PBD
+  src_path: src/ST17/ovl34__PLBIN_PL00D34S.PBD
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST17/generated.syms.ovl34__PLBIN_PL00D34S.PBD.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST17/undefined_funcs_auto.us.ovl34__PLBIN_PL00D34S.PBD.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST17/undefined_syms_auto.us.ovl34__PLBIN_PL00D34S.PBD.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\PLBIN\PL00D34S.PBD
+  - name: ST17_PL00D34S_34_header
+    type: dashchunkheader
+    start: 0x000E9000
+  - name: ST17_PL00D34S_34
+    type: code
+    start: 0x000E9800
+    vram: 0x800DBA00
+    exclusive_ram_id: ST17_PL00D34S_ram_34
+    subalign: 4
+    subsegments:
+      - [0xE9800, data, PL00D34S_34]
+  - [0xE9CA8]

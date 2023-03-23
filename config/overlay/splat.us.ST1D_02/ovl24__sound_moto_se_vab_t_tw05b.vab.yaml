@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST1D_02.ovl24__sound_moto_se_vab_t_tw05b.vab
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST1D_02.BIN
+  asm_path: asm/ST1D_02/ovl24__sound_moto_se_vab_t_tw05b.vab
+  asset_path: assets/ST1D_02/ovl24__sound_moto_se_vab_t_tw05b.vab
+  src_path: src/ST1D_02/ovl24__sound_moto_se_vab_t_tw05b.vab
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST1D_02/generated.syms.ovl24__sound_moto_se_vab_t_tw05b.vab.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST1D_02/undefined_funcs_auto.us.ovl24__sound_moto_se_vab_t_tw05b.vab.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST1D_02/undefined_syms_auto.us.ovl24__sound_moto_se_vab_t_tw05b.vab.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\sound\moto\se\vab\t_tw05b.vab
+  - name: ST1D_02_t_tw05b_24_header
+    type: dashchunkheader
+    start: 0x0007A800
+  - name: ST1D_02_t_tw05b_24
+    type: bin
+    start: 0x0007B000
+  - [0x94D30]

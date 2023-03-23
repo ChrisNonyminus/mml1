@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST10B.ovl12__sound_moto_se_seq_tori00_3.se
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST10B.BIN
+  asm_path: asm/ST10B/ovl12__sound_moto_se_seq_tori00_3.se
+  asset_path: assets/ST10B/ovl12__sound_moto_se_seq_tori00_3.se
+  src_path: src/ST10B/ovl12__sound_moto_se_seq_tori00_3.se
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST10B/generated.syms.ovl12__sound_moto_se_seq_tori00_3.se.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST10B/undefined_funcs_auto.us.ovl12__sound_moto_se_seq_tori00_3.se.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST10B/undefined_syms_auto.us.ovl12__sound_moto_se_seq_tori00_3.se.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\sound\moto\se\seq\tori00_3.se
+  - name: ST10B_tori00_3_12_header
+    type: dashchunkheader
+    start: 0x0008E000
+  - name: ST10B_tori00_3_12
+    type: bin
+    start: 0x0008E800
+  - [0x8E837]

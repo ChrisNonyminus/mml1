@@ -1,0 +1,23 @@
+options:
+  platform: psx
+  basename: ST03_07.ovl14__SCR_st03_inliv24c.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST03_07.BIN
+  asm_path: asm/ST03_07/ovl14__SCR_st03_inliv24c.TIM
+  asset_path: assets/ST03_07/ovl14__SCR_st03_inliv24c.TIM
+  src_path: src/ST03_07/ovl14__SCR_st03_inliv24c.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST03_07/generated.syms.ovl14__SCR_st03_inliv24c.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST03_07/undefined_funcs_auto.us.ovl14__SCR_st03_inliv24c.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST03_07/undefined_syms_auto.us.ovl14__SCR_st03_inliv24c.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\SCR\st03\inliv24c.TIM
+  - name: ST03_07_inliv24c_14_header
+    type: dashchunkheader
+    start: 0x00055000
+  - [0x55800]

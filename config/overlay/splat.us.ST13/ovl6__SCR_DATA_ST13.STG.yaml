@@ -1,0 +1,31 @@
+options:
+  platform: psx
+  basename: ST13.ovl6__SCR_DATA_ST13.STG
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST13.BIN
+  asm_path: asm/ST13/ovl6__SCR_DATA_ST13.STG
+  asset_path: assets/ST13/ovl6__SCR_DATA_ST13.STG
+  src_path: src/ST13/ovl6__SCR_DATA_ST13.STG
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST13/generated.syms.ovl6__SCR_DATA_ST13.STG.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST13/undefined_funcs_auto.us.ovl6__SCR_DATA_ST13.STG.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST13/undefined_syms_auto.us.ovl6__SCR_DATA_ST13.STG.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\SCR\DATA\ST13.STG
+  - name: ST13_ST13_6_header
+    type: dashchunkheader
+    start: 0x00027000
+  - name: ST13_ST13_6
+    type: code
+    start: 0x00027800
+    vram: 0x80194000
+    exclusive_ram_id: ST13_ST13_ram_6
+    subalign: 4
+    subsegments:
+      - [0x27800, data, ST13_6]
+  - [0x48628]

@@ -1,0 +1,23 @@
+options:
+  platform: psx
+  basename: EXIT_SUP.ovl6__OBJ_COMM_KOUKA03.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/EXIT_SUP.BIN
+  asm_path: asm/EXIT_SUP/ovl6__OBJ_COMM_KOUKA03.TIM
+  asset_path: assets/EXIT_SUP/ovl6__OBJ_COMM_KOUKA03.TIM
+  src_path: src/EXIT_SUP/ovl6__OBJ_COMM_KOUKA03.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.EXIT_SUP/generated.syms.ovl6__OBJ_COMM_KOUKA03.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.EXIT_SUP/undefined_funcs_auto.us.ovl6__OBJ_COMM_KOUKA03.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.EXIT_SUP/undefined_syms_auto.us.ovl6__OBJ_COMM_KOUKA03.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\OBJ\COMM\KOUKA03.TIM
+  - name: EXIT_SUP_KOUKA03_6_header
+    type: dashchunkheader
+    start: 0x0001B000
+  - [0x1B800]

@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST04_02.ovl2__OBJ_ST04_AR02_EM0900.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST04_02.BIN
+  asm_path: asm/ST04_02/ovl2__OBJ_ST04_AR02_EM0900.TIM
+  asset_path: assets/ST04_02/ovl2__OBJ_ST04_AR02_EM0900.TIM
+  src_path: src/ST04_02/ovl2__OBJ_ST04_AR02_EM0900.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST04_02/generated.syms.ovl2__OBJ_ST04_AR02_EM0900.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST04_02/undefined_funcs_auto.us.ovl2__OBJ_ST04_AR02_EM0900.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST04_02/undefined_syms_auto.us.ovl2__OBJ_ST04_AR02_EM0900.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\OBJ\ST04\AR02\EM0900.TIM
+  - name: ST04_02_EM0900_2_header
+    type: dashchunkheader
+    start: 0x00015800
+  - name: ST04_02_EM0900_2
+    type: bin
+    start: 0x00016000
+  - [0x1A000]

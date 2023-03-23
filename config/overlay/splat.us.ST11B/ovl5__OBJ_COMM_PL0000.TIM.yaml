@@ -1,0 +1,23 @@
+options:
+  platform: psx
+  basename: ST11B.ovl5__OBJ_COMM_PL0000.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST11B.BIN
+  asm_path: asm/ST11B/ovl5__OBJ_COMM_PL0000.TIM
+  asset_path: assets/ST11B/ovl5__OBJ_COMM_PL0000.TIM
+  src_path: src/ST11B/ovl5__OBJ_COMM_PL0000.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST11B/generated.syms.ovl5__OBJ_COMM_PL0000.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST11B/undefined_funcs_auto.us.ovl5__OBJ_COMM_PL0000.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST11B/undefined_syms_auto.us.ovl5__OBJ_COMM_PL0000.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\OBJ\COMM\PL0000.TIM
+  - name: ST11B_PL0000_5_header
+    type: dashchunkheader
+    start: 0x00020800
+  - [0x21000]

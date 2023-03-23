@@ -1,0 +1,23 @@
+options:
+  platform: psx
+  basename: GAUGE.ovl2__OBJ_COMM_KOUKA03.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/GAUGE.BIN
+  asm_path: asm/GAUGE/ovl2__OBJ_COMM_KOUKA03.TIM
+  asset_path: assets/GAUGE/ovl2__OBJ_COMM_KOUKA03.TIM
+  src_path: src/GAUGE/ovl2__OBJ_COMM_KOUKA03.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.GAUGE/generated.syms.ovl2__OBJ_COMM_KOUKA03.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.GAUGE/undefined_funcs_auto.us.ovl2__OBJ_COMM_KOUKA03.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.GAUGE/undefined_syms_auto.us.ovl2__OBJ_COMM_KOUKA03.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\OBJ\COMM\KOUKA03.TIM
+  - name: GAUGE_KOUKA03_2_header
+    type: dashchunkheader
+    start: 0x00009000
+  - [0x9800]

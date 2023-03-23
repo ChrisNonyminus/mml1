@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST1B_00.ovl24__SCR_st03_KANBAN.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST1B_00.BIN
+  asm_path: asm/ST1B_00/ovl24__SCR_st03_KANBAN.TIM
+  asset_path: assets/ST1B_00/ovl24__SCR_st03_KANBAN.TIM
+  src_path: src/ST1B_00/ovl24__SCR_st03_KANBAN.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST1B_00/generated.syms.ovl24__SCR_st03_KANBAN.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST1B_00/undefined_funcs_auto.us.ovl24__SCR_st03_KANBAN.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST1B_00/undefined_syms_auto.us.ovl24__SCR_st03_KANBAN.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\SCR\st03\KANBAN.TIM
+  - name: ST1B_00_KANBAN_24_header
+    type: dashchunkheader
+    start: 0x00085000
+  - name: ST1B_00_KANBAN_24
+    type: bin
+    start: 0x00085800
+  - [0x87800]

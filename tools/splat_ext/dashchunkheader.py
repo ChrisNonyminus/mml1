@@ -23,7 +23,7 @@ class PSXSegDashchunkheader(CommonSegHeader):
             print(dword)
         if typ == "ascii":
             text = data.decode("ASCII").strip()
-            text = text.replace("\x00", "\\0")  # escape NUL chars
+            text = text.replace("\n", "\\n").replace("\r", "\\r").replace("\t", "\\t").replace("\\", "\\\\").replace("\x00", "\\0")
             dstr = '"' + text + '"'
         elif typ == "symbol" and dword in self.symbols:
             typ = "word"
@@ -95,6 +95,7 @@ class PSXSegDashchunkheader(CommonSegHeader):
         src_path.parent.mkdir(parents=True, exist_ok=True)
         with open(src_path, "w", newline="\n") as f:
             f.write("\n".join(header_lines))
+            f.write("\n")
         self.log(f"Wrote {self.name} to {src_path}")
 
     @staticmethod

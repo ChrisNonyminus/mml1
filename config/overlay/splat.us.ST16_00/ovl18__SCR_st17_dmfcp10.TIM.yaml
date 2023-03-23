@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST16_00.ovl18__SCR_st17_dmfcp10.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST16_00.BIN
+  asm_path: asm/ST16_00/ovl18__SCR_st17_dmfcp10.TIM
+  asset_path: assets/ST16_00/ovl18__SCR_st17_dmfcp10.TIM
+  src_path: src/ST16_00/ovl18__SCR_st17_dmfcp10.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST16_00/generated.syms.ovl18__SCR_st17_dmfcp10.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST16_00/undefined_funcs_auto.us.ovl18__SCR_st17_dmfcp10.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST16_00/undefined_syms_auto.us.ovl18__SCR_st17_dmfcp10.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\SCR\st17\dmfcp10.TIM
+  - name: ST16_00_dmfcp10_18_header
+    type: dashchunkheader
+    start: 0x00053000
+  - name: ST16_00_dmfcp10_18
+    type: bin
+    start: 0x00053800
+  - [0x5B800]

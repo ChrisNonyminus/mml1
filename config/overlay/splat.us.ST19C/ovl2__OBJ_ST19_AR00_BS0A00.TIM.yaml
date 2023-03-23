@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST19C.ovl2__OBJ_ST19_AR00_BS0A00.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST19C.BIN
+  asm_path: asm/ST19C/ovl2__OBJ_ST19_AR00_BS0A00.TIM
+  asset_path: assets/ST19C/ovl2__OBJ_ST19_AR00_BS0A00.TIM
+  src_path: src/ST19C/ovl2__OBJ_ST19_AR00_BS0A00.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST19C/generated.syms.ovl2__OBJ_ST19_AR00_BS0A00.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST19C/undefined_funcs_auto.us.ovl2__OBJ_ST19_AR00_BS0A00.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST19C/undefined_syms_auto.us.ovl2__OBJ_ST19_AR00_BS0A00.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\OBJ\ST19\AR00\BS0A00.TIM
+  - name: ST19C_BS0A00_2_header
+    type: dashchunkheader
+    start: 0x00025800
+  - name: ST19C_BS0A00_2
+    type: bin
+    start: 0x00026000
+  - [0x2E000]

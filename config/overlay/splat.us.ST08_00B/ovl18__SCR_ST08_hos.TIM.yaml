@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST08_00B.ovl18__SCR_ST08_hos.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST08_00B.BIN
+  asm_path: asm/ST08_00B/ovl18__SCR_ST08_hos.TIM
+  asset_path: assets/ST08_00B/ovl18__SCR_ST08_hos.TIM
+  src_path: src/ST08_00B/ovl18__SCR_ST08_hos.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST08_00B/generated.syms.ovl18__SCR_ST08_hos.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST08_00B/undefined_funcs_auto.us.ovl18__SCR_ST08_hos.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST08_00B/undefined_syms_auto.us.ovl18__SCR_ST08_hos.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\SCR\ST08\hos.TIM
+  - name: ST08_00B_hos_18_header
+    type: dashchunkheader
+    start: 0x00061000
+  - name: ST08_00B_hos_18
+    type: bin
+    start: 0x00061800
+  - [0x65800]

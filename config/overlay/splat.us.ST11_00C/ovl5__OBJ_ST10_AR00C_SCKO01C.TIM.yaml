@@ -1,0 +1,23 @@
+options:
+  platform: psx
+  basename: ST11_00C.ovl5__OBJ_ST10_AR00C_SCKO01C.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST11_00C.BIN
+  asm_path: asm/ST11_00C/ovl5__OBJ_ST10_AR00C_SCKO01C.TIM
+  asset_path: assets/ST11_00C/ovl5__OBJ_ST10_AR00C_SCKO01C.TIM
+  src_path: src/ST11_00C/ovl5__OBJ_ST10_AR00C_SCKO01C.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST11_00C/generated.syms.ovl5__OBJ_ST10_AR00C_SCKO01C.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST11_00C/undefined_funcs_auto.us.ovl5__OBJ_ST10_AR00C_SCKO01C.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST11_00C/undefined_syms_auto.us.ovl5__OBJ_ST10_AR00C_SCKO01C.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\OBJ\ST10\AR00C\SCKO01C.TIM
+  - name: ST11_00C_SCKO01C_5_header
+    type: dashchunkheader
+    start: 0x00024000
+  - [0x24800]

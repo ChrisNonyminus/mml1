@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST05_04.ovl8__OBJ_ST05_AR04_EM4500.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST05_04.BIN
+  asm_path: asm/ST05_04/ovl8__OBJ_ST05_AR04_EM4500.TIM
+  asset_path: assets/ST05_04/ovl8__OBJ_ST05_AR04_EM4500.TIM
+  src_path: src/ST05_04/ovl8__OBJ_ST05_AR04_EM4500.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST05_04/generated.syms.ovl8__OBJ_ST05_AR04_EM4500.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST05_04/undefined_funcs_auto.us.ovl8__OBJ_ST05_AR04_EM4500.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST05_04/undefined_syms_auto.us.ovl8__OBJ_ST05_AR04_EM4500.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\OBJ\ST05\AR04\EM4500.TIM
+  - name: ST05_04_EM4500_8_header
+    type: dashchunkheader
+    start: 0x00030800
+  - name: ST05_04_EM4500_8
+    type: bin
+    start: 0x00031000
+  - [0x35000]

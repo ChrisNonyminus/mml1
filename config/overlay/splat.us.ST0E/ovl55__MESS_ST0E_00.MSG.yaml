@@ -1,0 +1,31 @@
+options:
+  platform: psx
+  basename: ST0E.ovl55__MESS_ST0E_00.MSG
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST0E.BIN
+  asm_path: asm/ST0E/ovl55__MESS_ST0E_00.MSG
+  asset_path: assets/ST0E/ovl55__MESS_ST0E_00.MSG
+  src_path: src/ST0E/ovl55__MESS_ST0E_00.MSG
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST0E/generated.syms.ovl55__MESS_ST0E_00.MSG.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST0E/undefined_funcs_auto.us.ovl55__MESS_ST0E_00.MSG.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST0E/undefined_syms_auto.us.ovl55__MESS_ST0E_00.MSG.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\MESS\ST0E_00.MSG
+  - name: ST0E_ST0E_00_55_header
+    type: dashchunkheader
+    start: 0x0012C000
+  - name: ST0E_ST0E_00_55
+    type: code
+    start: 0x0012C800
+    vram: 0x80153000
+    exclusive_ram_id: ST0E_ST0E_00_ram_55
+    subalign: 4
+    subsegments:
+      - [0x12C800, data, ST0E_00_55]
+  - [0x12D5B0]

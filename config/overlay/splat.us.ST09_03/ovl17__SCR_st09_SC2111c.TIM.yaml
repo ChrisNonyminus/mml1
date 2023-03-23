@@ -1,0 +1,23 @@
+options:
+  platform: psx
+  basename: ST09_03.ovl17__SCR_st09_SC2111c.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST09_03.BIN
+  asm_path: asm/ST09_03/ovl17__SCR_st09_SC2111c.TIM
+  asset_path: assets/ST09_03/ovl17__SCR_st09_SC2111c.TIM
+  src_path: src/ST09_03/ovl17__SCR_st09_SC2111c.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST09_03/generated.syms.ovl17__SCR_st09_SC2111c.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST09_03/undefined_funcs_auto.us.ovl17__SCR_st09_SC2111c.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST09_03/undefined_syms_auto.us.ovl17__SCR_st09_SC2111c.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\SCR\st09\SC2111c.TIM
+  - name: ST09_03_SC2111c_17_header
+    type: dashchunkheader
+    start: 0x0005C800
+  - [0x5D000]

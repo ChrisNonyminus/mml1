@@ -1,0 +1,23 @@
+options:
+  platform: psx
+  basename: ST05_00H.ovl2__OBJ_ST05_AR00H_CA0001.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST05_00H.BIN
+  asm_path: asm/ST05_00H/ovl2__OBJ_ST05_AR00H_CA0001.TIM
+  asset_path: assets/ST05_00H/ovl2__OBJ_ST05_AR00H_CA0001.TIM
+  src_path: src/ST05_00H/ovl2__OBJ_ST05_AR00H_CA0001.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST05_00H/generated.syms.ovl2__OBJ_ST05_AR00H_CA0001.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST05_00H/undefined_funcs_auto.us.ovl2__OBJ_ST05_AR00H_CA0001.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST05_00H/undefined_syms_auto.us.ovl2__OBJ_ST05_AR00H_CA0001.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\OBJ\ST05\AR00H\CA0001.TIM
+  - name: ST05_00H_CA0001_2_header
+    type: dashchunkheader
+    start: 0x00030000
+  - [0x30800]

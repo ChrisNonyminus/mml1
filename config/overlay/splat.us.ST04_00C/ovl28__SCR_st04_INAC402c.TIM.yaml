@@ -1,0 +1,23 @@
+options:
+  platform: psx
+  basename: ST04_00C.ovl28__SCR_st04_INAC402c.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST04_00C.BIN
+  asm_path: asm/ST04_00C/ovl28__SCR_st04_INAC402c.TIM
+  asset_path: assets/ST04_00C/ovl28__SCR_st04_INAC402c.TIM
+  src_path: src/ST04_00C/ovl28__SCR_st04_INAC402c.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST04_00C/generated.syms.ovl28__SCR_st04_INAC402c.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST04_00C/undefined_funcs_auto.us.ovl28__SCR_st04_INAC402c.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST04_00C/undefined_syms_auto.us.ovl28__SCR_st04_INAC402c.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\SCR\st04\INAC402c.TIM
+  - name: ST04_00C_INAC402c_28_header
+    type: dashchunkheader
+    start: 0x00072800
+  - [0x73000]

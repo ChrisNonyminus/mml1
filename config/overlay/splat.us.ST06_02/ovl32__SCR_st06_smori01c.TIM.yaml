@@ -1,0 +1,23 @@
+options:
+  platform: psx
+  basename: ST06_02.ovl32__SCR_st06_smori01c.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST06_02.BIN
+  asm_path: asm/ST06_02/ovl32__SCR_st06_smori01c.TIM
+  asset_path: assets/ST06_02/ovl32__SCR_st06_smori01c.TIM
+  src_path: src/ST06_02/ovl32__SCR_st06_smori01c.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST06_02/generated.syms.ovl32__SCR_st06_smori01c.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST06_02/undefined_funcs_auto.us.ovl32__SCR_st06_smori01c.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST06_02/undefined_syms_auto.us.ovl32__SCR_st06_smori01c.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\SCR\st06\smori01c.TIM
+  - name: ST06_02_smori01c_32_header
+    type: dashchunkheader
+    start: 0x000A3000
+  - [0xA3800]

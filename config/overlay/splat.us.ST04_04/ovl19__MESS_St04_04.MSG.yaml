@@ -1,0 +1,31 @@
+options:
+  platform: psx
+  basename: ST04_04.ovl19__MESS_St04_04.MSG
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST04_04.BIN
+  asm_path: asm/ST04_04/ovl19__MESS_St04_04.MSG
+  asset_path: assets/ST04_04/ovl19__MESS_St04_04.MSG
+  src_path: src/ST04_04/ovl19__MESS_St04_04.MSG
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST04_04/generated.syms.ovl19__MESS_St04_04.MSG.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST04_04/undefined_funcs_auto.us.ovl19__MESS_St04_04.MSG.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST04_04/undefined_syms_auto.us.ovl19__MESS_St04_04.MSG.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\MESS\St04_04.MSG
+  - name: ST04_04_St04_04_19_header
+    type: dashchunkheader
+    start: 0x0004A000
+  - name: ST04_04_St04_04_19
+    type: code
+    start: 0x0004A800
+    vram: 0x80153000
+    exclusive_ram_id: ST04_04_St04_04_ram_19
+    subalign: 4
+    subsegments:
+      - [0x4A800, data, St04_04_19]
+  - [0x4B215]

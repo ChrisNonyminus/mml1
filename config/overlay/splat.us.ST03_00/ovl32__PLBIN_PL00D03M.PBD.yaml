@@ -1,0 +1,31 @@
+options:
+  platform: psx
+  basename: ST03_00.ovl32__PLBIN_PL00D03M.PBD
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST03_00.BIN
+  asm_path: asm/ST03_00/ovl32__PLBIN_PL00D03M.PBD
+  asset_path: assets/ST03_00/ovl32__PLBIN_PL00D03M.PBD
+  src_path: src/ST03_00/ovl32__PLBIN_PL00D03M.PBD
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST03_00/generated.syms.ovl32__PLBIN_PL00D03M.PBD.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST03_00/undefined_funcs_auto.us.ovl32__PLBIN_PL00D03M.PBD.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST03_00/undefined_syms_auto.us.ovl32__PLBIN_PL00D03M.PBD.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\PLBIN\PL00D03M.PBD
+  - name: ST03_00_PL00D03M_32_header
+    type: dashchunkheader
+    start: 0x000A8800
+  - name: ST03_00_PL00D03M_32
+    type: code
+    start: 0x000A9000
+    vram: 0x800E9600
+    exclusive_ram_id: ST03_00_PL00D03M_ram_32
+    subalign: 4
+    subsegments:
+      - [0xA9000, data, PL00D03M_32]
+  - [0xA9B40]

@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST14.ovl3__sound_moto_se_vab_t_ug04b.vab
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST14.BIN
+  asm_path: asm/ST14/ovl3__sound_moto_se_vab_t_ug04b.vab
+  asset_path: assets/ST14/ovl3__sound_moto_se_vab_t_ug04b.vab
+  src_path: src/ST14/ovl3__sound_moto_se_vab_t_ug04b.vab
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST14/generated.syms.ovl3__sound_moto_se_vab_t_ug04b.vab.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST14/undefined_funcs_auto.us.ovl3__sound_moto_se_vab_t_ug04b.vab.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST14/undefined_syms_auto.us.ovl3__sound_moto_se_vab_t_ug04b.vab.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\sound\moto\se\vab\t_ug04b.vab
+  - name: ST14_t_ug04b_3_header
+    type: dashchunkheader
+    start: 0x0001C000
+  - name: ST14_t_ug04b_3
+    type: bin
+    start: 0x0001C800
+  - [0x38DF0]

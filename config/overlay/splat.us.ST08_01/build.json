@@ -1,0 +1,31 @@
+{
+"overlays": [
+["ovl0__EMBIN_ST08_01.EBD", 0, 110344, 0], 
+["ovl1__OBJ_ST08_AR01_EM0000.TIM", 1, 16384, 8], 
+["ovl2__OBJ_ST08_AR01_EM0600.TIM", 1, 6144, 8], 
+["ovl3__OBJ_ST08_AR01_EM0900B.TIM", 1, 16384, 8], 
+["ovl4__OBJ_ST08_AR01_EM1300.TIM", 1, 16384, 8], 
+["ovl5__OBJ_ST08_AR01_EM1300C.TIM", 9, 0, 8], 
+["ovl6__OBJ_ST08_AR01_EM1500B.TIM", 1, 16384, 8], 
+["ovl7__OBJ_ST08_AR01_EM1700.TIM", 1, 16384, 8], 
+["ovl8__OBJ_ST08_AR01_EM1B00.TIM", 1, 6144, 8], 
+["ovl9__OBJ_ST08_AR01_EM3900.TIM", 1, 16384, 8], 
+["ovl10__OBJ_ST08_AR01_EM3A00.TIM", 1, 16384, 8], 
+["ovl11__OBJ_ST08_AR01_EM4D00.TIM", 1, 16384, 8], 
+["ovl12__OBJ_ST08_AR01_EM6500.TIM", 1, 16384, 8], 
+["ovl13__OBJ_ST08_AR01_SCKO00.TIM", 1, 16384, 8], 
+["ovl14__SCR_ST08_inhos00.TIM", 1, 32768, 7], 
+["ovl15__SCR_ST08_inhos08c.TIM", 9, 0, 1], 
+["ovl16__SCR_ST08_inhos13.TIM", 1, 32768, 1], 
+["ovl17__SCR_ST08_inhos14c.TIM", 9, 0, 1], 
+["ovl18__SCR_ST08_inhos15c.TIM", 9, 0, 1], 
+["ovl19__SCR_ST08_inhos16c.TIM", 9, 0, 1], 
+["ovl20__SCR_ST08_inhos17c.TIM", 9, 0, 6], 
+["ovl21__SCR_ST08_inhos28.TIM", 1, 32768, 1], 
+["ovl22__SCR_ST08_inhos30.TIM", 1, 32768, 6], 
+["ovl23__sound_moto_se_vab_e_tw01a.vab", 5, 103024, 5152], 
+["ovl24__sound_moto_se_vab_m_hp00a.vab", 5, 189776, 5152], 
+["ovl25__sound_moto_se_seq_m_hp00a.sep", 8, 8436, 0], 
+["ovl26__MESS_ST08_01.MSG", 0, 7164, 0]
+]
+}

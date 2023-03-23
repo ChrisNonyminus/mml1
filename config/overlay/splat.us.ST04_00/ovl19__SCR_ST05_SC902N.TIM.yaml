@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST04_00.ovl19__SCR_ST05_SC902N.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST04_00.BIN
+  asm_path: asm/ST04_00/ovl19__SCR_ST05_SC902N.TIM
+  asset_path: assets/ST04_00/ovl19__SCR_ST05_SC902N.TIM
+  src_path: src/ST04_00/ovl19__SCR_ST05_SC902N.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST04_00/generated.syms.ovl19__SCR_ST05_SC902N.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST04_00/undefined_funcs_auto.us.ovl19__SCR_ST05_SC902N.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST04_00/undefined_syms_auto.us.ovl19__SCR_ST05_SC902N.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\SCR\ST05\SC902N.TIM
+  - name: ST04_00_SC902N_19_header
+    type: dashchunkheader
+    start: 0x00064000
+  - name: ST04_00_SC902N_19
+    type: bin
+    start: 0x00064800
+  - [0x69800]

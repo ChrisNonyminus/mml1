@@ -1,0 +1,23 @@
+options:
+  platform: psx
+  basename: ST05_02.ovl15__SCR_ST05_Rm0002.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST05_02.BIN
+  asm_path: asm/ST05_02/ovl15__SCR_ST05_Rm0002.TIM
+  asset_path: assets/ST05_02/ovl15__SCR_ST05_Rm0002.TIM
+  src_path: src/ST05_02/ovl15__SCR_ST05_Rm0002.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST05_02/generated.syms.ovl15__SCR_ST05_Rm0002.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST05_02/undefined_funcs_auto.us.ovl15__SCR_ST05_Rm0002.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST05_02/undefined_syms_auto.us.ovl15__SCR_ST05_Rm0002.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\SCR\ST05\Rm0002.TIM
+  - name: ST05_02_Rm0002_15_header
+    type: dashchunkheader
+    start: 0x0005C800
+  - [0x5D000]

@@ -1,0 +1,31 @@
+options:
+  platform: psx
+  basename: INIT_DAT.ovl7__PLBIN_PL00R00P.PBD
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/INIT_DAT.BIN
+  asm_path: asm/INIT_DAT/ovl7__PLBIN_PL00R00P.PBD
+  asset_path: assets/INIT_DAT/ovl7__PLBIN_PL00R00P.PBD
+  src_path: src/INIT_DAT/ovl7__PLBIN_PL00R00P.PBD
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.INIT_DAT/generated.syms.ovl7__PLBIN_PL00R00P.PBD.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.INIT_DAT/undefined_funcs_auto.us.ovl7__PLBIN_PL00R00P.PBD.txt
+  undefined_syms_auto_path: config/overlay/splat.us.INIT_DAT/undefined_syms_auto.us.ovl7__PLBIN_PL00R00P.PBD.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\PLBIN\PL00R00P.PBD
+  - name: INIT_DAT_PL00R00P_7_header
+    type: dashchunkheader
+    start: 0x00015800
+  - name: INIT_DAT_PL00R00P_7
+    type: code
+    start: 0x00016000
+    vram: 0x800FA000
+    exclusive_ram_id: INIT_DAT_PL00R00P_ram_7
+    subalign: 4
+    subsegments:
+      - [0x16000, data, PL00R00P_7]
+  - [0x17088]

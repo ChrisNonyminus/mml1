@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST00_03.ovl5__SCR_st00_tcca10.CLT
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST00_03.BIN
+  asm_path: asm/ST00_03/ovl5__SCR_st00_tcca10.CLT
+  asset_path: assets/ST00_03/ovl5__SCR_st00_tcca10.CLT
+  src_path: src/ST00_03/ovl5__SCR_st00_tcca10.CLT
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST00_03/generated.syms.ovl5__SCR_st00_tcca10.CLT.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST00_03/undefined_funcs_auto.us.ovl5__SCR_st00_tcca10.CLT.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST00_03/undefined_syms_auto.us.ovl5__SCR_st00_tcca10.CLT.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\SCR\st00\tcca10.CLT
+  - name: ST00_03_tcca10_5_header
+    type: dashchunkheader
+    start: 0x0002B800
+  - name: ST00_03_tcca10_5
+    type: bin
+    start: 0x0002C000
+  - [0x2C100]

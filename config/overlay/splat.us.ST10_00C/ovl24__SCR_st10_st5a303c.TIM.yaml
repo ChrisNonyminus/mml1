@@ -1,0 +1,23 @@
+options:
+  platform: psx
+  basename: ST10_00C.ovl24__SCR_st10_st5a303c.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST10_00C.BIN
+  asm_path: asm/ST10_00C/ovl24__SCR_st10_st5a303c.TIM
+  asset_path: assets/ST10_00C/ovl24__SCR_st10_st5a303c.TIM
+  src_path: src/ST10_00C/ovl24__SCR_st10_st5a303c.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST10_00C/generated.syms.ovl24__SCR_st10_st5a303c.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST10_00C/undefined_funcs_auto.us.ovl24__SCR_st10_st5a303c.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST10_00C/undefined_syms_auto.us.ovl24__SCR_st10_st5a303c.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\SCR\st10\st5a303c.TIM
+  - name: ST10_00C_st5a303c_24_header
+    type: dashchunkheader
+    start: 0x0006B800
+  - [0x6C000]

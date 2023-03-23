@@ -1,0 +1,14 @@
+{
+"overlays": [
+["ovl0__progbin_r3_st08.bin", 0, 99740, 0], 
+["ovl1__MAP_DATA_ST08_MAP.IDX", 0, 6348, 0], 
+["ovl2__MAP_DATA_ST08_MAP.MDT", 0, 7924, 0], 
+["ovl3__SCR_DATA_ST08.STG", 0, 132936, 0], 
+["ovl4__SCR_DATA_ST08.HED", 0, 1128, 0], 
+["ovl5__SCR_DATA_ST08.HD2", 0, 112, 0], 
+["ovl6__OBJ_COMM_PL0000.TIM", 9, 0, 8], 
+["ovl7__OBJ_COMM_PL0001.TIM", 9, 0, 8], 
+["ovl8__OBJ_FACE_PL00B00.TIM", 1, 32768, 8], 
+["ovl9__BG_CHAR_ST0BBG00.TIM", 1, 32768, 2]
+]
+}

@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST11_00C.ovl9__SCR_st03_scm500.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST11_00C.BIN
+  asm_path: asm/ST11_00C/ovl9__SCR_st03_scm500.TIM
+  asset_path: assets/ST11_00C/ovl9__SCR_st03_scm500.TIM
+  src_path: src/ST11_00C/ovl9__SCR_st03_scm500.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST11_00C/generated.syms.ovl9__SCR_st03_scm500.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST11_00C/undefined_funcs_auto.us.ovl9__SCR_st03_scm500.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST11_00C/undefined_syms_auto.us.ovl9__SCR_st03_scm500.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\SCR\st03\scm500.TIM
+  - name: ST11_00C_scm500_9_header
+    type: dashchunkheader
+    start: 0x0002E000
+  - name: ST11_00C_scm500_9
+    type: bin
+    start: 0x0002E800
+  - [0x32800]

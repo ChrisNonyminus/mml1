@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST0E.ovl51__SCR_st0e_md900.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST0E.BIN
+  asm_path: asm/ST0E/ovl51__SCR_st0e_md900.TIM
+  asset_path: assets/ST0E/ovl51__SCR_st0e_md900.TIM
+  src_path: src/ST0E/ovl51__SCR_st0e_md900.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST0E/generated.syms.ovl51__SCR_st0e_md900.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST0E/undefined_funcs_auto.us.ovl51__SCR_st0e_md900.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST0E/undefined_syms_auto.us.ovl51__SCR_st0e_md900.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\SCR\st0e\md900.TIM
+  - name: ST0E_md900_51_header
+    type: dashchunkheader
+    start: 0x00123800
+  - name: ST0E_md900_51
+    type: bin
+    start: 0x00124000
+  - [0x125000]

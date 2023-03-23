@@ -1,0 +1,23 @@
+options:
+  platform: psx
+  basename: ST07_00.ovl22__SCR_st07_d00910c.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST07_00.BIN
+  asm_path: asm/ST07_00/ovl22__SCR_st07_d00910c.TIM
+  asset_path: assets/ST07_00/ovl22__SCR_st07_d00910c.TIM
+  src_path: src/ST07_00/ovl22__SCR_st07_d00910c.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST07_00/generated.syms.ovl22__SCR_st07_d00910c.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST07_00/undefined_funcs_auto.us.ovl22__SCR_st07_d00910c.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST07_00/undefined_syms_auto.us.ovl22__SCR_st07_d00910c.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\SCR\st07\d00910c.TIM
+  - name: ST07_00_d00910c_22_header
+    type: dashchunkheader
+    start: 0x00080800
+  - [0x81000]

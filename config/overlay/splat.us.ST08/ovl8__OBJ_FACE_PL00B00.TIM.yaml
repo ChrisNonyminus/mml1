@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST08.ovl8__OBJ_FACE_PL00B00.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST08.BIN
+  asm_path: asm/ST08/ovl8__OBJ_FACE_PL00B00.TIM
+  asset_path: assets/ST08/ovl8__OBJ_FACE_PL00B00.TIM
+  src_path: src/ST08/ovl8__OBJ_FACE_PL00B00.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST08/generated.syms.ovl8__OBJ_FACE_PL00B00.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST08/undefined_funcs_auto.us.ovl8__OBJ_FACE_PL00B00.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST08/undefined_syms_auto.us.ovl8__OBJ_FACE_PL00B00.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\OBJ\FACE\PL00B00.TIM
+  - name: ST08_PL00B00_8_header
+    type: dashchunkheader
+    start: 0x00042000
+  - name: ST08_PL00B00_8
+    type: bin
+    start: 0x00042800
+  - [0x4A800]

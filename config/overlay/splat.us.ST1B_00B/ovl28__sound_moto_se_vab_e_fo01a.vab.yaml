@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST1B_00B.ovl28__sound_moto_se_vab_e_fo01a.vab
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST1B_00B.BIN
+  asm_path: asm/ST1B_00B/ovl28__sound_moto_se_vab_e_fo01a.vab
+  asset_path: assets/ST1B_00B/ovl28__sound_moto_se_vab_e_fo01a.vab
+  src_path: src/ST1B_00B/ovl28__sound_moto_se_vab_e_fo01a.vab
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST1B_00B/generated.syms.ovl28__sound_moto_se_vab_e_fo01a.vab.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST1B_00B/undefined_funcs_auto.us.ovl28__sound_moto_se_vab_e_fo01a.vab.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST1B_00B/undefined_syms_auto.us.ovl28__sound_moto_se_vab_e_fo01a.vab.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\sound\moto\se\vab\e_fo01a.vab
+  - name: ST1B_00B_e_fo01a_28_header
+    type: dashchunkheader
+    start: 0x000A2000
+  - name: ST1B_00B_e_fo01a_28
+    type: bin
+    start: 0x000A2800
+  - [0xE6430]

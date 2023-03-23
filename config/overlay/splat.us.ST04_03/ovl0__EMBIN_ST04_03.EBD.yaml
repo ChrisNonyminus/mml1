@@ -1,0 +1,31 @@
+options:
+  platform: psx
+  basename: ST04_03.ovl0__EMBIN_ST04_03.EBD
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST04_03.BIN
+  asm_path: asm/ST04_03/ovl0__EMBIN_ST04_03.EBD
+  asset_path: assets/ST04_03/ovl0__EMBIN_ST04_03.EBD
+  src_path: src/ST04_03/ovl0__EMBIN_ST04_03.EBD
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST04_03/generated.syms.ovl0__EMBIN_ST04_03.EBD.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST04_03/undefined_funcs_auto.us.ovl0__EMBIN_ST04_03.EBD.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST04_03/undefined_syms_auto.us.ovl0__EMBIN_ST04_03.EBD.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\EMBIN\ST04_03.EBD
+  - name: ST04_03_ST04_03_0_header
+    type: dashchunkheader
+    start: 0x00000000
+  - name: ST04_03_ST04_03_0
+    type: code
+    start: 0x00000800
+    vram: 0x8016C000
+    exclusive_ram_id: ST04_03_ST04_03_ram_0
+    subalign: 4
+    subsegments:
+      - [0x800, data, ST04_03_0]
+  - [0xD66C]

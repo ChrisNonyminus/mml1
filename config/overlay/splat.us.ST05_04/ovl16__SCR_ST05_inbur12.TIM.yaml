@@ -1,0 +1,23 @@
+options:
+  platform: psx
+  basename: ST05_04.ovl16__SCR_ST05_inbur12.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST05_04.BIN
+  asm_path: asm/ST05_04/ovl16__SCR_ST05_inbur12.TIM
+  asset_path: assets/ST05_04/ovl16__SCR_ST05_inbur12.TIM
+  src_path: src/ST05_04/ovl16__SCR_ST05_inbur12.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST05_04/generated.syms.ovl16__SCR_ST05_inbur12.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST05_04/undefined_funcs_auto.us.ovl16__SCR_ST05_inbur12.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST05_04/undefined_syms_auto.us.ovl16__SCR_ST05_inbur12.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\SCR\ST05\inbur12.TIM
+  - name: ST05_04_inbur12_16_header
+    type: dashchunkheader
+    start: 0x0004B800
+  - [0x4C000]

@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST04_00.ovl45__SCR_st04_SC1900.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST04_00.BIN
+  asm_path: asm/ST04_00/ovl45__SCR_st04_SC1900.TIM
+  asset_path: assets/ST04_00/ovl45__SCR_st04_SC1900.TIM
+  src_path: src/ST04_00/ovl45__SCR_st04_SC1900.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST04_00/generated.syms.ovl45__SCR_st04_SC1900.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST04_00/undefined_funcs_auto.us.ovl45__SCR_st04_SC1900.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST04_00/undefined_syms_auto.us.ovl45__SCR_st04_SC1900.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\SCR\st04\SC1900.TIM
+  - name: ST04_00_SC1900_45_header
+    type: dashchunkheader
+    start: 0x000AD800
+  - name: ST04_00_SC1900_45
+    type: bin
+    start: 0x000AE000
+  - [0xB1000]

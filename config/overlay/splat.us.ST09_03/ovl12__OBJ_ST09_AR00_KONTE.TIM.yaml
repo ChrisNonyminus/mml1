@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST09_03.ovl12__OBJ_ST09_AR00_KONTE.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST09_03.BIN
+  asm_path: asm/ST09_03/ovl12__OBJ_ST09_AR00_KONTE.TIM
+  asset_path: assets/ST09_03/ovl12__OBJ_ST09_AR00_KONTE.TIM
+  src_path: src/ST09_03/ovl12__OBJ_ST09_AR00_KONTE.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST09_03/generated.syms.ovl12__OBJ_ST09_AR00_KONTE.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST09_03/undefined_funcs_auto.us.ovl12__OBJ_ST09_AR00_KONTE.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST09_03/undefined_syms_auto.us.ovl12__OBJ_ST09_AR00_KONTE.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\OBJ\ST09\AR00\KONTE.TIM
+  - name: ST09_03_KONTE_12_header
+    type: dashchunkheader
+    start: 0x0004B000
+  - name: ST09_03_KONTE_12
+    type: bin
+    start: 0x0004B800
+  - [0x4D800]

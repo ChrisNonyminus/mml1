@@ -1,0 +1,31 @@
+options:
+  platform: psx
+  basename: ST0E.ovl3__SCR_DATA_ST0E.STG
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST0E.BIN
+  asm_path: asm/ST0E/ovl3__SCR_DATA_ST0E.STG
+  asset_path: assets/ST0E/ovl3__SCR_DATA_ST0E.STG
+  src_path: src/ST0E/ovl3__SCR_DATA_ST0E.STG
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST0E/generated.syms.ovl3__SCR_DATA_ST0E.STG.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST0E/undefined_funcs_auto.us.ovl3__SCR_DATA_ST0E.STG.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST0E/undefined_syms_auto.us.ovl3__SCR_DATA_ST0E.STG.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\SCR\DATA\ST0E.STG
+  - name: ST0E_ST0E_3_header
+    type: dashchunkheader
+    start: 0x00015800
+  - name: ST0E_ST0E_3
+    type: code
+    start: 0x00016000
+    vram: 0x80194000
+    exclusive_ram_id: ST0E_ST0E_ram_3
+    subalign: 4
+    subsegments:
+      - [0x16000, data, ST0E_3]
+  - [0x31794]

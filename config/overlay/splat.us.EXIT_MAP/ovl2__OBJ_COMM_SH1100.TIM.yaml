@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: EXIT_MAP.ovl2__OBJ_COMM_SH1100.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/EXIT_MAP.BIN
+  asm_path: asm/EXIT_MAP/ovl2__OBJ_COMM_SH1100.TIM
+  asset_path: assets/EXIT_MAP/ovl2__OBJ_COMM_SH1100.TIM
+  src_path: src/EXIT_MAP/ovl2__OBJ_COMM_SH1100.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.EXIT_MAP/generated.syms.ovl2__OBJ_COMM_SH1100.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.EXIT_MAP/undefined_funcs_auto.us.ovl2__OBJ_COMM_SH1100.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.EXIT_MAP/undefined_syms_auto.us.ovl2__OBJ_COMM_SH1100.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\OBJ\COMM\SH1100.TIM
+  - name: EXIT_MAP_SH1100_2_header
+    type: dashchunkheader
+    start: 0x00005000
+  - name: EXIT_MAP_SH1100_2
+    type: bin
+    start: 0x00005800
+  - [0x9800]

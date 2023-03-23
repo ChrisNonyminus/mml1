@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST19B.ovl1__OBJ_ST19_AR00_EM4100.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST19B.BIN
+  asm_path: asm/ST19B/ovl1__OBJ_ST19_AR00_EM4100.TIM
+  asset_path: assets/ST19B/ovl1__OBJ_ST19_AR00_EM4100.TIM
+  src_path: src/ST19B/ovl1__OBJ_ST19_AR00_EM4100.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST19B/generated.syms.ovl1__OBJ_ST19_AR00_EM4100.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST19B/undefined_funcs_auto.us.ovl1__OBJ_ST19_AR00_EM4100.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST19B/undefined_syms_auto.us.ovl1__OBJ_ST19_AR00_EM4100.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\OBJ\ST19\AR00\EM4100.TIM
+  - name: ST19B_EM4100_1_header
+    type: dashchunkheader
+    start: 0x00008800
+  - name: ST19B_EM4100_1
+    type: bin
+    start: 0x00009000
+  - [0xD000]

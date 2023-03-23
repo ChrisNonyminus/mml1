@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST1D_02.ovl21__OBJ_ST1D_AR02_EM0301.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST1D_02.BIN
+  asm_path: asm/ST1D_02/ovl21__OBJ_ST1D_AR02_EM0301.TIM
+  asset_path: assets/ST1D_02/ovl21__OBJ_ST1D_AR02_EM0301.TIM
+  src_path: src/ST1D_02/ovl21__OBJ_ST1D_AR02_EM0301.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST1D_02/generated.syms.ovl21__OBJ_ST1D_AR02_EM0301.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST1D_02/undefined_funcs_auto.us.ovl21__OBJ_ST1D_AR02_EM0301.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST1D_02/undefined_syms_auto.us.ovl21__OBJ_ST1D_AR02_EM0301.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\OBJ\ST1D\AR02\EM0301.TIM
+  - name: ST1D_02_EM0301_21_header
+    type: dashchunkheader
+    start: 0x0006D000
+  - name: ST1D_02_EM0301_21
+    type: bin
+    start: 0x0006D800
+  - [0x71800]

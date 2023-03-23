@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST11B.ovl8__BG_CHAR_ST0BBG00.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST11B.BIN
+  asm_path: asm/ST11B/ovl8__BG_CHAR_ST0BBG00.TIM
+  asset_path: assets/ST11B/ovl8__BG_CHAR_ST0BBG00.TIM
+  src_path: src/ST11B/ovl8__BG_CHAR_ST0BBG00.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST11B/generated.syms.ovl8__BG_CHAR_ST0BBG00.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST11B/undefined_funcs_auto.us.ovl8__BG_CHAR_ST0BBG00.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST11B/undefined_syms_auto.us.ovl8__BG_CHAR_ST0BBG00.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\BG\CHAR\ST0BBG00.TIM
+  - name: ST11B_ST0BBG00_8_header
+    type: dashchunkheader
+    start: 0x0002A000
+  - name: ST11B_ST0BBG00_8
+    type: bin
+    start: 0x0002A800
+  - [0x32800]

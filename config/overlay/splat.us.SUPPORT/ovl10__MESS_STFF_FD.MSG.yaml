@@ -1,0 +1,31 @@
+options:
+  platform: psx
+  basename: SUPPORT.ovl10__MESS_STFF_FD.MSG
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/SUPPORT.BIN
+  asm_path: asm/SUPPORT/ovl10__MESS_STFF_FD.MSG
+  asset_path: assets/SUPPORT/ovl10__MESS_STFF_FD.MSG
+  src_path: src/SUPPORT/ovl10__MESS_STFF_FD.MSG
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.SUPPORT/generated.syms.ovl10__MESS_STFF_FD.MSG.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.SUPPORT/undefined_funcs_auto.us.ovl10__MESS_STFF_FD.MSG.txt
+  undefined_syms_auto_path: config/overlay/splat.us.SUPPORT/undefined_syms_auto.us.ovl10__MESS_STFF_FD.MSG.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\MESS\STFF_FD.MSG
+  - name: SUPPORT_STFF_FD_10_header
+    type: dashchunkheader
+    start: 0x0004A000
+  - name: SUPPORT_STFF_FD_10
+    type: code
+    start: 0x0004A800
+    vram: 0x801E4000
+    exclusive_ram_id: SUPPORT_STFF_FD_ram_10
+    subalign: 4
+    subsegments:
+      - [0x4A800, data, STFF_FD_10]
+  - [0x50ED3]

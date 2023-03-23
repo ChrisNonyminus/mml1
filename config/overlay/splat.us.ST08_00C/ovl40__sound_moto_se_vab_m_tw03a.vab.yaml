@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST08_00C.ovl40__sound_moto_se_vab_m_tw03a.vab
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST08_00C.BIN
+  asm_path: asm/ST08_00C/ovl40__sound_moto_se_vab_m_tw03a.vab
+  asset_path: assets/ST08_00C/ovl40__sound_moto_se_vab_m_tw03a.vab
+  src_path: src/ST08_00C/ovl40__sound_moto_se_vab_m_tw03a.vab
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST08_00C/generated.syms.ovl40__sound_moto_se_vab_m_tw03a.vab.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST08_00C/undefined_funcs_auto.us.ovl40__sound_moto_se_vab_m_tw03a.vab.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST08_00C/undefined_syms_auto.us.ovl40__sound_moto_se_vab_m_tw03a.vab.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\sound\moto\se\vab\m_tw03a.vab
+  - name: ST08_00C_m_tw03a_40_header
+    type: dashchunkheader
+    start: 0x000BC800
+  - name: ST08_00C_m_tw03a_40
+    type: bin
+    start: 0x000BD000
+  - [0xEEBA0]

@@ -1,0 +1,23 @@
+options:
+  platform: psx
+  basename: ST02_01.ovl23__SCR_st03_scm911.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST02_01.BIN
+  asm_path: asm/ST02_01/ovl23__SCR_st03_scm911.TIM
+  asset_path: assets/ST02_01/ovl23__SCR_st03_scm911.TIM
+  src_path: src/ST02_01/ovl23__SCR_st03_scm911.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST02_01/generated.syms.ovl23__SCR_st03_scm911.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST02_01/undefined_funcs_auto.us.ovl23__SCR_st03_scm911.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST02_01/undefined_syms_auto.us.ovl23__SCR_st03_scm911.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\SCR\st03\scm911.TIM
+  - name: ST02_01_scm911_23_header
+    type: dashchunkheader
+    start: 0x0007A000
+  - [0x7A800]

@@ -1,0 +1,23 @@
+options:
+  platform: psx
+  basename: ST0F_00.ovl20__SCR_st0f_inpol22.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST0F_00.BIN
+  asm_path: asm/ST0F_00/ovl20__SCR_st0f_inpol22.TIM
+  asset_path: assets/ST0F_00/ovl20__SCR_st0f_inpol22.TIM
+  src_path: src/ST0F_00/ovl20__SCR_st0f_inpol22.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST0F_00/generated.syms.ovl20__SCR_st0f_inpol22.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST0F_00/undefined_funcs_auto.us.ovl20__SCR_st0f_inpol22.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST0F_00/undefined_syms_auto.us.ovl20__SCR_st0f_inpol22.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\SCR\st0f\inpol22.TIM
+  - name: ST0F_00_inpol22_20_header
+    type: dashchunkheader
+    start: 0x0005C000
+  - [0x5C800]

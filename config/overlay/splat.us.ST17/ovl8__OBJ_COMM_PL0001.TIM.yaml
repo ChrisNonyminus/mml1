@@ -1,0 +1,23 @@
+options:
+  platform: psx
+  basename: ST17.ovl8__OBJ_COMM_PL0001.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST17.BIN
+  asm_path: asm/ST17/ovl8__OBJ_COMM_PL0001.TIM
+  asset_path: assets/ST17/ovl8__OBJ_COMM_PL0001.TIM
+  src_path: src/ST17/ovl8__OBJ_COMM_PL0001.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST17/generated.syms.ovl8__OBJ_COMM_PL0001.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST17/undefined_funcs_auto.us.ovl8__OBJ_COMM_PL0001.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST17/undefined_syms_auto.us.ovl8__OBJ_COMM_PL0001.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\OBJ\COMM\PL0001.TIM
+  - name: ST17_PL0001_8_header
+    type: dashchunkheader
+    start: 0x00054000
+  - [0x54800]

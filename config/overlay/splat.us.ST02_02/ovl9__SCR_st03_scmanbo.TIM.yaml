@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST02_02.ovl9__SCR_st03_scmanbo.TIM
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST02_02.BIN
+  asm_path: asm/ST02_02/ovl9__SCR_st03_scmanbo.TIM
+  asset_path: assets/ST02_02/ovl9__SCR_st03_scmanbo.TIM
+  src_path: src/ST02_02/ovl9__SCR_st03_scmanbo.TIM
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST02_02/generated.syms.ovl9__SCR_st03_scmanbo.TIM.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST02_02/undefined_funcs_auto.us.ovl9__SCR_st03_scmanbo.TIM.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST02_02/undefined_syms_auto.us.ovl9__SCR_st03_scmanbo.TIM.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\SCR\st03\scmanbo.TIM
+  - name: ST02_02_scmanbo_9_header
+    type: dashchunkheader
+    start: 0x00042000
+  - name: ST02_02_scmanbo_9
+    type: bin
+    start: 0x00042800
+  - [0x4A800]

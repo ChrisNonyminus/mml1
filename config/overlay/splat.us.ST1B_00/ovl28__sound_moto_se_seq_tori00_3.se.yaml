@@ -1,0 +1,26 @@
+options:
+  platform: psx
+  basename: ST1B_00.ovl28__sound_moto_se_seq_tori00_3.se
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST1B_00.BIN
+  asm_path: asm/ST1B_00/ovl28__sound_moto_se_seq_tori00_3.se
+  asset_path: assets/ST1B_00/ovl28__sound_moto_se_seq_tori00_3.se
+  src_path: src/ST1B_00/ovl28__sound_moto_se_seq_tori00_3.se
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST1B_00/generated.syms.ovl28__sound_moto_se_seq_tori00_3.se.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST1B_00/undefined_funcs_auto.us.ovl28__sound_moto_se_seq_tori00_3.se.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST1B_00/undefined_syms_auto.us.ovl28__sound_moto_se_seq_tori00_3.se.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\sound\moto\se\seq\tori00_3.se
+  - name: ST1B_00_tori00_3_28_header
+    type: dashchunkheader
+    start: 0x000D5000
+  - name: ST1B_00_tori00_3_28
+    type: bin
+    start: 0x000D5800
+  - [0xD5837]

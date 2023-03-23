@@ -1,0 +1,31 @@
+options:
+  platform: psx
+  basename: ST03_00C.ovl26__mess_st03_ff.msg
+  base_path: ../../../
+  target_path: ./disks/us/CDDATA/DAT/ST03_00C.BIN
+  asm_path: asm/ST03_00C/ovl26__mess_st03_ff.msg
+  asset_path: assets/ST03_00C/ovl26__mess_st03_ff.msg
+  src_path: src/ST03_00C/ovl26__mess_st03_ff.msg
+  compiler: GCC
+  extensions_path: tools/splat_ext
+  symbol_addrs_path: config/overlay/splat.us.ST03_00C/generated.syms.ovl26__mess_st03_ff.msg.txt
+  undefined_funcs_auto_path: config/overlay/splat.us.ST03_00C/undefined_funcs_auto.us.ovl26__mess_st03_ff.msg.txt
+  undefined_syms_auto_path: config/overlay/splat.us.ST03_00C/undefined_syms_auto.us.ovl26__mess_st03_ff.msg.txt
+  find_file_boundaries: yes
+  use_legacy_include_asm: no
+  migrate_rodata_to_functions: no
+  auto_decompile_empty_functions: no
+segments:
+# ..\mess\st03_ff.msg
+  - name: ST03_00C_st03_ff_26_header
+    type: dashchunkheader
+    start: 0x00090000
+  - name: ST03_00C_st03_ff_26
+    type: code
+    start: 0x00090800
+    vram: 0x80153000
+    exclusive_ram_id: ST03_00C_st03_ff_ram_26
+    subalign: 4
+    subsegments:
+      - [0x90800, data, st03_ff_26]
+  - [0x93859]
