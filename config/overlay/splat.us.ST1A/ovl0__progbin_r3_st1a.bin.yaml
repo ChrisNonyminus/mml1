@@ -33,7 +33,7 @@ segments:
     subsegments:
       - [0x800, rodata]
       - [0xEF8, asm]
-      - [0x2C120, c, eve19]
+      - [0x2C0E4, c, eve19]
       - [0x2CAEC, asm]
       - [0x2CB58, data]
   - [0x39FE4]

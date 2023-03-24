@@ -1,0 +1,14 @@
+StXX_eve19_move = 0x8012b8e4;
+eve19_move_tbl = 0x801396c4;
+eve19_main = 0x8012b920;
+eve19_main_tbl = 0x801396cc;
+eve19_end = 0x8012b95c;
+eve19_main_area_00 = 0x8012b97c;
+eve19_main_area_01 = 0x8012bb54;
+eve19_main_area_02 = 0x8012bbec;
+eve19_main_area_05 = 0x8012bd4c;
+eve19_main_area_06 = 0x8012bec4;
+eve19_main_area_09 = 0x8012c03c;
+eve19_main_dummy = 0x8012C1B4;
+check_block = 0x8012c1c0;
+check_swing_camera = 0x8012c228;

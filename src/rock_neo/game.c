@@ -41,12 +41,12 @@ void func_80015734(GAME_WORK* gw) {
 
     switch (gw->x1) {
     case 0:
-        func_8001DA8C(0x527);
+        Sce_flag_on(0x527);
         if (!((u8)gw->x82 & 1) && (gw->x54[7] == 0)) {
-            func_8001DA8C(0x510);
-            func_8001DA8C(0x522);
-            func_8001DA8C(0x446);
-            func_8001DA8C(0x448);
+            Sce_flag_on(0x510);
+            Sce_flag_on(0x522);
+            Sce_flag_on(0x446);
+            Sce_flag_on(0x448);
         }
         break;
     case 1:

@@ -414,3 +414,12 @@ VSyncCallback = 0x80076cf8;
 WaitEvent = 0x8007fee0;
 write = 0x8007ffb0;
 
+Close_EVE_WORK = 0x800319F4;
+
+//eve19_check_flag = 0x800c1c8a;
+
+MojiTaskExec2 = 0x80053A08;
+
+Sce_flag_on = 0x8001DA8C;
+
+Swing_Camera2 = 0x800398F8;

@@ -4,7 +4,7 @@ INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/moji", func_80053788);
 
 INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/moji", func_8005382C);
 
-INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/moji", func_80053A08);
+INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/moji", MojiTaskExec2);
 
 INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/moji", MojiTaskKill);
 

@@ -14,7 +14,7 @@ unknown_t func_8001D7AC(unknown_t);
 unknown_t func_80012E98(unknown_t);
 unknown_t func_80031AA4();
 unknown_t func_80016D64();
-unknown_t func_8001DA8C(unknown_t);
+unknown_t Sce_flag_on(unknown_t);
 unknown_t func_8001F23C();
 extern unknown_t D_8008CB94; // may be in sub_scrn.c
 extern s32 D_80098B2C;
