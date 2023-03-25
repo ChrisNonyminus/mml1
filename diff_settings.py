@@ -10,7 +10,7 @@ def add_custom_arguments(parser):
 
 
 def apply_rock_neo(config, version):
-    config['baseimg'] = f'disks/{version}/' + (f'rock_neo.exe')
+    config['baseimg'] = f'disks/{version}/' + (f'ROCK_NEO.EXE')
     config['myimg'] = f'build/' + (f'rock_neo.exe')
     config['mapfile'] = f'build/rock_neo.map'
     config['source_directories'] = [
@@ -20,7 +20,7 @@ def apply_rock_neo(config, version):
 
 def apply_bin(config, version, name):
     config["arch"] = "mipsel"
-    config['baseimg'] = f'disks/{version}/' + (f'BIN/{name}.BIN').upper()
+    config['baseimg'] = f'disks/{version}/' + (f'CDDATA/DAT/{name}.BIN').upper()
     config['myimg'] = f'build/{version}/' + (f'{name}.bin').upper()
     config['mapfile'] = f'build/{version}/{name}.map'
     config['source_directories'] = [

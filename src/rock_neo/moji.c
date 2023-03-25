@@ -1,8 +1,9 @@
-#include "common.h"
+#include "rock_neo.h"
+u8 Moji_flag[8];
 
 INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/moji", func_80053788);
 
-INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/moji", func_8005382C);
+INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/moji", MojiTaskExec);
 
 INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/moji", MojiTaskExec2);
 

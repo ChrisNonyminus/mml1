@@ -53,7 +53,9 @@ segments:
       - [0x587F8, asm, psxsdk/code]
       - [0x70EC4, data]
       - [0x80064, sdata]
-      - [0x88958, sbss]
+      - [0x88958, scommon]
+      - [0x89258, .scommon, moji]
+      - [0x89260, scommon]
       - [0x8B648, bss]
       - [0xB5E88, bin] # heap?
   - [0xC9800]

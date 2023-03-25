@@ -10,7 +10,9 @@
 #include "rock_neo/sound.h"
 #include "rock_neo/sub_scrn.h"
 
-#ifdef TEMP
+#ifndef ACCEPT_REORDERING_BULLSHIT
+
+// clang-format off
 INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/sub_scrn", func_8005EC34);
 #else
 void func_8005EC34(void) {
@@ -19,12 +21,12 @@ void func_8005EC34(void) {
 }
 #endif
 
-#if 0
+#ifndef ACCEPT_REORDERING_BULLSHIT
 INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/sub_scrn", func_8005EC80);
 #else
 s32 func_8005EC80(s32* arg0) {
     MojiTaskKill();
-    func_8005382C(0, D_8008CB94, -1);
+    MojiTaskExec(0, D_8008CB94, -1);
     func_80063FC0(0, 0x20006); // sus second parameter, looks like an enum
     Sub_screen_basic_param_set();
     *arg0 = 1;
@@ -57,8 +59,10 @@ INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/sub_scrn", func_8005FFBC);
 
 // clang-format on
 
-#if 0
-INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/sub_scrn", func_800600CC); // https://decomp.me/scratch/XN3jK
+#ifndef ACCEPT_REORDERING_BULLSHIT
+// clang-format off
+
+INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/sub_scrn", func_800600CC);
 #else
 s32 func_800600CC(SUB_SCREEN_WORK* subp) {
     switch (subp->routine_1) {
@@ -74,7 +78,7 @@ s32 func_800600CC(SUB_SCREEN_WORK* subp) {
             break;
         }
         func_8001D7AC(22);
-        func_8005382C(0, 0x801F2000, 0x1D); // ???
+        MojiTaskExec(0, 0x801F2000, 0x1D); // ???
         func_80063FC0(2, 0x20007);
         func_800605DC();
         subp->routine_1++;
@@ -128,7 +132,8 @@ INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/sub_scrn", func_80060C70);
 
 // clang-format on
 
-#if 0
+#ifndef ACCEPT_REORDERING_BULLSHIT
+// clang-format off
 INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/sub_scrn", func_80060DB8);
 #else
 unknown_t func_80060DB8(SUB_SCREEN_WORK* subp) {
@@ -150,7 +155,8 @@ unknown_t func_80060DB8(SUB_SCREEN_WORK* subp) {
 }
 #endif
 
-#if 0
+#ifndef ACCEPT_REORDERING_BULLSHIT
+// clang-format off
 INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/sub_scrn", Sub_screen_cancel_check);
 #else
 s32 Sub_screen_cancel_check(void) {
@@ -174,7 +180,8 @@ s32 Sub_screen_cancel_check(void) {
 }
 #endif
 
-#if 0
+#ifndef ACCEPT_REORDERING_BULLSHIT
+
 INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/sub_scrn", Sub_screen_shift_check);
 #else
 void Sub_screen_shift_check(SUB_SCREEN_WORK* subp) {
@@ -202,7 +209,8 @@ void Sub_screen_shift_check(SUB_SCREEN_WORK* subp) {
 
 // clang-format off
 
-#if 0
+#ifndef ACCEPT_REORDERING_BULLSHIT
+// clang-format off
 INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/sub_scrn", Sub_screen_sort_attack);
 #else
 // clang-format on
@@ -229,7 +237,7 @@ void Sub_screen_sort_attack(void) {
 // clang-format off
 #endif
 
-#if 0
+#ifndef ACCEPT_REORDERING_BULLSHIT
 INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/sub_scrn", Sub_screen_sort_energy);
 #else
 // clang-format on
@@ -255,6 +263,10 @@ void Sub_screen_sort_energy(void) {
 // clang-format off
 
 #endif
+
+#ifndef ACCEPT_REORDERING_BULLSHIT
+INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/sub_scrn", Sub_screen_sort_range);
+#else
 // clang-format on
 void Sub_screen_sort_range(void) {
     s32 d0, d1;
@@ -275,7 +287,12 @@ void Sub_screen_sort_range(void) {
         }
     }
 }
+// clang-format off
+#endif
 
+#ifndef ACCEPT_REORDERING_BULLSHIT
+INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/sub_scrn", Sub_screen_sort_rapid);
+#else
 void Sub_screen_sort_rapid(void) {
     s32 d0, d1;
     u8 sort_src, sort_dist;
@@ -295,7 +312,11 @@ void Sub_screen_sort_rapid(void) {
         }
     }
 }
+#endif
 
+#ifndef ACCEPT_REORDERING_BULLSHIT
+INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/sub_scrn", Sub_screen_sort_sub);
+#else
 void Sub_screen_sort_sub(PL_WORK* pp, s32 d0, s32 d1) {
     u8 sort_buff;
 
@@ -303,7 +324,11 @@ void Sub_screen_sort_sub(PL_WORK* pp, s32 d0, s32 d1) {
     pp->rb_parts_sort_data[d0] = pp->rb_parts_sort_data[d1];
     pp->rb_parts_sort_data[d1] = sort_buff;
 }
+#endif
 
+#ifndef ACCEPT_REORDERING_BULLSHIT
+INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/sub_scrn", Sub_screen_rb_parts_set);
+#else
 void Sub_screen_rb_parts_set(void) {
     s32 d0, d1, d2;
 
@@ -345,10 +370,11 @@ void Sub_screen_rb_parts_set(void) {
     if (pp->weapon_data[1].repeat_level > 0x07)
         pp->weapon_data[1].repeat_level = 0x07;
 }
+#endif
 
 // clang-format off
 
-#ifdef OG_COMPILER
+#if defined(USE_OG_COMPILER) && !defined(ACCEPT_REORDERING_BULLSHIT)
 void Sub_screen_rb_parts_calc(SUB_SCREEN_WORK* subp) {
     s32 d0, d1, d2;
 

@@ -14,6 +14,9 @@
 
 // clang-format off
 
+#ifndef ACCEPT_REORDERING_BULLSHIT
+INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/game", func_800155A4);
+#else
 // clang-format on
 void func_800155A4(void) {
     GAME_WORK* gp;
@@ -31,10 +34,14 @@ void func_800155A4(void) {
     }
 }
 // clang-format off
+#endif
 
 // https://decomp.me/scratch/OFeoF
 INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/game", func_80015634);
 
+#ifndef ACCEPT_REORDERING_BULLSHIT
+INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/game", func_80015734);
+#else
 // clang-format on
 void func_80015734(GAME_WORK* gw) {
     _unkstruc_800C3558* temp_v1 = &D_800C3558;
@@ -64,7 +71,12 @@ void func_80015734(GAME_WORK* gw) {
     gw->x1 = 1;
     gw->x82 = (u8)gw->x82 & 0xFE;
 }
+// clang-format off
+#endif
 
+#ifndef ACCEPT_REORDERING_BULLSHIT
+INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/game", func_80015840);
+#else
 void func_80015840(GAME_WORK* arg0) {
     _unkstruc_800C3558* temp_v1 = &D_800C3558;
 
@@ -87,6 +99,7 @@ void func_80015840(GAME_WORK* arg0) {
     }
 }
 // clang-format off
+#endif
 
 INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/game", func_800158F0);
 
@@ -102,6 +115,9 @@ INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/game", func_80016434);
 
 INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/game", func_800164B4);
 
+#ifndef ACCEPT_REORDERING_BULLSHIT
+INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/game", func_80016528);
+#else
 // clang-format on
 void func_80016528(GAME_WORK* arg0) {
     PL_WORK* pp;
@@ -136,6 +152,7 @@ void func_80016528(GAME_WORK* arg0) {
 }
 
 // clang-format off
+#endif
 
 INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/game", func_8001663C);
 
@@ -143,12 +160,21 @@ INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/game", func_80016798);
 
 INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/game", func_800169AC);
 
+#ifndef ACCEPT_REORDERING_BULLSHIT
+INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/game", func_80016BC0);
+#else
 // clang-format on
 void func_80016BC0(void) {
     if (++Game_work.time > 10799999u)
         Game_work.time = 10799999u;
 }
+// clang-format off
+#endif
 
+#ifndef ACCEPT_REORDERING_BULLSHIT
+INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/game", func_80016BF4);
+#else
+// clang-format on
 void func_80016BF4(void) {
     if (Game_work.routine_0 >= 3 && Game_work.routine_0 != 6 && !D_80098910) {
         if ((D_800C0C26 & 9) == 9) {
@@ -163,7 +189,7 @@ void func_80016BF4(void) {
                 func_8001D494(0, 1, 0);
                 D_80098A70 = 0;
                 func_80017C30(8);
-                func_8001DCD0(0x1FEu);
+                Sce_flag_off(0x1FEu);
                 Code800133D8_work.x0 = 1;
                 func_80012F78(func_80013420);
             }
@@ -172,22 +198,42 @@ void func_80016BF4(void) {
         }
     }
 }
+// clang-format off
+#endif
+
+#ifndef ACCEPT_REORDERING_BULLSHIT
+INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/game", func_80016D0C);
+#else
+// clang-format on
 void func_80016D0C(GAME_WORK* arg0) {
     if (D_80098A72 == 0) {
         arg0->x1++;
     }
 }
+// clang-format off
+#endif
+
+#ifndef ACCEPT_REORDERING_BULLSHIT
+INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/game", func_80016D38);
+#else
 void func_80016D38(GAME_WORK* arg0) { // lol, duplicate function
     if (D_80098A72 == 0) {
         arg0->x1++;
     }
 }
+#endif
+
+#ifndef ACCEPT_REORDERING_BULLSHIT
+INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/game", func_80016D64);
+#else
+// clang-format on
 s32 func_80016D64(void) {
     while (D_80098788)
         func_80012E98(1);
     return func_8001B314();
 }
 // clang-format off
+#endif
 
 
 

@@ -9,3 +9,4 @@ ctx.c
 .vscode/settings.json
 __pycache__/
 generated.*
+bin/psyq

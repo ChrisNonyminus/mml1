@@ -3,6 +3,7 @@
 
 #include "rock_neo.h"
 
+unknown_t MojiTaskExec(unknown_t, unknown_t, unknown_t);
 s32 MojiTaskKill(); // 0x80053A30
 
 extern u32 Moji_flag;  // 0x80098A58

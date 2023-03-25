@@ -18,7 +18,7 @@ INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/scene", Sce_flag_test);
 
 INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/scene", Sce_flag_on);
 
-INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/scene", func_8001DCD0);
+INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/scene", Sce_flag_off);
 
 INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/scene", func_8001DD88);
 
