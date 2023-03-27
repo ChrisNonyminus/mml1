@@ -1,5 +1,5 @@
 # Megaman Legends Decomp
-WIP Decompilation of Megaman Legends (aka Rockman Dash, formerly Rockman NEO) for the PlayStation 1. So far, only ROCK_NEO.EXE, the game's actual exe (the one loaded by the disk loads the logo and then executes ROCK_NEO.EXE) is being decompiled; I'm having trouble figuring out how to properly split the game's overlays.
+WIP Decompilation of Megaman Legends (aka Rockman Dash, formerly Rockman NEO) for the PlayStation 1.
 
 This project/experiment was just recently started, so a lot of things are barebones at the moment.
 
