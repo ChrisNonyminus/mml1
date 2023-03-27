@@ -1,8 +1,6 @@
 # Megaman Legends Decomp
 WIP Decompilation of Megaman Legends (aka Rockman Dash, formerly Rockman NEO) for the PlayStation 1.
 
-This project/experiment was just recently started, so a lot of things are barebones at the moment.
-
 The code is not yet shiftable.
 
 Contributions and help are more than appreciated!
