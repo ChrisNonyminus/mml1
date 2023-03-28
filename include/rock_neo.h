@@ -53,4 +53,9 @@ typedef struct unkst_80098A28 {
 } unkst_80098A28; // may be a GTE primitive
 extern unkst_80098A28 D_80098A28;
 
+extern void (*D_80080894[])(s8*);
+
+extern s8 D_80098B1C;
+extern s8 D_80098B1D;
+
 #endif

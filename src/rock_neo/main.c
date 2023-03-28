@@ -58,7 +58,14 @@ INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/main", func_800130D0);
 
 INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/main", func_8001319C);
 
-INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/main", func_800131FC);
+void func_800131FC(void) {
+    D_80098B1C = 0;
+    D_80098B1D = 0;
+    while (1) {
+        D_80080894[D_80098B1C](&D_80098B1C);
+        func_80012E98(1);
+    }
+}
 
 void func_8001326C(u8* arg0) {
     unkst_80098A28* var_s0;
