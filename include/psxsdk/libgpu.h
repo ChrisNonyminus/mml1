@@ -12,6 +12,11 @@ typedef struct {
 } DR_ENV; /* Packed Drawing Environment */
 
 typedef struct {
+    unsigned long* tag;
+    unsigned long code[2];
+} DR_MODE;
+
+typedef struct {
     unsigned long tag;
     unsigned char r0, g0, b0, code;
     short x0, y0;
@@ -157,5 +162,7 @@ typedef struct  {
     short x2, y2; 
     short x3, y3; 
 } POLY_F4;
+
+void SetDrawMode(DR_MODE* p, int dfe, int dtd, int tpage, RECT* tw);
 
 #endif

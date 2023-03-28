@@ -12,7 +12,7 @@ typedef struct GAME_WORK {
     s32 x4;
     s16 x8, xA;
     s32 time;
-    u8 x10[0x18 - 0x10];
+    s32 x10, x14;
     u16 difficultyUnlocked[2];
     s32 zennyCount;
     u8 x20[0x3C - 0x20];
@@ -24,7 +24,9 @@ typedef struct GAME_WORK {
     s8 x5B;
     s8 x5C[0x68 - 0x5C];
     s16 x68, x6A, x6C;
-    u8 x6E[0x81 - 0x6E];
+    u8 x6E[0x70 - 0x6E];
+    s16 x70, x72, x74, x76;
+    s8 x78[0x81- 0x78];
     s8 x81;
     u8 x82;
     s8 x83;

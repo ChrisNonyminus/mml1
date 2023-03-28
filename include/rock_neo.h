@@ -32,6 +32,7 @@ unknown_t Sce_flag_off(unknown_t);
 unknown_t func_80063BA8();
 unknown_t func_800665E8();
 extern u16 D_80098910;
+extern DR_MODE D_80098A10[];
 extern s16 D_80098A70;
 extern s16 D_80098A72;
 extern u8 D_80098788;
@@ -41,5 +42,15 @@ extern u8 D_80098788;
 
 #define PRIM_PTR(t) (*(t** )0x1F800070)
 #define PRIM_PTR_INC(t) PRIM_PTR(t); PRIM_PTR(t) = PRIM_PTR(t) + 1
+
+typedef struct unkst_80098A28 {
+    s8 xe0[3]; // tag?
+    s8 unk3; // tag? (4th byte?)
+    s8 unk4[3];
+    s8 unk7; // code?
+    s16 unk8, unkA;
+    s16 unkC, unkE; // unkC is being set to 320 and unkE to 240, looks like the resolution
+} unkst_80098A28; // may be a GTE primitive
+extern unkst_80098A28 D_80098A28;
 
 #endif
