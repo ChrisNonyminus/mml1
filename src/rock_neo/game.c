@@ -160,20 +160,13 @@ INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/game", func_80016798);
 
 INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/game", func_800169AC);
 
-#ifndef ACCEPT_REORDERING_BULLSHIT
-INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/game", func_80016BC0);
-#else
+
 // clang-format on
 void func_80016BC0(void) {
     if (++Game_work.time > 10799999u)
         Game_work.time = 10799999u;
 }
-// clang-format off
-#endif
 
-#ifndef ACCEPT_REORDERING_BULLSHIT
-INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/game", func_80016BF4);
-#else
 // clang-format on
 void func_80016BF4(void) {
     if (Game_work.routine_0 >= 3 && Game_work.routine_0 != 6 && !D_80098910) {
@@ -198,48 +191,59 @@ void func_80016BF4(void) {
         }
     }
 }
-// clang-format off
-#endif
 
-#ifndef ACCEPT_REORDERING_BULLSHIT
-INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/game", func_80016D0C);
-#else
 // clang-format on
 void func_80016D0C(GAME_WORK* arg0) {
     if (D_80098A72 == 0) {
         arg0->x1++;
     }
 }
-// clang-format off
-#endif
 
-#ifndef ACCEPT_REORDERING_BULLSHIT
-INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/game", func_80016D38);
-#else
 void func_80016D38(GAME_WORK* arg0) { // lol, duplicate function
     if (D_80098A72 == 0) {
         arg0->x1++;
     }
 }
-#endif
 
-#ifndef ACCEPT_REORDERING_BULLSHIT
-INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/game", func_80016D64);
-#else
 // clang-format on
 s32 func_80016D64(void) {
     while (D_80098788)
         func_80012E98(1);
     return func_8001B314();
 }
-// clang-format off
-#endif
 
 
 
 
-// https://decomp.me/scratch/Jy2ox
-INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/game", func_80016DAC);
+void func_80016DAC(void) {
+    POLY_FT4* v0;
+
+    v0 = PRIM_PTR_INC(POLY_FT4); // not sure if POLY_FT4
+    v0->tag[3] = 9;
+    v0->code = 44;
+    v0->tpage = GetTPage(0, 0, 320, 256);
+    v0->clut = GetClut(0, 496);
+    v0->x0 = 32;
+    v0->y0 = 56;
+    v0->x1 = 287;
+    v0->y1 = 56;
+    v0->x2 = 32;
+    v0->y2 = 184;
+    v0->x3 = 287;
+    v0->y3 = 184;
+    v0->u0 = 0;
+    v0->v0 = 0;
+    v0->u1 = 255;
+    v0->v1 = 0;
+    v0->u2 = 0;
+    v0->v2 = 0x80;
+    v0->u3 = -1;
+    v0->v3 = 0x80;
+    v0->r0 = 0x80;
+    v0->g0 = 0x80;
+    v0->b0 = 0x80;
+    AddPrim(&D_80098934->x78, v0);
+}
 
 void func_80016E90(void) {
     GAME_WORK* gp;
