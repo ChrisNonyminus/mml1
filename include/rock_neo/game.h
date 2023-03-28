@@ -30,6 +30,22 @@ typedef struct GAME_WORK {
     s8 x83;
 } GAME_WORK;
 
+typedef struct {
+    u8 tag[4];
+    u8 unk4, unk5, unk6, code;
+    s16 unk8, unkA, unkC, unkE, unk10, unk12, unk14, unk16;
+    s8 gap[16];
+
+} UNK_PRIM_1;
+
+typedef struct {
+    int x0;
+    s8 x4[0x74 - 0x4];
+    void* x74;
+    void* x78;
+} UnkStruc_80098934;
+extern UnkStruc_80098934* D_80098934;
+
 extern GAME_WORK Game_work;
 
 extern void (*Game_main_tbl[])(GAME_WORK*);

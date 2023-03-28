@@ -39,4 +39,7 @@ extern u8 D_80098788;
 #define GET_PARTS_NO(x) ((u8*)&Moji_flag3)[x]
 #define GET_SELECT_NO(x) ((u8*)&D_80098B2C)[x]
 
+#define PRIM_PTR(t) (*(t** )0x1F800070)
+#define PRIM_PTR_INC(t) PRIM_PTR(t); PRIM_PTR(t) = PRIM_PTR(t) + 1
+
 #endif

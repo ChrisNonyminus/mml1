@@ -1,4 +1,7 @@
-#include "common.h"
+#include "rock_neo.h"
+
+#include "rock_neo/game.h"
+#include "rock_neo/cd.h"
 
 // clang-format off
 
@@ -56,4 +59,5 @@ INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/main", func_8001319C);
 
 INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/main", func_800131FC);
 
+// https://decomp.me/scratch/XpLHy
 INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/main", func_8001326C);

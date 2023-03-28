@@ -128,4 +128,34 @@ extern void DrawOTag(unsigned long* p);
 extern DRAWENV* PutDrawEnv(DRAWENV* env);
 extern DISPENV* PutDispEnv(DISPENV* env);
 
+void AddPrim(void*, void*);                         /* extern */
+u16 GetClut(int, int);                                  /* extern */
+u16 GetTPage(int, int, int, int);                           /* extern */
+
+typedef struct {
+    unsigned char tag[4];
+    unsigned char r0, g0, b0, code;
+    short x0, y0;
+    unsigned char u0, v0;
+    unsigned short clut;
+    short x1, y1;
+    unsigned char u1, v1;
+    unsigned short tpage;
+    short x2, y2;
+    unsigned char u2, v2;
+    unsigned short pad2;
+    short x3, y3;
+    unsigned char u3, v3;
+    unsigned short pad3;
+} POLY_FT4;
+typedef struct  {
+    unsigned long *tag; 
+    unsigned char r0, g0, b0; 
+    unsigned char code; 
+    short x0, y0; 
+    short x1, y1; 
+    short x2, y2; 
+    short x3, y3; 
+} POLY_F4;
+
 #endif

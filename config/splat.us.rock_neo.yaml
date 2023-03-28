@@ -46,7 +46,7 @@ segments:
       - [0x2C640, c, player]
       - [0x32A38, asm]
       - [0x43F88, c, moji]
-      - [0x4B074, asm]
+      - [0x4C710, asm]
       - [0x4F434, c, sub_scrn]
       - [0x531E0, c, debug]
       - [0x543A8, asm]

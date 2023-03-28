@@ -272,3 +272,21 @@ INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/moji", func_8005A598);
 INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/moji", func_8005A634);
 
 INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/moji", func_8005A858);
+
+INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/moji", func_8005A874);
+
+INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/moji", func_8005AB78);
+
+INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/moji", func_8005ACA8);
+
+INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/moji", func_8005B454);
+
+INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/moji", func_8005B5D8);
+
+INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/moji", func_8005B85C);
+
+INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/moji", func_8005B98C);
+
+INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/moji", func_8005BC90);
+
+INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/moji", func_8005BCE4);

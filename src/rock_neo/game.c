@@ -238,7 +238,45 @@ s32 func_80016D64(void) {
 
 
 
-
+// https://decomp.me/scratch/Jy2ox
 INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/game", func_80016DAC);
 
-INCLUDE_ASM("config/../asm/rock_neo/nonmatchings/game", func_80016E90);
+void func_80016E90(void) {
+    GAME_WORK* gp;
+    UNK_PRIM_1* temp_s0;
+    UNK_PRIM_1* temp_s0_2;
+    gp = &Game_work;
+
+    temp_s0 = PRIM_PTR(UNK_PRIM_1);
+    temp_s0->tag[3] = 5;
+    temp_s0->code = 40;
+    temp_s0->unk8 = 0;
+    temp_s0->unkA = 0;
+    temp_s0->unkC = 320;
+    temp_s0->unkE = 0;
+    temp_s0->unk10 = 0;
+    temp_s0->unk12 = 120 - gp->x8;
+    temp_s0->unk14 = 320;
+    temp_s0->unk16 = 120 - gp->x8;
+    temp_s0->unk4 = 0;
+    temp_s0->unk5 = 0;
+    temp_s0->unk6 = 0;
+    temp_s0->code &= 0xFD;
+    AddPrim(&D_80098934->x74, temp_s0++);
+    temp_s0->tag[3] = 5;
+    temp_s0->code = 40;
+    temp_s0->unk8 = 0;
+    temp_s0->unkA = gp->x8 + 119;
+    temp_s0->unkC = 320;
+    temp_s0->unkE = gp->x8 + 119;
+    temp_s0->unk10 = 0;
+    temp_s0->unk12 = 240;
+    temp_s0->unk14 = 320;
+    temp_s0->unk16 = 240;
+    temp_s0->unk4 = 0;
+    temp_s0->unk5 = 0;
+    temp_s0->unk6 = 0;
+    temp_s0->code = temp_s0->code & 0xFD;
+    AddPrim(&D_80098934->x74, temp_s0++);
+    (*(UNK_PRIM_1** )0x1F800070) = temp_s0;
+}
