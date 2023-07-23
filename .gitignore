@@ -10,3 +10,4 @@ ctx.c
 __pycache__/
 generated.*
 bin/psyq
+venv/

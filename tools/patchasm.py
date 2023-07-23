@@ -4,7 +4,7 @@ import sys
 import re
 
 def patch_asm(asm):
-    re_li_pattern = r"\tli\s+(\$\w+),\s*(0x[0-9a-fA-F]+)"
+    re_li_pattern = r"li\s+(\$\w+),\s*(0x[0-9a-fA-F]+)"
     # Ensure that any li instance where the \2 value is less than 0xFFFF is addiu instead
     # This is because the assembler will automatically convert these lis to ori for whatever reason
     for line in asm.splitlines():
@@ -12,7 +12,7 @@ def patch_asm(asm):
         if match:
             reg, val = match.groups()
             if int(val, 16) < 0xFFFF:
-                asm = asm.replace(line, f"\taddiu {reg}, $0, {val}")
+                asm = asm.replace(line, f"addiu {reg}, $0, {val}")
 
     return asm
 

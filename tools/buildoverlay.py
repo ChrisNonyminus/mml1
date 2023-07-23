@@ -22,15 +22,15 @@ import hashlib
 import os, sys, json, yaml, struct, subprocess, shutil, glob, re
 
 VERSION = "us"
-CROSS = "mipsel-linux-gnu-"
+CROSS = "mipsel-elf-"
 AS = f"{CROSS}as"
 LD = f"{CROSS}ld"
 CPP = f"{CROSS}cpp"
 OBJCOPY = f"{CROSS}objcopy"
 CC = "./bin/cc1-27"
 AS_FLAGS        = "-Iinclude -march=r3000 -mtune=r3000 -no-pad-sections -O1 -G0"
-CC_FLAGS        = "-mcpu=3000 -quiet -G0 -w -O2 -funsigned-char -fpeephole -ffunction-cse -fpcc-struct-return -fcommon -fverbose-asm -fgnu-linker -mgas -msoft-float"
-CPP_FLAGS       = "-Iinclude -undef -Wall -lang-c -fno-builtin -gstabs -Dmips -D__GNUC__=2 -D__OPTIMIZE__ -D__mips__ -D__mips -Dpsx -D__psx__ -D__psx -D_PSYQ -D__EXTENSIONS__ -D_MIPSEL -D_LANGUAGE_C -DLANGUAGE_C -DHACKS"
+CC_FLAGS        = "-mcpu=3000 -quiet -G0 -w -O2 -funsigned-char -fpeephole -ffunction-cse -fpcc-struct-return -fcommon -fverbose-asm -fgnu-linker -mgas -msoft-float -gcoff"
+CPP_FLAGS       = "-Iinclude -undef -Wall -lang-c -fno-builtin -Dmips -D__GNUC__=2 -D__OPTIMIZE__ -D__mips__ -D__mips -Dpsx -D__psx__ -D__psx -D_PSYQ -D__EXTENSIONS__ -D_MIPSEL -D_LANGUAGE_C -DLANGUAGE_C -DHACKS"
 
 ASM_DIR         = "asm"
 SRC_DIR         = "src"
@@ -40,7 +40,7 @@ BUILD_DIR       = "build"
 CONFIG_DIR      = "config"
 TOOLS_DIR       = "tools"
 
-ASPATCH = "$HOME/go/bin/aspatch"
+MASPSX = "python3 tools/maspx/maspsx.py --no-macro-inc --expand-div"
 PYPATCHASM = "tools/patchasm.py"
 
 build_log = open(f"logs/build_{sys.argv[1]}.log", "w")
@@ -103,7 +103,7 @@ def assemble_s_file(s_file, o_file):
     build_log.write(f"as {s_file} -> {o_file}\n")
 
 def compile_c_file(c_file, o_file):
-    os.system(f"{CPP} {CPP_FLAGS} {c_file} | {CC} {CC_FLAGS} | {ASPATCH} | python3 {PYPATCHASM} | {AS} {AS_FLAGS} -o {o_file}")
+    os.system(f"{CPP} {CPP_FLAGS} {c_file} | {CC} {CC_FLAGS} | {MASPSX} | python3 {PYPATCHASM} | {AS} {AS_FLAGS} -o {o_file}")
     build_log.write(f"cc {c_file} -> {o_file}\n")
 
 def compile_asset_file(bin_file, o_file):

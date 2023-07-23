@@ -9,15 +9,15 @@ SPLATYAML_FOLDER := config
 MAIN := main
 ROCK_NEO := rock_neo
 
-CROSS           := mipsel-linux-gnu-
+CROSS           ?= mipsel-elf-
 AS              := $(CROSS)as
 CC              := ./bin/cc1-27
 LD              := $(CROSS)ld
 CPP				:= $(CROSS)cpp
 OBJCOPY         := $(CROSS)objcopy
 AS_FLAGS        += -Iinclude -march=r3000 -mtune=r3000 -no-pad-sections -O1 -G0
-CC_FLAGS        += -mcpu=3000 -quiet -w -O2 -funsigned-char -fpeephole -ffunction-cse -fpcc-struct-return -fcommon -fverbose-asm -fgnu-linker -mgas -msoft-float -G8
-CPP_FLAGS       += -Iinclude -undef -Wall -lang-c -fno-builtin -gstabs
+CC_FLAGS        += -mcpu=3000 -quiet -w -O2 -funsigned-char -fpeephole -ffunction-cse -fpcc-struct-return -fcommon -fverbose-asm -fgnu-linker -mgas -msoft-float -G8  -gcoff
+CPP_FLAGS       += -Iinclude -undef -Wall -lang-c -fno-builtin
 CPP_FLAGS       += -Dmips -D__GNUC__=2 -D__OPTIMIZE__ -D__mips__ -D__mips -Dpsx -D__psx__ -D__psx -D_PSYQ -D__EXTENSIONS__ -D_MIPSEL -D_LANGUAGE_C -DLANGUAGE_C -DHACKS
 
 
@@ -40,6 +40,7 @@ ASMDIFFER_APP   := $(ASMDIFFER_DIR)/diff.py
 GO				:= $(HOME)/go/bin/go
 GOPATH			:= $(HOME)/go
 ASPATCH			:= $(GOPATH)/bin/aspatch
+MASPSX          := $(PYTHON) tools/maspx/maspsx.py --no-macro-inc --expand-div
 SOTNDISK		:= $(GOPATH)/bin/sotn-disk
 PYPATCHASM := $(TOOLS_DIR)/patchasm.py
 DUMPSXISO := dumpsxiso
@@ -119,7 +120,7 @@ ALL_BIN_YAML_SUBDIRS := $(filter-out . ..,$(ALL_BIN_YAML_SUBDIRS))
 ALL_BIN_YAML_FILES := $(foreach dir,$(ALL_BIN_YAML_SUBDIRS),$(wildcard $(dir)/*.yaml))
 
 default: all
-all: build check
+all: build
 build: logs $(ROCK_NEO_TARGET) chunks
 
 logs:
@@ -261,8 +262,8 @@ diff_main:
 $(BUILD_DIR)/%.s.o: %.s
 	$(AS) $(AS_FLAGS) -o $@ $<
 
-$(BUILD_DIR)/%.c.o: %.c $(ASPATCH)
-	$(CPP) $(CPP_FLAGS) $< | $(CC) $(CC_FLAGS) | $(ASPATCH) | $(PYTHON) $(PYPATCHASM) | $(AS) $(AS_FLAGS) -o $@
+$(BUILD_DIR)/%.c.o: %.c
+	$(CPP) $(CPP_FLAGS) $< | $(CC) $(CC_FLAGS) | $(MASPSX) | $(PYTHON) $(PYPATCHASM) | $(AS) $(AS_FLAGS) -o $@
 $(BUILD_DIR)/$(ASSETS_DIR)/%.bin.o: $(ASSETS_DIR)/%.bin
 	$(LD) -r -b binary -o $@ $<
 

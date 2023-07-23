@@ -6,11 +6,11 @@ The code is not yet shiftable.
 Contributions and help are more than appreciated!
 
 # Prequisites
-- A Debian-based Linux distro. Arch-based distros and Gentoo *might* work, but I'm not positive.
-- mipsel-linux-gnu toolchain
-- [mkpsxiso](https://github.com/Lameguy64/mkpsxiso) (install the latest deb artifact from the latest commit action)
+- A Linux distro.
+- ``mipsel-linux-gnu`` toolchain (``mipsel-elf-gcc`` on the AUR for Arch Linux users; put ``CROSS=mipsel-elf-`` as an environment variable)
+- [mkpsxiso](https://github.com/Lameguy64/mkpsxiso) (install the latest deb artifact from the latest commit action, or if on Arch, install ``mkpsxiso-git`` from the AUR)
 - python3
-  - Run ``python3 -m pip install -U -r requirements.txt``
+  - Run ``python3 -m pip install -U -r requirements.txt`` (a venv is required on Arch Linux)
 
 # BUILDING
 - Take a cue and bin of the US release of Mega Man Legends, and place it in the disks folder.

@@ -15,7 +15,7 @@ def apply_rock_neo(config, version):
     config['mapfile'] = f'build/rock_neo.map'
     config['source_directories'] = [
         f'src/rock_neo', 'include', f'asm/rock_neo']
-    config['objdump_executable'] = 'mipsel-linux-gnu-objdump'
+    config['objdump_executable'] = 'mipsel-elf-objdump'
 
 
 def apply_bin(config, version, name):
@@ -25,7 +25,7 @@ def apply_bin(config, version, name):
     config['mapfile'] = f'build/{version}/{name}.map'
     config['source_directories'] = [
         f'src/{name}', 'include', f'asm/{version}/{name}']
-    config['objdump_executable'] = 'mipsel-linux-gnu-objdump'
+    config['objdump_executable'] = 'mipsel-elf-objdump'
 
 
 def apply(config, args):
@@ -35,4 +35,4 @@ def apply(config, args):
         apply_rock_neo(config, version)
 
     config["arch"] = "mipsel"
-    config['objdump_executable'] = 'mipsel-linux-gnu-objdump'
+    config['objdump_executable'] = 'mipsel-elf-objdump'

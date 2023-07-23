@@ -4,7 +4,7 @@ import elftools.elf.elffile
 from elftools.elf.sections import SymbolTableSection
 
 VERSION = "us"
-CROSS = "mipsel-linux-gnu-"
+CROSS = "mipsel-elf-"
 AS = f"{CROSS}as"
 LD = f"{CROSS}ld"
 CPP = f"{CROSS}cpp"
@@ -22,7 +22,7 @@ BUILD_DIR       = "build"
 CONFIG_DIR      = "config"
 TOOLS_DIR       = "tools"
 
-ASPATCH = "$HOME/go/bin/aspatch"
+MASPSX = "python3 tools/maspx/maspsx.py --no-macro-inc --expand-div"
 PYPATCHASM = "tools/patchasm.py"
 
 def generate_rock_neo_syms_txt():

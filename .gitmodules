@@ -4,3 +4,6 @@
 [submodule "tools/asm-differ"]
 	path = tools/asm-differ
 	url = https://github.com/simonlindholm/asm-differ.git
+[submodule "tools/maspx"]
+	path = tools/maspx
+	url = https://github.com/mkst/maspsx.git
